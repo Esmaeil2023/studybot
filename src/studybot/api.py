@@ -116,7 +116,14 @@ def citation_of(chunk: Chunk) -> Citation:
 
 def load_pipeline() -> tuple[PipelineLike, list[Chunk]]:
     """The real pipeline: dense search + reranker + Claude. Slow; called once at start-up."""
-    from studybot.answer import DEFAULT_MODEL, TOP_K, AnthropicLLM, Pipeline, build_retriever
+    from studybot.answer import (
+        ANSWER_TOOL,
+        DEFAULT_MODEL,
+        TOP_K,
+        AnthropicLLM,
+        Pipeline,
+        build_retriever,
+    )
     from studybot.ingest import load_chunks
 
     path = os.environ.get("STUDYBOT_CHUNKS", "data/processed/chunks.jsonl")
@@ -131,7 +138,7 @@ def load_pipeline() -> tuple[PipelineLike, list[Chunk]]:
         translations=os.environ.get("STUDYBOT_TRANSLATIONS", "data/cache/query_translations.json"),
         no_translate=False,
     )
-    llm = AnthropicLLM(os.environ.get("STUDYBOT_LLM", DEFAULT_MODEL))
+    llm = AnthropicLLM(os.environ.get("STUDYBOT_LLM", DEFAULT_MODEL), tool=ANSWER_TOOL)
     return Pipeline(build_retriever(chunks, settings), chunks, llm, TOP_K), chunks
 
 
@@ -228,7 +235,9 @@ German or English. Answers cite the source or say the documents don't contain it
 placeholder="e.g. How long is the standard period of study?" aria-label="Question">
 <button id="b">Ask</button></form>
 <div class="ex" id="ex"></div><div id="out" aria-live="polite"></div>
-<footer>Unofficial student project. Not legal advice: always check the original documents.</footer>
+<footer>Unofficial student project, not legal advice. Based on StuFPO ISSS 2024, APO WIAI 2026 and
+the ISSS module handbook 2024. Which version applies to you depends on your enrolment and the
+transition rules: always check the original documents.</footer>
 </main><script>
 const ex=["How long is the standard period of study?",
 "Welche Englischnachweise werden verlangt?","What are the application deadlines?",

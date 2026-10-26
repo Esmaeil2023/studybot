@@ -139,7 +139,9 @@ def test_load_pipeline_wires_the_real_components(monkeypatch, tmp_path):
     monkeypatch.setenv("STUDYBOT_CHUNKS", str(path))
     monkeypatch.setenv("STUDYBOT_LLM", "my-model")
     monkeypatch.setattr(ingest_module, "load_chunks", lambda p: chunks)
-    monkeypatch.setattr(answer_module, "AnthropicLLM", lambda name: seen.setdefault("llm", name))
+    monkeypatch.setattr(
+        answer_module, "AnthropicLLM", lambda name, **kw: seen.setdefault("llm", name)
+    )
     monkeypatch.setattr(
         answer_module, "build_retriever", lambda c, settings: seen.setdefault("settings", settings)
     )

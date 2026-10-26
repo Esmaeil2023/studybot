@@ -52,6 +52,23 @@ Note: module descriptions come from a PDF table that was flattened into text, so
 its value can end up next to each other without a sentence, e.g. "Examination Portfolio" means \
 the form of examination is a portfolio. Read such pairs as statements."""
 
+# Version 1.1: the answer is requested as a forced tool call, so the API itself guarantees a
+# JSON object with these three fields (v1.0 asked for JSON in plain text and occasionally got
+# nothing or malformed text back).
+ANSWER_TOOL = {
+    "name": "answer",
+    "description": "Give the final answer, or say that the excerpts do not contain it.",
+    "input_schema": {
+        "type": "object",
+        "properties": {
+            "answerable": {"type": "boolean"},
+            "answer": {"type": "string"},
+            "citations": {"type": "array", "items": {"type": "string"}},
+        },
+        "required": ["answerable", "answer", "citations"],
+    },
+}
+
 _CITE_RE = re.compile(r"\bC(\d+)\b")
 
 
@@ -79,7 +96,11 @@ def load_env(path: str | Path = ".env") -> None:
 class AnthropicLLM:
     """Claude through the Anthropic API. Needs `pip install -e ".[llm]"` and LLM_API_KEY in .env."""
 
-    def __init__(self, model: str = DEFAULT_MODEL, max_tokens: int = 1200):
+    def __init__(
+        self, model: str = DEFAULT_MODEL, max_tokens: int = 1200, tool: dict | None = None
+    ):
+        """`tool`: if given, the model must answer through this tool, and `complete` returns the
+        tool's input as a JSON string (so the reply is valid JSON by construction)."""
         load_env()
         key = os.environ.get("LLM_API_KEY") or os.environ.get("ANTHROPIC_API_KEY")
         if not key:
@@ -90,15 +111,26 @@ class AnthropicLLM:
             raise SystemExit('answer generation needs: pip install -e ".[llm]"') from error
         self.name = model
         self.max_tokens = max_tokens
+        self.tool = tool
         self._client = anthropic.Anthropic(api_key=key)
 
     def complete(self, system: str, user: str) -> str:
+        options = {}
+        if self.tool:
+            options = {
+                "tools": [self.tool],
+                "tool_choice": {"type": "tool", "name": self.tool["name"]},
+            }
         reply = self._client.messages.create(
             model=self.name,
             max_tokens=self.max_tokens,
             system=system,
             messages=[{"role": "user", "content": user}],
+            **options,
         )
+        for block in reply.content:
+            if block.type == "tool_use":
+                return json.dumps(block.input, ensure_ascii=False)
         return "".join(block.text for block in reply.content if block.type == "text")
 
 
@@ -298,7 +330,9 @@ def main(argv: list[str] | None = None) -> int:
         return 2
 
     chunks = load_chunks(args.chunks)
-    pipeline = Pipeline(build_retriever(chunks, args), chunks, AnthropicLLM(args.llm), args.k)
+    pipeline = Pipeline(
+        build_retriever(chunks, args), chunks, AnthropicLLM(args.llm, tool=ANSWER_TOOL), args.k
+    )
     by_id = {c.chunk_id: c for c in chunks}
 
     if args.question:

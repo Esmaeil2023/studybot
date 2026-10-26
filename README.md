@@ -169,6 +169,18 @@ JSON; if the excerpts do not contain the answer it sets `"answerable": false` in
 Citations are mapped back to chunk ids, so every claim points to a page of a document. An
 unreadable reply is retried once.
 
+**Versions.** v1.0 asked for the JSON in plain text; all numbers in *Results* below are v1.0, and
+the test split was run once with it. v1.0 occasionally returned an empty or malformed reply
+(2 of 84 test questions). v1.1 requests the answer as a forced tool call, so the API itself
+guarantees valid JSON. v1.1 has been checked on dev only; the test split is not re-run, so the
+test numbers below belong to v1.0.
+
+v1.1 on dev: 0.95 correct (38 of 40, 95% CI 0.85-1.00), 0.94 of unanswerable refused, no
+unreadable replies. This is not evidence that v1.1 is more accurate than v1.0 (0.93): the
+difference is one question (f33-de). It is also not proof that the format failures are gone,
+because v1.0 had none on dev either (they showed up on test, 2 of 84). It shows that v1.1 works
+and costs nothing in accuracy; whether it removes the failures would need a larger sample.
+
 ```
 cp .env.example .env            # then put your key after LLM_API_KEY=  (.env is git-ignored)
 python -m studybot.answer "How long is the standard period of study in ISSS?"
@@ -253,6 +265,9 @@ answer. Settings are environment variables (see the top of `api.py`).
 
 ### Docker
 
+*The Dockerfile has not been built or run yet (the author's machine has no Docker); the service
+itself was tested locally with `uvicorn`.*
+
 ```
 make chunks                                   # the image bakes in data/processed/chunks.jsonl
 docker build -t studybot .                    # downloads the two models (about 3 GB), slow once
@@ -311,9 +326,12 @@ the models (that needs the PDFs, an API key and about an hour).
   the results say nothing about other universities' regulations.
 - The judge is a Claude model grading Claude answers; it was validated on a small sample and
   against blatant damage, not against subtle errors.
-- Occasional empty or malformed model replies are retried once, and still cost 2 of 84 test
-  questions. Constrained (tool-based) output would fix this; not done, to keep the test numbers
-  honest.
+- v1.0 (the version behind the test numbers) cost 2 of 84 test questions to empty or malformed
+  replies; v1.1 uses tool-based output to prevent this, with dev numbers only (see Phase 5).
+- Which regulation applies to a student depends on enrolment date and transition rules written
+  into the documents (the StuFPO's transitional period ended on 30 September 2026). The bot
+  answers from the three documents as ingested and does not know the user's cohort: check the
+  originals before relying on an answer.
 - Sentence numbers inside a line can stay glued to the text; this is cosmetic.
 - Expected, harmless inspector warnings on the real PDFs: one very short chunk (a one-line
   section) and one repeated text (a boilerplate sentence).

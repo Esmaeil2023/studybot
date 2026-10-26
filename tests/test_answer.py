@@ -1,4 +1,5 @@
 import json
+from types import SimpleNamespace
 
 import pytest
 
@@ -160,7 +161,7 @@ def test_cli_batch_with_fakes(tmp_path, monkeypatch, capsys):
     monkeypatch.setattr(
         ans, "build_retriever", lambda chunks, args: lambda q, depth: ["reg:par1:0"]
     )
-    monkeypatch.setattr(ans, "AnthropicLLM", lambda model: FakeLLM(replies))
+    monkeypatch.setattr(ans, "AnthropicLLM", lambda model, **kw: FakeLLM(replies))
     base = ["--chunks", str(tmp_path / "chunks.jsonl"), "--questions", str(tmp_path / "q.jsonl"),
             "--out-dir", str(tmp_path / "res")]  # fmt: skip
 
@@ -177,7 +178,7 @@ def test_cli_single_question_prints_answer_and_source(tmp_path, monkeypatch, cap
     monkeypatch.setattr(
         ans, "build_retriever", lambda chunks, args: lambda q, depth: ["reg:par1:0"]
     )
-    monkeypatch.setattr(ans, "AnthropicLLM", lambda model: FakeLLM([reply()]))
+    monkeypatch.setattr(ans, "AnthropicLLM", lambda model, **kw: FakeLLM([reply()]))
     assert ans.main(["Wie lange?", "--chunks", str(tmp_path / "chunks.jsonl")]) == 0
     out = capsys.readouterr().out
     assert out.startswith("ANSWER: Vier Fachsemester.") and "[reg | § 1]" in out
@@ -208,3 +209,50 @@ def test_pipeline_gives_up_after_one_retry():
     pipeline = Pipeline(lambda q, depth: ["reg:par1:0"], CHUNKS, llm, top_k=1)
     answer = pipeline.answer("Wie lange?")
     assert answer.error is not None and not answer.answerable
+
+
+class _Block(SimpleNamespace):
+    pass
+
+
+class _FakeClient:
+    """Stands in for anthropic.Anthropic().messages.create."""
+
+    def __init__(self, content):
+        self.content = content
+        self.calls = []
+        self.messages = self
+
+    def create(self, **kwargs):
+        self.calls.append(kwargs)
+        return SimpleNamespace(content=self.content)
+
+
+def _llm(content, tool=None):
+    llm = object.__new__(ans.AnthropicLLM)  # skip the constructor: no key, no network
+    llm.name, llm.max_tokens, llm.tool = "m", 100, tool
+    llm._client = _FakeClient(content)
+    return llm
+
+
+def test_tool_call_reply_is_returned_as_json_and_parses():
+    block = _Block(
+        type="tool_use", input={"answerable": True, "answer": "Vier [C1].", "citations": ["C1"]}
+    )
+    llm = _llm([block], tool=ans.ANSWER_TOOL)
+    raw = llm.complete("sys", "user")
+    call = llm._client.calls[0]
+    assert call["tool_choice"] == {"type": "tool", "name": "answer"} and call["tools"]
+    assert ans.parse_reply(raw, ["reg:par1:0"])[:4] == (True, "Vier [C1].", ["reg:par1:0"], [])
+
+
+def test_plain_text_reply_still_works_without_a_tool():
+    llm = _llm([_Block(type="text", text='{"answerable": false}')])
+    assert llm.complete("s", "u") == '{"answerable": false}'
+    assert "tools" not in llm._client.calls[0]
+
+
+def test_tool_schema_requires_the_three_fields():
+    assert set(ans.ANSWER_TOOL["input_schema"]["required"]) == {
+        "answerable", "answer", "citations"
+    }  # fmt: skip
