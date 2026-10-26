@@ -4,8 +4,8 @@ Bilingual (German/English) question answering over a university's study and exam
 Answers cite the exact paragraph and page. Retrieval and answer quality are measured on a
 hand-written test set.
 
-**Status:** Phase 1 (parsing and chunking). Later phases add the test set, retrieval, reranking,
-answer generation, evaluation, the API and the deployment.
+**Status:** Phases 1-2 (parsing and chunking; evaluation set). Later phases add retrieval,
+reranking, answer generation, evaluation, the API and the deployment.
 
 ## Quickstart
 
@@ -91,6 +91,31 @@ Each line of `data/processed/chunks.jsonl` is one chunk:
 From Phase 3 on, the search indexes use `header + "\n" + text` (`Chunk.index_text`), so a passage is
 understandable on its own. The evaluation matches gold evidence against `text` only.
 
+## How Phase 2 works (the evaluation set)
+
+The test set comes before any model, so that no design decision can be tuned to its questions.
+
+- `data/eval/facts.yaml`: 50 answerable facts. Each has a German and an English question, a short
+  reference answer in both languages and **evidence spans**: verbatim text from the PDFs that
+  answers the question. 37 facts come from the two regulations, 13 from the module handbook
+  (English text, so a German question over it is cross-lingual too).
+- `data/eval/unanswerable.yaml`: 20 questions the documents cannot answer (14 off-topic, 6
+  "near-misses" that sound answerable). Every off-topic entry lists regular expressions that must
+  not occur in any chunk, and the build fails if one does.
+- `make evalset` maps every span to the chunks that contain it and writes
+  `data/eval/questions.jsonl` (140 rows = 70 pairs x 2 languages) and `data/eval/review.md`.
+  Evidence is stored as text, not as chunk ids, so changing the chunker later does not invalidate
+  the questions: rerun `make evalset` and the gold chunk ids are recomputed.
+- The split is by pair: 28 dev pairs (20 answerable, 8 unanswerable) and 42 test pairs (30 + 12),
+  stratified by source document / question kind. The DE and EN version of a question are always in
+  the same split. Use dev for all design decisions; run test once at the end.
+- `review.md` is for a human: for each question open the PDF at the given page and check that the
+  evidence says what the answer says. Nothing in the set is trusted until that has been done.
+
+Checks the build enforces: every span is found exactly (a fuzzy match is reported as a problem),
+no span is so generic that it occurs in more than three chunks, ids and question texts are unique,
+and DE/EN twins are never split.
+
 ## Known limitations
 
 - The parser is tested on synthetic PDFs (regulation and handbook) and was checked by eye on the
@@ -113,8 +138,10 @@ understandable on its own. The evaluation matches gold evidence against `text` o
 configs/ingest.yaml        which PDFs, chunk size limits
 data/raw/                  the PDFs (not committed), sources.md lists them
 data/processed/            chunks.jsonl and ingest_manifest.json (generated)
+data/eval/                 facts.yaml, unanswerable.yaml (hand-written), questions.jsonl (generated)
 src/studybot/ingest.py     PDFs -> chunks
 src/studybot/inspect_chunks.py
+src/studybot/evalset.py    evaluation set: evidence -> chunks, split, validation
 tests/                     pytest, with a synthetic regulation PDF
 ```
 

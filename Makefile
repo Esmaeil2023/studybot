@@ -13,3 +13,6 @@ test:
 
 lint:
 	$(PYTHON) -m ruff check src tests
+
+evalset:
+	python -m studybot.evalset --review data/eval/review.md

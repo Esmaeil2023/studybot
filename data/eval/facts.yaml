@@ -1,0 +1,473 @@
+# Answerable test questions. One entry = one fact, asked in German (q_de) and English (q_en).
+#
+# evidence: verbatim text from the chunks that is enough to answer. `section` (optional) narrows
+# the search to one section label (needed in the handbook, where "Frequency: ..." occurs in
+# every module). The spans are mapped to chunk ids by `python -m studybot.evalset`.
+# Several spans = the answer needs all of them (they may sit in different chunks / documents).
+#
+# category: number | deadline | condition | procedure | list | person | multi-chunk
+
+facts:
+  # ------------------------------------------------------------------ StuFPO ISSS 2024
+  - id: f01
+    category: number
+    q_de: "Wie viele Fachsemester beträgt die Regelstudienzeit im Masterstudiengang International Software Systems Science?"
+    q_en: "How many semesters is the standard period of study in the International Software Systems Science master's programme?"
+    a_de: "Vier Fachsemester."
+    a_en: "Four semesters."
+    evidence:
+      - {doc: stufpo-isss-2024, span: "Die Regelstudienzeit beträgt vier Fachsemester."}
+
+  - id: f02
+    category: number
+    q_de: "Wie lange darf man im Master ISSS maximal studieren (Höchststudienzeit)?"
+    q_en: "What is the maximum duration of study in the ISSS master's programme?"
+    a_de: "Sechs Fachsemester."
+    a_en: "Six semesters."
+    evidence:
+      - {doc: stufpo-isss-2024, span: "Die Höchststudienzeit beträgt sechs Fachsemester."}
+
+  - id: f03
+    category: number
+    q_de: "Welche Gesamtnote braucht man im Bachelorabschluss im gleichen Studienfach, um direkt zum Master ISSS zugelassen zu werden?"
+    q_en: "What overall grade does a bachelor's degree in the same subject need for direct admission to the ISSS master's programme?"
+    a_de: "Die Gesamtnote 2,7 oder besser."
+    a_en: "An overall grade of 2.7 or better."
+    evidence:
+      - {doc: stufpo-isss-2024, span: "der Gesamtnote 2,7 oder besser in einem Studiengang im gleichen Studienfach"}
+
+  - id: f04
+    category: number
+    q_de: "Welche Englischnachweise werden für den Master ISSS verlangt?"
+    q_en: "Which English language certificates are required for the ISSS master's programme?"
+    a_de: "Mindestens IELTS 6.5 oder TOEFL 90 iBT oder ein gleichwertiger Nachweis."
+    a_en: "At least IELTS 6.5 or TOEFL 90 iBT, or an equivalent proof."
+    evidence:
+      - {doc: stufpo-isss-2024, span: "zumindest IELTS 6.5 oder TOEFL 90 iBT"}
+
+  - id: f05
+    category: deadline
+    q_de: "Bis wann muss man sich für den Master ISSS zum Wintersemester und zum Sommersemester bewerben?"
+    q_en: "What are the application deadlines for the ISSS master's programme for the winter and the summer semester?"
+    a_de: "Zum Wintersemester bis zum 15. Juli, zum Sommersemester bis zum 15. Januar."
+    a_en: "15 July for the winter semester and 15 January for the summer semester."
+    evidence:
+      - {doc: stufpo-isss-2024, span: "Die Bewerbungsfrist für die Aufnahme des Studiums im Wintersemester endet am 15. Juli des jeweiligen Jahres."}
+      - {doc: stufpo-isss-2024, span: "endet die Bewerbungsfrist am 15. Januar des jeweiligen Jahres"}
+
+  - id: f06
+    category: condition
+    q_de: "Kann man den Master ISSS beginnen, bevor man den Bachelor ganz abgeschlossen hat? Unter welchen Bedingungen?"
+    q_en: "Can you start the ISSS master's programme before finishing your bachelor's degree, and under what conditions?"
+    a_de: "Ja, wenn bei der Einschreibung mindestens 150 ECTS-Punkte nachgewiesen sind; die Zugangsvoraussetzungen müssen bis zum Ende des zweiten Fachsemesters nachgewiesen werden."
+    a_en: "Yes, if at least 150 ECTS credits are proven at enrolment; the admission requirements must be proven by the end of the second semester."
+    evidence:
+      - {doc: stufpo-isss-2024, span: "mindestens 150 ECTS-Punkte des qualifizierenden Studiengangs nachgewiesen werden"}
+      - {doc: stufpo-isss-2024, span: "bis zum Ende des zweiten Fachsemesters nachgewiesen werden"}
+
+  - id: f07
+    category: condition
+    q_de: "Wer muss für den Master ISSS einen GRE- oder GATE-Nachweis vorlegen und welche Mindestpunkte gelten im GRE?"
+    q_en: "Who has to submit a GRE or GATE score for the ISSS master's programme, and what are the minimum GRE scores?"
+    a_de: "Bewerber, die nicht in einem Lissabon-Unterzeichnerstaat studiert haben und eine Gesamtnote schlechter als 1,5 haben; GRE: mindestens 153 Verbal Reasoning, 164 Quantitative Reasoning und Niveau 4,0 in Analytical Writing."
+    a_en: "Applicants whose degree is not from a Lisbon Convention signatory state and whose overall grade is worse than 1.5; GRE: at least 153 Verbal Reasoning, 164 Quantitative Reasoning and 4.0 in Analytical Writing."
+    evidence:
+      - {doc: stufpo-isss-2024, span: "deren Gesamtnote gemäß Abs. 1 oder Abs. 2 schlechter als 1,5 ist"}
+      - {doc: stufpo-isss-2024, span: "mindestens 153 Punkte in Verbal Reasoning, 164 Punkte in Quantitative Reasoning"}
+
+  - id: f08
+    category: condition
+    q_de: "Welche Voraussetzungen gelten für die Zulassung mit einem Abschluss in einem verwandten Studiengang (nicht im gleichen Fach)?"
+    q_en: "What are the admission requirements for applicants with a degree in a related (not the same) programme?"
+    a_de: "Gesamtnote 2,0 oder besser und Kompetenzen im Umfang von mindestens 115 ECTS-Punkten gemäß den Modulgruppen A1–A4 (Bachelor Informatik: Software Systems Science) bzw. A1–A3 (Bachelor Informatik)."
+    a_en: "An overall grade of 2.0 or better and competences worth at least 115 ECTS credits in the module groups A1–A4 (B.Sc. Software Systems Science) or A1–A3 (B.Sc. Informatik)."
+    evidence:
+      - {doc: stufpo-isss-2024, span: "der Gesamtnote 2,0 oder besser in einem verwandten Studiengang"}
+      - {doc: stufpo-isss-2024, span: "Kompetenzen im Umfang von mindestens 115 ECTS-Punkten"}
+
+  - id: f09
+    category: number
+    q_de: "Wie setzt sich die Note der Masterarbeit im Master ISSS zusammen?"
+    q_en: "How is the grade of the master's thesis in the ISSS programme composed?"
+    a_de: "67 % schriftliche Arbeit und 33 % Kolloquium."
+    a_en: "67% the written thesis and 33% the colloquium."
+    evidence:
+      - {doc: stufpo-isss-2024, span: "Die Note der Masterarbeit setzt sich zu 67 % aus der Bewertung der schriftlichen Arbeit und zu 33 % aus der Bewertung des Kolloquiums"}
+
+  - id: f10
+    category: condition
+    q_de: "Wie viele ECTS-Punkte muss man schon haben, um zur Masterarbeit im Master ISSS zugelassen zu werden?"
+    q_en: "How many ECTS credits do you need before you are admitted to the master's thesis in ISSS?"
+    a_de: "Mindestens 60 ECTS-Punkte."
+    a_en: "At least 60 ECTS credits."
+    evidence:
+      - {doc: stufpo-isss-2024, span: "Die Zulassung zur Masterarbeit setzt voraus, dass Module im Umfang von mindestens 60 ECTS-Punkten erfolgreich absolviert wurden."}
+
+  - id: f11
+    category: number
+    q_de: "Wie lange ist die Bearbeitungszeit der Masterarbeit im Master ISSS und wie lang dauert das Kolloquium?"
+    q_en: "How long is the processing time of the master's thesis in ISSS and how long is the colloquium?"
+    a_de: "Sechs Monate Bearbeitungszeit; das Kolloquium dauert 20 bis 60 Minuten."
+    a_en: "Six months for the thesis; the colloquium lasts 20 to 60 minutes."
+    evidence:
+      - {doc: stufpo-isss-2024, span: "Bearbeitungszeit von sechs Monaten und einem Kolloquium mit einer Prüfungsdauer von 20 bis 60 Minuten"}
+
+  - id: f12
+    category: number
+    q_de: "Wie viele ECTS-Punkte hat die Masterarbeit im Master ISSS?"
+    q_en: "How many ECTS credits is the master's thesis worth in the ISSS programme?"
+    a_de: "30 ECTS-Punkte."
+    a_en: "30 ECTS credits."
+    evidence:
+      - {doc: stufpo-isss-2024, span: "das Modul Masterarbeit im Umfang von 30 ECTS-Punkten"}
+
+  - id: f13
+    category: condition
+    q_de: "In welcher Sprache werden Lehrveranstaltungen und Prüfungen im Master ISSS abgehalten?"
+    q_en: "In which language are courses and exams held in the ISSS master's programme?"
+    a_de: "Auf Englisch."
+    a_en: "In English."
+    evidence:
+      - {doc: stufpo-isss-2024, span: "Lehrveranstaltungen und Modulprüfungen gemäß dieser Ordnung werden in englischer Sprache abgehalten und abgelegt."}
+
+  - id: f14
+    category: number
+    q_de: "Wie viele ECTS-Punkte muss man im Master ISSS insgesamt erreichen?"
+    q_en: "How many ECTS credits in total do you need to complete the ISSS master's programme?"
+    a_de: "120 ECTS-Punkte einschließlich der Masterarbeit."
+    a_en: "120 ECTS credits including the master's thesis."
+    evidence:
+      - {doc: stufpo-isss-2024, span: "beträgt die zu erreichende Summe der ECTS-Punkte einschließlich der Masterarbeit 120 ECTS-Punkte"}
+
+  - id: f15
+    category: number
+    q_de: "Aus welchen Modulen besteht die Modulgruppe A3 (Seminar and Project) und wie viele ECTS-Punkte haben sie?"
+    q_en: "What does module group A3 (Seminar and Project) consist of, and how many ECTS credits do the parts have?"
+    a_de: "Ein Seminarmodul mit 3 ECTS-Punkten und ein Projektmodul mit 6 ECTS-Punkten."
+    a_en: "A seminar module worth 3 ECTS credits and a project module worth 6 ECTS credits."
+    evidence:
+      - {doc: stufpo-isss-2024, span: "ein Seminarmodul im Umfang von 3 ECTS-Punkten und ein Projektmodul im Fachgebiet der Software Systems Science im Umfang von 6 ECTS-Punkten"}
+
+  - id: f16
+    category: multi-chunk
+    q_de: "Wie lange muss das Praktikum im internationalen Kontext mindestens dauern und wie viele ECTS-Punkte bringt es?"
+    q_en: "What is the minimum duration of the internship in an international context, and how many ECTS credits does it give?"
+    a_de: "Mindestens 360 Stunden; es zählt mit 12 ECTS-Punkten (unbenotet)."
+    a_en: "At least 360 hours; it is worth 12 ECTS credits (ungraded)."
+    evidence:
+      - {doc: stufpo-isss-2024, span: "im Umfang von mindestens 360 Stunden"}
+      - {doc: stufpo-isss-2024, span: "Praktikum im internationalen Kontext im Umfang von 12 ECTS-Punkten"}
+
+  - id: f17
+    category: list
+    q_de: "Welche vier Studienschwerpunkte kann man im Master ISSS wählen?"
+    q_en: "Which four study focus areas can you choose in the ISSS master's programme?"
+    a_de: "S1: Distributed and Mobile Systems, S2: Software Analysis and Verification, S3: Service-oriented Architectures, S4: Communication Systems and Protocols."
+    a_en: "S1: Distributed and Mobile Systems, S2: Software Analysis and Verification, S3: Service-oriented Architectures, S4: Communication Systems and Protocols."
+    evidence:
+      - {doc: stufpo-isss-2024, span: "S1: Distributed and Mobile Systems"}
+      - {doc: stufpo-isss-2024, span: "S4: Communication Systems and Protocols"}
+
+  - id: f18
+    category: condition
+    q_de: "Unter welchen Bedingungen wird ein Studienschwerpunkt im Zeugnis ausgewiesen?"
+    q_en: "Under which conditions is a study focus area shown on the degree certificate?"
+    a_de: "Auf Antrag, wenn die Masterarbeit in A4, ein Seminar oder Projekt in A3 und mindestens 18 ECTS-Punkte aus A1 und A2 im Schwerpunkt erbracht wurden."
+    a_en: "On request, if the thesis is in A4, a seminar or project is in A3, and at least 18 ECTS credits from A1 and A2 were earned in that focus area."
+    evidence:
+      - {doc: stufpo-isss-2024, span: "a) die Masterarbeit in Modulgruppe A4, b) ein Seminar oder ein Projekt in Modulgruppe A3 und zusätzlich c) mindestens 18 ECTS-Punkte aus den Modulgruppen A1 und A2 im entsprechenden Studienschwerpunkt erbracht wurden"}
+
+  - id: f19
+    category: condition
+    q_de: "Bis wann konnten Studierende, die vor dem Wintersemester 2024/25 begonnen haben, in die neue StuFPO des Masters ISSS übertreten?"
+    q_en: "Until when could students who started the ISSS master's programme before winter semester 2024/25 switch to the new study and examination regulations?"
+    a_de: "Bis zum 30. September 2026, durch schriftliche Erklärung an den Prüfungsausschuss."
+    a_en: "Until 30 September 2026, by written declaration to the examination committee."
+    evidence:
+      - {doc: stufpo-isss-2024, span: "können bis zum 30. September 2026 in die vorliegende Ordnung übertreten"}
+
+  - id: f20
+    category: condition
+    q_de: "Kann die Masterarbeit im Master ISSS auch in einem anderen als dem vorgegebenen Fach geschrieben werden?"
+    q_en: "Can the ISSS master's thesis be written on a topic from a different subject than the listed ones?"
+    a_de: "Ja, auf Antrag kann der Prüfungsausschuss ein Thema aus einem anderen Fach zulassen, sofern glaubhaft nachgewiesen wird, dass es inhaltlich der Software Systems Science entnommen ist."
+    a_en: "Yes, on request the examination committee can approve a topic from another subject if it is credibly shown that the topic belongs to Software Systems Science."
+    evidence:
+      - {doc: stufpo-isss-2024, span: "kann vom Prüfungsausschuss auch ein Thema aus einem anderen Fach zugelassen werden"}
+
+  # ------------------------------------------------------------------ APO WIAI 2026
+  - id: f21
+    category: number
+    q_de: "Wie viele Arbeitsstunden entsprechen einem ECTS-Punkt an der Fakultät WIAI?"
+    q_en: "How many hours of work correspond to one ECTS credit at the WIAI faculty?"
+    a_de: "Ca. 30 Arbeitsstunden."
+    a_en: "About 30 hours of work."
+    evidence:
+      - {doc: apo-wiai-2026, span: "Ein ECTS-Punkt entspricht einem Arbeitsaufwand von ca. 30 Arbeitsstunden."}
+
+  - id: f22
+    category: number
+    q_de: "Aus wie vielen Mitgliedern besteht der Prüfungsausschuss mindestens?"
+    q_en: "What is the minimum number of members of the examination committee?"
+    a_de: "Mindestens drei Mitglieder."
+    a_en: "At least three members."
+    evidence:
+      - {doc: apo-wiai-2026, span: "Der Prüfungsausschuss besteht aus mindestens drei Mitgliedern."}
+
+  - id: f23
+    category: procedure
+    q_de: "Was passiert, wenn ich eine Prüfung ohne triftigen Grund versäume?"
+    q_en: "What happens if I miss an exam without a valid reason?"
+    a_de: "Die Prüfungsleistung wird mit „nicht ausreichend“ (5,0) bewertet."
+    a_en: "The exam is graded 'nicht ausreichend' (5.0)."
+    evidence:
+      - {doc: apo-wiai-2026, span: "oder tritt sie bzw. er nach Beginn der Prüfung ohne triftige Gründe von der Prüfungsleistung zurück, so wird die Prüfungsleistung mit „nicht ausreichend“ (5,0) bewertet."}
+
+  - id: f24
+    category: procedure
+    q_de: "Welche Folgen kann ein Plagiat in einer Prüfung haben?"
+    q_en: "What consequences can plagiarism in an exam have?"
+    a_de: "Die Prüfung gilt als „nicht ausreichend“ (5,0); in schwerwiegenden Fällen oder bei Wiederholung kann der Prüfungsanspruch im Studiengang entfallen."
+    a_en: "The exam counts as 'nicht ausreichend' (5.0); in serious or repeated cases the right to take exams in the programme can be withdrawn."
+    evidence:
+      - {doc: apo-wiai-2026, span: "kann der Prüfungsausschuss in schwerwiegenden Fällen oder bei wiederholtem Verstoß festlegen, dass in dem jeweiligen Bachelor- oder Masterstudiengang kein Prüfungsanspruch mehr besteht"}
+
+  - id: f25
+    category: condition
+    q_de: "Wie viele Kompetenzen dürfen höchstens durch außerhalb der Hochschule erworbene Kenntnisse ersetzt werden?"
+    q_en: "How much of the required competences can at most be replaced by competences acquired outside higher education?"
+    a_de: "Höchstens die Hälfte der im Studiengang nachzuweisenden Kompetenzen."
+    a_en: "At most half of the competences to be proven in the programme."
+    evidence:
+      - {doc: apo-wiai-2026, span: "höchstens die Hälfte der im Studiengang nachzuweisenden Kompetenzen ersetzen"}
+
+  - id: f26
+    category: number
+    q_de: "Wie lange darf eine Klausur dauern?"
+    q_en: "How long can a written exam last?"
+    a_de: "Mindestens 30 und höchstens 240 Minuten."
+    a_en: "At least 30 and at most 240 minutes."
+    evidence:
+      - {doc: apo-wiai-2026, span: "Die Bearbeitungszeit einer schriftlichen Prüfung beträgt mindestens 30 und höchstens 240 Minuten."}
+
+  - id: f27
+    category: number
+    q_de: "Wie lange dauert eine mündliche Prüfung nach der APO WIAI?"
+    q_en: "How long does an oral exam last according to the APO WIAI?"
+    a_de: "Mindestens 5 und höchstens 60 Minuten."
+    a_en: "At least 5 and at most 60 minutes."
+    evidence:
+      - {doc: apo-wiai-2026, span: "Die Dauer einer mündlichen Prüfung oder eines Testats beträgt mindestens 5 und höchstens 60 Minuten."}
+
+  - id: f28
+    category: condition
+    q_de: "Wann gilt die regelmäßige Teilnahme an einer Lehrveranstaltung als nicht erfüllt, wenn ich selbst für die Abwesenheit verantwortlich bin?"
+    q_en: "When is regular attendance considered not fulfilled if I am responsible for the absence?"
+    a_de: "Bei mehr als zwei versäumten Unterrichtsterminen bzw. mehr als 20 % der Unterrichtszeit bei Blockveranstaltungen."
+    a_en: "If more than two sessions are missed, or more than 20% of the teaching time in block courses."
+    evidence:
+      - {doc: apo-wiai-2026, span: "von mehr als zwei Unterrichtsterminen bzw. von mehr als 20 % der Unterrichtszeit bei Blockveranstaltungen"}
+
+  - id: f29
+    category: number
+    q_de: "Wie viele Punkte kann man maximal durch optionale semesterbegleitende Studienleistungen zur Notenverbesserung sammeln?"
+    q_en: "How many points can optional coursework for grade improvement contribute at most?"
+    a_de: "Maximal 20 % der in der Prüfungsleistung erreichbaren Punkte."
+    a_en: "At most 20% of the points achievable in the exam."
+    evidence:
+      - {doc: apo-wiai-2026, span: "können maximal 20 % der in der Prüfungsleistung erreichbaren Punkte erworben werden"}
+
+  - id: f30
+    category: condition
+    q_de: "Bei welcher Gesamtnote wird das Prädikat „mit Auszeichnung“ vergeben?"
+    q_en: "For which overall grade is the distinction 'mit Auszeichnung' awarded?"
+    a_de: "Bei einer Gesamtnote von 1,0 bis einschließlich 1,2."
+    a_en: "For an overall grade from 1.0 up to and including 1.2."
+    evidence:
+      - {doc: apo-wiai-2026, span: "Wenn die Gesamtnote im Bereich von 1,0 bis einschließlich 1,2 liegt, wird zusätzlich das Prädikat"}
+
+  - id: f31
+    category: list
+    q_de: "Welche Noten sind nach der APO WIAI ausgeschlossen?"
+    q_en: "Which grades are excluded under the APO WIAI?"
+    a_de: "Die Noten 0,7, 4,3, 4,7 und 5,3."
+    a_en: "The grades 0.7, 4.3, 4.7 and 5.3."
+    evidence:
+      - {doc: apo-wiai-2026, span: "Die Noten 0,7, 4,3, 4,7 und 5,3 sind ausgeschlossen."}
+
+  - id: f32
+    category: procedure
+    q_de: "Wie wird die Gesamtnote eines Studiengangs berechnet?"
+    q_en: "How is the overall grade of a programme calculated?"
+    a_de: "Als nach ECTS-Punkten gewichtetes arithmetisches Mittel der Modulnoten, auf eine Dezimalstelle abgeschnitten."
+    a_en: "As the arithmetic mean of the module grades weighted by ECTS credits, truncated to one decimal place."
+    evidence:
+      - {doc: apo-wiai-2026, span: "das auf eine Dezimalstelle abgeschnittene, nach ECTS-Punkten gewichtete arithmetische Mittel der Noten der einzelnen Module"}
+
+  - id: f33
+    category: number
+    q_de: "Wie oft darf eine nicht bestandene Masterarbeit wiederholt werden?"
+    q_en: "How many times can a failed master's thesis be repeated?"
+    a_de: "Einmal, mit einem neuen Thema; eine zweite Wiederholung ist ausgeschlossen."
+    a_en: "Once, with a new topic; a second repetition is not allowed."
+    evidence:
+      - {doc: apo-wiai-2026, span: "Eine zweite Wiederholung der Bachelor- bzw. Masterarbeit ist ausgeschlossen."}
+
+  - id: f34
+    category: deadline
+    q_de: "Um wie viel kann die Bearbeitungszeit der Masterarbeit bei triftigen Gründen höchstens verlängert werden?"
+    q_en: "By how much can the processing time of the master's thesis be extended at most for valid reasons?"
+    a_de: "Um höchstens einen Monat, auf schriftlichen Antrag beim Prüfungsausschuss."
+    a_en: "By at most one month, on written request to the examination committee."
+    evidence:
+      - {doc: apo-wiai-2026, span: "um höchstens einen Monat verlängert werden"}
+
+  - id: f35
+    category: condition
+    q_de: "Welche Pausenregelung gilt für Schwangere bei Klausuren?"
+    q_en: "What break rule applies to pregnant students in written exams?"
+    a_de: "Ab der 30. Schwangerschaftswoche besteht nach je zwei Stunden Arbeitszeit Anspruch auf 30 Minuten Erholungspause, die an die Prüfungszeit angehängt wird."
+    a_en: "From the 30th week of pregnancy, a 30-minute break after every two hours of working time, which is added to the exam time."
+    evidence:
+      - {doc: apo-wiai-2026, span: "ab der 30. Schwangerschaftswoche bei Prüfungsklausuren nach je zwei Stunden Arbeitszeit Anspruch auf eine Erholungspause von 30 Minuten Dauer"}
+
+  - id: f36
+    category: condition
+    q_de: "Wie lange nach der Zeugnisausstellung kann der Prüfungsausschuss wegen Täuschung noch Noten berichtigen oder Prüfungen für nicht bestanden erklären?"
+    q_en: "For how long after the degree certificate was issued can the examination committee still correct grades or declare exams failed because of cheating?"
+    a_de: "Fünf Jahre ab dem Datum des Prüfungszeugnisses."
+    a_en: "Five years from the date of the certificate."
+    evidence:
+      - {doc: apo-wiai-2026, span: "nach einer Frist von fünf Jahren ab dem Datum des Prüfungszeugnisses ausgeschlossen"}
+
+  - id: f37
+    category: condition
+    q_de: "Ab welcher Kohortengröße gibt das Diploma Supplement die prozentuale Notenverteilung an?"
+    q_en: "From what cohort size does the Diploma Supplement show the percentage distribution of grades?"
+    a_de: "Wenn die Kohorte der vier vorhergehenden Abschlusssemester mindestens 15 Absolventen umfasst."
+    a_en: "If the cohort of the four preceding graduation semesters contains at least 15 graduates."
+    evidence:
+      - {doc: apo-wiai-2026, span: "mindestens 15 Absolventen bzw. Absolventinnen"}
+
+  - id: f38
+    category: procedure
+    q_de: "Was geschieht mit überschüssigen ECTS-Punkten, wenn die Grenze einer Modulgruppe überschritten wird?"
+    q_en: "What happens to excess ECTS credits when the credit limit of a module group is exceeded?"
+    a_de: "Die überschießende Punktezahl wird bei dem am schlechtesten bewerteten Modul abgeschnitten."
+    a_en: "The excess credits are cut from the worst-graded module."
+    evidence:
+      - {doc: apo-wiai-2026, span: "wird die überschießende Punktezahl bei dem am schlechtesten bewerteten Modul abgeschnitten"}
+
+  # ------------------------------------------------------------------ cross-document
+  - id: f39
+    category: multi-chunk
+    q_de: "Wie oft darf man eine nicht bestandene Modulprüfung im Master ISSS wiederholen und wie lange hat man dafür höchstens Zeit?"
+    q_en: "How often can you retake a failed module exam in the ISSS master's programme, and what is the time limit?"
+    a_de: "Einmal oder mehrmals innerhalb der Höchststudiendauer von sechs Fachsemestern."
+    a_en: "Once or several times within the maximum study duration of six semesters."
+    evidence:
+      - {doc: apo-wiai-2026, span: "innerhalb der Höchststudiendauer gemäß § 30 Abs. 2 StuFPO einmal oder mehrmals wiederholt werden"}
+      - {doc: stufpo-isss-2024, span: "Die Höchststudienzeit beträgt sechs Fachsemester."}
+
+  # ------------------------------------------------------------------ Module handbook (English)
+  - id: f40
+    category: person
+    q_de: "Wer ist für das Modul Reinforcement Learning (DS-RL-M) verantwortlich?"
+    q_en: "Who is responsible for the module Reinforcement Learning (DS-RL-M)?"
+    a_de: "Prof. Dr. Stefan Ultes."
+    a_en: "Prof. Dr. Stefan Ultes."
+    evidence:
+      - {doc: mhb-isss-2024, section: "Modul DS-RL-M", span: "Person responsible for module: Prof. Dr. Stefan Ultes"}
+
+  - id: f41
+    category: number
+    q_de: "Wie viele Stunden Arbeit sind im Modul Reinforcement Learning für die Bearbeitung der Assignments eingeplant?"
+    q_en: "How many hours of work are planned for the assignments in the Reinforcement Learning module?"
+    a_de: "75 Stunden."
+    a_en: "75 hours."
+    evidence:
+      - {doc: mhb-isss-2024, section: "Modul DS-RL-M", span: "Work on the actual assignments: 75h"}
+
+  - id: f42
+    category: person
+    q_de: "Wer unterrichtet das Modul Deep Learning for Natural Language Processing und wann wird es angeboten?"
+    q_en: "Who teaches the module Deep Learning for Natural Language Processing and when is it offered?"
+    a_de: "Dr. Sean Papay; jedes Sommersemester."
+    a_en: "Dr. Sean Papay; every summer semester."
+    evidence:
+      - {doc: mhb-isss-2024, section: "Modul NLPROC-DL4NLP-M", span: "Lecturers: Dr. Sean Papay"}
+      - {doc: mhb-isss-2024, section: "Modul NLPROC-DL4NLP-M", span: "Frequency: every summer semester"}
+
+  - id: f43
+    category: condition
+    q_de: "Welche Vorkenntnisse werden für das Modul Deep Learning for Natural Language Processing empfohlen?"
+    q_en: "Which prior knowledge is recommended for the module Deep Learning for Natural Language Processing?"
+    a_de: "Vorkenntnisse und Erfahrung im Machine Learning sowie gute Programmierfähigkeiten, vorzugsweise in Python."
+    a_en: "Prior knowledge of and experience with machine learning, plus strong programming ability, preferably in Python."
+    evidence:
+      - {doc: mhb-isss-2024, section: "Modul NLPROC-DL4NLP-M", span: "Prior knowledge of and experience with Machine Learning."}
+
+  - id: f44
+    category: person
+    q_de: "Wer ist für das Modul Probabilistic Graphical Models for Natural Language Processing verantwortlich?"
+    q_en: "Who is responsible for the module Probabilistic Graphical Models for Natural Language Processing?"
+    a_de: "Prof. Dr. Roman Klinger."
+    a_en: "Prof. Dr. Roman Klinger."
+    evidence:
+      - {doc: mhb-isss-2024, section: "Modul NLProc-PGM4NLP-M", span: "Person responsible for module: Prof. Dr. Roman Klinger"}
+
+  - id: f45
+    category: list
+    q_de: "Welche Arten von grafischen Modellen werden im Modul Probabilistic Graphical Models for NLP behandelt?"
+    q_en: "Which kinds of graphical models are covered in the module Probabilistic Graphical Models for NLP?"
+    a_de: "Gerichtete graphische Modelle / Bayessche Netze, ungerichtete graphische Modelle / Markov Random Fields, Conditional Random Fields (sowie u. a. kausale Modelle und neuronale graphische Modelle)."
+    a_en: "Directed graphical models / Bayesian networks, undirected graphical models / Markov random fields, conditional random fields (plus, among others, causal and neural graphical models)."
+    evidence:
+      - {doc: mhb-isss-2024, section: "Modul NLProc-PGM4NLP-M", span: "Directed graphical models / Bayesian networks"}
+      - {doc: mhb-isss-2024, section: "Modul NLProc-PGM4NLP-M", span: "Conditional random fields"}
+
+  - id: f46
+    category: number
+    q_de: "Wie verteilt sich der Arbeitsaufwand im Modul Data Streams and Complex Event Processing auf Präsenzzeit und Selbststudium?"
+    q_en: "How is the workload in the module Data Streams and Complex Event Processing split between contact time and self-study?"
+    a_de: "45 Stunden Präsenzzeit und 135 Stunden Selbststudium."
+    a_en: "45 hours of contact time and 135 hours of self-study."
+    evidence:
+      - {doc: mhb-isss-2024, section: "Modul MOBI-DSC-M", span: "45 h Präsenzzeit"}
+      - {doc: mhb-isss-2024, section: "Modul MOBI-DSC-M", span: "135 h Selbststudium"}
+
+  - id: f47
+    category: condition
+    q_de: "In welcher Sprache wird das Modul Ubiquitous Systems (HCI-US-B) standardmäßig unterrichtet?"
+    q_en: "In which language is the module Ubiquitous Systems (HCI-US-B) taught by default?"
+    a_de: "Standardmäßig auf Deutsch; auf Wunsch kann auf Englisch gewechselt werden."
+    a_en: "German by default, but it can be changed to English on demand."
+    evidence:
+      - {doc: mhb-isss-2024, section: "Modul HCI-US-B", span: "The default language of instruction in this course is German, but can be changed to English on demand."}
+
+  - id: f48
+    category: number
+    q_de: "Wie lange dauert die Klausur im Modul Introduction to Functional Programming?"
+    q_en: "How long is the written exam in the module Introduction to Functional Programming?"
+    a_de: "90 Minuten."
+    a_en: "90 minutes."
+    evidence:
+      - {doc: mhb-isss-2024, section: "Modul GdI-IFP-M", span: "Duration of Examination: 90 minutes"}
+
+  - id: f49
+    category: condition
+    q_de: "Welche Prüfungsform hat das Modul Designing Gamified Systems?"
+    q_en: "What is the form of examination in the module Designing Gamified Systems?"
+    a_de: "Ein Portfolio."
+    a_en: "A portfolio."
+    evidence:
+      - {doc: mhb-isss-2024, section: "Modul GAMES-DGS-M", span: "Examination Portfolio"}
+
+  - id: f50
+    category: condition
+    q_de: "Kann ich die Prüfung im Modul Universal Logic & Universal Reasoning auf Deutsch ablegen?"
+    q_en: "Can I take the exam in the module Universal Logic & Universal Reasoning in German?"
+    a_de: "Ja, Studierende können Englisch oder Deutsch für die schriftliche Hausarbeit und die mündliche Prüfung wählen."
+    a_en: "Yes, students may choose English or German for the written assignment and the oral examination."
+    evidence:
+      - {doc: mhb-isss-2024, section: "Modul AISE-UL", span: "Students may choose English or German as the language for the written assignment and oral examination."}

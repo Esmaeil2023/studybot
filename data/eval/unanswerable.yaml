@@ -1,0 +1,149 @@
+# Questions the three documents cannot answer. A good system says "not in the documents".
+#
+# kind: off-topic   - a study-related topic the documents never mention
+#       near-miss   - sounds answerable, but the documents give only part of the answer or
+#                     speak about something else (the hard cases)
+# absent:           - regular expressions (case-insensitive) that must NOT occur in any chunk;
+#                     `python -m studybot.evalset` checks this, so a "gap" is a verified gap.
+# why:              - what the documents do say, for the reviewer.
+
+unanswerable:
+  - id: u01
+    kind: off-topic
+    q_de: "Wie hoch sind die Studiengebühren für den Master ISSS?"
+    q_en: "How high are the tuition fees for the ISSS master's programme?"
+    absent: ['Studiengebühr', 'Semesterbeitrag', '\btuition\b', '\bfees?\b']
+    why: "Fees are not mentioned in any of the three documents."
+
+  - id: u02
+    kind: off-topic
+    q_de: "Gibt es ein Stipendium oder BAföG-Regelungen für Masterstudierende an der Fakultät WIAI?"
+    q_en: "Are there scholarships or BAföG rules for master's students at the WIAI faculty?"
+    absent: ['Stipend', 'BAföG', 'scholarship']
+    why: "Funding is not covered."
+
+  - id: u03
+    kind: off-topic
+    q_de: "Wo finde ich einen Wohnheimplatz in Bamberg?"
+    q_en: "Where can I find a room in a student dormitory in Bamberg?"
+    absent: ['Wohnheim', 'dormitor', 'housing']
+    why: "Housing is not covered."
+
+  - id: u04
+    kind: off-topic
+    q_de: "Wie viel kostet ein Mittagessen in der Mensa?"
+    q_en: "How much does a lunch in the canteen cost?"
+    absent: ['Mensa', 'canteen']
+    why: "Not covered."
+
+  - id: u05
+    kind: off-topic
+    q_de: "Welche Voraussetzungen gelten für die Zulassung zur Promotion nach dem Master ISSS?"
+    q_en: "What are the requirements for admission to a doctorate after the ISSS master's degree?"
+    absent: ['Promotion', 'doctoral', '\bPhD\b']
+    why: "Doctoral studies are not covered."
+
+  - id: u06
+    kind: off-topic
+    q_de: "Kann man den Master ISSS auch in Teilzeit studieren?"
+    q_en: "Is it possible to study the ISSS master's programme part-time?"
+    absent: ['Teilzeit', 'part-time', 'part time']
+    why: "Part-time study is not mentioned."
+
+  - id: u07
+    kind: off-topic
+    q_de: "Welche Erasmus-Partneruniversitäten gibt es für das Auslandssemester?"
+    q_en: "Which Erasmus partner universities are there for the semester abroad?"
+    absent: ['Erasmus']
+    why: "The StuFPO mentions the International Office and 'Hochschulpartnerschaften' but names no partners."
+
+  - id: u08
+    kind: off-topic
+    q_de: "Wie viele Stunden pro Woche darf ich als Werkstudent oder Hilfskraft neben dem Studium arbeiten?"
+    q_en: "How many hours per week may I work as a working student or student assistant alongside my studies?"
+    absent: ['Werkstudent', 'Hilfskraft', 'working student', 'student assistant']
+    why: "Employment rules are not covered."
+
+  - id: u09
+    kind: off-topic
+    q_de: "Wie sind die Öffnungszeiten der Universitätsbibliothek?"
+    q_en: "What are the opening hours of the university library?"
+    absent: ['Bibliothek', 'library']
+    why: "Not covered."
+
+  - id: u10
+    kind: off-topic
+    q_de: "Was kostet das Semesterticket?"
+    q_en: "How much is the semester ticket?"
+    absent: ['Semesterticket']
+    why: "Not covered."
+
+  - id: u11
+    kind: off-topic
+    q_de: "Brauche ich Deutschkenntnisse (DSH oder TestDaF) für den Master ISSS?"
+    q_en: "Do I need German language skills (DSH or TestDaF) for the ISSS master's programme?"
+    absent: ['Deutschkenntnisse', '\bDSH\b', 'TestDaF']
+    why: "Only English proficiency is required (IELTS/TOEFL); German certificates are not mentioned."
+
+  - id: u12
+    kind: off-topic
+    q_de: "Wie beantrage ich ein Visum für das Studium in Deutschland?"
+    q_en: "How do I apply for a visa to study in Germany?"
+    absent: ['\bVisum\b', '\bvisa\b', 'Aufenthaltserlaubnis', 'residence permit']
+    why: "Immigration is not covered."
+
+  - id: u13
+    kind: off-topic
+    q_de: "Wie kann ich mich für ein Urlaubssemester beurlauben lassen?"
+    q_en: "How can I apply for a leave of absence semester?"
+    absent: ['Urlaubssemester', 'Beurlaubung', 'beurlaub', 'leave of absence']
+    why: "Leave of absence is not covered."
+
+  - id: u14
+    kind: off-topic
+    q_de: "Welche Zulassungszahl (Numerus clausus) gilt für den Master ISSS?"
+    q_en: "How many study places are available in the ISSS master's programme (admission quota)?"
+    absent: ['Numerus', 'Zulassungszahl', 'Kapazität']
+    why: "Admission is by requirements, no quota is given."
+
+  - id: u15
+    kind: near-miss
+    q_de: "Wie viel Prozent der Punkte braucht man, um eine Multiple-Choice-Klausur zu bestehen?"
+    q_en: "What percentage of the points do you need to pass a multiple-choice exam?"
+    absent: []
+    why: "APO § 9 (13) speaks of a pass mark 'festzulegenden Prozentwert' but gives no number."
+
+  - id: u16
+    kind: near-miss
+    q_de: "Welchen TOEFL-Wert braucht man für den Bachelorstudiengang Angewandte Informatik?"
+    q_en: "What TOEFL score is required for the bachelor's programme Applied Computer Science?"
+    absent: []
+    why: "Only the master ISSS requirement (TOEFL 90 iBT) is in the documents."
+
+  - id: u17
+    kind: near-miss
+    q_de: "Wer ist aktuell Vorsitzende oder Vorsitzender des Prüfungsausschusses im Master ISSS?"
+    q_en: "Who is currently the chair of the examination committee for the ISSS master's programme?"
+    absent: []
+    why: "The documents describe the committee but name no members."
+
+  - id: u18
+    kind: near-miss
+    q_de: "Mit welcher Software werden Abschlussarbeiten auf Plagiate geprüft?"
+    q_en: "Which software is used to check theses for plagiarism?"
+    absent: ['Turnitin', 'Ouriginal', 'PlagScan', '\bUrkund\b']
+    why: "APO § 9 (12) says a software-supported anonymised check is possible, but names no tool."
+
+  - id: u19
+    kind: near-miss
+    q_de: "Wie viele ECTS-Punkte hat das Modul Quantum Computing im Master ISSS?"
+    q_en: "How many ECTS credits does the module Quantum Computing have in the ISSS master's programme?"
+    absent: ['Quantum']
+    why: "No such module is listed."
+
+  - id: u20
+    kind: near-miss
+    q_de: "Welche Gebühr fällt für eine Nachfrist an, wenn die Höchststudiendauer überschritten wird?"
+    q_en: "What fee is charged for the extension when the maximum study duration is exceeded?"
+    absent: ['\bfees?\b', 'Gebühr']
+    why: "An extension (Nachfrist) can be granted by the examination committee, but no fee is mentioned."
