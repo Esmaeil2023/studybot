@@ -54,11 +54,14 @@ class QueryTranslator:
 
     def _save(self) -> None:
         if self._path:
-            self._path.parent.mkdir(parents=True, exist_ok=True)
-            self._path.write_text(
-                json.dumps(self._cache, ensure_ascii=False, indent=1, sort_keys=True),
-                encoding="utf-8",
-            )
+            try:
+                self._path.parent.mkdir(parents=True, exist_ok=True)
+                self._path.write_text(
+                    json.dumps(self._cache, ensure_ascii=False, indent=1, sort_keys=True),
+                    encoding="utf-8",
+                )
+            except OSError:  # e.g. a read-only container: keep the cache in memory only
+                pass
 
 
 def default_translator(cache_path: str | Path) -> QueryTranslator:

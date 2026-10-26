@@ -23,9 +23,15 @@ dense = [
 llm = [
     "anthropic>=0.40",  # answer generation (Claude API)
 ]
+api = [
+    "fastapi>=0.110",
+    "uvicorn>=0.29",
+]
 dev = [
     "pytest>=8",
     "ruff>=0.5",
+    "httpx>=0.27",  # FastAPI's test client
+    "fastapi>=0.110",
 ]
 
 [tool.setuptools.packages.find]

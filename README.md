@@ -210,7 +210,7 @@ once, after all settings were fixed on dev.
 | retrieval: gold chunk in top 10 | 0.97 | 0.97 |
 | retrieval: gold chunk first | 0.72 | 0.73 |
 | retrieval MRR | 0.81 | 0.81 |
-| answers with a cited gold chunk | 0.94 | 0.96 |
+| answers with a cited gold chunk | 0.97 | 0.96 |
 | invented citations | 0 | 0 |
 
 Brackets are 95% bootstrap intervals. What the 4 wrong test answers were:
@@ -225,6 +225,73 @@ On dev, two unanswerable questions about German-language requirements (u11) were
 "no German certificate is required, only English", which is arguably correct; the label
 "unanswerable" is debatable and was not changed after seeing the results.
 
+## How Phase 7 works (the service)
+
+`api.py` puts the pipeline behind a small HTTP API and a one-page demo (FastAPI).
+
+```
+pip install -e ".[dense,llm,api]"
+uvicorn studybot.api:app --port 8000        # models load at start-up, about half a minute
+```
+
+| | |
+|---|---|
+| `GET /` | demo page (type a question, see the answer and its sources) |
+| `POST /ask` | `{"question": "..."}` returns `answerable`, `answer`, and `citations` (document, section, pages, excerpt) |
+| `GET /health` | `{"status": "ok", "ready": true}` |
+| `GET /docs` | generated API documentation |
+
+```
+curl -s localhost:8000/ask -H 'Content-Type: application/json' \
+  -d '{"question": "How long is the standard period of study?"}'
+```
+
+Safeguards, because every request costs a model call: questions are limited to 3-500 characters,
+each client may make 20 requests per minute (`STUDYBOT_RATE`), and `STUDYBOT_API_KEY` (if set)
+requires the header `X-API-Key`. A failed or unreadable model call returns 502, never a made-up
+answer. Settings are environment variables (see the top of `api.py`).
+
+### Docker
+
+```
+make chunks                                   # the image bakes in data/processed/chunks.jsonl
+docker build -t studybot .                    # downloads the two models (about 3 GB), slow once
+docker run --rm -p 8080:8080 -e LLM_API_KEY=... studybot     # http://localhost:8080
+```
+
+The key is passed at run time and is never part of the image. The image needs about 4 GB of RAM.
+On an Apple-silicon Mac, add `--platform linux/amd64` when building for a cloud server.
+The image contains the text of the three public documents; do not push it to a public registry.
+
+### Deploying to Google Cloud Run (not done as part of this repo)
+
+Replace `PROJECT` with your project id. Cloud Run bills per use and scales to zero; the first
+request after idle waits for the models to load (about a minute).
+
+```
+gcloud services enable run.googleapis.com artifactregistry.googleapis.com secretmanager.googleapis.com
+gcloud artifacts repositories create studybot --repository-format=docker --location=europe-west3
+gcloud auth configure-docker europe-west3-docker.pkg.dev
+docker build --platform linux/amd64 -t europe-west3-docker.pkg.dev/PROJECT/studybot/studybot:1 .
+docker push europe-west3-docker.pkg.dev/PROJECT/studybot/studybot:1
+gcloud secrets create studybot-llm-key --data-file=- < <(printf %s "$LLM_API_KEY")
+gcloud run deploy studybot --image europe-west3-docker.pkg.dev/PROJECT/studybot/studybot:1 \
+  --region europe-west3 --memory 4Gi --cpu 2 --cpu-boost --concurrency 1 --max-instances 1 \
+  --timeout 120 --set-secrets LLM_API_KEY=studybot-llm-key:latest --allow-unauthenticated
+```
+
+A public demo means strangers can spend your model budget. Keep `--max-instances 1`, leave the
+rate limit on, and set a monthly spend limit for the API key in the Anthropic console before
+sharing the link. (If you set `STUDYBOT_API_KEY`, the demo page can no longer call the API.)
+
+### Continuous integration
+
+`.github/workflows/ci.yml` runs on every push: lint (`ruff`), format check, and the tests on two
+Python versions. `tests/test_results_gate.py` is a quality gate on the committed results: it fails
+if the saved judged accuracy drops below 0.85, if any answer cites a chunk the model was not shown,
+or if the judge's stress test has a miss. It guards the published numbers; it does not re-run
+the models (that needs the PDFs, an API key and about an hour).
+
 ## Known limitations
 
 - The parser is tested on synthetic PDFs (regulation and handbook) and was checked by eye on the
@@ -237,6 +304,8 @@ On dev, two unanswerable questions about German-language requirements (u11) were
 - Hyphen repair is a heuristic: in German, a hyphen at a line end before a lower-case word is
   removed, unless that word is `und`, `oder`, `bzw.`, `sowie`, `bis` or `noch`. In the English
   handbook the hyphen is kept ("third-party").
+- The service handles one request at a time and has no user accounts; it is a demo, not a
+  production system. The rate limit lives in memory, so it resets on restart.
 - Small evaluation set: 140 questions from 50 facts over three documents. One question moves a
   number by 1.7 to 2.5 points; the intervals are wide. Dev and test use the same documents, so
   the results say nothing about other universities' regulations.
@@ -264,6 +333,9 @@ src/studybot/eval_retrieval.py  retrieval metrics on the evaluation set
 src/studybot/translate.py  English query -> German, cached
 src/studybot/answer.py     cited answers with abstention
 src/studybot/judge.py      LLM judge, human-label check, stress test
+src/studybot/api.py        FastAPI service and demo page
+Dockerfile, .dockerignore  container image
+.github/workflows/ci.yml   lint, format, tests
 tests/                     pytest, with a synthetic regulation PDF
 ```
 
