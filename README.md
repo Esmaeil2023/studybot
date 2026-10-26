@@ -4,8 +4,8 @@ Bilingual (German/English) question answering over a university's study and exam
 Answers cite the exact paragraph and page. Retrieval and answer quality are measured on a
 hand-written test set.
 
-**Status:** Phases 1-2 (parsing and chunking; evaluation set). Later phases add retrieval,
-reranking, answer generation, evaluation, the API and the deployment.
+**Status:** Phases 1-4 (parsing and chunking; evaluation set; retrieval; reranking). Later
+phases add answer generation, evaluation, the API and the deployment.
 
 ## Quickstart
 
@@ -116,6 +116,38 @@ Checks the build enforces: every span is found exactly (a fuzzy match is reporte
 no span is so generic that it occurs in more than three chunks, ids and question texts are unique,
 and DE/EN twins are never split.
 
+## How Phase 3 works (retrieval)
+
+`src/studybot/retrieval.py` has the building blocks, `eval_retrieval.py` measures them on the dev
+questions (the test split is locked behind `--final`).
+
+- **BM25**: keyword search with German/English stemming; the query is stemmed both ways because
+  its language may differ from the chunk's.
+- **Dense**: multilingual-e5-base embeddings (`query:` / `passage:` prefixes), cosine similarity
+  by an exact matrix product (identical to FAISS at this size), cached in `indexes/`.
+- **Hybrid**: Reciprocal Rank Fusion of the two rankings, with an optional BM25 weight.
+- **Rerank**: the dense top 20 reordered by a cross-encoder (`BAAI/bge-reranker-v2-m3`).
+
+```
+python -m studybot.eval_retrieval --system bm25   --split dev
+python -m studybot.eval_retrieval --system dense  --split dev
+python -m studybot.eval_retrieval --system hybrid --split dev --sweep
+python -m studybot.eval_retrieval --system rerank --split dev
+```
+
+Dev results so far (40 answerable questions, 20 per language; differences below ~0.15 are noise):
+
+| system | hit@1 | hit@10 | hit@10 DE | hit@10 EN | MRR |
+|---|---|---|---|---|---|
+| BM25 | 0.40 | 0.60 | 0.90 | 0.30 | 0.48 |
+| dense | 0.50 | 0.85 | 1.00 | 0.70 | 0.61 |
+| hybrid (equal weights) | 0.40 | 0.68 | 1.00 | 0.35 | 0.52 |
+
+Findings: BM25 cannot cross languages (DE 0.90 vs EN 0.30). Dense narrows the gap. Fusing with
+BM25 did not help on this corpus at any weight tried (a small grid on dev), because for English
+questions BM25 puts irrelevant chunks near the top. English questions about the master's thesis
+retrieve the English module description instead of the German regulation paragraph (language bias).
+
 ## Known limitations
 
 - The parser is tested on synthetic PDFs (regulation and handbook) and was checked by eye on the
@@ -142,6 +174,8 @@ data/eval/                 facts.yaml, unanswerable.yaml (hand-written), questio
 src/studybot/ingest.py     PDFs -> chunks
 src/studybot/inspect_chunks.py
 src/studybot/evalset.py    evaluation set: evidence -> chunks, split, validation
+src/studybot/retrieval.py  BM25, dense, RRF fusion, cross-encoder reranker
+src/studybot/eval_retrieval.py  retrieval metrics on the evaluation set
 tests/                     pytest, with a synthetic regulation PDF
 ```
 

@@ -12,9 +12,14 @@ license = { text = "MIT" }
 dependencies = [
     "pymupdf>=1.24.3",   # PDF text extraction (import name: pymupdf)
     "pyyaml>=6",         # config files
+    "snowballstemmer>=2.2",  # German/English stemming for BM25
 ]
 
 [project.optional-dependencies]
+dense = [
+    "numpy>=1.26",
+    "sentence-transformers>=3",  # multilingual-e5 embeddings
+]
 dev = [
     "pytest>=8",
     "ruff>=0.5",

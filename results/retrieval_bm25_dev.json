@@ -1,0 +1,1165 @@
+{
+ "system": "bm25",
+ "split": "dev",
+ "model": null,
+ "overall": {
+  "n": 40,
+  "mrr": 0.4804085497835498,
+  "hit@1": 0.4,
+  "full@1": 0.375,
+  "hit@3": 0.55,
+  "full@3": 0.525,
+  "hit@5": 0.55,
+  "full@5": 0.525,
+  "hit@10": 0.6,
+  "full@10": 0.575
+ },
+ "by_lang": {
+  "de": {
+   "n": 20,
+   "mrr": 0.6879383116883118,
+   "hit@1": 0.55,
+   "full@1": 0.5,
+   "hit@3": 0.8,
+   "full@3": 0.75,
+   "hit@5": 0.8,
+   "full@5": 0.75,
+   "hit@10": 0.9,
+   "full@10": 0.85
+  },
+  "en": {
+   "n": 20,
+   "mrr": 0.2728787878787879,
+   "hit@1": 0.25,
+   "full@1": 0.25,
+   "hit@3": 0.3,
+   "full@3": 0.3,
+   "hit@5": 0.3,
+   "full@5": 0.3,
+   "hit@10": 0.3,
+   "full@10": 0.3
+  }
+ },
+ "by_doc": {
+  "apo-wiai-2026": {
+   "n": 16,
+   "mrr": 0.5771103896103896,
+   "hit@1": 0.5625,
+   "full@1": 0.5,
+   "hit@3": 0.5625,
+   "full@3": 0.5,
+   "hit@5": 0.5625,
+   "full@5": 0.5,
+   "hit@10": 0.625,
+   "full@10": 0.5625
+  },
+  "mhb-isss-2024": {
+   "n": 8,
+   "mrr": 0.678030303030303,
+   "hit@1": 0.5,
+   "full@1": 0.5,
+   "hit@3": 0.875,
+   "full@3": 0.875,
+   "hit@5": 0.875,
+   "full@5": 0.875,
+   "hit@10": 0.875,
+   "full@10": 0.875
+  },
+  "stufpo-isss-2024": {
+   "n": 16,
+   "mrr": 0.28489583333333335,
+   "hit@1": 0.1875,
+   "full@1": 0.1875,
+   "hit@3": 0.375,
+   "full@3": 0.375,
+   "hit@5": 0.375,
+   "full@5": 0.375,
+   "hit@10": 0.4375,
+   "full@10": 0.4375
+  }
+ },
+ "questions": [
+  {
+   "qid": "f01-de",
+   "pair_id": "f01",
+   "lang": "de",
+   "doc": "stufpo-isss-2024",
+   "question": "Wie viele Fachsemester beträgt die Regelstudienzeit im Masterstudiengang International Software Systems Science?",
+   "first_gold_rank": 6,
+   "mrr": 0.16666666666666666,
+   "top5": [
+    "stufpo-isss-2024:par33:0",
+    "stufpo-isss-2024:anhang1:0",
+    "apo-wiai-2026:par3:0",
+    "stufpo-isss-2024:par29:0",
+    "stufpo-isss-2024:anhang2:0"
+   ],
+   "gold": [
+    "stufpo-isss-2024:par30:0"
+   ],
+   "hit@1": false,
+   "full@1": false,
+   "hit@3": false,
+   "full@3": false,
+   "hit@5": false,
+   "full@5": false,
+   "hit@10": true,
+   "full@10": true
+  },
+  {
+   "qid": "f01-en",
+   "pair_id": "f01",
+   "lang": "en",
+   "doc": "stufpo-isss-2024",
+   "question": "How many semesters is the standard period of study in the International Software Systems Science master's programme?",
+   "first_gold_rank": null,
+   "mrr": 0.0,
+   "top5": [
+    "mhb-isss-2024:modulisosysc-proj-m:0",
+    "mhb-isss-2024:modulisosysc-sem-m:0",
+    "stufpo-isss-2024:anhang1:0",
+    "mhb-isss-2024:allgemeines:0",
+    "apo-wiai-2026:par3:0"
+   ],
+   "gold": [
+    "stufpo-isss-2024:par30:0"
+   ],
+   "hit@1": false,
+   "full@1": false,
+   "hit@3": false,
+   "full@3": false,
+   "hit@5": false,
+   "full@5": false,
+   "hit@10": false,
+   "full@10": false
+  },
+  {
+   "qid": "f03-de",
+   "pair_id": "f03",
+   "lang": "de",
+   "doc": "stufpo-isss-2024",
+   "question": "Welche Gesamtnote braucht man im Bachelorabschluss im gleichen Studienfach, um direkt zum Master ISSS zugelassen zu werden?",
+   "first_gold_rank": 1,
+   "mrr": 1.0,
+   "top5": [
+    "stufpo-isss-2024:par33:0",
+    "stufpo-isss-2024:par34:0",
+    "apo-wiai-2026:par10:0",
+    "stufpo-isss-2024:ausfertigung:0",
+    "apo-wiai-2026:par3:0"
+   ],
+   "gold": [
+    "stufpo-isss-2024:par33:0"
+   ],
+   "hit@1": true,
+   "full@1": true,
+   "hit@3": true,
+   "full@3": true,
+   "hit@5": true,
+   "full@5": true,
+   "hit@10": true,
+   "full@10": true
+  },
+  {
+   "qid": "f03-en",
+   "pair_id": "f03",
+   "lang": "en",
+   "doc": "stufpo-isss-2024",
+   "question": "What overall grade does a bachelor's degree in the same subject need for direct admission to the ISSS master's programme?",
+   "first_gold_rank": null,
+   "mrr": 0.0,
+   "top5": [
+    "mhb-isss-2024:modulsss-thesis-m:0",
+    "apo-wiai-2026:par3:0",
+    "mhb-isss-2024:modulisosysc-proj-m:0",
+    "mhb-isss-2024:modulisosysc-sem-m:0",
+    "mhb-isss-2024:allgemeines:0"
+   ],
+   "gold": [
+    "stufpo-isss-2024:par33:0"
+   ],
+   "hit@1": false,
+   "full@1": false,
+   "hit@3": false,
+   "full@3": false,
+   "hit@5": false,
+   "full@5": false,
+   "hit@10": false,
+   "full@10": false
+  },
+  {
+   "qid": "f04-de",
+   "pair_id": "f04",
+   "lang": "de",
+   "doc": "stufpo-isss-2024",
+   "question": "Welche Englischnachweise werden für den Master ISSS verlangt?",
+   "first_gold_rank": 40,
+   "mrr": 0.025,
+   "top5": [
+    "apo-wiai-2026:par3:0",
+    "stufpo-isss-2024:par33:1",
+    "stufpo-isss-2024:anhang1:0",
+    "mhb-isss-2024:modulsss-thesis-m:0",
+    "stufpo-isss-2024:par40:0"
+   ],
+   "gold": [
+    "stufpo-isss-2024:par33:0"
+   ],
+   "hit@1": false,
+   "full@1": false,
+   "hit@3": false,
+   "full@3": false,
+   "hit@5": false,
+   "full@5": false,
+   "hit@10": false,
+   "full@10": false
+  },
+  {
+   "qid": "f04-en",
+   "pair_id": "f04",
+   "lang": "en",
+   "doc": "stufpo-isss-2024",
+   "question": "Which English language certificates are required for the ISSS master's programme?",
+   "first_gold_rank": null,
+   "mrr": 0.0,
+   "top5": [
+    "mhb-isss-2024:allgemeines:2",
+    "mhb-isss-2024:anhang:4",
+    "mhb-isss-2024:modulisosysc-sem-m:0",
+    "mhb-isss-2024:modulisosysc-proj-m:0",
+    "mhb-isss-2024:modulsss-thesis-m:0"
+   ],
+   "gold": [
+    "stufpo-isss-2024:par33:0"
+   ],
+   "hit@1": false,
+   "full@1": false,
+   "hit@3": false,
+   "full@3": false,
+   "hit@5": false,
+   "full@5": false,
+   "hit@10": false,
+   "full@10": false
+  },
+  {
+   "qid": "f05-de",
+   "pair_id": "f05",
+   "lang": "de",
+   "doc": "stufpo-isss-2024",
+   "question": "Bis wann muss man sich für den Master ISSS zum Wintersemester und zum Sommersemester bewerben?",
+   "first_gold_rank": 1,
+   "mrr": 1.0,
+   "top5": [
+    "stufpo-isss-2024:par33:1",
+    "stufpo-isss-2024:par41:0",
+    "apo-wiai-2026:par14:0",
+    "stufpo-isss-2024:anhang1:0",
+    "stufpo-isss-2024:anhang1:2"
+   ],
+   "gold": [
+    "stufpo-isss-2024:par33:1"
+   ],
+   "hit@1": true,
+   "full@1": true,
+   "hit@3": true,
+   "full@3": true,
+   "hit@5": true,
+   "full@5": true,
+   "hit@10": true,
+   "full@10": true
+  },
+  {
+   "qid": "f05-en",
+   "pair_id": "f05",
+   "lang": "en",
+   "doc": "stufpo-isss-2024",
+   "question": "What are the application deadlines for the ISSS master's programme for the winter and the summer semester?",
+   "first_gold_rank": null,
+   "mrr": 0.0,
+   "top5": [
+    "stufpo-isss-2024:anhang1:0",
+    "mhb-isss-2024:modulisosysc-proj-m:1",
+    "mhb-isss-2024:modulisosysc-proj-m:0",
+    "mhb-isss-2024:modulisosysc-sem-m:1",
+    "mhb-isss-2024:anhang:3"
+   ],
+   "gold": [
+    "stufpo-isss-2024:par33:1"
+   ],
+   "hit@1": false,
+   "full@1": false,
+   "hit@3": false,
+   "full@3": false,
+   "hit@5": false,
+   "full@5": false,
+   "hit@10": false,
+   "full@10": false
+  },
+  {
+   "qid": "f09-de",
+   "pair_id": "f09",
+   "lang": "de",
+   "doc": "stufpo-isss-2024",
+   "question": "Wie setzt sich die Note der Masterarbeit im Master ISSS zusammen?",
+   "first_gold_rank": 1,
+   "mrr": 1.0,
+   "top5": [
+    "stufpo-isss-2024:par35:0",
+    "stufpo-isss-2024:anhang1:2",
+    "stufpo-isss-2024:anhang1:0",
+    "apo-wiai-2026:par6:0",
+    "apo-wiai-2026:par3:0"
+   ],
+   "gold": [
+    "stufpo-isss-2024:par35:0"
+   ],
+   "hit@1": true,
+   "full@1": true,
+   "hit@3": true,
+   "full@3": true,
+   "hit@5": true,
+   "full@5": true,
+   "hit@10": true,
+   "full@10": true
+  },
+  {
+   "qid": "f09-en",
+   "pair_id": "f09",
+   "lang": "en",
+   "doc": "stufpo-isss-2024",
+   "question": "How is the grade of the master's thesis in the ISSS programme composed?",
+   "first_gold_rank": null,
+   "mrr": 0.0,
+   "top5": [
+    "mhb-isss-2024:modulsss-thesis-m:0",
+    "mhb-isss-2024:modulsss-thesis-m:1",
+    "apo-wiai-2026:par3:0",
+    "stufpo-isss-2024:anhang1:0",
+    "mhb-isss-2024:anhang:3"
+   ],
+   "gold": [
+    "stufpo-isss-2024:par35:0"
+   ],
+   "hit@1": false,
+   "full@1": false,
+   "hit@3": false,
+   "full@3": false,
+   "hit@5": false,
+   "full@5": false,
+   "hit@10": false,
+   "full@10": false
+  },
+  {
+   "qid": "f10-de",
+   "pair_id": "f10",
+   "lang": "de",
+   "doc": "stufpo-isss-2024",
+   "question": "Wie viele ECTS-Punkte muss man schon haben, um zur Masterarbeit im Master ISSS zugelassen zu werden?",
+   "first_gold_rank": 2,
+   "mrr": 0.5,
+   "top5": [
+    "stufpo-isss-2024:anhang1:0",
+    "stufpo-isss-2024:par35:0",
+    "apo-wiai-2026:par11:0",
+    "stufpo-isss-2024:anhang1:2",
+    "stufpo-isss-2024:par33:0"
+   ],
+   "gold": [
+    "stufpo-isss-2024:par35:0"
+   ],
+   "hit@1": false,
+   "full@1": false,
+   "hit@3": true,
+   "full@3": true,
+   "hit@5": true,
+   "full@5": true,
+   "hit@10": true,
+   "full@10": true
+  },
+  {
+   "qid": "f10-en",
+   "pair_id": "f10",
+   "lang": "en",
+   "doc": "stufpo-isss-2024",
+   "question": "How many ECTS credits do you need before you are admitted to the master's thesis in ISSS?",
+   "first_gold_rank": 30,
+   "mrr": 0.03333333333333333,
+   "top5": [
+    "mhb-isss-2024:modulsss-thesis-m:0",
+    "mhb-isss-2024:modulsss-thesis-m:1",
+    "stufpo-isss-2024:anhang1:0",
+    "mhb-isss-2024:anhang:3",
+    "stufpo-isss-2024:anhang1:2"
+   ],
+   "gold": [
+    "stufpo-isss-2024:par35:0"
+   ],
+   "hit@1": false,
+   "full@1": false,
+   "hit@3": false,
+   "full@3": false,
+   "hit@5": false,
+   "full@5": false,
+   "hit@10": false,
+   "full@10": false
+  },
+  {
+   "qid": "f17-de",
+   "pair_id": "f17",
+   "lang": "de",
+   "doc": "stufpo-isss-2024",
+   "question": "Welche vier Studienschwerpunkte kann man im Master ISSS wählen?",
+   "first_gold_rank": 2,
+   "mrr": 0.5,
+   "top5": [
+    "stufpo-isss-2024:par36:0",
+    "stufpo-isss-2024:anhang3:0",
+    "stufpo-isss-2024:par30:0",
+    "stufpo-isss-2024:par35:0",
+    "apo-wiai-2026:par3:0"
+   ],
+   "gold": [
+    "stufpo-isss-2024:anhang3:0"
+   ],
+   "hit@1": false,
+   "full@1": false,
+   "hit@3": true,
+   "full@3": true,
+   "hit@5": true,
+   "full@5": true,
+   "hit@10": true,
+   "full@10": true
+  },
+  {
+   "qid": "f17-en",
+   "pair_id": "f17",
+   "lang": "en",
+   "doc": "stufpo-isss-2024",
+   "question": "Which four study focus areas can you choose in the ISSS master's programme?",
+   "first_gold_rank": null,
+   "mrr": 0.0,
+   "top5": [
+    "mhb-isss-2024:modulsss-thesis-m:0",
+    "mhb-isss-2024:modulisosysc-sem-m:0",
+    "mhb-isss-2024:modulisosysc-proj-m:0",
+    "mhb-isss-2024:allgemeines:2",
+    "mhb-isss-2024:anhang:3"
+   ],
+   "gold": [
+    "stufpo-isss-2024:anhang3:0"
+   ],
+   "hit@1": false,
+   "full@1": false,
+   "hit@3": false,
+   "full@3": false,
+   "hit@5": false,
+   "full@5": false,
+   "hit@10": false,
+   "full@10": false
+  },
+  {
+   "qid": "f20-de",
+   "pair_id": "f20",
+   "lang": "de",
+   "doc": "stufpo-isss-2024",
+   "question": "Kann die Masterarbeit im Master ISSS auch in einem anderen als dem vorgegebenen Fach geschrieben werden?",
+   "first_gold_rank": 3,
+   "mrr": 0.3333333333333333,
+   "top5": [
+    "stufpo-isss-2024:anhang2:0",
+    "stufpo-isss-2024:par40:0",
+    "stufpo-isss-2024:par35:0",
+    "stufpo-isss-2024:anhang1:0",
+    "apo-wiai-2026:par9:0"
+   ],
+   "gold": [
+    "stufpo-isss-2024:par35:0"
+   ],
+   "hit@1": false,
+   "full@1": false,
+   "hit@3": true,
+   "full@3": true,
+   "hit@5": true,
+   "full@5": true,
+   "hit@10": true,
+   "full@10": true
+  },
+  {
+   "qid": "f20-en",
+   "pair_id": "f20",
+   "lang": "en",
+   "doc": "stufpo-isss-2024",
+   "question": "Can the ISSS master's thesis be written on a topic from a different subject than the listed ones?",
+   "first_gold_rank": null,
+   "mrr": 0.0,
+   "top5": [
+    "mhb-isss-2024:modulsss-thesis-m:0",
+    "mhb-isss-2024:modulsss-thesis-m:1",
+    "mhb-isss-2024:modulisosysc-sem-m:0",
+    "mhb-isss-2024:anhang:3",
+    "stufpo-isss-2024:anhang1:0"
+   ],
+   "gold": [
+    "stufpo-isss-2024:par35:0"
+   ],
+   "hit@1": false,
+   "full@1": false,
+   "hit@3": false,
+   "full@3": false,
+   "hit@5": false,
+   "full@5": false,
+   "hit@10": false,
+   "full@10": false
+  },
+  {
+   "qid": "f21-de",
+   "pair_id": "f21",
+   "lang": "de",
+   "doc": "apo-wiai-2026",
+   "question": "Wie viele Arbeitsstunden entsprechen einem ECTS-Punkt an der Fakultät WIAI?",
+   "first_gold_rank": 1,
+   "mrr": 1.0,
+   "top5": [
+    "apo-wiai-2026:par2:0",
+    "apo-wiai-2026:par1:0",
+    "stufpo-isss-2024:par29:0",
+    "stufpo-isss-2024:anhang1:2",
+    "stufpo-isss-2024:anhang1:0"
+   ],
+   "gold": [
+    "apo-wiai-2026:par2:0"
+   ],
+   "hit@1": true,
+   "full@1": true,
+   "hit@3": true,
+   "full@3": true,
+   "hit@5": true,
+   "full@5": true,
+   "hit@10": true,
+   "full@10": true
+  },
+  {
+   "qid": "f21-en",
+   "pair_id": "f21",
+   "lang": "en",
+   "doc": "apo-wiai-2026",
+   "question": "How many hours of work correspond to one ECTS credit at the WIAI faculty?",
+   "first_gold_rank": 1,
+   "mrr": 1.0,
+   "top5": [
+    "apo-wiai-2026:par2:0",
+    "mhb-isss-2024:modulsss-praktintkon-m:0",
+    "mhb-isss-2024:modulsss-thesis-m:0",
+    "mhb-isss-2024:allgemeines:2",
+    "mhb-isss-2024:anhang:3"
+   ],
+   "gold": [
+    "apo-wiai-2026:par2:0"
+   ],
+   "hit@1": true,
+   "full@1": true,
+   "hit@3": true,
+   "full@3": true,
+   "hit@5": true,
+   "full@5": true,
+   "hit@10": true,
+   "full@10": true
+  },
+  {
+   "qid": "f25-de",
+   "pair_id": "f25",
+   "lang": "de",
+   "doc": "apo-wiai-2026",
+   "question": "Wie viele Kompetenzen dürfen höchstens durch außerhalb der Hochschule erworbene Kenntnisse ersetzt werden?",
+   "first_gold_rank": 1,
+   "mrr": 1.0,
+   "top5": [
+    "apo-wiai-2026:par6:0",
+    "stufpo-isss-2024:par39:0",
+    "stufpo-isss-2024:par37:0",
+    "stufpo-isss-2024:anhang1:2",
+    "apo-wiai-2026:par26:0"
+   ],
+   "gold": [
+    "apo-wiai-2026:par6:0"
+   ],
+   "hit@1": true,
+   "full@1": true,
+   "hit@3": true,
+   "full@3": true,
+   "hit@5": true,
+   "full@5": true,
+   "hit@10": true,
+   "full@10": true
+  },
+  {
+   "qid": "f25-en",
+   "pair_id": "f25",
+   "lang": "en",
+   "doc": "apo-wiai-2026",
+   "question": "How much of the required competences can at most be replaced by competences acquired outside higher education?",
+   "first_gold_rank": null,
+   "mrr": 0.0,
+   "top5": [
+    "mhb-isss-2024:modulaise-auto:0",
+    "mhb-isss-2024:modulgames-dgs-m:0",
+    "mhb-isss-2024:modulsss-thesis-m:0",
+    "mhb-isss-2024:modulisosysc-sem-m:0",
+    "mhb-isss-2024:modulisosysc-proj-m:0"
+   ],
+   "gold": [
+    "apo-wiai-2026:par6:0"
+   ],
+   "hit@1": false,
+   "full@1": false,
+   "hit@3": false,
+   "full@3": false,
+   "hit@5": false,
+   "full@5": false,
+   "hit@10": false,
+   "full@10": false
+  },
+  {
+   "qid": "f27-de",
+   "pair_id": "f27",
+   "lang": "de",
+   "doc": "apo-wiai-2026",
+   "question": "Wie lange dauert eine mündliche Prüfung nach der APO WIAI?",
+   "first_gold_rank": 1,
+   "mrr": 1.0,
+   "top5": [
+    "apo-wiai-2026:par9:2",
+    "apo-wiai-2026:par9:1",
+    "apo-wiai-2026:par13:0",
+    "stufpo-isss-2024:anhang1:1",
+    "mhb-isss-2024:modulhci-us-b:2"
+   ],
+   "gold": [
+    "apo-wiai-2026:par9:2"
+   ],
+   "hit@1": true,
+   "full@1": true,
+   "hit@3": true,
+   "full@3": true,
+   "hit@5": true,
+   "full@5": true,
+   "hit@10": true,
+   "full@10": true
+  },
+  {
+   "qid": "f27-en",
+   "pair_id": "f27",
+   "lang": "en",
+   "doc": "apo-wiai-2026",
+   "question": "How long does an oral exam last according to the APO WIAI?",
+   "first_gold_rank": null,
+   "mrr": 0.0,
+   "top5": [
+    "mhb-isss-2024:allgemeines:0",
+    "mhb-isss-2024:modulhci-us-b:1",
+    "mhb-isss-2024:modulhci-mci-m:1",
+    "mhb-isss-2024:modulmobi-dsc-m:1",
+    "mhb-isss-2024:modulalgok-algo-m:1"
+   ],
+   "gold": [
+    "apo-wiai-2026:par9:2"
+   ],
+   "hit@1": false,
+   "full@1": false,
+   "hit@3": false,
+   "full@3": false,
+   "hit@5": false,
+   "full@5": false,
+   "hit@10": false,
+   "full@10": false
+  },
+  {
+   "qid": "f33-de",
+   "pair_id": "f33",
+   "lang": "de",
+   "doc": "apo-wiai-2026",
+   "question": "Wie oft darf eine nicht bestandene Masterarbeit wiederholt werden?",
+   "first_gold_rank": 7,
+   "mrr": 0.14285714285714285,
+   "top5": [
+    "apo-wiai-2026:par11:0",
+    "apo-wiai-2026:par5:0",
+    "apo-wiai-2026:par20:0",
+    "apo-wiai-2026:par9:4",
+    "stufpo-isss-2024:par35:0"
+   ],
+   "gold": [
+    "apo-wiai-2026:par18:0"
+   ],
+   "hit@1": false,
+   "full@1": false,
+   "hit@3": false,
+   "full@3": false,
+   "hit@5": false,
+   "full@5": false,
+   "hit@10": true,
+   "full@10": true
+  },
+  {
+   "qid": "f33-en",
+   "pair_id": "f33",
+   "lang": "en",
+   "doc": "apo-wiai-2026",
+   "question": "How many times can a failed master's thesis be repeated?",
+   "first_gold_rank": null,
+   "mrr": 0.0,
+   "top5": [
+    "mhb-isss-2024:modulsss-thesis-m:0",
+    "mhb-isss-2024:modulsss-thesis-m:1",
+    "stufpo-isss-2024:anhang1:0",
+    "mhb-isss-2024:anhang:3",
+    "stufpo-isss-2024:par40:0"
+   ],
+   "gold": [
+    "apo-wiai-2026:par18:0"
+   ],
+   "hit@1": false,
+   "full@1": false,
+   "hit@3": false,
+   "full@3": false,
+   "hit@5": false,
+   "full@5": false,
+   "hit@10": false,
+   "full@10": false
+  },
+  {
+   "qid": "f36-de",
+   "pair_id": "f36",
+   "lang": "de",
+   "doc": "apo-wiai-2026",
+   "question": "Wie lange nach der Zeugnisausstellung kann der Prüfungsausschuss wegen Täuschung noch Noten berichtigen oder Prüfungen für nicht bestanden erklären?",
+   "first_gold_rank": 1,
+   "mrr": 1.0,
+   "top5": [
+    "apo-wiai-2026:par25:0",
+    "apo-wiai-2026:par11:0",
+    "apo-wiai-2026:par10:0",
+    "apo-wiai-2026:par20:0",
+    "apo-wiai-2026:par7:0"
+   ],
+   "gold": [
+    "apo-wiai-2026:par25:0"
+   ],
+   "hit@1": true,
+   "full@1": true,
+   "hit@3": true,
+   "full@3": true,
+   "hit@5": true,
+   "full@5": true,
+   "hit@10": true,
+   "full@10": true
+  },
+  {
+   "qid": "f36-en",
+   "pair_id": "f36",
+   "lang": "en",
+   "doc": "apo-wiai-2026",
+   "question": "For how long after the degree certificate was issued can the examination committee still correct grades or declare exams failed because of cheating?",
+   "first_gold_rank": null,
+   "mrr": 0.0,
+   "top5": [
+    "mhb-isss-2024:anhang:4",
+    "mhb-isss-2024:modulsss-thesis-m:0",
+    "mhb-isss-2024:modulispl-mdp-m:1",
+    "apo-wiai-2026:par3:0",
+    "mhb-isss-2024:moduleesys-adaml-m:0"
+   ],
+   "gold": [
+    "apo-wiai-2026:par25:0"
+   ],
+   "hit@1": false,
+   "full@1": false,
+   "hit@3": false,
+   "full@3": false,
+   "hit@5": false,
+   "full@5": false,
+   "hit@10": false,
+   "full@10": false
+  },
+  {
+   "qid": "f37-de",
+   "pair_id": "f37",
+   "lang": "de",
+   "doc": "apo-wiai-2026",
+   "question": "Ab welcher Kohortengröße gibt das Diploma Supplement die prozentuale Notenverteilung an?",
+   "first_gold_rank": 1,
+   "mrr": 1.0,
+   "top5": [
+    "apo-wiai-2026:par21:1",
+    "stufpo-isss-2024:par32:0",
+    "apo-wiai-2026:par24:0",
+    "stufpo-isss-2024:par41:0",
+    "apo-wiai-2026:par25:0"
+   ],
+   "gold": [
+    "apo-wiai-2026:par21:1"
+   ],
+   "hit@1": true,
+   "full@1": true,
+   "hit@3": true,
+   "full@3": true,
+   "hit@5": true,
+   "full@5": true,
+   "hit@10": true,
+   "full@10": true
+  },
+  {
+   "qid": "f37-en",
+   "pair_id": "f37",
+   "lang": "en",
+   "doc": "apo-wiai-2026",
+   "question": "From what cohort size does the Diploma Supplement show the percentage distribution of grades?",
+   "first_gold_rank": 1,
+   "mrr": 1.0,
+   "top5": [
+    "apo-wiai-2026:par21:1",
+    "apo-wiai-2026:par3:0",
+    "mhb-isss-2024:moduldsg-distrsys-m:0",
+    "mhb-isss-2024:modulsss-thesis-m:0",
+    "apo-wiai-2026:par21:0"
+   ],
+   "gold": [
+    "apo-wiai-2026:par21:1"
+   ],
+   "hit@1": true,
+   "full@1": true,
+   "hit@3": true,
+   "full@3": true,
+   "hit@5": true,
+   "full@5": true,
+   "hit@10": true,
+   "full@10": true
+  },
+  {
+   "qid": "f38-de",
+   "pair_id": "f38",
+   "lang": "de",
+   "doc": "apo-wiai-2026",
+   "question": "Was geschieht mit überschüssigen ECTS-Punkten, wenn die Grenze einer Modulgruppe überschritten wird?",
+   "first_gold_rank": 1,
+   "mrr": 1.0,
+   "top5": [
+    "apo-wiai-2026:par19:0",
+    "stufpo-isss-2024:anhang1:0",
+    "stufpo-isss-2024:anhang1:2",
+    "stufpo-isss-2024:par33:0",
+    "stufpo-isss-2024:par36:0"
+   ],
+   "gold": [
+    "apo-wiai-2026:par19:0"
+   ],
+   "hit@1": true,
+   "full@1": true,
+   "hit@3": true,
+   "full@3": true,
+   "hit@5": true,
+   "full@5": true,
+   "hit@10": true,
+   "full@10": true
+  },
+  {
+   "qid": "f38-en",
+   "pair_id": "f38",
+   "lang": "en",
+   "doc": "apo-wiai-2026",
+   "question": "What happens to excess ECTS credits when the credit limit of a module group is exceeded?",
+   "first_gold_rank": 11,
+   "mrr": 0.09090909090909091,
+   "top5": [
+    "apo-wiai-2026:par2:0",
+    "mhb-isss-2024:allgemeines:2",
+    "mhb-isss-2024:allgemeines:1",
+    "mhb-isss-2024:anhang:3",
+    "mhb-isss-2024:modulgames-dgs-m:1"
+   ],
+   "gold": [
+    "apo-wiai-2026:par19:0"
+   ],
+   "hit@1": false,
+   "full@1": false,
+   "hit@3": false,
+   "full@3": false,
+   "hit@5": false,
+   "full@5": false,
+   "hit@10": false,
+   "full@10": false
+  },
+  {
+   "qid": "f39-de",
+   "pair_id": "f39",
+   "lang": "de",
+   "doc": "apo-wiai-2026",
+   "question": "Wie oft darf man eine nicht bestandene Modulprüfung im Master ISSS wiederholen und wie lange hat man dafür höchstens Zeit?",
+   "first_gold_rank": 1,
+   "mrr": 1.0,
+   "top5": [
+    "apo-wiai-2026:par11:0",
+    "apo-wiai-2026:par9:2",
+    "apo-wiai-2026:par9:4",
+    "apo-wiai-2026:par3:0",
+    "apo-wiai-2026:par5:0"
+   ],
+   "gold": [
+    "apo-wiai-2026:par11:0",
+    "stufpo-isss-2024:par30:0"
+   ],
+   "hit@1": true,
+   "full@1": false,
+   "hit@3": true,
+   "full@3": false,
+   "hit@5": true,
+   "full@5": false,
+   "hit@10": true,
+   "full@10": false
+  },
+  {
+   "qid": "f39-en",
+   "pair_id": "f39",
+   "lang": "en",
+   "doc": "apo-wiai-2026",
+   "question": "How often can you retake a failed module exam in the ISSS master's programme, and what is the time limit?",
+   "first_gold_rank": null,
+   "mrr": 0.0,
+   "top5": [
+    "mhb-isss-2024:modulsss-thesis-m:0",
+    "mhb-isss-2024:allgemeines:0",
+    "mhb-isss-2024:modulisosysc-proj-m:0",
+    "stufpo-isss-2024:anhang1:0",
+    "mhb-isss-2024:modulisosysc-sem-m:0"
+   ],
+   "gold": [
+    "apo-wiai-2026:par11:0",
+    "stufpo-isss-2024:par30:0"
+   ],
+   "hit@1": false,
+   "full@1": false,
+   "hit@3": false,
+   "full@3": false,
+   "hit@5": false,
+   "full@5": false,
+   "hit@10": false,
+   "full@10": false
+  },
+  {
+   "qid": "f40-de",
+   "pair_id": "f40",
+   "lang": "de",
+   "doc": "mhb-isss-2024",
+   "question": "Wer ist für das Modul Reinforcement Learning (DS-RL-M) verantwortlich?",
+   "first_gold_rank": 1,
+   "mrr": 1.0,
+   "top5": [
+    "mhb-isss-2024:modulds-rl-m:0",
+    "mhb-isss-2024:modulds-rl-m:1",
+    "mhb-isss-2024:modulds-rl-m:2",
+    "stufpo-isss-2024:anhang1:1",
+    "stufpo-isss-2024:anhang3:0"
+   ],
+   "gold": [
+    "mhb-isss-2024:modulds-rl-m:0"
+   ],
+   "hit@1": true,
+   "full@1": true,
+   "hit@3": true,
+   "full@3": true,
+   "hit@5": true,
+   "full@5": true,
+   "hit@10": true,
+   "full@10": true
+  },
+  {
+   "qid": "f40-en",
+   "pair_id": "f40",
+   "lang": "en",
+   "doc": "mhb-isss-2024",
+   "question": "Who is responsible for the module Reinforcement Learning (DS-RL-M)?",
+   "first_gold_rank": 1,
+   "mrr": 1.0,
+   "top5": [
+    "mhb-isss-2024:modulds-rl-m:0",
+    "mhb-isss-2024:modulds-rl-m:1",
+    "mhb-isss-2024:modulds-rl-m:2",
+    "stufpo-isss-2024:anhang1:1",
+    "stufpo-isss-2024:anhang3:0"
+   ],
+   "gold": [
+    "mhb-isss-2024:modulds-rl-m:0"
+   ],
+   "hit@1": true,
+   "full@1": true,
+   "hit@3": true,
+   "full@3": true,
+   "hit@5": true,
+   "full@5": true,
+   "hit@10": true,
+   "full@10": true
+  },
+  {
+   "qid": "f47-de",
+   "pair_id": "f47",
+   "lang": "de",
+   "doc": "mhb-isss-2024",
+   "question": "In welcher Sprache wird das Modul Ubiquitous Systems (HCI-US-B) standardmäßig unterrichtet?",
+   "first_gold_rank": 2,
+   "mrr": 0.5,
+   "top5": [
+    "mhb-isss-2024:modulhci-us-b:2",
+    "mhb-isss-2024:modulhci-us-b:0",
+    "stufpo-isss-2024:anhang3:0",
+    "mhb-isss-2024:modulhci-us-b:1",
+    "stufpo-isss-2024:anhang1:1"
+   ],
+   "gold": [
+    "mhb-isss-2024:modulhci-us-b:0"
+   ],
+   "hit@1": false,
+   "full@1": false,
+   "hit@3": true,
+   "full@3": true,
+   "hit@5": true,
+   "full@5": true,
+   "hit@10": true,
+   "full@10": true
+  },
+  {
+   "qid": "f47-en",
+   "pair_id": "f47",
+   "lang": "en",
+   "doc": "mhb-isss-2024",
+   "question": "In which language is the module Ubiquitous Systems (HCI-US-B) taught by default?",
+   "first_gold_rank": 1,
+   "mrr": 1.0,
+   "top5": [
+    "mhb-isss-2024:modulhci-us-b:0",
+    "mhb-isss-2024:modulhci-us-b:2",
+    "mhb-isss-2024:modulhci-us-b:1",
+    "stufpo-isss-2024:anhang3:0",
+    "mhb-isss-2024:modulhci-mci-m:0"
+   ],
+   "gold": [
+    "mhb-isss-2024:modulhci-us-b:0"
+   ],
+   "hit@1": true,
+   "full@1": true,
+   "hit@3": true,
+   "full@3": true,
+   "hit@5": true,
+   "full@5": true,
+   "hit@10": true,
+   "full@10": true
+  },
+  {
+   "qid": "f48-de",
+   "pair_id": "f48",
+   "lang": "de",
+   "doc": "mhb-isss-2024",
+   "question": "Wie lange dauert die Klausur im Modul Introduction to Functional Programming?",
+   "first_gold_rank": 11,
+   "mrr": 0.09090909090909091,
+   "top5": [
+    "stufpo-isss-2024:anhang1:1",
+    "stufpo-isss-2024:anhang3:0",
+    "mhb-isss-2024:modulgdi-ifp-m:0",
+    "mhb-isss-2024:modulhci-us-b:2",
+    "mhb-isss-2024:modulgdi-fprs-m:1"
+   ],
+   "gold": [
+    "mhb-isss-2024:modulgdi-ifp-m:1"
+   ],
+   "hit@1": false,
+   "full@1": false,
+   "hit@3": false,
+   "full@3": false,
+   "hit@5": false,
+   "full@5": false,
+   "hit@10": false,
+   "full@10": false
+  },
+  {
+   "qid": "f48-en",
+   "pair_id": "f48",
+   "lang": "en",
+   "doc": "mhb-isss-2024",
+   "question": "How long is the written exam in the module Introduction to Functional Programming?",
+   "first_gold_rank": 3,
+   "mrr": 0.3333333333333333,
+   "top5": [
+    "stufpo-isss-2024:anhang3:0",
+    "stufpo-isss-2024:anhang1:1",
+    "mhb-isss-2024:modulgdi-ifp-m:1",
+    "mhb-isss-2024:modulgdi-ifp-m:0",
+    "mhb-isss-2024:modulgdi-fprs-m:1"
+   ],
+   "gold": [
+    "mhb-isss-2024:modulgdi-ifp-m:1"
+   ],
+   "hit@1": false,
+   "full@1": false,
+   "hit@3": true,
+   "full@3": true,
+   "hit@5": true,
+   "full@5": true,
+   "hit@10": true,
+   "full@10": true
+  },
+  {
+   "qid": "f49-de",
+   "pair_id": "f49",
+   "lang": "de",
+   "doc": "mhb-isss-2024",
+   "question": "Welche Prüfungsform hat das Modul Designing Gamified Systems?",
+   "first_gold_rank": 2,
+   "mrr": 0.5,
+   "top5": [
+    "mhb-isss-2024:modulgames-dgs-m:0",
+    "mhb-isss-2024:modulgames-dgs-m:2",
+    "mhb-isss-2024:modulgames-dgs-m:1",
+    "stufpo-isss-2024:par40:0",
+    "stufpo-isss-2024:anhang1:0"
+   ],
+   "gold": [
+    "mhb-isss-2024:modulgames-dgs-m:2"
+   ],
+   "hit@1": false,
+   "full@1": false,
+   "hit@3": true,
+   "full@3": true,
+   "hit@5": true,
+   "full@5": true,
+   "hit@10": true,
+   "full@10": true
+  },
+  {
+   "qid": "f49-en",
+   "pair_id": "f49",
+   "lang": "en",
+   "doc": "mhb-isss-2024",
+   "question": "What is the form of examination in the module Designing Gamified Systems?",
+   "first_gold_rank": 1,
+   "mrr": 1.0,
+   "top5": [
+    "mhb-isss-2024:modulgames-dgs-m:2",
+    "mhb-isss-2024:modulgames-dgs-m:0",
+    "mhb-isss-2024:modulgames-dgs-m:1",
+    "mhb-isss-2024:modulhci-us-b:2",
+    "mhb-isss-2024:modulgdi-fprs-m:2"
+   ],
+   "gold": [
+    "mhb-isss-2024:modulgames-dgs-m:2"
+   ],
+   "hit@1": true,
+   "full@1": true,
+   "hit@3": true,
+   "full@3": true,
+   "hit@5": true,
+   "full@5": true,
+   "hit@10": true,
+   "full@10": true
+  }
+ ]
+}
