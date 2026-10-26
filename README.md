@@ -148,6 +148,83 @@ BM25 did not help on this corpus at any weight tried (a small grid on dev), beca
 questions BM25 puts irrelevant chunks near the top. English questions about the master's thesis
 retrieve the English module description instead of the German regulation paragraph (language bias).
 
+### Reranking and query translation
+
+The cross-encoder reranker lifted dev hit@1 from 0.50 (dense) to 0.70. English questions still
+missed German passages ("application deadlines" vs. "Bewerbungsfrist"), so English questions are
+also translated to German by the model (`translate.py`, cached in `data/cache/`) and both
+versions are searched; the two dense rankings are fused before reranking.
+
+| dev, 40 questions | hit@1 | hit@10 | hit@10 EN | MRR |
+|---|---|---|---|---|
+| dense | 0.50 | 0.85 | 0.70 | 0.61 |
+| dense + rerank | 0.70 | 0.90 | 0.80 | 0.78 |
+| dense + translation + rerank | 0.72 | 0.97 | 0.95 | 0.81 |
+
+## How Phase 5 works (answers)
+
+`answer.py`: retrieve the top 20, rerank, show the top 5 to Claude (`claude-haiku-5-5`) as numbered
+excerpts. The model must answer **only** from the excerpts, cite them as `[C2]`, and reply with
+JSON; if the excerpts do not contain the answer it sets `"answerable": false` instead of guessing.
+Citations are mapped back to chunk ids, so every claim points to a page of a document. An
+unreadable reply is retried once.
+
+```
+cp .env.example .env            # then put your key after LLM_API_KEY=  (.env is git-ignored)
+python -m studybot.answer "How long is the standard period of study in ISSS?"
+python -m studybot.answer --batch --split dev
+```
+
+## How Phase 6 works (is the answer right?)
+
+`judge.py`: a second, stronger model (`claude-sonnet-5-5`) compares each answer with the gold answer
+(correct / partial / wrong). Refusing an answerable question counts as wrong; refusing an
+unanswerable one counts as right. Confidence intervals are bootstrapped over question *pairs*
+(German and English twin together).
+
+The judge itself was checked two ways:
+
+- **Human labels**: 24 answers labelled by hand (judge agrees on 24 of 24, kappa 1.00; two of the
+  labels were corrected after a review, so this is a small check, not proof).
+- **Stress test**: 101 deliberately damaged answers (changed number, number word or name; "not
+  stated"; another question's answer): the judge refused to call any of them correct (101/101).
+
+```
+python -m studybot.judge --split dev
+python -m studybot.judge --split dev --sample 24 && python -m studybot.judge --label
+python -m studybot.judge --validate data/eval/judge_labels.csv
+python -m studybot.judge --stress --split dev
+```
+
+## Results
+
+The test split (84 questions: 60 answerable, 24 unanswerable; never used for any decision) was run
+once, after all settings were fixed on dev.
+
+| | dev | test |
+|---|---|---|
+| answerable questions answered correctly | 0.93 [0.80, 1.00] (n=40) | 0.93 [0.83, 1.00] (n=60) |
+| ... German questions | 0.90 | 0.93 |
+| ... English questions | 0.95 | 0.93 |
+| unanswerable questions refused | 0.88 (n=16) | 1.00 (n=24) |
+| retrieval: gold chunk in top 10 | 0.97 | 0.97 |
+| retrieval: gold chunk first | 0.72 | 0.73 |
+| retrieval MRR | 0.81 | 0.81 |
+| answers with a cited gold chunk | 0.94 | 0.96 |
+| invented citations | 0 | 0 |
+
+Brackets are 95% bootstrap intervals. What the 4 wrong test answers were:
+
+- **f06 (DE and EN)**: retrieval miss. The paragraph about starting before the bachelor's degree
+  is complete never reached the model, so it correctly said it could not find it.
+- **f08 (DE and EN)**: format failures, not knowledge failures. The German reply was empty twice;
+  the English reply was an answer that did not parse as JSON. They count as wrong (an unreadable
+  reply is treated as a refusal).
+
+On dev, two unanswerable questions about German-language requirements (u11) were answered with
+"no German certificate is required, only English", which is arguably correct; the label
+"unanswerable" is debatable and was not changed after seeing the results.
+
 ## Known limitations
 
 - The parser is tested on synthetic PDFs (regulation and handbook) and was checked by eye on the
@@ -160,6 +237,14 @@ retrieve the English module description instead of the German regulation paragra
 - Hyphen repair is a heuristic: in German, a hyphen at a line end before a lower-case word is
   removed, unless that word is `und`, `oder`, `bzw.`, `sowie`, `bis` or `noch`. In the English
   handbook the hyphen is kept ("third-party").
+- Small evaluation set: 140 questions from 50 facts over three documents. One question moves a
+  number by 1.7 to 2.5 points; the intervals are wide. Dev and test use the same documents, so
+  the results say nothing about other universities' regulations.
+- The judge is a Claude model grading Claude answers; it was validated on a small sample and
+  against blatant damage, not against subtle errors.
+- Occasional empty or malformed model replies are retried once, and still cost 2 of 84 test
+  questions. Constrained (tool-based) output would fix this; not done, to keep the test numbers
+  honest.
 - Sentence numbers inside a line can stay glued to the text; this is cosmetic.
 - Expected, harmless inspector warnings on the real PDFs: one very short chunk (a one-line
   section) and one repeated text (a boilerplate sentence).
@@ -176,6 +261,9 @@ src/studybot/inspect_chunks.py
 src/studybot/evalset.py    evaluation set: evidence -> chunks, split, validation
 src/studybot/retrieval.py  BM25, dense, RRF fusion, cross-encoder reranker
 src/studybot/eval_retrieval.py  retrieval metrics on the evaluation set
+src/studybot/translate.py  English query -> German, cached
+src/studybot/answer.py     cited answers with abstention
+src/studybot/judge.py      LLM judge, human-label check, stress test
 tests/                     pytest, with a synthetic regulation PDF
 ```
 
