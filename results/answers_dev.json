@@ -1,0 +1,1357 @@
+{
+ "llm": "claude-haiku-5-5",
+ "k": 5,
+ "metrics": {
+  "n_answerable": 40,
+  "n_unanswerable": 16,
+  "correct_abstention": 0.9375,
+  "false_abstention": 0.1,
+  "gold_in_context": 0.875,
+  "cites_gold": 0.9444444444444444,
+  "answers_without_citation": 0.0,
+  "invalid_citation_rate": 0.0,
+  "unreadable_replies": 0.0
+ },
+ "answers": [
+  {
+   "qid": "f01-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Vier Fachsemester.",
+   "gold_chunk_ids": [
+    "stufpo-isss-2024:par30:0"
+   ],
+   "question": "Wie viele Fachsemester beträgt die Regelstudienzeit im Masterstudiengang International Software Systems Science?",
+   "answerable": true,
+   "text": "Die Regelstudienzeit beträgt vier Fachsemester [C3].",
+   "citations": [
+    "stufpo-isss-2024:par30:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "stufpo-isss-2024:par33:0",
+    "stufpo-isss-2024:par37:0",
+    "stufpo-isss-2024:par30:0",
+    "mhb-isss-2024:modulisosysc-sem-m:0",
+    "stufpo-isss-2024:par29:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Die Regelstudienzeit beträgt vier Fachsemester [C3].\", \"citations\": [\"C3\"]}"
+  },
+  {
+   "qid": "f01-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "Four semesters.",
+   "gold_chunk_ids": [
+    "stufpo-isss-2024:par30:0"
+   ],
+   "question": "How many semesters is the standard period of study in the International Software Systems Science master's programme?",
+   "answerable": false,
+   "text": "The excerpts give the Regelstudienzeit only for the prior bachelor's degree required for admission (at least six semesters), not for the International Software Systems Science master's programme itself.",
+   "citations": [],
+   "invalid_citations": [],
+   "context_ids": [
+    "stufpo-isss-2024:par33:0",
+    "mhb-isss-2024:modulisosysc-sem-m:0",
+    "mhb-isss-2024:modulisosysc-proj-m:0",
+    "mhb-isss-2024:modulsss-thesis-m:0",
+    "mhb-isss-2024:anhang:3"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": false, \"answer\": \"The excerpts give the Regelstudienzeit only for the prior bachelor's degree required for admission (at least six semesters), not for the International Software Systems Science master's programme itself.\", \"citations\": []}"
+  },
+  {
+   "qid": "f03-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Die Gesamtnote 2,7 oder besser.",
+   "gold_chunk_ids": [
+    "stufpo-isss-2024:par33:0"
+   ],
+   "question": "Welche Gesamtnote braucht man im Bachelorabschluss im gleichen Studienfach, um direkt zum Master ISSS zugelassen zu werden?",
+   "answerable": true,
+   "text": "Im gleichen Studienfach ist die Gesamtnote 2,7 oder besser erforderlich, zusammen mit einem Abschluss mit mindestens sechs Fachsemestern Regelstudienzeit und 180 ECTS-Punkten [C1].",
+   "citations": [
+    "stufpo-isss-2024:par33:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "stufpo-isss-2024:par33:0",
+    "stufpo-isss-2024:par29:0",
+    "stufpo-isss-2024:par33:1",
+    "stufpo-isss-2024:par40:0",
+    "stufpo-isss-2024:par35:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Im gleichen Studienfach ist die Gesamtnote 2,7 oder besser erforderlich, zusammen mit einem Abschluss mit mindestens sechs Fachsemestern Regelstudienzeit und 180 ECTS-Punkten [C1].\", \"citations\": [\"C1\"]}"
+  },
+  {
+   "qid": "f03-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "An overall grade of 2.7 or better.",
+   "gold_chunk_ids": [
+    "stufpo-isss-2024:par33:0"
+   ],
+   "question": "What overall grade does a bachelor's degree in the same subject need for direct admission to the ISSS master's programme?",
+   "answerable": true,
+   "text": "A bachelor's degree in the same subject must have an overall grade of 2.7 or better for direct admission [C1]. Related degrees require a grade of 2.0 or better and are a separate route [C1].",
+   "citations": [
+    "stufpo-isss-2024:par33:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "stufpo-isss-2024:par33:0",
+    "stufpo-isss-2024:par29:0",
+    "mhb-isss-2024:modulsss-thesis-m:0",
+    "stufpo-isss-2024:par40:0",
+    "mhb-isss-2024:modulisosysc-sem-m:0"
+   ],
+   "error": null,
+   "raw": "A bachelor's degree in the same subject must have an overall grade of 2.7 or better for direct admission [C1]. Related degrees require a grade of 2.0 or better and are a separate route [C1].\n\n{\"answerable\": true, \"answer\": \"A bachelor's degree in the same subject must have an overall grade of 2.7 or better for direct admission [C1]. Related degrees require a grade of 2.0 or better and are a separate route [C1].\", \"citations\": [\"C1\"]}"
+  },
+  {
+   "qid": "f04-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Mindestens IELTS 6.5 oder TOEFL 90 iBT oder ein gleichwertiger Nachweis.",
+   "gold_chunk_ids": [
+    "stufpo-isss-2024:par33:0"
+   ],
+   "question": "Welche Englischnachweise werden für den Master ISSS verlangt?",
+   "answerable": true,
+   "text": "Für den Masterstudiengang ISSS werden Englischkenntnisse verlangt, die zu einem englischsprachigen Studium befähigen. Der Nachweis erfolgt durch Zertifikate entsprechend zumindest IELTS 6.5 oder TOEFL 90 iBT oder durch gleichwertige Sprachnachweise [C1].",
+   "citations": [
+    "stufpo-isss-2024:par33:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "stufpo-isss-2024:par33:0",
+    "stufpo-isss-2024:par33:1",
+    "stufpo-isss-2024:par39:0",
+    "stufpo-isss-2024:par37:0",
+    "mhb-isss-2024:modulisosysc-sem-m:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Für den Masterstudiengang ISSS werden Englischkenntnisse verlangt, die zu einem englischsprachigen Studium befähigen. Der Nachweis erfolgt durch Zertifikate entsprechend zumindest IELTS 6.5 oder TOEFL 90 iBT oder durch gleichwertige Sprachnachweise [C1].\", \"citations\": [\"C1\"]}"
+  },
+  {
+   "qid": "f04-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "At least IELTS 6.5 or TOEFL 90 iBT, or an equivalent proof.",
+   "gold_chunk_ids": [
+    "stufpo-isss-2024:par33:0"
+   ],
+   "question": "Which English language certificates are required for the ISSS master's programme?",
+   "answerable": true,
+   "text": "Applicants must prove English proficiency sufficient for an English-taught degree, with certificates at least IELTS 6.5 or TOEFL 90 iBT, or equivalent language proofs [C1].",
+   "citations": [
+    "stufpo-isss-2024:par33:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "stufpo-isss-2024:par33:0",
+    "mhb-isss-2024:allgemeines:2",
+    "mhb-isss-2024:anhang:4",
+    "stufpo-isss-2024:par38:0",
+    "mhb-isss-2024:modulisosysc-sem-m:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Applicants must prove English proficiency sufficient for an English-taught degree, with certificates at least IELTS 6.5 or TOEFL 90 iBT, or equivalent language proofs [C1].\", \"citations\": [\"C1\"]}"
+  },
+  {
+   "qid": "f05-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Zum Wintersemester bis zum 15. Juli, zum Sommersemester bis zum 15. Januar.",
+   "gold_chunk_ids": [
+    "stufpo-isss-2024:par33:1"
+   ],
+   "question": "Bis wann muss man sich für den Master ISSS zum Wintersemester und zum Sommersemester bewerben?",
+   "answerable": true,
+   "text": "Die Bewerbungsfrist für das Wintersemester endet am 15. Juli des jeweiligen Jahres, für das Sommersemester am 15. Januar des jeweiligen Jahres [C1].",
+   "citations": [
+    "stufpo-isss-2024:par33:1"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "stufpo-isss-2024:par33:1",
+    "stufpo-isss-2024:par41:0",
+    "mhb-isss-2024:allgemeines:0",
+    "stufpo-isss-2024:par33:0",
+    "stufpo-isss-2024:par37:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Die Bewerbungsfrist für das Wintersemester endet am 15. Juli des jeweiligen Jahres, für das Sommersemester am 15. Januar des jeweiligen Jahres [C1].\", \"citations\": [\"C1\"]}"
+  },
+  {
+   "qid": "f05-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "15 July for the winter semester and 15 January for the summer semester.",
+   "gold_chunk_ids": [
+    "stufpo-isss-2024:par33:1"
+   ],
+   "question": "What are the application deadlines for the ISSS master's programme for the winter and the summer semester?",
+   "answerable": false,
+   "text": "The excerpts do not contain application deadlines for the ISSS master's programme. They cover the module handbook's validity notice, transition rules, and module descriptions with ECTS, contact hours and examination forms.",
+   "citations": [],
+   "invalid_citations": [],
+   "context_ids": [
+    "mhb-isss-2024:allgemeines:0",
+    "mhb-isss-2024:anhang:1",
+    "mhb-isss-2024:anhang:2",
+    "mhb-isss-2024:anhang:3",
+    "mhb-isss-2024:anhang:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": false, \"answer\": \"The excerpts do not contain application deadlines for the ISSS master's programme. They cover the module handbook's validity notice, transition rules, and module descriptions with ECTS, contact hours and examination forms.\", \"citations\": []}"
+  },
+  {
+   "qid": "f09-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "67 % schriftliche Arbeit und 33 % Kolloquium.",
+   "gold_chunk_ids": [
+    "stufpo-isss-2024:par35:0"
+   ],
+   "question": "Wie setzt sich die Note der Masterarbeit im Master ISSS zusammen?",
+   "answerable": true,
+   "text": "Die Note der Masterarbeit setzt sich zu 67 % aus der Bewertung der schriftlichen Arbeit und zu 33 % aus der Bewertung des Kolloquiums zusammen, in dem die Hauptergebnisse der Arbeit verteidigt werden [C1].",
+   "citations": [
+    "stufpo-isss-2024:par35:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "stufpo-isss-2024:par35:0",
+    "stufpo-isss-2024:par33:0",
+    "stufpo-isss-2024:anhang1:0",
+    "stufpo-isss-2024:anhang2:0",
+    "stufpo-isss-2024:par34:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Die Note der Masterarbeit setzt sich zu 67 % aus der Bewertung der schriftlichen Arbeit und zu 33 % aus der Bewertung des Kolloquiums zusammen, in dem die Hauptergebnisse der Arbeit verteidigt werden [C1].\", \"citations\": [\"C1\"]}"
+  },
+  {
+   "qid": "f09-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "67% the written thesis and 33% the colloquium.",
+   "gold_chunk_ids": [
+    "stufpo-isss-2024:par35:0"
+   ],
+   "question": "How is the grade of the master's thesis in the ISSS programme composed?",
+   "answerable": true,
+   "text": "The master's thesis module grade is 67% the written thesis and 33% the colloquium presentation (20 to 60 minutes) [C1][C2]. The presentation can take place before or after the thesis is graded, according to the student's preference [C2].",
+   "citations": [
+    "mhb-isss-2024:modulsss-thesis-m:0",
+    "mhb-isss-2024:modulsss-thesis-m:1"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "mhb-isss-2024:modulsss-thesis-m:0",
+    "mhb-isss-2024:modulsss-thesis-m:1",
+    "stufpo-isss-2024:anhang1:0",
+    "stufpo-isss-2024:par40:0",
+    "mhb-isss-2024:allgemeines:2"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"The master's thesis module grade is 67% the written thesis and 33% the colloquium presentation (20 to 60 minutes) [C1][C2]. The presentation can take place before or after the thesis is graded, according to the student's preference [C2].\", \"citations\": [\"C1\", \"C2\"]}"
+  },
+  {
+   "qid": "f10-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Mindestens 60 ECTS-Punkte.",
+   "gold_chunk_ids": [
+    "stufpo-isss-2024:par35:0"
+   ],
+   "question": "Wie viele ECTS-Punkte muss man schon haben, um zur Masterarbeit im Master ISSS zugelassen zu werden?",
+   "answerable": true,
+   "text": "Für die Zulassung zur Masterarbeit müssen Module im Umfang von mindestens 60 ECTS-Punkten erfolgreich absolviert sein [C2].",
+   "citations": [
+    "stufpo-isss-2024:par35:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "stufpo-isss-2024:par33:0",
+    "stufpo-isss-2024:par35:0",
+    "stufpo-isss-2024:anhang1:0",
+    "stufpo-isss-2024:par29:0",
+    "stufpo-isss-2024:anhang2:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Für die Zulassung zur Masterarbeit müssen Module im Umfang von mindestens 60 ECTS-Punkten erfolgreich absolviert sein [C2].\", \"citations\": [\"C2\"]}"
+  },
+  {
+   "qid": "f10-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "At least 60 ECTS credits.",
+   "gold_chunk_ids": [
+    "stufpo-isss-2024:par35:0"
+   ],
+   "question": "How many ECTS credits do you need before you are admitted to the master's thesis in ISSS?",
+   "answerable": true,
+   "text": "The master's thesis can only be registered, and thus confirmed by the examination board, once at least 60 ECTS credit points have been successfully completed towards the degree [C1].",
+   "citations": [
+    "mhb-isss-2024:modulsss-thesis-m:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "mhb-isss-2024:modulsss-thesis-m:0",
+    "stufpo-isss-2024:par33:0",
+    "stufpo-isss-2024:anhang1:0",
+    "mhb-isss-2024:allgemeines:2",
+    "stufpo-isss-2024:par40:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"The master's thesis can only be registered, and thus confirmed by the examination board, once at least 60 ECTS credit points have been successfully completed towards the degree [C1].\", \"citations\": [\"C1\"]}"
+  },
+  {
+   "qid": "f17-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "S1: Distributed and Mobile Systems, S2: Software Analysis and Verification, S3: Service-oriented Architectures, S4: Communication Systems and Protocols.",
+   "gold_chunk_ids": [
+    "stufpo-isss-2024:anhang3:0"
+   ],
+   "question": "Welche vier Studienschwerpunkte kann man im Master ISSS wählen?",
+   "answerable": true,
+   "text": "Im Masterstudiengang International Software Systems Science kann aus den folgenden vier Studienschwerpunkten gewählt werden: S1: Distributed and Mobile Systems, S2: Software Analysis and Verification, S3: Service-oriented Architectures, S4: Communication Systems and Protocols [C1].",
+   "citations": [
+    "stufpo-isss-2024:anhang3:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "stufpo-isss-2024:anhang3:0",
+    "stufpo-isss-2024:par36:0",
+    "stufpo-isss-2024:par40:0",
+    "stufpo-isss-2024:anhang3:1",
+    "stufpo-isss-2024:par39:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Im Masterstudiengang International Software Systems Science kann aus den folgenden vier Studienschwerpunkten gewählt werden: S1: Distributed and Mobile Systems, S2: Software Analysis and Verification, S3: Service-oriented Architectures, S4: Communication Systems and Protocols [C1].\", \"citations\": [\"C1\"]}"
+  },
+  {
+   "qid": "f17-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "S1: Distributed and Mobile Systems, S2: Software Analysis and Verification, S3: Service-oriented Architectures, S4: Communication Systems and Protocols.",
+   "gold_chunk_ids": [
+    "stufpo-isss-2024:anhang3:0"
+   ],
+   "question": "Which four study focus areas can you choose in the ISSS master's programme?",
+   "answerable": true,
+   "text": "You can choose from four study focus areas: S1: Distributed and Mobile Systems, S2: Software Analysis and Verification, S3: Service-oriented Architectures, and S4: Communication Systems and Protocols [C1].",
+   "citations": [
+    "stufpo-isss-2024:anhang3:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "stufpo-isss-2024:anhang3:0",
+    "stufpo-isss-2024:par40:0",
+    "stufpo-isss-2024:anhang2:0",
+    "stufpo-isss-2024:par39:0",
+    "stufpo-isss-2024:par33:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"You can choose from four study focus areas: S1: Distributed and Mobile Systems, S2: Software Analysis and Verification, S3: Service-oriented Architectures, and S4: Communication Systems and Protocols [C1].\", \"citations\": [\"C1\"]}"
+  },
+  {
+   "qid": "f20-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Ja, auf Antrag kann der Prüfungsausschuss ein Thema aus einem anderen Fach zulassen, sofern glaubhaft nachgewiesen wird, dass es inhaltlich der Software Systems Science entnommen ist.",
+   "gold_chunk_ids": [
+    "stufpo-isss-2024:par35:0"
+   ],
+   "question": "Kann die Masterarbeit im Master ISSS auch in einem anderen als dem vorgegebenen Fach geschrieben werden?",
+   "answerable": true,
+   "text": "Ja, auf Antrag kann der Prüfungsausschuss auch ein Thema aus einem anderen Fach zulassen. Die Prüfungskandidatin bzw. der Prüfungskandidat muss dabei glaubhaft nachweisen, dass das Thema inhaltlich der Software Systems Science entnommen ist [C1]. Für andere Fächer aus dem Bereich des Masterstudiums ISSS ist im Antrag glaubhaft nachzuweisen, dass ein inhaltlicher Bezug zum Masterstudiengang besteht [C2].",
+   "citations": [
+    "stufpo-isss-2024:par35:0",
+    "stufpo-isss-2024:anhang2:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "stufpo-isss-2024:par35:0",
+    "stufpo-isss-2024:anhang2:0",
+    "stufpo-isss-2024:par34:0",
+    "stufpo-isss-2024:par33:0",
+    "stufpo-isss-2024:par40:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Ja, auf Antrag kann der Prüfungsausschuss auch ein Thema aus einem anderen Fach zulassen. Die Prüfungskandidatin bzw. der Prüfungskandidat muss dabei glaubhaft nachweisen, dass das Thema inhaltlich der Software Systems Science entnommen ist [C1]. Für andere Fächer aus dem Bereich des Masterstudiums ISSS ist im Antrag glaubhaft nachzuweisen, dass ein inhaltlicher Bezug zum Masterstudiengang besteht [C2].\", \"citations\": [\"C1\", \"C2\"]}"
+  },
+  {
+   "qid": "f20-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "Yes, on request the examination committee can approve a topic from another subject if it is credibly shown that the topic belongs to Software Systems Science.",
+   "gold_chunk_ids": [
+    "stufpo-isss-2024:par35:0"
+   ],
+   "question": "Can the ISSS master's thesis be written on a topic from a different subject than the listed ones?",
+   "answerable": true,
+   "text": "Yes. On the candidate's request, the examination board may admit a thesis topic from another subject, but the candidate must credibly show that the topic is content-wise drawn from Software Systems Science [C3]. Appendix 2 specifies that the board approves such topics on application, with proof of a content-related link to the ISSS programme [C1].",
+   "citations": [
+    "stufpo-isss-2024:anhang2:0",
+    "stufpo-isss-2024:par35:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "stufpo-isss-2024:anhang2:0",
+    "mhb-isss-2024:modulsss-thesis-m:0",
+    "stufpo-isss-2024:par35:0",
+    "stufpo-isss-2024:par40:0",
+    "stufpo-isss-2024:par34:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Yes. On the candidate's request, the examination board may admit a thesis topic from another subject, but the candidate must credibly show that the topic is content-wise drawn from Software Systems Science [C3]. Appendix 2 specifies that the board approves such topics on application, with proof of a content-related link to the ISSS programme [C1].\", \"citations\": [\"C1\", \"C3\"]}"
+  },
+  {
+   "qid": "f21-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Ca. 30 Arbeitsstunden.",
+   "gold_chunk_ids": [
+    "apo-wiai-2026:par2:0"
+   ],
+   "question": "Wie viele Arbeitsstunden entsprechen einem ECTS-Punkt an der Fakultät WIAI?",
+   "answerable": true,
+   "text": "Ein ECTS-Punkt entspricht einem Arbeitsaufwand von ca. 30 Arbeitsstunden [C1]. Die APO WIAI gilt für die genannten Bachelor- und Masterstudiengänge der WIAI-Fächer [C3].",
+   "citations": [
+    "apo-wiai-2026:par2:0",
+    "apo-wiai-2026:par1:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "apo-wiai-2026:par2:0",
+    "stufpo-isss-2024:anhang1:2",
+    "apo-wiai-2026:par1:0",
+    "apo-wiai-2026:par6:0",
+    "apo-wiai-2026:par10:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Ein ECTS-Punkt entspricht einem Arbeitsaufwand von ca. 30 Arbeitsstunden [C1]. Die APO WIAI gilt für die genannten Bachelor- und Masterstudiengänge der WIAI-Fächer [C3].\", \"citations\": [\"C1\", \"C3\"]}"
+  },
+  {
+   "qid": "f21-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "About 30 hours of work.",
+   "gold_chunk_ids": [
+    "apo-wiai-2026:par2:0"
+   ],
+   "question": "How many hours of work correspond to one ECTS credit at the WIAI faculty?",
+   "answerable": true,
+   "text": "One ECTS credit corresponds to a workload of approximately 30 working hours [C1].",
+   "citations": [
+    "apo-wiai-2026:par2:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "apo-wiai-2026:par2:0",
+    "mhb-isss-2024:allgemeines:2",
+    "mhb-isss-2024:allgemeines:1",
+    "mhb-isss-2024:anhang:0",
+    "mhb-isss-2024:modulds-convai-m:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"One ECTS credit corresponds to a workload of approximately 30 working hours [C1].\", \"citations\": [\"C1\"]}"
+  },
+  {
+   "qid": "f25-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Höchstens die Hälfte der im Studiengang nachzuweisenden Kompetenzen.",
+   "gold_chunk_ids": [
+    "apo-wiai-2026:par6:0"
+   ],
+   "question": "Wie viele Kompetenzen dürfen höchstens durch außerhalb der Hochschule erworbene Kenntnisse ersetzt werden?",
+   "answerable": true,
+   "text": "Außerhalb des Hochschulbereichs erworbene Kompetenzen dürfen höchstens die Hälfte der im Studiengang nachzuweisenden Kompetenzen ersetzen [C1].",
+   "citations": [
+    "apo-wiai-2026:par6:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "apo-wiai-2026:par6:0",
+    "stufpo-isss-2024:par37:0",
+    "apo-wiai-2026:par10:0",
+    "stufpo-isss-2024:anhang1:2",
+    "stufpo-isss-2024:par33:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Außerhalb des Hochschulbereichs erworbene Kompetenzen dürfen höchstens die Hälfte der im Studiengang nachzuweisenden Kompetenzen ersetzen [C1].\", \"citations\": [\"C1\"]}"
+  },
+  {
+   "qid": "f25-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "At most half of the competences to be proven in the programme.",
+   "gold_chunk_ids": [
+    "apo-wiai-2026:par6:0"
+   ],
+   "question": "How much of the required competences can at most be replaced by competences acquired outside higher education?",
+   "answerable": true,
+   "text": "Competences acquired outside higher education may replace at most half of the competences to be demonstrated in the degree programme [C1].",
+   "citations": [
+    "apo-wiai-2026:par6:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "apo-wiai-2026:par6:0",
+    "stufpo-isss-2024:par37:0",
+    "mhb-isss-2024:allgemeines:2",
+    "mhb-isss-2024:modulisosysc-sem-m:0",
+    "mhb-isss-2024:modulisosysc-proj-m:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Competences acquired outside higher education may replace at most half of the competences to be demonstrated in the degree programme [C1].\", \"citations\": [\"C1\"]}"
+  },
+  {
+   "qid": "f27-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Mindestens 5 und höchstens 60 Minuten.",
+   "gold_chunk_ids": [
+    "apo-wiai-2026:par9:2"
+   ],
+   "question": "Wie lange dauert eine mündliche Prüfung nach der APO WIAI?",
+   "answerable": true,
+   "text": "Eine mündliche Prüfung dauert mindestens 5 und höchstens 60 Minuten [C1].",
+   "citations": [
+    "apo-wiai-2026:par9:2"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "apo-wiai-2026:par9:2",
+    "apo-wiai-2026:par13:0",
+    "apo-wiai-2026:par9:1",
+    "apo-wiai-2026:par9:3",
+    "apo-wiai-2026:par2:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Eine mündliche Prüfung dauert mindestens 5 und höchstens 60 Minuten [C1].\", \"citations\": [\"C1\"]}"
+  },
+  {
+   "qid": "f27-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "At least 5 and at most 60 minutes.",
+   "gold_chunk_ids": [
+    "apo-wiai-2026:par9:2"
+   ],
+   "question": "How long does an oral exam last according to the APO WIAI?",
+   "answerable": true,
+   "text": "According to the APO WIAI, an oral examination lasts at least 5 and at most 60 minutes [C1].",
+   "citations": [
+    "apo-wiai-2026:par9:2"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "apo-wiai-2026:par9:2",
+    "mhb-isss-2024:modulds-convai-m:3",
+    "mhb-isss-2024:modulhci-us-b:1",
+    "mhb-isss-2024:modulsysnap-ose-m:2",
+    "mhb-isss-2024:modulcomnet-cn-m:1"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"According to the APO WIAI, an oral examination lasts at least 5 and at most 60 minutes [C1].\", \"citations\": [\"C1\"]}"
+  },
+  {
+   "qid": "f33-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Einmal, mit einem neuen Thema; eine zweite Wiederholung ist ausgeschlossen.",
+   "gold_chunk_ids": [
+    "apo-wiai-2026:par18:0"
+   ],
+   "question": "Wie oft darf eine nicht bestandene Masterarbeit wiederholt werden?",
+   "answerable": true,
+   "text": "Eine nicht bestandene Masterarbeit kann einmal wiederholt werden, und zwar als zweite Masterarbeit über ein neues Thema [C1][C2]. Eine zweite Wiederholung ist ausgeschlossen [C2].",
+   "citations": [
+    "apo-wiai-2026:par11:0",
+    "apo-wiai-2026:par18:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "apo-wiai-2026:par11:0",
+    "apo-wiai-2026:par18:0",
+    "apo-wiai-2026:par20:0",
+    "apo-wiai-2026:par16:0",
+    "apo-wiai-2026:par17:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Eine nicht bestandene Masterarbeit kann einmal wiederholt werden, und zwar als zweite Masterarbeit über ein neues Thema [C1][C2]. Eine zweite Wiederholung ist ausgeschlossen [C2].\", \"citations\": [\"C1\", \"C2\"]}"
+  },
+  {
+   "qid": "f33-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "Once, with a new topic; a second repetition is not allowed.",
+   "gold_chunk_ids": [
+    "apo-wiai-2026:par18:0"
+   ],
+   "question": "How many times can a failed master's thesis be repeated?",
+   "answerable": true,
+   "text": "A master's thesis graded \"nicht ausreichend\" (5,0) may be repeated once, as a second thesis on a new topic; a second repetition is excluded [C1].",
+   "citations": [
+    "apo-wiai-2026:par18:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "apo-wiai-2026:par18:0",
+    "mhb-isss-2024:modulsss-thesis-m:0",
+    "mhb-isss-2024:modulisosysc-sem-m:0",
+    "mhb-isss-2024:modulisosysc-proj-m:0",
+    "apo-wiai-2026:par16:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"A master's thesis graded \\\"nicht ausreichend\\\" (5,0) may be repeated once, as a second thesis on a new topic; a second repetition is excluded [C1].\", \"citations\": [\"C1\"]}"
+  },
+  {
+   "qid": "f36-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Fünf Jahre ab dem Datum des Prüfungszeugnisses.",
+   "gold_chunk_ids": [
+    "apo-wiai-2026:par25:0"
+   ],
+   "question": "Wie lange nach der Zeugnisausstellung kann der Prüfungsausschuss wegen Täuschung noch Noten berichtigen oder Prüfungen für nicht bestanden erklären?",
+   "answerable": true,
+   "text": "Eine Entscheidung nach § 25 Abs. 1 ist nach einer Frist von fünf Jahren ab dem Datum des Prüfungszeugnisses ausgeschlossen [C1].",
+   "citations": [
+    "apo-wiai-2026:par25:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "apo-wiai-2026:par25:0",
+    "apo-wiai-2026:par7:0",
+    "apo-wiai-2026:par20:0",
+    "apo-wiai-2026:par4:1",
+    "apo-wiai-2026:par8:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Eine Entscheidung nach § 25 Abs. 1 ist nach einer Frist von fünf Jahren ab dem Datum des Prüfungszeugnisses ausgeschlossen [C1].\", \"citations\": [\"C1\"]}"
+  },
+  {
+   "qid": "f36-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "Five years from the date of the certificate.",
+   "gold_chunk_ids": [
+    "apo-wiai-2026:par25:0"
+   ],
+   "question": "For how long after the degree certificate was issued can the examination committee still correct grades or declare exams failed because of cheating?",
+   "answerable": true,
+   "text": "The examination committee can no longer correct grades or declare exams failed for cheating after five years from the date of the examination certificate [C1].",
+   "citations": [
+    "apo-wiai-2026:par25:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "apo-wiai-2026:par25:0",
+    "mhb-isss-2024:allgemeines:0",
+    "mhb-isss-2024:modulvis-ivva-m:1",
+    "apo-wiai-2026:par13:0",
+    "mhb-isss-2024:anhang:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"The examination committee can no longer correct grades or declare exams failed for cheating after five years from the date of the examination certificate [C1].\", \"citations\": [\"C1\"]}"
+  },
+  {
+   "qid": "f37-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Wenn die Kohorte der vier vorhergehenden Abschlusssemester mindestens 15 Absolventen umfasst.",
+   "gold_chunk_ids": [
+    "apo-wiai-2026:par21:1"
+   ],
+   "question": "Ab welcher Kohortengröße gibt das Diploma Supplement die prozentuale Notenverteilung an?",
+   "answerable": true,
+   "text": "Die prozentuale Notenverteilung wird angegeben, sofern die vier vorhergehenden Abschlusssemester als Kohorte insgesamt mindestens 15 Absolventinnen bzw. Absolventen enthalten [C1].",
+   "citations": [
+    "apo-wiai-2026:par21:1"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "apo-wiai-2026:par21:1",
+    "apo-wiai-2026:par10:0",
+    "stufpo-isss-2024:par35:0",
+    "apo-wiai-2026:par9:4",
+    "apo-wiai-2026:par9:5"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Die prozentuale Notenverteilung wird angegeben, sofern die vier vorhergehenden Abschlusssemester als Kohorte insgesamt mindestens 15 Absolventinnen bzw. Absolventen enthalten [C1].\", \"citations\": [\"C1\"]}"
+  },
+  {
+   "qid": "f37-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "If the cohort of the four preceding graduation semesters contains at least 15 graduates.",
+   "gold_chunk_ids": [
+    "apo-wiai-2026:par21:1"
+   ],
+   "question": "From what cohort size does the Diploma Supplement show the percentage distribution of grades?",
+   "answerable": true,
+   "text": "The percentage distribution of grades is shown when the cohort of the four preceding graduation semesters contains at least 15 graduates (Absolventen bzw. Absolventinnen) [C1].",
+   "citations": [
+    "apo-wiai-2026:par21:1"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "apo-wiai-2026:par21:1",
+    "mhb-isss-2024:modulds-rl-m:2",
+    "mhb-isss-2024:modulxai-adl-m:2",
+    "mhb-isss-2024:modulsss-thesis-m:1",
+    "mhb-isss-2024:moduleesys-adaml-m:2"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"The percentage distribution of grades is shown when the cohort of the four preceding graduation semesters contains at least 15 graduates (Absolventen bzw. Absolventinnen) [C1].\", \"citations\": [\"C1\"]}"
+  },
+  {
+   "qid": "f38-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Die überschießende Punktezahl wird bei dem am schlechtesten bewerteten Modul abgeschnitten.",
+   "gold_chunk_ids": [
+    "apo-wiai-2026:par19:0"
+   ],
+   "question": "Was geschieht mit überschüssigen ECTS-Punkten, wenn die Grenze einer Modulgruppe überschritten wird?",
+   "answerable": true,
+   "text": "Bei Überschreitung der ECTS-Grenze einer Modulgruppe wird die überschießende Punktezahl bei dem am schlechtesten bewerteten Modul abgeschnitten [C1].",
+   "citations": [
+    "apo-wiai-2026:par19:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "apo-wiai-2026:par19:0",
+    "stufpo-isss-2024:anhang1:2",
+    "stufpo-isss-2024:anhang1:0",
+    "apo-wiai-2026:par11:0",
+    "stufpo-isss-2024:par36:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Bei Überschreitung der ECTS-Grenze einer Modulgruppe wird die überschießende Punktezahl bei dem am schlechtesten bewerteten Modul abgeschnitten [C1].\", \"citations\": [\"C1\"]}"
+  },
+  {
+   "qid": "f38-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "The excess credits are cut from the worst-graded module.",
+   "gold_chunk_ids": [
+    "apo-wiai-2026:par19:0"
+   ],
+   "question": "What happens to excess ECTS credits when the credit limit of a module group is exceeded?",
+   "answerable": true,
+   "text": "When the ECTS limit of a module group is exceeded, the excess credit points are cut off from the module with the worst grade in that group [C1].",
+   "citations": [
+    "apo-wiai-2026:par19:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "apo-wiai-2026:par19:0",
+    "mhb-isss-2024:allgemeines:1",
+    "mhb-isss-2024:allgemeines:2",
+    "stufpo-isss-2024:anhang1:2",
+    "stufpo-isss-2024:anhang1:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"When the ECTS limit of a module group is exceeded, the excess credit points are cut off from the module with the worst grade in that group [C1].\", \"citations\": [\"C1\"]}"
+  },
+  {
+   "qid": "f39-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Einmal oder mehrmals innerhalb der Höchststudiendauer von sechs Fachsemestern.",
+   "gold_chunk_ids": [
+    "apo-wiai-2026:par11:0",
+    "stufpo-isss-2024:par30:0"
+   ],
+   "question": "Wie oft darf man eine nicht bestandene Modulprüfung im Master ISSS wiederholen und wie lange hat man dafür höchstens Zeit?",
+   "answerable": true,
+   "text": "Eine nicht bestandene Modulprüfung kann einmal oder mehrmals wiederholt werden [C1]. Die Wiederholung muss innerhalb der Höchststudiendauer gemäß § 30 Abs. 2 StuFPO erfolgen [C1]; die Länge dieser Höchststudiendauer steht in den vorliegenden Auszügen nicht.",
+   "citations": [
+    "apo-wiai-2026:par11:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "apo-wiai-2026:par11:0",
+    "apo-wiai-2026:par20:0",
+    "stufpo-isss-2024:par40:0",
+    "stufpo-isss-2024:anhang1:2",
+    "stufpo-isss-2024:par37:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Eine nicht bestandene Modulprüfung kann einmal oder mehrmals wiederholt werden [C1]. Die Wiederholung muss innerhalb der Höchststudiendauer gemäß § 30 Abs. 2 StuFPO erfolgen [C1]; die Länge dieser Höchststudiendauer steht in den vorliegenden Auszügen nicht.\", \"citations\": [\"C1\"]}"
+  },
+  {
+   "qid": "f39-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "Once or several times within the maximum study duration of six semesters.",
+   "gold_chunk_ids": [
+    "apo-wiai-2026:par11:0",
+    "stufpo-isss-2024:par30:0"
+   ],
+   "question": "How often can you retake a failed module exam in the ISSS master's programme, and what is the time limit?",
+   "answerable": false,
+   "text": "The excerpts do not state how often a failed module examination may be retaken or what the time limit for retaking is. They only contain transition rules for modules changed in the 2024 handbook [C1] and module descriptions [C2][C3][C4].",
+   "citations": [],
+   "invalid_citations": [],
+   "context_ids": [
+    "mhb-isss-2024:allgemeines:0",
+    "mhb-isss-2024:modulsss-thesis-m:0",
+    "mhb-isss-2024:modulisosysc-sem-m:0",
+    "mhb-isss-2024:modulisosysc-proj-m:0",
+    "mhb-isss-2024:allgemeines:1"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": false, \"answer\": \"The excerpts do not state how often a failed module examination may be retaken or what the time limit for retaking is. They only contain transition rules for modules changed in the 2024 handbook [C1] and module descriptions [C2][C3][C4].\", \"citations\": []}"
+  },
+  {
+   "qid": "f40-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Prof. Dr. Stefan Ultes.",
+   "gold_chunk_ids": [
+    "mhb-isss-2024:modulds-rl-m:0"
+   ],
+   "question": "Wer ist für das Modul Reinforcement Learning (DS-RL-M) verantwortlich?",
+   "answerable": true,
+   "text": "Verantwortlich für das Modul DS-RL-M Reinforcement Learning ist Prof. Dr. Stefan Ultes [C1].",
+   "citations": [
+    "mhb-isss-2024:modulds-rl-m:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "mhb-isss-2024:modulds-rl-m:0",
+    "mhb-isss-2024:modulds-rl-m:1",
+    "mhb-isss-2024:modulds-rl-m:2",
+    "mhb-isss-2024:moduldsg-rds-m:0",
+    "mhb-isss-2024:modulds-convai-m:1"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Verantwortlich für das Modul DS-RL-M Reinforcement Learning ist Prof. Dr. Stefan Ultes [C1].\", \"citations\": [\"C1\"]}"
+  },
+  {
+   "qid": "f40-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "Prof. Dr. Stefan Ultes.",
+   "gold_chunk_ids": [
+    "mhb-isss-2024:modulds-rl-m:0"
+   ],
+   "question": "Who is responsible for the module Reinforcement Learning (DS-RL-M)?",
+   "answerable": true,
+   "text": "The person responsible for the module Reinforcement Learning (DS-RL-M) is Prof. Dr. Stefan Ultes [C1].",
+   "citations": [
+    "mhb-isss-2024:modulds-rl-m:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "mhb-isss-2024:modulds-rl-m:0",
+    "mhb-isss-2024:modulds-rl-m:1",
+    "mhb-isss-2024:modulds-rl-m:2",
+    "mhb-isss-2024:moduldsg-rds-m:0",
+    "mhb-isss-2024:modulds-convai-m:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"The person responsible for the module Reinforcement Learning (DS-RL-M) is Prof. Dr. Stefan Ultes [C1].\", \"citations\": [\"C1\"]}"
+  },
+  {
+   "qid": "f47-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Standardmäßig auf Deutsch; auf Wunsch kann auf Englisch gewechselt werden.",
+   "gold_chunk_ids": [
+    "mhb-isss-2024:modulhci-us-b:0"
+   ],
+   "question": "In welcher Sprache wird das Modul Ubiquitous Systems (HCI-US-B) standardmäßig unterrichtet?",
+   "answerable": true,
+   "text": "Das Modul wird standardmäßig auf Deutsch unterrichtet; auf Wunsch kann die Sprache auf Englisch geändert werden [C1]. Die Studien- und Prüfungsordnung nennt allgemein Englisch für Lehrveranstaltungen gemäß dieser Ordnung [C5], was der modulspezifischen Angabe widerspricht.",
+   "citations": [
+    "mhb-isss-2024:modulhci-us-b:0",
+    "stufpo-isss-2024:par38:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "mhb-isss-2024:modulhci-us-b:0",
+    "mhb-isss-2024:modulhci-us-b:1",
+    "mhb-isss-2024:modulhci-mci-m:0",
+    "mhb-isss-2024:modulhci-mci-m:1",
+    "stufpo-isss-2024:par38:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Das Modul wird standardmäßig auf Deutsch unterrichtet; auf Wunsch kann die Sprache auf Englisch geändert werden [C1]. Die Studien- und Prüfungsordnung nennt allgemein Englisch für Lehrveranstaltungen gemäß dieser Ordnung [C5], was der modulspezifischen Angabe widerspricht.\", \"citations\": [\"C1\", \"C5\"]}"
+  },
+  {
+   "qid": "f47-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "German by default, but it can be changed to English on demand.",
+   "gold_chunk_ids": [
+    "mhb-isss-2024:modulhci-us-b:0"
+   ],
+   "question": "In which language is the module Ubiquitous Systems (HCI-US-B) taught by default?",
+   "answerable": true,
+   "text": "The default language of instruction is German, but it can be changed to English on demand [C1].",
+   "citations": [
+    "mhb-isss-2024:modulhci-us-b:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "mhb-isss-2024:modulhci-us-b:0",
+    "mhb-isss-2024:modulhci-mci-m:0",
+    "mhb-isss-2024:modulhci-us-b:1",
+    "mhb-isss-2024:modulgames-dgs-m:1",
+    "mhb-isss-2024:modulhci-mci-m:1"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"The default language of instruction is German, but it can be changed to English on demand [C1].\", \"citations\": [\"C1\"]}"
+  },
+  {
+   "qid": "f48-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "90 Minuten.",
+   "gold_chunk_ids": [
+    "mhb-isss-2024:modulgdi-ifp-m:1"
+   ],
+   "question": "Wie lange dauert die Klausur im Modul Introduction to Functional Programming?",
+   "answerable": true,
+   "text": "Die Klausur im Modul Introduction to Functional Programming (GdI-IFP-M) dauert 90 Minuten [C3].",
+   "citations": [
+    "mhb-isss-2024:modulgdi-ifp-m:1"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "mhb-isss-2024:modulgdi-ifp-m:0",
+    "mhb-isss-2024:modulgdi-fprs-m:1",
+    "mhb-isss-2024:modulgdi-ifp-m:1",
+    "stufpo-isss-2024:anhang1:1",
+    "mhb-isss-2024:anhang:1"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Die Klausur im Modul Introduction to Functional Programming (GdI-IFP-M) dauert 90 Minuten [C3].\", \"citations\": [\"C3\"]}"
+  },
+  {
+   "qid": "f48-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "90 minutes.",
+   "gold_chunk_ids": [
+    "mhb-isss-2024:modulgdi-ifp-m:1"
+   ],
+   "question": "How long is the written exam in the module Introduction to Functional Programming?",
+   "answerable": true,
+   "text": "The written examination in Introduction to Functional Programming lasts 90 minutes [C1]. This is also listed in the module handbook summary [C4].",
+   "citations": [
+    "mhb-isss-2024:modulgdi-ifp-m:1",
+    "mhb-isss-2024:anhang:1"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "mhb-isss-2024:modulgdi-ifp-m:1",
+    "mhb-isss-2024:modulgdi-ifp-m:0",
+    "mhb-isss-2024:modulgdi-fprs-m:1",
+    "mhb-isss-2024:anhang:1",
+    "mhb-isss-2024:modulgdi-fprs-m:2"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"The written examination in Introduction to Functional Programming lasts 90 minutes [C1]. This is also listed in the module handbook summary [C4].\", \"citations\": [\"C1\", \"C4\"]}"
+  },
+  {
+   "qid": "f49-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Ein Portfolio.",
+   "gold_chunk_ids": [
+    "mhb-isss-2024:modulgames-dgs-m:2"
+   ],
+   "question": "Welche Prüfungsform hat das Modul Designing Gamified Systems?",
+   "answerable": false,
+   "text": "Die Auszüge zum Modul GAMES-DGS-M enthalten keine Angabe zur Prüfungsform; die Überschrift „Examination Portfolio“ in C2 ist ohne Inhalt, und die allgemeinen Prüfungsformen in C5 nennen nicht, welche für dieses Modul gilt. C4 betrifft ein anderes Modul.",
+   "citations": [],
+   "invalid_citations": [],
+   "context_ids": [
+    "mhb-isss-2024:modulgames-dgs-m:0",
+    "mhb-isss-2024:modulgames-dgs-m:2",
+    "mhb-isss-2024:modulgames-dgs-m:1",
+    "mhb-isss-2024:modulhci-us-b:2",
+    "apo-wiai-2026:par9:1"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": false, \"answer\": \"Die Auszüge zum Modul GAMES-DGS-M enthalten keine Angabe zur Prüfungsform; die Überschrift „Examination Portfolio“ in C2 ist ohne Inhalt, und die allgemeinen Prüfungsformen in C5 nennen nicht, welche für dieses Modul gilt. C4 betrifft ein anderes Modul.\", \"citations\": []}"
+  },
+  {
+   "qid": "f49-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "A portfolio.",
+   "gold_chunk_ids": [
+    "mhb-isss-2024:modulgames-dgs-m:2"
+   ],
+   "question": "What is the form of examination in the module Designing Gamified Systems?",
+   "answerable": true,
+   "text": "The module's examination is listed as a \"Portfolio\" [C3], but the excerpts give no further details such as format or duration.",
+   "citations": [
+    "mhb-isss-2024:modulgames-dgs-m:2"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "mhb-isss-2024:modulgames-dgs-m:0",
+    "mhb-isss-2024:modulgames-dgs-m:1",
+    "mhb-isss-2024:modulgames-dgs-m:2",
+    "mhb-isss-2024:modulgdi-fprs-m:2",
+    "mhb-isss-2024:modulds-convai-m:3"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"The module's examination is listed as a \\\"Portfolio\\\" [C3], but the excerpts give no further details such as format or duration.\", \"citations\": [\"C3\"]}"
+  },
+  {
+   "qid": "u01-de",
+   "lang": "de",
+   "gold_answerable": false,
+   "gold_answer": null,
+   "gold_chunk_ids": [],
+   "question": "Wie hoch sind die Studiengebühren für den Master ISSS?",
+   "answerable": false,
+   "text": "Die Excerpts enthalten keine Angaben zu Studiengebühren für den Masterstudiengang ISSS; sie regeln Geltungsbereich, Zugangsvoraussetzungen, ECTS-Verteilung und Module.",
+   "citations": [],
+   "invalid_citations": [],
+   "context_ids": [
+    "stufpo-isss-2024:par29:0",
+    "stufpo-isss-2024:anhang1:0",
+    "stufpo-isss-2024:par33:0",
+    "mhb-isss-2024:modulisosysc-sem-m:0",
+    "stufpo-isss-2024:anhang1:1"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": false, \"answer\": \"Die Excerpts enthalten keine Angaben zu Studiengebühren für den Masterstudiengang ISSS; sie regeln Geltungsbereich, Zugangsvoraussetzungen, ECTS-Verteilung und Module.\", \"citations\": []}"
+  },
+  {
+   "qid": "u01-en",
+   "lang": "en",
+   "gold_answerable": false,
+   "gold_answer": null,
+   "gold_chunk_ids": [],
+   "question": "How high are the tuition fees for the ISSS master's programme?",
+   "answerable": false,
+   "text": "The excerpts do not contain any information about tuition fees for the International Software Systems Science master's programme; they only cover module descriptions, ECTS distribution, thesis requirements and admission requirements.",
+   "citations": [],
+   "invalid_citations": [],
+   "context_ids": [
+    "mhb-isss-2024:modulisosysc-sem-m:0",
+    "stufpo-isss-2024:anhang1:0",
+    "mhb-isss-2024:modulsss-thesis-m:0",
+    "stufpo-isss-2024:par33:0",
+    "mhb-isss-2024:modulisosysc-proj-m:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": false, \"answer\": \"The excerpts do not contain any information about tuition fees for the International Software Systems Science master's programme; they only cover module descriptions, ECTS distribution, thesis requirements and admission requirements.\", \"citations\": []}"
+  },
+  {
+   "qid": "u02-de",
+   "lang": "de",
+   "gold_answerable": false,
+   "gold_answer": null,
+   "gold_chunk_ids": [],
+   "question": "Gibt es ein Stipendium oder BAföG-Regelungen für Masterstudierende an der Fakultät WIAI?",
+   "answerable": false,
+   "text": "Die Auszüge enthalten keine Regelungen zu Stipendien oder BAföG; sie betreffen Geltungsbereich, Inkrafttreten, Abschlussgrade und Zugangsvoraussetzungen der Studiengänge.",
+   "citations": [],
+   "invalid_citations": [],
+   "context_ids": [
+    "stufpo-isss-2024:par29:0",
+    "apo-wiai-2026:par28:0",
+    "apo-wiai-2026:par1:0",
+    "apo-wiai-2026:par3:0",
+    "apo-wiai-2026:par14:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": false, \"answer\": \"Die Auszüge enthalten keine Regelungen zu Stipendien oder BAföG; sie betreffen Geltungsbereich, Inkrafttreten, Abschlussgrade und Zugangsvoraussetzungen der Studiengänge.\", \"citations\": []}"
+  },
+  {
+   "qid": "u02-en",
+   "lang": "en",
+   "gold_answerable": false,
+   "gold_answer": null,
+   "gold_chunk_ids": [],
+   "question": "Are there scholarships or BAföG rules for master's students at the WIAI faculty?",
+   "answerable": false,
+   "text": "The excerpts cover degree titles, the scope of the examination regulations, entry into force and admission conditions, but they contain no information on scholarships or BAföG rules for master's students.",
+   "citations": [],
+   "invalid_citations": [],
+   "context_ids": [
+    "apo-wiai-2026:par3:0",
+    "apo-wiai-2026:par1:0",
+    "stufpo-isss-2024:par29:0",
+    "apo-wiai-2026:par28:0",
+    "apo-wiai-2026:par14:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": false, \"answer\": \"The excerpts cover degree titles, the scope of the examination regulations, entry into force and admission conditions, but they contain no information on scholarships or BAföG rules for master's students.\", \"citations\": []}"
+  },
+  {
+   "qid": "u03-de",
+   "lang": "de",
+   "gold_answerable": false,
+   "gold_answer": null,
+   "gold_chunk_ids": [],
+   "question": "Wo finde ich einen Wohnheimplatz in Bamberg?",
+   "answerable": false,
+   "text": "The excerpts cover the international experience provisions, the examination regulations and the module handbook of the ISSS master's programme. They contain no information about student housing or dormitory places in Bamberg.",
+   "citations": [],
+   "invalid_citations": [],
+   "context_ids": [
+    "stufpo-isss-2024:par37:0",
+    "stufpo-isss-2024:ausfertigung:0",
+    "apo-wiai-2026:ausfertigung:0",
+    "mhb-isss-2024:anhang:4",
+    "stufpo-isss-2024:anhang1:2"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": false, \"answer\": \"The excerpts cover the international experience provisions, the examination regulations and the module handbook of the ISSS master's programme. They contain no information about student housing or dormitory places in Bamberg.\", \"citations\": []}"
+  },
+  {
+   "qid": "u03-en",
+   "lang": "en",
+   "gold_answerable": false,
+   "gold_answer": null,
+   "gold_chunk_ids": [],
+   "question": "Where can I find a room in a student dormitory in Bamberg?",
+   "answerable": false,
+   "text": "The excerpts contain no information about student dormitories or housing in Bamberg; they only cover study and examination regulations, module descriptions, and an official publication notice.",
+   "citations": [],
+   "invalid_citations": [],
+   "context_ids": [
+    "mhb-isss-2024:allgemeines:0",
+    "mhb-isss-2024:allgemeines:2",
+    "mhb-isss-2024:anhang:4",
+    "mhb-isss-2024:modulhci-us-b:0",
+    "apo-wiai-2026:ausfertigung:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": false, \"answer\": \"The excerpts contain no information about student dormitories or housing in Bamberg; they only cover study and examination regulations, module descriptions, and an official publication notice.\", \"citations\": []}"
+  },
+  {
+   "qid": "u07-de",
+   "lang": "de",
+   "gold_answerable": false,
+   "gold_answer": null,
+   "gold_chunk_ids": [],
+   "question": "Welche Erasmus-Partneruniversitäten gibt es für das Auslandssemester?",
+   "answerable": false,
+   "text": "Die Auszüge enthalten keine Liste von Erasmus-Partneruniversitäten; sie erwähnen nur, dass das International Office die Vermittlung von Studienplätzen im Rahmen bestehender Hochschulpartnerschaften unterstützt.",
+   "citations": [],
+   "invalid_citations": [],
+   "context_ids": [
+    "stufpo-isss-2024:par37:0",
+    "mhb-isss-2024:allgemeines:2",
+    "mhb-isss-2024:anhang:4",
+    "stufpo-isss-2024:anhang1:2",
+    "stufpo-isss-2024:par33:1"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": false, \"answer\": \"Die Auszüge enthalten keine Liste von Erasmus-Partneruniversitäten; sie erwähnen nur, dass das International Office die Vermittlung von Studienplätzen im Rahmen bestehender Hochschulpartnerschaften unterstützt.\", \"citations\": []}"
+  },
+  {
+   "qid": "u07-en",
+   "lang": "en",
+   "gold_answerable": false,
+   "gold_answer": null,
+   "gold_chunk_ids": [],
+   "question": "Which Erasmus partner universities are there for the semester abroad?",
+   "answerable": false,
+   "text": "The excerpts do not mention Erasmus or any partner universities; they only refer to a guided study abroad at a foreign university without naming any institutions.",
+   "citations": [],
+   "invalid_citations": [],
+   "context_ids": [
+    "mhb-isss-2024:allgemeines:2",
+    "mhb-isss-2024:anhang:4",
+    "mhb-isss-2024:modulsss-praktintkon-m:0",
+    "mhb-isss-2024:anhang:3",
+    "mhb-isss-2024:modulaise-ul:1"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": false, \"answer\": \"The excerpts do not mention Erasmus or any partner universities; they only refer to a guided study abroad at a foreign university without naming any institutions.\", \"citations\": []}"
+  },
+  {
+   "qid": "u10-de",
+   "lang": "de",
+   "gold_answerable": false,
+   "gold_answer": null,
+   "gold_chunk_ids": [],
+   "question": "Was kostet das Semesterticket?",
+   "answerable": false,
+   "text": "Die Auszüge enthalten keine Angaben zu den Kosten des Semestertickets. Sie behandeln Module, Modulprüfungen, Studienschwerpunkte, Anerkennung und Wiederholung von Prüfungen.",
+   "citations": [],
+   "invalid_citations": [],
+   "context_ids": [
+    "stufpo-isss-2024:anhang1:2",
+    "stufpo-isss-2024:anhang3:0",
+    "stufpo-isss-2024:anhang1:1",
+    "apo-wiai-2026:par11:0",
+    "apo-wiai-2026:par6:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": false, \"answer\": \"Die Auszüge enthalten keine Angaben zu den Kosten des Semestertickets. Sie behandeln Module, Modulprüfungen, Studienschwerpunkte, Anerkennung und Wiederholung von Prüfungen.\", \"citations\": []}"
+  },
+  {
+   "qid": "u10-en",
+   "lang": "en",
+   "gold_answerable": false,
+   "gold_answer": null,
+   "gold_chunk_ids": [],
+   "question": "How much is the semester ticket?",
+   "answerable": false,
+   "text": "The excerpts are about study and examination regulations and module descriptions, and none of them mention a semester ticket or its price.",
+   "citations": [],
+   "invalid_citations": [],
+   "context_ids": [
+    "mhb-isss-2024:modulisosysc-sem-m:0",
+    "mhb-isss-2024:modulsysnap-virt-m:1",
+    "mhb-isss-2024:allgemeines:0",
+    "mhb-isss-2024:modulmobi-adm-m:0",
+    "mhb-isss-2024:moduleesys-adaml-m:1"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": false, \"answer\": \"The excerpts are about study and examination regulations and module descriptions, and none of them mention a semester ticket or its price.\", \"citations\": []}"
+  },
+  {
+   "qid": "u11-de",
+   "lang": "de",
+   "gold_answerable": false,
+   "gold_answer": null,
+   "gold_chunk_ids": [],
+   "question": "Brauche ich Deutschkenntnisse (DSH oder TestDaF) für den Master ISSS?",
+   "answerable": true,
+   "text": "Für den Zugang ist laut § 33 Abs. 3 ein Englischnachweis erforderlich, der zu einem englischsprachigen Studium befähigt, etwa IELTS 6.5 oder TOEFL 90 iBT oder ein gleichwertiger Sprachnachweis [C1]. Lehrveranstaltungen und Modulprüfungen werden in englischer Sprache abgehalten und abgelegt [C5]. DSH oder TestDaF werden in den Auszügen nicht erwähnt.",
+   "citations": [
+    "stufpo-isss-2024:par33:0",
+    "stufpo-isss-2024:par38:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "stufpo-isss-2024:par33:0",
+    "stufpo-isss-2024:par34:0",
+    "stufpo-isss-2024:par40:0",
+    "stufpo-isss-2024:par39:0",
+    "stufpo-isss-2024:par38:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Für den Zugang ist laut § 33 Abs. 3 ein Englischnachweis erforderlich, der zu einem englischsprachigen Studium befähigt, etwa IELTS 6.5 oder TOEFL 90 iBT oder ein gleichwertiger Sprachnachweis [C1]. Lehrveranstaltungen und Modulprüfungen werden in englischer Sprache abgehalten und abgelegt [C5]. DSH oder TestDaF werden in den Auszügen nicht erwähnt.\", \"citations\": [\"C1\", \"C5\"]}"
+  },
+  {
+   "qid": "u11-en",
+   "lang": "en",
+   "gold_answerable": false,
+   "gold_answer": null,
+   "gold_chunk_ids": [],
+   "question": "Do I need German language skills (DSH or TestDaF) for the ISSS master's programme?",
+   "answerable": false,
+   "text": "The excerpts do not mention DSH or TestDaF or any German language requirement for admission to the ISSS master's programme. They only cover module-level language settings and a B2 English requirement for one module.",
+   "citations": [],
+   "invalid_citations": [],
+   "context_ids": [
+    "mhb-isss-2024:moduldsg-distrsys-m:1",
+    "mhb-isss-2024:modulgdi-ifp-m:0",
+    "mhb-isss-2024:moduldt-dbcpu-m:1",
+    "mhb-isss-2024:moduldsg-rds-m:1",
+    "mhb-isss-2024:modulsss-thesis-m:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": false, \"answer\": \"The excerpts do not mention DSH or TestDaF or any German language requirement for admission to the ISSS master's programme. They only cover module-level language settings and a B2 English requirement for one module.\", \"citations\": []}"
+  },
+  {
+   "qid": "u18-de",
+   "lang": "de",
+   "gold_answerable": false,
+   "gold_answer": null,
+   "gold_chunk_ids": [],
+   "question": "Mit welcher Software werden Abschlussarbeiten auf Plagiate geprüft?",
+   "answerable": false,
+   "text": "Die Auszüge erwähnen nur, dass die digitale Fassung einer durch Software unterstützten, anonymisierten Prüfung auf Plagiate unterzogen werden kann, nennen aber kein konkretes Softwareprodukt.",
+   "citations": [],
+   "invalid_citations": [],
+   "context_ids": [
+    "apo-wiai-2026:par9:1",
+    "apo-wiai-2026:par7:0",
+    "apo-wiai-2026:par9:3",
+    "stufpo-isss-2024:par35:0",
+    "mhb-isss-2024:modulswt-asv-m:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": false, \"answer\": \"Die Auszüge erwähnen nur, dass die digitale Fassung einer durch Software unterstützten, anonymisierten Prüfung auf Plagiate unterzogen werden kann, nennen aber kein konkretes Softwareprodukt.\", \"citations\": []}"
+  },
+  {
+   "qid": "u18-en",
+   "lang": "en",
+   "gold_answerable": false,
+   "gold_answer": null,
+   "gold_chunk_ids": [],
+   "question": "Which software is used to check theses for plagiarism?",
+   "answerable": false,
+   "text": "The excerpts describe module contents, examination formats and handbook validity rules, but say nothing about plagiarism checks or the software used for them.",
+   "citations": [],
+   "invalid_citations": [],
+   "context_ids": [
+    "mhb-isss-2024:modulgdi-fprs-m:2",
+    "mhb-isss-2024:modulswt-asv-m:1",
+    "mhb-isss-2024:modulswt-asv-m:0",
+    "mhb-isss-2024:moduleesys-adaml-m:0",
+    "mhb-isss-2024:allgemeines:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": false, \"answer\": \"The excerpts describe module contents, examination formats and handbook validity rules, but say nothing about plagiarism checks or the software used for them.\", \"citations\": []}"
+  },
+  {
+   "qid": "u20-de",
+   "lang": "de",
+   "gold_answerable": false,
+   "gold_answer": null,
+   "gold_chunk_ids": [],
+   "question": "Welche Gebühr fällt für eine Nachfrist an, wenn die Höchststudiendauer überschritten wird?",
+   "answerable": false,
+   "text": "Die Auszüge enthalten keine Gebühr für eine Nachfrist. Sie regeln lediglich, dass der Prüfungsausschuss auf Antrag eine Nachfrist gewährt, nennen aber keinen Betrag.",
+   "citations": [],
+   "invalid_citations": [],
+   "context_ids": [
+    "apo-wiai-2026:par20:0",
+    "apo-wiai-2026:par11:0",
+    "apo-wiai-2026:par13:0",
+    "apo-wiai-2026:par19:0",
+    "stufpo-isss-2024:par30:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": false, \"answer\": \"Die Auszüge enthalten keine Gebühr für eine Nachfrist. Sie regeln lediglich, dass der Prüfungsausschuss auf Antrag eine Nachfrist gewährt, nennen aber keinen Betrag.\", \"citations\": []}"
+  },
+  {
+   "qid": "u20-en",
+   "lang": "en",
+   "gold_answerable": false,
+   "gold_answer": null,
+   "gold_chunk_ids": [],
+   "question": "What fee is charged for the extension when the maximum study duration is exceeded?",
+   "answerable": false,
+   "text": "The excerpts do not mention any fee for an extension. [C1] only provides that the examination board may grant a Nachfrist on application if the deadline is exceeded for reasons the candidate is not responsible for, and [C2] only states the maximum study duration of six semesters.",
+   "citations": [],
+   "invalid_citations": [],
+   "context_ids": [
+    "apo-wiai-2026:par20:0",
+    "stufpo-isss-2024:par30:0",
+    "mhb-isss-2024:modulpsi-advasp-m:2",
+    "mhb-isss-2024:modulvis-ivva-m:1",
+    "mhb-isss-2024:modulxai-adl-m:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": false, \"answer\": \"The excerpts do not mention any fee for an extension. [C1] only provides that the examination board may grant a Nachfrist on application if the deadline is exceeded for reasons the candidate is not responsible for, and [C2] only states the maximum study duration of six semesters.\", \"citations\": []}"
+  }
+ ]
+}

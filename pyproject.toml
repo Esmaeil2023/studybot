@@ -20,6 +20,9 @@ dense = [
     "numpy>=1.26",
     "sentence-transformers>=3",  # multilingual-e5 embeddings
 ]
+llm = [
+    "anthropic>=0.40",  # answer generation (Claude API)
+]
 dev = [
     "pytest>=8",
     "ruff>=0.5",
