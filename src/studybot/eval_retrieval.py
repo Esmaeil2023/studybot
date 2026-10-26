@@ -116,7 +116,14 @@ def breakdown(records: Sequence[dict], key: str) -> dict[str, dict]:
 class Rankings:
     """BM25 and dense rankings of every query, computed once and reused for many fusions."""
 
-    def __init__(self, chunks: list[Chunk], args: argparse.Namespace, need_dense: bool):
+    def __init__(
+        self,
+        chunks: list[Chunk],
+        args: argparse.Namespace,
+        need_dense: bool,
+        expand: Callable[[str], list[str]] | None = None,
+    ):
+        self._expand = expand  # query -> extra queries (e.g. its German translation)
         self._texts = {c.chunk_id: c.index_text for c in chunks}
         self._bm25 = BM25Index(chunks)
         self._dense = (
@@ -138,11 +145,19 @@ class Rankings:
             self._cache[key] = [cid for cid, _ in self._dense.search(query, depth)]
         return self._cache[key][:depth]
 
+    def first_stage(self, query: str, depth: int) -> list[str]:
+        """Dense ranking; with `expand`, fused with the rankings of the translated queries."""
+        extra = self._expand(query) if self._expand else []
+        if not extra:
+            return self.dense(query, depth)
+        rankings = [self.dense(q, depth) for q in (query, *extra)]
+        return rrf_fuse(rankings, k=60)[:depth]
+
     def reranked(self, reranker: Reranker, candidates: int) -> Search:
         """Dense top `candidates`, reordered by the cross-encoder; the rest keeps dense order."""
 
         def search(query: str, depth: int) -> list[str]:
-            first_stage = self.dense(query, max(depth, candidates))
+            first_stage = self.first_stage(query, max(depth, candidates))
             head, tail = first_stage[:candidates], first_stage[candidates:]
             key = ("rerank", query)
             if key not in self._cache:
@@ -163,7 +178,7 @@ def build_search(system: str, rankings: Rankings, args: argparse.Namespace) -> S
     if system == "bm25":
         return rankings.bm25
     if system == "dense":
-        return rankings.dense
+        return rankings.first_stage
     if system == "rerank":
         reranker = CrossEncoderReranker(args.reranker_model)
         return rankings.reranked(reranker, args.candidates)
@@ -236,6 +251,12 @@ def print_report(system: str, split: str, records: list[dict], n_misses: int) ->
         print(f"      gold {r['gold']}   top1 {r['top5'][:1]}")
 
 
+def make_translator(args: argparse.Namespace) -> Callable[[str], list[str]]:
+    from studybot.translate import default_translator
+
+    return default_translator(args.translations)
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Evaluate retrieval")
     parser.add_argument("--system", choices=["bm25", "dense", "hybrid", "rerank"], required=True)
@@ -250,6 +271,10 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--rrf-k", type=int, default=60)
     parser.add_argument("--bm25-weight", type=float, default=1.0, help="hybrid: BM25 weight in RRF")
     parser.add_argument("--sweep", action="store_true", help="hybrid: try a small grid, print only")
+    parser.add_argument(
+        "--translate", action="store_true", help="dense/rerank: also search the German translation"
+    )
+    parser.add_argument("--translations", default="data/cache/query_translations.json")
     parser.add_argument("--misses", type=int, default=10, help="how many misses to print")
     parser.add_argument("--out-dir", default="results")
     args = parser.parse_args(argv)
@@ -264,19 +289,22 @@ def main(argv: list[str] | None = None) -> int:
 
     chunks = load_chunks(args.chunks)
     rows = load_questions(args.questions, split=args.split)
-    rankings = Rankings(chunks, args, need_dense=args.system != "bm25" or args.sweep)
+    expand = make_translator(args) if args.translate else None
+    rankings = Rankings(chunks, args, need_dense=args.system != "bm25" or args.sweep, expand=expand)
     if args.sweep:
         print_sweep(run_sweep(rows, rankings))
         return 0
     records = evaluate(rows, build_search(args.system, rankings, args))
 
-    print_report(args.system, args.split, records, args.misses)
-    out = Path(args.out_dir) / f"retrieval_{args.system}_{args.split}.json"
+    name = args.system + ("+translate" if args.translate else "")
+    print_report(name, args.split, records, args.misses)
+    suffix = "+translate" if args.translate else ""
+    out = Path(args.out_dir) / f"retrieval_{args.system}{suffix}_{args.split}.json"
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(
         json.dumps(
             {
-                "system": args.system,
+                "system": args.system + suffix,
                 "split": args.split,
                 "model": args.model if args.system != "bm25" else None,
                 "reranker": args.reranker_model if args.system == "rerank" else None,

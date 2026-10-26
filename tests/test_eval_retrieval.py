@@ -104,6 +104,7 @@ class StubRankings(er.Rankings):
 
     def __init__(self):
         self._cache = {}
+        self._expand = None
         self._texts = {"a": "the right answer", "wrong": "something else", "c": "more text"}
 
     def bm25(self, query, depth):
@@ -147,3 +148,20 @@ def test_reranked_reorders_only_the_candidates_and_keeps_the_tail():
     # candidates = wrong, a; the query mentions "right answer", so a moves up; c stays last
     assert search("right answer", 5) == ["a", "wrong", "c"]
     assert search("right answer", 1) == ["a"]
+
+
+def test_first_stage_fuses_the_translation_when_the_original_misses():
+    class Bilingual(StubRankings):
+        def dense(self, query, depth):  # the English query finds the wrong chunk, German finds a
+            return (["wrong", "c", "a"] if query == "en query" else ["a", "c"])[:depth]
+
+    rankings = Bilingual()
+    assert rankings.first_stage("en query", 3) == ["wrong", "c", "a"]  # no translator
+    rankings._expand = lambda q: ["de query"]
+    assert rankings.first_stage("en query", 3)[0] == "a"  # no longer buried by English alone
+
+
+def test_first_stage_without_translation_is_plain_dense():
+    rankings = StubRankings()
+    rankings._expand = lambda q: []
+    assert rankings.first_stage("q", 5) == rankings.dense("q", 5)

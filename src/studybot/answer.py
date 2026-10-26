@@ -46,7 +46,11 @@ degree programme, another module), do not answer: set "answerable" to false.
 5. Reply with one JSON object and nothing else:
 {"answerable": true or false, "answer": "<text, or a one-sentence explanation of what is \
 missing>", "citations": ["C1", "C3"]}
-Use an empty citations list when answerable is false."""
+Use an empty citations list when answerable is false.
+
+Note: module descriptions come from a PDF table that was flattened into text, so a label and \
+its value can end up next to each other without a sentence, e.g. "Examination Portfolio" means \
+the form of examination is a portfolio. Read such pairs as statements."""
 
 _CITE_RE = re.compile(r"\bC(\d+)\b")
 
@@ -227,15 +231,25 @@ def format_metrics(metrics: dict) -> str:
 
 
 def build_retriever(chunks: list[Chunk], args: argparse.Namespace) -> Retriever:
-    """Dense first stage + cross-encoder reranker, the best system measured on dev."""
-    from studybot.retrieval import CrossEncoderReranker, DenseIndex, E5Embedder, rerank
+    """Dense first stage (English questions also searched in German) + cross-encoder reranker."""
+    from studybot.retrieval import (
+        CrossEncoderReranker,
+        DenseIndex,
+        E5Embedder,
+        rerank,
+        rrf_fuse,
+    )
+    from studybot.translate import default_translator
 
+    translate = None if args.no_translate else default_translator(args.translations)
     dense = DenseIndex(chunks, E5Embedder(args.model), cache_dir=args.cache_dir)
     reranker = CrossEncoderReranker(args.reranker_model)
     texts = {c.chunk_id: c.index_text for c in chunks}
 
     def retrieve(query: str, depth: int) -> list[str]:
-        candidates = [cid for cid, _ in dense.search(query, args.candidates)]
+        queries = [query, *(translate(query) if translate else [])]
+        rankings = [[cid for cid, _ in dense.search(q, args.candidates)] for q in queries]
+        candidates = rrf_fuse(rankings)[: args.candidates] if len(rankings) > 1 else rankings[0]
         return rerank(query, candidates, texts, reranker)[:depth]
 
     return retrieve
@@ -267,6 +281,10 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--reranker-model", default="BAAI/bge-reranker-v2-m3")
     parser.add_argument("--candidates", type=int, default=20)
     parser.add_argument("--cache-dir", default="indexes")
+    parser.add_argument("--translations", default="data/cache/query_translations.json")
+    parser.add_argument(
+        "--no-translate", action="store_true", help="do not also search English questions in German"
+    )
     parser.add_argument("--out-dir", default="results")
     args = parser.parse_args(argv)
 
@@ -307,11 +325,14 @@ def main(argv: list[str] | None = None) -> int:
     print("\n" + format_metrics(metrics))
     out = Path(args.out_dir) / f"answers_{args.split}.json"
     out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(
-        json.dumps({"llm": args.llm, "k": args.k, "metrics": metrics, "answers": records},
-                   ensure_ascii=False, indent=1),
-        encoding="utf-8",
-    )  # fmt: skip
+    report = {
+        "llm": args.llm,
+        "k": args.k,
+        "translate": not args.no_translate,
+        "metrics": metrics,
+        "answers": records,
+    }
+    out.write_text(json.dumps(report, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"\nwrote {out}")
     return 0
 
