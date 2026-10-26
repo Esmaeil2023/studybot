@@ -144,3 +144,98 @@ def test_read_labels_rejects_unknown_label(tmp_path):
 def test_test_split_is_locked(capsys):
     assert j.main(["--split", "test"]) == 2
     assert "locked" in capsys.readouterr().out
+
+
+def test_interactive_labelling_saves_skips_and_quits(tmp_path):
+    rows = [{**rec(f"f0{i}-de"), "verdict": "correct", "judged_by": "llm"} for i in range(1, 5)]
+    path = tmp_path / "sheet.csv"
+    j.write_sheet(rows, path)
+    answers = iter(["x", "c", "s", "w", "q"])  # 'x' is ignored and asked again
+    j.label_interactively(path, ask=lambda prompt: next(answers))
+    assert j.read_labels(path) == {"f01-de": "correct", "f03-de": "wrong"}
+    # a second session only asks for what is still blank (f02 was skipped, f04 not reached)
+    asked = []
+    again = iter(["p", "p"])
+    j.label_interactively(path, ask=lambda prompt: asked.append(prompt) or next(again))
+    assert len(asked) == 2 and len(j.read_labels(path)) == 4
+
+
+def test_relabel_asks_again_only_for_the_named_qids(tmp_path):
+    rows = [{**rec(f"f0{i}-de"), "verdict": "correct", "judged_by": "llm"} for i in range(1, 4)]
+    path = tmp_path / "sheet.csv"
+    j.write_sheet(rows, path)
+    first = iter(["c", "c", "c"])
+    j.label_interactively(path, ask=lambda prompt: next(first))
+    second = iter(["p"])
+    j.label_interactively(path, ask=lambda prompt: next(second), relabel=["f02-de"])
+    assert j.read_labels(path) == {"f01-de": "correct", "f02-de": "partial", "f03-de": "correct"}
+
+
+def test_swap_number_changes_a_key_number_but_not_citations_or_paragraphs():
+    assert j.swap_number("Mindestens 60 ECTS-Punkte [C1].", "Mindestens 60 ECTS-Punkte.") == (
+        "Mindestens 70 ECTS-Punkte [C1]."
+    )
+    assert j.swap_number("At least IELTS 6.5 [C1]", "IELTS 6.5 or TOEFL 90") == (
+        "At least IELTS 7.5 [C1]"
+    )
+    assert j.swap_number("Nach § 25 Abs. 1 gilt 5 Jahre.", "Fünf Jahre, 5") == (
+        "Nach § 25 Abs. 1 gilt 7 Jahre."
+    )
+    assert j.swap_number("Es gilt [C2] ohne Zahl.", "Nichts") is None
+    assert j.swap_number("It lasts 20 minutes.", "It lasts 5 minutes.") is None  # not a key fact
+
+
+def test_swap_number_word_keeps_capitalisation_and_needs_the_reference_to_agree():
+    assert j.swap_number_word("Vier Fachsemester [C1].", "Vier Fachsemester.") == (
+        "Sechs Fachsemester [C1]."
+    )
+    assert j.swap_number_word("It takes four semesters.", "Four semesters.") == (
+        "It takes six semesters."
+    )
+    assert j.swap_number_word("It takes four semesters.", "Some semesters.") is None
+
+
+def test_swap_name_replaces_only_a_name_the_reference_has():
+    answer = "Verantwortlich ist Prof. Dr. Stefan Ultes [C1]."
+    assert FAKE in j.swap_name(answer, "Prof. Dr. Stefan Ultes.")
+    assert j.swap_name(answer, "Niemand.") is None
+
+
+FAKE = j.FAKE_NAME
+
+
+def test_stress_cases_only_come_from_answers_the_judge_called_correct():
+    def row(qid, text, ref, verdict="correct", by="llm"):
+        return {**rec(qid, text=text), "gold_answer": ref, "verdict": verdict, "judged_by": by}
+
+    judged = [
+        row("f01-de", "Vier Fachsemester [C1].", "Vier Fachsemester."),
+        row("f02-de", "Mindestens 60 ECTS [C1].", "Mindestens 60 ECTS."),
+        row("f03-de", "Falsch.", "Richtig.", verdict="wrong"),
+        row("f04-de", "Regel.", "Regel.", by="rule"),
+    ]
+    cases = j.make_stress_cases(judged)
+    assert {c["qid"] for c in cases} == {"f01-de", "f02-de"}
+    kinds = {(c["qid"], c["kind"]) for c in cases}
+    assert ("f01-de", "changed_number_word") in kinds and ("f02-de", "changed_number") in kinds
+    assert ("f01-de", "not_stated") in kinds and ("f02-de", "other_answer") in kinds
+    other = next(c for c in cases if c["qid"] == "f01-de" and c["kind"] == "other_answer")
+    assert other["answer"] == "Mindestens 60 ECTS [C1]."  # taken from a different pair
+
+
+def test_stress_summary_counts_caught_and_lists_misses():
+    cases = [
+        {"qid": "a", "kind": "changed_number", "question": "q", "reference": "r", "answer": "x"},
+        {"qid": "b", "kind": "changed_number", "question": "q", "reference": "r", "answer": "y"},
+        {"qid": "c", "kind": "not_stated", "question": "q", "reference": "r", "answer": "z"},
+    ]
+    replies = iter(['{"verdict": "wrong"}', '{"verdict": "correct"}', '{"verdict": "partial"}'])
+    summary = j.summarise_stress(j.run_stress(cases, lambda s, u: next(replies)))
+    assert summary["kinds"]["changed_number"] == {"n": 2, "caught": 1, "rate": 0.5}
+    assert summary["caught"] == 2 and summary["n"] == 3
+    assert [m["qid"] for m in summary["missed"]] == ["b"]
+
+
+def test_swap_number_changes_every_occurrence_of_the_key_number():
+    out = j.swap_number("It lasts 90 minutes; the handbook also says 90 minutes.", "90 minutes.")
+    assert out == "It lasts 100 minutes; the handbook also says 100 minutes."

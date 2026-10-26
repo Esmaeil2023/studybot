@@ -1,0 +1,1048 @@
+{
+ "judge": "claude-sonnet-5-5",
+ "summary": {
+  "kinds": {
+   "changed_name": {
+    "n": 2,
+    "caught": 2,
+    "rate": 1.0
+   },
+   "changed_number": {
+    "n": 18,
+    "caught": 18,
+    "rate": 1.0
+   },
+   "changed_number_word": {
+    "n": 7,
+    "caught": 7,
+    "rate": 1.0
+   },
+   "not_stated": {
+    "n": 37,
+    "caught": 37,
+    "rate": 1.0
+   },
+   "other_answer": {
+    "n": 37,
+    "caught": 37,
+    "rate": 1.0
+   }
+  },
+  "n": 101,
+  "caught": 101,
+  "rate": 1.0,
+  "missed": []
+ },
+ "cases": [
+  {
+   "qid": "f01-de",
+   "kind": "changed_number_word",
+   "question": "Wie viele Fachsemester beträgt die Regelstudienzeit im Masterstudiengang International Software Systems Science?",
+   "reference": "Vier Fachsemester.",
+   "answer": "Die Regelstudienzeit beträgt sechs Fachsemester [C3].",
+   "original": "Die Regelstudienzeit beträgt vier Fachsemester [C3].",
+   "verdict": "wrong",
+   "reason": "The system states six Fachsemester, which contradicts the reference answer of four."
+  },
+  {
+   "qid": "f01-de",
+   "kind": "not_stated",
+   "question": "Wie viele Fachsemester beträgt die Regelstudienzeit im Masterstudiengang International Software Systems Science?",
+   "reference": "Vier Fachsemester.",
+   "answer": "The excerpts do not state this.",
+   "original": "Die Regelstudienzeit beträgt vier Fachsemester [C3].",
+   "verdict": "wrong",
+   "reason": "The system says the information is not available, while the reference answer gives four Fachsemester."
+  },
+  {
+   "qid": "f01-en",
+   "kind": "changed_number_word",
+   "question": "How many semesters is the standard period of study in the International Software Systems Science master's programme?",
+   "reference": "Four semesters.",
+   "answer": "The standard period of study (Regelstudienzeit) is six Fachsemester [C5].",
+   "original": "The standard period of study (Regelstudienzeit) is four Fachsemester [C5].",
+   "verdict": "wrong",
+   "reason": "The system says six semesters, but the reference answer is four semesters."
+  },
+  {
+   "qid": "f01-en",
+   "kind": "not_stated",
+   "question": "How many semesters is the standard period of study in the International Software Systems Science master's programme?",
+   "reference": "Four semesters.",
+   "answer": "The excerpts do not state this.",
+   "original": "The standard period of study (Regelstudienzeit) is four Fachsemester [C5].",
+   "verdict": "wrong",
+   "reason": "The system says the information is not available, while the reference answer is four semesters."
+  },
+  {
+   "qid": "f03-de",
+   "kind": "changed_number",
+   "question": "Welche Gesamtnote braucht man im Bachelorabschluss im gleichen Studienfach, um direkt zum Master ISSS zugelassen zu werden?",
+   "reference": "Die Gesamtnote 2,7 oder besser.",
+   "answer": "Für die direkte Zulassung im gleichen Studienfach ist die Gesamtnote 3,7 oder besser erforderlich, bei einer Regelstudienzeit von mindestens sechs Fachsemestern im Umfang von 180 ECTS-Punkten [C1].",
+   "original": "Für die direkte Zulassung im gleichen Studienfach ist die Gesamtnote 2,7 oder besser erforderlich, bei einer Regelstudienzeit von mindestens sechs Fachsemestern im Umfang von 180 ECTS-Punkten [C1].",
+   "verdict": "wrong",
+   "reason": "The system states a required grade of 3,7 or better, which contradicts the reference value of 2,7 or better."
+  },
+  {
+   "qid": "f03-de",
+   "kind": "not_stated",
+   "question": "Welche Gesamtnote braucht man im Bachelorabschluss im gleichen Studienfach, um direkt zum Master ISSS zugelassen zu werden?",
+   "reference": "Die Gesamtnote 2,7 oder besser.",
+   "answer": "The excerpts do not state this.",
+   "original": "Für die direkte Zulassung im gleichen Studienfach ist die Gesamtnote 2,7 oder besser erforderlich, bei einer Regelstudienzeit von mindestens sechs Fachsemestern im Umfang von 180 ECTS-Punkten [C1].",
+   "verdict": "wrong",
+   "reason": "The system says the information is not available instead of giving the required grade of 2.7 or better."
+  },
+  {
+   "qid": "f03-en",
+   "kind": "changed_number",
+   "question": "What overall grade does a bachelor's degree in the same subject need for direct admission to the ISSS master's programme?",
+   "reference": "An overall grade of 2.7 or better.",
+   "answer": "A degree in the same subject with an overall grade of 3.7 or better gives direct admission, provided it has a standard period of study of at least six semesters and 180 ECTS points [C1].",
+   "original": "A degree in the same subject with an overall grade of 2.7 or better gives direct admission, provided it has a standard period of study of at least six semesters and 180 ECTS points [C1].",
+   "verdict": "wrong",
+   "reason": "The system states a grade of 3.7 or better, which contradicts the reference's 2.7 or better."
+  },
+  {
+   "qid": "f03-en",
+   "kind": "not_stated",
+   "question": "What overall grade does a bachelor's degree in the same subject need for direct admission to the ISSS master's programme?",
+   "reference": "An overall grade of 2.7 or better.",
+   "answer": "The excerpts do not state this.",
+   "original": "A degree in the same subject with an overall grade of 2.7 or better gives direct admission, provided it has a standard period of study of at least six semesters and 180 ECTS points [C1].",
+   "verdict": "wrong",
+   "reason": "The system says the information is not available instead of giving the required overall grade of 2.7 or better."
+  },
+  {
+   "qid": "f04-de",
+   "kind": "changed_number",
+   "question": "Welche Englischnachweise werden für den Master ISSS verlangt?",
+   "reference": "Mindestens IELTS 6.5 oder TOEFL 90 iBT oder ein gleichwertiger Nachweis.",
+   "answer": "Für den Zugang zum Masterstudiengang ISSS sind Englischkenntnisse nachzuweisen, die zu einem englischsprachigen Studium befähigen. Der Nachweis erfolgt durch Zertifikate entsprechend mindestens IELTS 7.5 oder TOEFL 90 iBT oder gleichwertige Sprachnachweise [C1].",
+   "original": "Für den Zugang zum Masterstudiengang ISSS sind Englischkenntnisse nachzuweisen, die zu einem englischsprachigen Studium befähigen. Der Nachweis erfolgt durch Zertifikate entsprechend mindestens IELTS 6.5 oder TOEFL 90 iBT oder gleichwertige Sprachnachweise [C1].",
+   "verdict": "wrong",
+   "reason": "The system states a minimum of IELTS 7.5, but the reference says IELTS 6.5; the TOEFL 90 iBT figure matches, but the IELTS number contradicts the reference."
+  },
+  {
+   "qid": "f04-de",
+   "kind": "not_stated",
+   "question": "Welche Englischnachweise werden für den Master ISSS verlangt?",
+   "reference": "Mindestens IELTS 6.5 oder TOEFL 90 iBT oder ein gleichwertiger Nachweis.",
+   "answer": "The excerpts do not state this.",
+   "original": "Für den Zugang zum Masterstudiengang ISSS sind Englischkenntnisse nachzuweisen, die zu einem englischsprachigen Studium befähigen. Der Nachweis erfolgt durch Zertifikate entsprechend mindestens IELTS 6.5 oder TOEFL 90 iBT oder gleichwertige Sprachnachweise [C1].",
+   "verdict": "wrong",
+   "reason": "The system says the information is not available and gives none of the required facts (IELTS 6.5, TOEFL 90 iBT, or equivalent)."
+  },
+  {
+   "qid": "f04-en",
+   "kind": "changed_number",
+   "question": "Which English language certificates are required for the ISSS master's programme?",
+   "reference": "At least IELTS 6.5 or TOEFL 90 iBT, or an equivalent proof.",
+   "answer": "Applicants need English proficiency sufficient to study in English, proven by certificates of at least IELTS 7.5 or TOEFL 90 iBT, or equivalent language proof [C1].",
+   "original": "Applicants need English proficiency sufficient to study in English, proven by certificates of at least IELTS 6.5 or TOEFL 90 iBT, or equivalent language proof [C1].",
+   "verdict": "wrong",
+   "reason": "The system states IELTS 7.5, but the reference requires IELTS 6.5, so a key number contradicts the reference."
+  },
+  {
+   "qid": "f04-en",
+   "kind": "not_stated",
+   "question": "Which English language certificates are required for the ISSS master's programme?",
+   "reference": "At least IELTS 6.5 or TOEFL 90 iBT, or an equivalent proof.",
+   "answer": "The excerpts do not state this.",
+   "original": "Applicants need English proficiency sufficient to study in English, proven by certificates of at least IELTS 6.5 or TOEFL 90 iBT, or equivalent language proof [C1].",
+   "verdict": "wrong",
+   "reason": "The system says the information is not available instead of giving the required IELTS 6.5 / TOEFL 90 iBT or equivalent."
+  },
+  {
+   "qid": "f05-de",
+   "kind": "changed_number",
+   "question": "Bis wann muss man sich für den Master ISSS zum Wintersemester und zum Sommersemester bewerben?",
+   "reference": "Zum Wintersemester bis zum 15. Juli, zum Sommersemester bis zum 15. Januar.",
+   "answer": "Für das Wintersemester endet die Bewerbungsfrist am 25. Juli des jeweiligen Jahres [C1]. Für das Sommersemester endet sie am 25. Januar des jeweiligen Jahres [C1].",
+   "original": "Für das Wintersemester endet die Bewerbungsfrist am 15. Juli des jeweiligen Jahres [C1]. Für das Sommersemester endet sie am 15. Januar des jeweiligen Jahres [C1].",
+   "verdict": "wrong",
+   "reason": "The system gives 25 July and 25 January, but the reference deadlines are 15 July and 15 January."
+  },
+  {
+   "qid": "f05-de",
+   "kind": "not_stated",
+   "question": "Bis wann muss man sich für den Master ISSS zum Wintersemester und zum Sommersemester bewerben?",
+   "reference": "Zum Wintersemester bis zum 15. Juli, zum Sommersemester bis zum 15. Januar.",
+   "answer": "The excerpts do not state this.",
+   "original": "Für das Wintersemester endet die Bewerbungsfrist am 15. Juli des jeweiligen Jahres [C1]. Für das Sommersemester endet sie am 15. Januar des jeweiligen Jahres [C1].",
+   "verdict": "wrong",
+   "reason": "The system says the information is not available and gives neither deadline (15 July for winter, 15 January for summer)."
+  },
+  {
+   "qid": "f05-en",
+   "kind": "changed_number",
+   "question": "What are the application deadlines for the ISSS master's programme for the winter and the summer semester?",
+   "reference": "15 July for the winter semester and 15 January for the summer semester.",
+   "answer": "The application deadline for the winter semester ends on 25 July of the respective year, and for the summer semester it ends on 25 January of the respective year [C1].",
+   "original": "The application deadline for the winter semester ends on 15 July of the respective year, and for the summer semester it ends on 15 January of the respective year [C1].",
+   "verdict": "wrong",
+   "reason": "The system gives 25 July and 25 January, which contradicts the reference deadlines of 15 July and 15 January."
+  },
+  {
+   "qid": "f05-en",
+   "kind": "not_stated",
+   "question": "What are the application deadlines for the ISSS master's programme for the winter and the summer semester?",
+   "reference": "15 July for the winter semester and 15 January for the summer semester.",
+   "answer": "The excerpts do not state this.",
+   "original": "The application deadline for the winter semester ends on 15 July of the respective year, and for the summer semester it ends on 15 January of the respective year [C1].",
+   "verdict": "wrong",
+   "reason": "The system says the information is not available and gives neither deadline, while the reference gives 15 July (winter) and 15 January (summer)."
+  },
+  {
+   "qid": "f09-de",
+   "kind": "changed_number",
+   "question": "Wie setzt sich die Note der Masterarbeit im Master ISSS zusammen?",
+   "reference": "67 % schriftliche Arbeit und 33 % Kolloquium.",
+   "answer": "Die Note der Masterarbeit setzt sich zu 77 % aus der Bewertung der schriftlichen Arbeit und zu 33 % aus der Bewertung des Kolloquiums zusammen, in dem die Hauptergebnisse der Arbeit verteidigt werden [C1].",
+   "original": "Die Note der Masterarbeit setzt sich zu 67 % aus der Bewertung der schriftlichen Arbeit und zu 33 % aus der Bewertung des Kolloquiums zusammen, in dem die Hauptergebnisse der Arbeit verteidigt werden [C1].",
+   "verdict": "wrong",
+   "reason": "The system gives 77 % for the written work instead of 67 %, so the weights are incorrect and add up to 110 %."
+  },
+  {
+   "qid": "f09-de",
+   "kind": "not_stated",
+   "question": "Wie setzt sich die Note der Masterarbeit im Master ISSS zusammen?",
+   "reference": "67 % schriftliche Arbeit und 33 % Kolloquium.",
+   "answer": "The excerpts do not state this.",
+   "original": "Die Note der Masterarbeit setzt sich zu 67 % aus der Bewertung der schriftlichen Arbeit und zu 33 % aus der Bewertung des Kolloquiums zusammen, in dem die Hauptergebnisse der Arbeit verteidigt werden [C1].",
+   "verdict": "wrong",
+   "reason": "The system says the information is not available instead of giving the 67 % written thesis / 33 % colloquium split."
+  },
+  {
+   "qid": "f09-en",
+   "kind": "changed_number",
+   "question": "How is the grade of the master's thesis in the ISSS programme composed?",
+   "reference": "67% the written thesis and 33% the colloquium.",
+   "answer": "The master's thesis module grade is made up of the written thesis, weighted 77%, and the oral colloquium (presentation) of 20 to 60 minutes, weighted 33% [C1][C2]. The colloquium can take place before or after the thesis is graded, according to the student's preference [C2].",
+   "original": "The master's thesis module grade is made up of the written thesis, weighted 67%, and the oral colloquium (presentation) of 20 to 60 minutes, weighted 33% [C1][C2]. The colloquium can take place before or after the thesis is graded, according to the student's preference [C2].",
+   "verdict": "wrong",
+   "reason": "The system gives the thesis weight as 77% instead of 67%, which contradicts the reference (and the weights don't sum to 100%)."
+  },
+  {
+   "qid": "f09-en",
+   "kind": "not_stated",
+   "question": "How is the grade of the master's thesis in the ISSS programme composed?",
+   "reference": "67% the written thesis and 33% the colloquium.",
+   "answer": "The excerpts do not state this.",
+   "original": "The master's thesis module grade is made up of the written thesis, weighted 67%, and the oral colloquium (presentation) of 20 to 60 minutes, weighted 33% [C1][C2]. The colloquium can take place before or after the thesis is graded, according to the student's preference [C2].",
+   "verdict": "wrong",
+   "reason": "The system says the information is not available and gives neither the 67% thesis nor the 33% colloquium weighting."
+  },
+  {
+   "qid": "f10-de",
+   "kind": "changed_number",
+   "question": "Wie viele ECTS-Punkte muss man schon haben, um zur Masterarbeit im Master ISSS zugelassen zu werden?",
+   "reference": "Mindestens 60 ECTS-Punkte.",
+   "answer": "Für die Zulassung zur Masterarbeit müssen Module im Umfang von mindestens 70 ECTS-Punkten erfolgreich absolviert sein [C2].",
+   "original": "Für die Zulassung zur Masterarbeit müssen Module im Umfang von mindestens 60 ECTS-Punkten erfolgreich absolviert sein [C2].",
+   "verdict": "wrong",
+   "reason": "The system states at least 70 ECTS points, which contradicts the reference value of at least 60 ECTS points."
+  },
+  {
+   "qid": "f10-de",
+   "kind": "not_stated",
+   "question": "Wie viele ECTS-Punkte muss man schon haben, um zur Masterarbeit im Master ISSS zugelassen zu werden?",
+   "reference": "Mindestens 60 ECTS-Punkte.",
+   "answer": "The excerpts do not state this.",
+   "original": "Für die Zulassung zur Masterarbeit müssen Module im Umfang von mindestens 60 ECTS-Punkten erfolgreich absolviert sein [C2].",
+   "verdict": "wrong",
+   "reason": "The system says the information is not available, while the reference gives a specific figure of at least 60 ECTS."
+  },
+  {
+   "qid": "f10-en",
+   "kind": "changed_number",
+   "question": "How many ECTS credits do you need before you are admitted to the master's thesis in ISSS?",
+   "reference": "At least 60 ECTS credits.",
+   "answer": "You need at least 70 ECTS credit points successfully completed towards the degree before the master's thesis can be registered and confirmed [C1][C5].",
+   "original": "You need at least 60 ECTS credit points successfully completed towards the degree before the master's thesis can be registered and confirmed [C1][C5].",
+   "verdict": "wrong",
+   "reason": "The system states at least 70 ECTS credits, which contradicts the reference's 60 ECTS credits."
+  },
+  {
+   "qid": "f10-en",
+   "kind": "not_stated",
+   "question": "How many ECTS credits do you need before you are admitted to the master's thesis in ISSS?",
+   "reference": "At least 60 ECTS credits.",
+   "answer": "The excerpts do not state this.",
+   "original": "You need at least 60 ECTS credit points successfully completed towards the degree before the master's thesis can be registered and confirmed [C1][C5].",
+   "verdict": "wrong",
+   "reason": "The system says the information is not available instead of giving the required 60 ECTS credits."
+  },
+  {
+   "qid": "f17-de",
+   "kind": "not_stated",
+   "question": "Welche vier Studienschwerpunkte kann man im Master ISSS wählen?",
+   "reference": "S1: Distributed and Mobile Systems, S2: Software Analysis and Verification, S3: Service-oriented Architectures, S4: Communication Systems and Protocols.",
+   "answer": "The excerpts do not state this.",
+   "original": "Im Masterstudiengang International Software Systems Science kann aus den folgenden vier Studienschwerpunkten gewählt werden: S1: Distributed and Mobile Systems, S2: Software Analysis and Verification, S3: Service-oriented Architectures, S4: Communication Systems and Protocols [C1].",
+   "verdict": "wrong",
+   "reason": "The system says the information is not available and names none of the four Studienschwerpunkte given in the reference."
+  },
+  {
+   "qid": "f17-en",
+   "kind": "not_stated",
+   "question": "Which four study focus areas can you choose in the ISSS master's programme?",
+   "reference": "S1: Distributed and Mobile Systems, S2: Software Analysis and Verification, S3: Service-oriented Architectures, S4: Communication Systems and Protocols.",
+   "answer": "The excerpts do not state this.",
+   "original": "You can choose from four study focus areas: S1: Distributed and Mobile Systems, S2: Software Analysis and Verification, S3: Service-oriented Architectures, and S4: Communication Systems and Protocols [C1].",
+   "verdict": "wrong",
+   "reason": "The system says the information is not available and does not name any of the four focus areas given in the reference."
+  },
+  {
+   "qid": "f20-de",
+   "kind": "not_stated",
+   "question": "Kann die Masterarbeit im Master ISSS auch in einem anderen als dem vorgegebenen Fach geschrieben werden?",
+   "reference": "Ja, auf Antrag kann der Prüfungsausschuss ein Thema aus einem anderen Fach zulassen, sofern glaubhaft nachgewiesen wird, dass es inhaltlich der Software Systems Science entnommen ist.",
+   "answer": "The excerpts do not state this.",
+   "original": "Ja, auf Antrag kann der Prüfungsausschuss auch ein Thema aus einem anderen Fach zulassen; die Kandidatin bzw. der Kandidat muss dann glaubhaft nachweisen, dass das Thema inhaltlich der Software Systems Science entnommen ist [C1]. Für andere Fächer aus dem Bereich des Masterstudiums gilt zudem, dass im Antrag ein inhaltlicher Bezug zum Masterstudiengang glaubhaft zu belegen ist [C2].",
+   "verdict": "wrong",
+   "reason": "The system says the information is not available, while the reference gives a clear answer: yes, with the examination board's approval on application."
+  },
+  {
+   "qid": "f20-en",
+   "kind": "not_stated",
+   "question": "Can the ISSS master's thesis be written on a topic from a different subject than the listed ones?",
+   "reference": "Yes, on request the examination committee can approve a topic from another subject if it is credibly shown that the topic belongs to Software Systems Science.",
+   "answer": "The excerpts do not state this.",
+   "original": "Yes. On request, the examination board may admit a topic from another subject, provided the candidate plausibly shows that the topic is drawn from Software Systems Science [C3]. Such an exception must be individually approved by the examination board and justified as related to the curriculum of the International Software Systems Science master's programme [C2][C1].",
+   "verdict": "wrong",
+   "reason": "The system says the information is not available, while the reference answer says yes, on request the examination committee can approve a topic from another subject if it is credibly shown to belong to Software Systems Science."
+  },
+  {
+   "qid": "f21-de",
+   "kind": "changed_number",
+   "question": "Wie viele Arbeitsstunden entsprechen einem ECTS-Punkt an der Fakultät WIAI?",
+   "reference": "Ca. 30 Arbeitsstunden.",
+   "answer": "Ein ECTS-Punkt entspricht einem Arbeitsaufwand von ca. 40 Arbeitsstunden [C1]. Die APO WIAI gilt für die Bachelor- und Masterstudiengänge der WIAI-Fakultät [C3].",
+   "original": "Ein ECTS-Punkt entspricht einem Arbeitsaufwand von ca. 30 Arbeitsstunden [C1]. Die APO WIAI gilt für die Bachelor- und Masterstudiengänge der WIAI-Fakultät [C3].",
+   "verdict": "wrong",
+   "reason": "The system states about 40 working hours per ECTS point, but the reference says about 30, so the key number is different."
+  },
+  {
+   "qid": "f21-de",
+   "kind": "not_stated",
+   "question": "Wie viele Arbeitsstunden entsprechen einem ECTS-Punkt an der Fakultät WIAI?",
+   "reference": "Ca. 30 Arbeitsstunden.",
+   "answer": "The excerpts do not state this.",
+   "original": "Ein ECTS-Punkt entspricht einem Arbeitsaufwand von ca. 30 Arbeitsstunden [C1]. Die APO WIAI gilt für die Bachelor- und Masterstudiengänge der WIAI-Fakultät [C3].",
+   "verdict": "wrong",
+   "reason": "The system says the information is not available instead of giving the reference answer of about 30 working hours per ECTS point."
+  },
+  {
+   "qid": "f21-en",
+   "kind": "changed_number",
+   "question": "How many hours of work correspond to one ECTS credit at the WIAI faculty?",
+   "reference": "About 30 hours of work.",
+   "answer": "One ECTS credit corresponds to a workload of approximately 40 working hours [C1].",
+   "original": "One ECTS credit corresponds to a workload of approximately 30 working hours [C1].",
+   "verdict": "wrong",
+   "reason": "The system says about 40 hours per ECTS credit, but the reference says about 30 hours."
+  },
+  {
+   "qid": "f21-en",
+   "kind": "not_stated",
+   "question": "How many hours of work correspond to one ECTS credit at the WIAI faculty?",
+   "reference": "About 30 hours of work.",
+   "answer": "The excerpts do not state this.",
+   "original": "One ECTS credit corresponds to a workload of approximately 30 working hours [C1].",
+   "verdict": "wrong",
+   "reason": "The system says the information is not available, while the reference answer gives about 30 hours per ECTS credit."
+  },
+  {
+   "qid": "f25-de",
+   "kind": "not_stated",
+   "question": "Wie viele Kompetenzen dürfen höchstens durch außerhalb der Hochschule erworbene Kenntnisse ersetzt werden?",
+   "reference": "Höchstens die Hälfte der im Studiengang nachzuweisenden Kompetenzen.",
+   "answer": "The excerpts do not state this.",
+   "original": "Außerhalb des Hochschulbereichs erworbene Kompetenzen dürfen höchstens die Hälfte der im Studiengang nachzuweisenden Kompetenzen ersetzen [C1].",
+   "verdict": "wrong",
+   "reason": "The system says the information is not available, while the reference gives a clear answer (at most half of the competences)."
+  },
+  {
+   "qid": "f25-en",
+   "kind": "changed_number_word",
+   "question": "How much of the required competences can at most be replaced by competences acquired outside higher education?",
+   "reference": "At most half of the competences to be proven in the programme.",
+   "answer": "Competences acquired outside the higher education sector may replace at most a third of the competences to be demonstrated in the degree programme [C1].",
+   "original": "Competences acquired outside the higher education sector may replace at most half of the competences to be demonstrated in the degree programme [C1].",
+   "verdict": "wrong",
+   "reason": "The system says at most a third, but the reference says at most half, so the key number contradicts the reference."
+  },
+  {
+   "qid": "f25-en",
+   "kind": "not_stated",
+   "question": "How much of the required competences can at most be replaced by competences acquired outside higher education?",
+   "reference": "At most half of the competences to be proven in the programme.",
+   "answer": "The excerpts do not state this.",
+   "original": "Competences acquired outside the higher education sector may replace at most half of the competences to be demonstrated in the degree programme [C1].",
+   "verdict": "wrong",
+   "reason": "The system says the information is not available, while the reference states at most half of the competences can be replaced."
+  },
+  {
+   "qid": "f27-de",
+   "kind": "changed_number",
+   "question": "Wie lange dauert eine mündliche Prüfung nach der APO WIAI?",
+   "reference": "Mindestens 5 und höchstens 60 Minuten.",
+   "answer": "Eine mündliche Prüfung dauert mindestens 7 und höchstens 60 Minuten [C1].",
+   "original": "Eine mündliche Prüfung dauert mindestens 5 und höchstens 60 Minuten [C1].",
+   "verdict": "wrong",
+   "reason": "The system gives a minimum of 7 minutes, but the reference says 5 minutes, so the key number is incorrect."
+  },
+  {
+   "qid": "f27-de",
+   "kind": "not_stated",
+   "question": "Wie lange dauert eine mündliche Prüfung nach der APO WIAI?",
+   "reference": "Mindestens 5 und höchstens 60 Minuten.",
+   "answer": "The excerpts do not state this.",
+   "original": "Eine mündliche Prüfung dauert mindestens 5 und höchstens 60 Minuten [C1].",
+   "verdict": "wrong",
+   "reason": "The system says the information is not available and gives neither the minimum of 5 minutes nor the maximum of 60 minutes."
+  },
+  {
+   "qid": "f27-en",
+   "kind": "changed_number",
+   "question": "How long does an oral exam last according to the APO WIAI?",
+   "reference": "At least 5 and at most 60 minutes.",
+   "answer": "According to the APO WIAI, an oral examination lasts at least 7 and at most 60 minutes [C1].",
+   "original": "According to the APO WIAI, an oral examination lasts at least 5 and at most 60 minutes [C1].",
+   "verdict": "wrong",
+   "reason": "The system gives a minimum of 7 minutes, but the reference says at least 5 minutes, so the number contradicts the reference."
+  },
+  {
+   "qid": "f27-en",
+   "kind": "not_stated",
+   "question": "How long does an oral exam last according to the APO WIAI?",
+   "reference": "At least 5 and at most 60 minutes.",
+   "answer": "The excerpts do not state this.",
+   "original": "According to the APO WIAI, an oral examination lasts at least 5 and at most 60 minutes [C1].",
+   "verdict": "wrong",
+   "reason": "The system says the information is not available, while the reference gives a duration of at least 5 and at most 60 minutes."
+  },
+  {
+   "qid": "f33-en",
+   "kind": "not_stated",
+   "question": "How many times can a failed master's thesis be repeated?",
+   "reference": "Once, with a new topic; a second repetition is not allowed.",
+   "answer": "The excerpts do not state this.",
+   "original": "A failed master's thesis may be repeated once [C2]. The repetition is a second thesis on a new topic, and a second repetition is excluded [C1].",
+   "verdict": "wrong",
+   "reason": "The system says the information is not available, while the reference answer states the thesis can be repeated once with a new topic."
+  },
+  {
+   "qid": "f36-de",
+   "kind": "changed_number_word",
+   "question": "Wie lange nach der Zeugnisausstellung kann der Prüfungsausschuss wegen Täuschung noch Noten berichtigen oder Prüfungen für nicht bestanden erklären?",
+   "reference": "Fünf Jahre ab dem Datum des Prüfungszeugnisses.",
+   "answer": "Eine Entscheidung nach § 25 Abs. 1 (Berichtigung der Noten bzw. Erklärung des Nichtbestehens) ist nach einer Frist von drei Jahren ab dem Datum des Prüfungszeugnisses ausgeschlossen [C1].",
+   "original": "Eine Entscheidung nach § 25 Abs. 1 (Berichtigung der Noten bzw. Erklärung des Nichtbestehens) ist nach einer Frist von fünf Jahren ab dem Datum des Prüfungszeugnisses ausgeschlossen [C1].",
+   "verdict": "wrong",
+   "reason": "The system says three years, but the reference states five years from the date of the certificate."
+  },
+  {
+   "qid": "f36-de",
+   "kind": "not_stated",
+   "question": "Wie lange nach der Zeugnisausstellung kann der Prüfungsausschuss wegen Täuschung noch Noten berichtigen oder Prüfungen für nicht bestanden erklären?",
+   "reference": "Fünf Jahre ab dem Datum des Prüfungszeugnisses.",
+   "answer": "The excerpts do not state this.",
+   "original": "Eine Entscheidung nach § 25 Abs. 1 (Berichtigung der Noten bzw. Erklärung des Nichtbestehens) ist nach einer Frist von fünf Jahren ab dem Datum des Prüfungszeugnisses ausgeschlossen [C1].",
+   "verdict": "wrong",
+   "reason": "The system says the information is not available, while the reference gives five years from the date of the examination certificate."
+  },
+  {
+   "qid": "f36-en",
+   "kind": "changed_number_word",
+   "question": "For how long after the degree certificate was issued can the examination committee still correct grades or declare exams failed because of cheating?",
+   "reference": "Five years from the date of the certificate.",
+   "answer": "Decisions to correct grades or declare exams failed because of deception are excluded three years after the date of the examination certificate [C1].",
+   "original": "Decisions to correct grades or declare exams failed because of deception are excluded five years after the date of the examination certificate [C1].",
+   "verdict": "wrong",
+   "reason": "The system says three years, but the reference says five years from the certificate date."
+  },
+  {
+   "qid": "f36-en",
+   "kind": "not_stated",
+   "question": "For how long after the degree certificate was issued can the examination committee still correct grades or declare exams failed because of cheating?",
+   "reference": "Five years from the date of the certificate.",
+   "answer": "The excerpts do not state this.",
+   "original": "Decisions to correct grades or declare exams failed because of deception are excluded five years after the date of the examination certificate [C1].",
+   "verdict": "wrong",
+   "reason": "The system says the information is not available, whereas the reference answer gives five years from the certificate date."
+  },
+  {
+   "qid": "f37-de",
+   "kind": "changed_number",
+   "question": "Ab welcher Kohortengröße gibt das Diploma Supplement die prozentuale Notenverteilung an?",
+   "reference": "Wenn die Kohorte der vier vorhergehenden Abschlusssemester mindestens 15 Absolventen umfasst.",
+   "answer": "Die prozentuale Notenverteilung wird angegeben, sofern die Kohorte der vier dem Abschlusssemester vorhergehenden Abschlusssemester insgesamt mindestens 25 Absolventinnen und Absolventen enthält [C1].",
+   "original": "Die prozentuale Notenverteilung wird angegeben, sofern die Kohorte der vier dem Abschlusssemester vorhergehenden Abschlusssemester insgesamt mindestens 15 Absolventinnen und Absolventen enthält [C1].",
+   "verdict": "wrong",
+   "reason": "The system states a minimum cohort of 25 graduates, but the reference says 15, so the key number is contradicted."
+  },
+  {
+   "qid": "f37-de",
+   "kind": "changed_number_word",
+   "question": "Ab welcher Kohortengröße gibt das Diploma Supplement die prozentuale Notenverteilung an?",
+   "reference": "Wenn die Kohorte der vier vorhergehenden Abschlusssemester mindestens 15 Absolventen umfasst.",
+   "answer": "Die prozentuale Notenverteilung wird angegeben, sofern die Kohorte der sechs dem Abschlusssemester vorhergehenden Abschlusssemester insgesamt mindestens 15 Absolventinnen und Absolventen enthält [C1].",
+   "original": "Die prozentuale Notenverteilung wird angegeben, sofern die Kohorte der vier dem Abschlusssemester vorhergehenden Abschlusssemester insgesamt mindestens 15 Absolventinnen und Absolventen enthält [C1].",
+   "verdict": "wrong",
+   "reason": "The threshold of 15 graduates matches, but the system says the cohort spans six preceding semesters instead of four, which contradicts the reference."
+  },
+  {
+   "qid": "f37-de",
+   "kind": "not_stated",
+   "question": "Ab welcher Kohortengröße gibt das Diploma Supplement die prozentuale Notenverteilung an?",
+   "reference": "Wenn die Kohorte der vier vorhergehenden Abschlusssemester mindestens 15 Absolventen umfasst.",
+   "answer": "The excerpts do not state this.",
+   "original": "Die prozentuale Notenverteilung wird angegeben, sofern die Kohorte der vier dem Abschlusssemester vorhergehenden Abschlusssemester insgesamt mindestens 15 Absolventinnen und Absolventen enthält [C1].",
+   "verdict": "wrong",
+   "reason": "The system says the information is not available, while the reference gives a specific threshold of at least 15 graduates."
+  },
+  {
+   "qid": "f37-en",
+   "kind": "changed_number",
+   "question": "From what cohort size does the Diploma Supplement show the percentage distribution of grades?",
+   "reference": "If the cohort of the four preceding graduation semesters contains at least 15 graduates.",
+   "answer": "The percentage grade distribution is shown if the cohort of the four preceding graduation semesters contains at least 25 graduates [C1].",
+   "original": "The percentage grade distribution is shown if the cohort of the four preceding graduation semesters contains at least 15 graduates [C1].",
+   "verdict": "wrong",
+   "reason": "The system states a minimum of 25 graduates, but the reference says 15."
+  },
+  {
+   "qid": "f37-en",
+   "kind": "changed_number_word",
+   "question": "From what cohort size does the Diploma Supplement show the percentage distribution of grades?",
+   "reference": "If the cohort of the four preceding graduation semesters contains at least 15 graduates.",
+   "answer": "The percentage grade distribution is shown if the cohort of the six preceding graduation semesters contains at least 15 graduates [C1].",
+   "original": "The percentage grade distribution is shown if the cohort of the four preceding graduation semesters contains at least 15 graduates [C1].",
+   "verdict": "wrong",
+   "reason": "The system says six preceding graduation semesters, but the reference says four, although the threshold of 15 graduates matches."
+  },
+  {
+   "qid": "f37-en",
+   "kind": "not_stated",
+   "question": "From what cohort size does the Diploma Supplement show the percentage distribution of grades?",
+   "reference": "If the cohort of the four preceding graduation semesters contains at least 15 graduates.",
+   "answer": "The excerpts do not state this.",
+   "original": "The percentage grade distribution is shown if the cohort of the four preceding graduation semesters contains at least 15 graduates [C1].",
+   "verdict": "wrong",
+   "reason": "The system says the information is not available, while the reference gives a specific threshold of at least 15 graduates in the four preceding graduation semesters."
+  },
+  {
+   "qid": "f38-de",
+   "kind": "not_stated",
+   "question": "Was geschieht mit überschüssigen ECTS-Punkten, wenn die Grenze einer Modulgruppe überschritten wird?",
+   "reference": "Die überschießende Punktezahl wird bei dem am schlechtesten bewerteten Modul abgeschnitten.",
+   "answer": "The excerpts do not state this.",
+   "original": "Wird die ECTS-Grenze einer Modulgruppe überschritten, wird die überschießende Punktezahl beim am schlechtesten bewerteten Modul abgeschnitten [C1].",
+   "verdict": "wrong",
+   "reason": "The system says the information is not available, while the reference states that excess points are cut off from the worst-graded module."
+  },
+  {
+   "qid": "f38-en",
+   "kind": "not_stated",
+   "question": "What happens to excess ECTS credits when the credit limit of a module group is exceeded?",
+   "reference": "The excess credits are cut from the worst-graded module.",
+   "answer": "The excerpts do not state this.",
+   "original": "When the ECTS limit of a module group is exceeded, the excess points are cut from the worst-graded module in that group [C1].",
+   "verdict": "wrong",
+   "reason": "The system says the information is not available instead of giving the reference fact that the excess credits are cut from the worst-graded module."
+  },
+  {
+   "qid": "f40-de",
+   "kind": "changed_name",
+   "question": "Wer ist für das Modul Reinforcement Learning (DS-RL-M) verantwortlich?",
+   "reference": "Prof. Dr. Stefan Ultes.",
+   "answer": "Verantwortlich für das Modul Reinforcement Learning (DS-RL-M) ist Prof. Dr. Anna Berger [C1].",
+   "original": "Verantwortlich für das Modul Reinforcement Learning (DS-RL-M) ist Prof. Dr. Stefan Ultes [C1].",
+   "verdict": "wrong",
+   "reason": "The system names Prof. Dr. Anna Berger as responsible, but the reference says Prof. Dr. Stefan Ultes."
+  },
+  {
+   "qid": "f40-de",
+   "kind": "not_stated",
+   "question": "Wer ist für das Modul Reinforcement Learning (DS-RL-M) verantwortlich?",
+   "reference": "Prof. Dr. Stefan Ultes.",
+   "answer": "The excerpts do not state this.",
+   "original": "Verantwortlich für das Modul Reinforcement Learning (DS-RL-M) ist Prof. Dr. Stefan Ultes [C1].",
+   "verdict": "wrong",
+   "reason": "The system says the information is not available instead of naming Prof. Dr. Stefan Ultes as the responsible person."
+  },
+  {
+   "qid": "f40-en",
+   "kind": "changed_name",
+   "question": "Who is responsible for the module Reinforcement Learning (DS-RL-M)?",
+   "reference": "Prof. Dr. Stefan Ultes.",
+   "answer": "The person responsible for module DS-RL-M Reinforcement Learning is Prof. Dr. Anna Berger [C1].",
+   "original": "The person responsible for module DS-RL-M Reinforcement Learning is Prof. Dr. Stefan Ultes [C1].",
+   "verdict": "wrong",
+   "reason": "The system names Prof. Dr. Anna Berger, but the reference says the responsible person is Prof. Dr. Stefan Ultes."
+  },
+  {
+   "qid": "f40-en",
+   "kind": "not_stated",
+   "question": "Who is responsible for the module Reinforcement Learning (DS-RL-M)?",
+   "reference": "Prof. Dr. Stefan Ultes.",
+   "answer": "The excerpts do not state this.",
+   "original": "The person responsible for module DS-RL-M Reinforcement Learning is Prof. Dr. Stefan Ultes [C1].",
+   "verdict": "wrong",
+   "reason": "The system says the information is not available instead of naming Prof. Dr. Stefan Ultes as the responsible person."
+  },
+  {
+   "qid": "f47-de",
+   "kind": "not_stated",
+   "question": "In welcher Sprache wird das Modul Ubiquitous Systems (HCI-US-B) standardmäßig unterrichtet?",
+   "reference": "Standardmäßig auf Deutsch; auf Wunsch kann auf Englisch gewechselt werden.",
+   "answer": "The excerpts do not state this.",
+   "original": "Die Standardsprache des Moduls HCI-US-B Ubiquitous Systems ist Deutsch; auf Wunsch kann sie auf Englisch umgestellt werden [C1].",
+   "verdict": "wrong",
+   "reason": "The system says the information is not available, while the reference states the module is taught in German by default, with English possible on request."
+  },
+  {
+   "qid": "f47-en",
+   "kind": "not_stated",
+   "question": "In which language is the module Ubiquitous Systems (HCI-US-B) taught by default?",
+   "reference": "German by default, but it can be changed to English on demand.",
+   "answer": "The excerpts do not state this.",
+   "original": "The default language of instruction is German, but it can be changed to English on demand [C1].",
+   "verdict": "wrong",
+   "reason": "The system says the information is not available, while the reference states German by default (changeable to English)."
+  },
+  {
+   "qid": "f48-de",
+   "kind": "changed_number",
+   "question": "Wie lange dauert die Klausur im Modul Introduction to Functional Programming?",
+   "reference": "90 Minuten.",
+   "answer": "Die Klausur im Modul Introduction to Functional Programming dauert 100 Minuten [C3]. Dies bestätigt auch die Modulübersicht [C5].",
+   "original": "Die Klausur im Modul Introduction to Functional Programming dauert 90 Minuten [C3]. Dies bestätigt auch die Modulübersicht [C5].",
+   "verdict": "wrong",
+   "reason": "The system states 100 minutes, which contradicts the reference answer of 90 minutes."
+  },
+  {
+   "qid": "f48-de",
+   "kind": "not_stated",
+   "question": "Wie lange dauert die Klausur im Modul Introduction to Functional Programming?",
+   "reference": "90 Minuten.",
+   "answer": "The excerpts do not state this.",
+   "original": "Die Klausur im Modul Introduction to Functional Programming dauert 90 Minuten [C3]. Dies bestätigt auch die Modulübersicht [C5].",
+   "verdict": "wrong",
+   "reason": "The system says the information is not available instead of giving the reference answer of 90 minutes."
+  },
+  {
+   "qid": "f48-en",
+   "kind": "changed_number",
+   "question": "How long is the written exam in the module Introduction to Functional Programming?",
+   "reference": "90 minutes.",
+   "answer": "The written examination in Introduction to Functional Programming lasts 100 minutes [C1]. The module handbook summary lists the same 100-minute written examination [C4].",
+   "original": "The written examination in Introduction to Functional Programming lasts 90 minutes [C1]. The module handbook summary lists the same 90-minute written examination [C4].",
+   "verdict": "wrong",
+   "reason": "The system states 100 minutes, which contradicts the reference answer of 90 minutes."
+  },
+  {
+   "qid": "f48-en",
+   "kind": "not_stated",
+   "question": "How long is the written exam in the module Introduction to Functional Programming?",
+   "reference": "90 minutes.",
+   "answer": "The excerpts do not state this.",
+   "original": "The written examination in Introduction to Functional Programming lasts 90 minutes [C1]. The module handbook summary lists the same 90-minute written examination [C4].",
+   "verdict": "wrong",
+   "reason": "The system says the information is not available, while the reference gives the duration as 90 minutes."
+  },
+  {
+   "qid": "f49-de",
+   "kind": "not_stated",
+   "question": "Welche Prüfungsform hat das Modul Designing Gamified Systems?",
+   "reference": "Ein Portfolio.",
+   "answer": "The excerpts do not state this.",
+   "original": "Die Prüfungsform des Moduls Designing Gamified Systems ist ein Portfolio [C2].",
+   "verdict": "wrong",
+   "reason": "The system says the information is not available, while the reference answer states the exam form is a portfolio."
+  },
+  {
+   "qid": "f49-en",
+   "kind": "not_stated",
+   "question": "What is the form of examination in the module Designing Gamified Systems?",
+   "reference": "A portfolio.",
+   "answer": "The excerpts do not state this.",
+   "original": "The form of examination in the module Designing Gamified Systems is a portfolio [C3].",
+   "verdict": "wrong",
+   "reason": "The system says the information is not available, while the reference answer states the exam form is a portfolio."
+  },
+  {
+   "qid": "f01-de",
+   "kind": "other_answer",
+   "question": "Wie viele Fachsemester beträgt die Regelstudienzeit im Masterstudiengang International Software Systems Science?",
+   "reference": "Vier Fachsemester.",
+   "answer": "Außerhalb des Hochschulbereichs erworbene Kompetenzen dürfen höchstens die Hälfte der im Studiengang nachzuweisenden Kompetenzen ersetzen [C1].",
+   "original": "Die Regelstudienzeit beträgt vier Fachsemester [C3].",
+   "verdict": "wrong",
+   "reason": "The system answer discusses crediting competencies acquired outside higher education and does not state the standard period of study (four semesters)."
+  },
+  {
+   "qid": "f01-en",
+   "kind": "other_answer",
+   "question": "How many semesters is the standard period of study in the International Software Systems Science master's programme?",
+   "reference": "Four semesters.",
+   "answer": "Eine mündliche Prüfung dauert mindestens 5 und höchstens 60 Minuten [C1].",
+   "original": "The standard period of study (Regelstudienzeit) is four Fachsemester [C5].",
+   "verdict": "wrong",
+   "reason": "The system answer talks about the duration of an oral exam and does not state the standard period of study (four semesters)."
+  },
+  {
+   "qid": "f03-de",
+   "kind": "other_answer",
+   "question": "Welche Gesamtnote braucht man im Bachelorabschluss im gleichen Studienfach, um direkt zum Master ISSS zugelassen zu werden?",
+   "reference": "Die Gesamtnote 2,7 oder besser.",
+   "answer": "You can choose from four study focus areas: S1: Distributed and Mobile Systems, S2: Software Analysis and Verification, S3: Service-oriented Architectures, and S4: Communication Systems and Protocols [C1].",
+   "original": "Für die direkte Zulassung im gleichen Studienfach ist die Gesamtnote 2,7 oder besser erforderlich, bei einer Regelstudienzeit von mindestens sechs Fachsemestern im Umfang von 180 ECTS-Punkten [C1].",
+   "verdict": "wrong",
+   "reason": "The system answer lists study focus areas and never gives the required overall grade of 2.7 or better, so it answers a different question."
+  },
+  {
+   "qid": "f03-en",
+   "kind": "other_answer",
+   "question": "What overall grade does a bachelor's degree in the same subject need for direct admission to the ISSS master's programme?",
+   "reference": "An overall grade of 2.7 or better.",
+   "answer": "Ein ECTS-Punkt entspricht einem Arbeitsaufwand von ca. 30 Arbeitsstunden [C1]. Die APO WIAI gilt für die Bachelor- und Masterstudiengänge der WIAI-Fakultät [C3].",
+   "original": "A degree in the same subject with an overall grade of 2.7 or better gives direct admission, provided it has a standard period of study of at least six semesters and 180 ECTS points [C1].",
+   "verdict": "wrong",
+   "reason": "The system answer does not mention the required overall grade of 2.7 or better and instead gives unrelated information about ECTS and the APO WIAI."
+  },
+  {
+   "qid": "f04-de",
+   "kind": "other_answer",
+   "question": "Welche Englischnachweise werden für den Master ISSS verlangt?",
+   "reference": "Mindestens IELTS 6.5 oder TOEFL 90 iBT oder ein gleichwertiger Nachweis.",
+   "answer": "You need at least 60 ECTS credit points successfully completed towards the degree before the master's thesis can be registered and confirmed [C1][C5].",
+   "original": "Für den Zugang zum Masterstudiengang ISSS sind Englischkenntnisse nachzuweisen, die zu einem englischsprachigen Studium befähigen. Der Nachweis erfolgt durch Zertifikate entsprechend mindestens IELTS 6.5 oder TOEFL 90 iBT oder gleichwertige Sprachnachweise [C1].",
+   "verdict": "wrong",
+   "reason": "The system answer talks about ECTS credit requirements for thesis registration and does not mention English proficiency proofs (IELTS 6.5 / TOEFL 90 iBT), so it answers a different question."
+  },
+  {
+   "qid": "f04-en",
+   "kind": "other_answer",
+   "question": "Which English language certificates are required for the ISSS master's programme?",
+   "reference": "At least IELTS 6.5 or TOEFL 90 iBT, or an equivalent proof.",
+   "answer": "Ein ECTS-Punkt entspricht einem Arbeitsaufwand von ca. 30 Arbeitsstunden [C1]. Die APO WIAI gilt für die Bachelor- und Masterstudiengänge der WIAI-Fakultät [C3].",
+   "original": "Applicants need English proficiency sufficient to study in English, proven by certificates of at least IELTS 6.5 or TOEFL 90 iBT, or equivalent language proof [C1].",
+   "verdict": "wrong",
+   "reason": "The system answer discusses ECTS workload and the scope of the APO WIAI and never mentions the required English certificates (IELTS 6.5 or TOEFL 90 iBT)."
+  },
+  {
+   "qid": "f05-de",
+   "kind": "other_answer",
+   "question": "Bis wann muss man sich für den Master ISSS zum Wintersemester und zum Sommersemester bewerben?",
+   "reference": "Zum Wintersemester bis zum 15. Juli, zum Sommersemester bis zum 15. Januar.",
+   "answer": "You can choose from four study focus areas: S1: Distributed and Mobile Systems, S2: Software Analysis and Verification, S3: Service-oriented Architectures, and S4: Communication Systems and Protocols [C1].",
+   "original": "Für das Wintersemester endet die Bewerbungsfrist am 15. Juli des jeweiligen Jahres [C1]. Für das Sommersemester endet sie am 15. Januar des jeweiligen Jahres [C1].",
+   "verdict": "wrong",
+   "reason": "The system answer lists study focus areas and gives no application deadlines, so it does not answer the question about 15 July and 15 January."
+  },
+  {
+   "qid": "f05-en",
+   "kind": "other_answer",
+   "question": "What are the application deadlines for the ISSS master's programme for the winter and the summer semester?",
+   "reference": "15 July for the winter semester and 15 January for the summer semester.",
+   "answer": "Für die Zulassung zur Masterarbeit müssen Module im Umfang von mindestens 60 ECTS-Punkten erfolgreich absolviert sein [C2].",
+   "original": "The application deadline for the winter semester ends on 15 July of the respective year, and for the summer semester it ends on 15 January of the respective year [C1].",
+   "verdict": "wrong",
+   "reason": "The system answer discusses admission requirements for the master's thesis (60 ECTS) and gives no application deadlines, so it does not answer the question."
+  },
+  {
+   "qid": "f09-de",
+   "kind": "other_answer",
+   "question": "Wie setzt sich die Note der Masterarbeit im Master ISSS zusammen?",
+   "reference": "67 % schriftliche Arbeit und 33 % Kolloquium.",
+   "answer": "Für den Zugang zum Masterstudiengang ISSS sind Englischkenntnisse nachzuweisen, die zu einem englischsprachigen Studium befähigen. Der Nachweis erfolgt durch Zertifikate entsprechend mindestens IELTS 6.5 oder TOEFL 90 iBT oder gleichwertige Sprachnachweise [C1].",
+   "original": "Die Note der Masterarbeit setzt sich zu 67 % aus der Bewertung der schriftlichen Arbeit und zu 33 % aus der Bewertung des Kolloquiums zusammen, in dem die Hauptergebnisse der Arbeit verteidigt werden [C1].",
+   "verdict": "wrong",
+   "reason": "The system answer discusses English language admission requirements and does not mention the master's thesis grade composition (67% written work, 33% colloquium)."
+  },
+  {
+   "qid": "f09-en",
+   "kind": "other_answer",
+   "question": "How is the grade of the master's thesis in the ISSS programme composed?",
+   "reference": "67% the written thesis and 33% the colloquium.",
+   "answer": "The form of examination in the module Designing Gamified Systems is a portfolio [C3].",
+   "original": "The master's thesis module grade is made up of the written thesis, weighted 67%, and the oral colloquium (presentation) of 20 to 60 minutes, weighted 33% [C1][C2]. The colloquium can take place before or after the thesis is graded, according to the student's preference [C2].",
+   "verdict": "wrong",
+   "reason": "The system answer discusses a portfolio in an unrelated module and does not state the 67% thesis / 33% colloquium composition."
+  },
+  {
+   "qid": "f10-de",
+   "kind": "other_answer",
+   "question": "Wie viele ECTS-Punkte muss man schon haben, um zur Masterarbeit im Master ISSS zugelassen zu werden?",
+   "reference": "Mindestens 60 ECTS-Punkte.",
+   "answer": "Yes. On request, the examination board may admit a topic from another subject, provided the candidate plausibly shows that the topic is drawn from Software Systems Science [C3]. Such an exception must be individually approved by the examination board and justified as related to the curriculum of the International Software Systems Science master's programme [C2][C1].",
+   "original": "Für die Zulassung zur Masterarbeit müssen Module im Umfang von mindestens 60 ECTS-Punkten erfolgreich absolviert sein [C2].",
+   "verdict": "wrong",
+   "reason": "The system answer never gives the required 60 ECTS points and instead discusses an exception for topics from another subject, which does not answer the question."
+  },
+  {
+   "qid": "f10-en",
+   "kind": "other_answer",
+   "question": "How many ECTS credits do you need before you are admitted to the master's thesis in ISSS?",
+   "reference": "At least 60 ECTS credits.",
+   "answer": "Eine mündliche Prüfung dauert mindestens 5 und höchstens 60 Minuten [C1].",
+   "original": "You need at least 60 ECTS credit points successfully completed towards the degree before the master's thesis can be registered and confirmed [C1][C5].",
+   "verdict": "wrong",
+   "reason": "The system answer is about the duration of oral exams and does not state the required 60 ECTS credits for admission to the master's thesis."
+  },
+  {
+   "qid": "f17-de",
+   "kind": "other_answer",
+   "question": "Welche vier Studienschwerpunkte kann man im Master ISSS wählen?",
+   "reference": "S1: Distributed and Mobile Systems, S2: Software Analysis and Verification, S3: Service-oriented Architectures, S4: Communication Systems and Protocols.",
+   "answer": "The standard period of study (Regelstudienzeit) is four Fachsemester [C5].",
+   "original": "Im Masterstudiengang International Software Systems Science kann aus den folgenden vier Studienschwerpunkten gewählt werden: S1: Distributed and Mobile Systems, S2: Software Analysis and Verification, S3: Service-oriented Architectures, S4: Communication Systems and Protocols [C1].",
+   "verdict": "wrong",
+   "reason": "The system answer talks about the standard period of study and does not name any of the four Studienschwerpunkte, so it answers a different question."
+  },
+  {
+   "qid": "f17-en",
+   "kind": "other_answer",
+   "question": "Which four study focus areas can you choose in the ISSS master's programme?",
+   "reference": "S1: Distributed and Mobile Systems, S2: Software Analysis and Verification, S3: Service-oriented Architectures, S4: Communication Systems and Protocols.",
+   "answer": "Verantwortlich für das Modul Reinforcement Learning (DS-RL-M) ist Prof. Dr. Stefan Ultes [C1].",
+   "original": "You can choose from four study focus areas: S1: Distributed and Mobile Systems, S2: Software Analysis and Verification, S3: Service-oriented Architectures, and S4: Communication Systems and Protocols [C1].",
+   "verdict": "wrong",
+   "reason": "The system answer discusses who is responsible for a Reinforcement Learning module, which is unrelated to the four ISSS focus areas."
+  },
+  {
+   "qid": "f20-de",
+   "kind": "other_answer",
+   "question": "Kann die Masterarbeit im Master ISSS auch in einem anderen als dem vorgegebenen Fach geschrieben werden?",
+   "reference": "Ja, auf Antrag kann der Prüfungsausschuss ein Thema aus einem anderen Fach zulassen, sofern glaubhaft nachgewiesen wird, dass es inhaltlich der Software Systems Science entnommen ist.",
+   "answer": "Die Note der Masterarbeit setzt sich zu 67 % aus der Bewertung der schriftlichen Arbeit und zu 33 % aus der Bewertung des Kolloquiums zusammen, in dem die Hauptergebnisse der Arbeit verteidigt werden [C1].",
+   "original": "Ja, auf Antrag kann der Prüfungsausschuss auch ein Thema aus einem anderen Fach zulassen; die Kandidatin bzw. der Kandidat muss dann glaubhaft nachweisen, dass das Thema inhaltlich der Software Systems Science entnommen ist [C1]. Für andere Fächer aus dem Bereich des Masterstudiums gilt zudem, dass im Antrag ein inhaltlicher Bezug zum Masterstudiengang glaubhaft zu belegen ist [C2].",
+   "verdict": "wrong",
+   "reason": "The system answer addresses the grading composition of the master's thesis and does not answer whether the thesis can be written in a different subject."
+  },
+  {
+   "qid": "f20-en",
+   "kind": "other_answer",
+   "question": "Can the ISSS master's thesis be written on a topic from a different subject than the listed ones?",
+   "reference": "Yes, on request the examination committee can approve a topic from another subject if it is credibly shown that the topic belongs to Software Systems Science.",
+   "answer": "Die Regelstudienzeit beträgt vier Fachsemester [C3].",
+   "original": "Yes. On request, the examination board may admit a topic from another subject, provided the candidate plausibly shows that the topic is drawn from Software Systems Science [C3]. Such an exception must be individually approved by the examination board and justified as related to the curriculum of the International Software Systems Science master's programme [C2][C1].",
+   "verdict": "wrong",
+   "reason": "The system's answer states the standard study duration, which does not address whether a thesis topic from another subject can be approved."
+  },
+  {
+   "qid": "f21-de",
+   "kind": "other_answer",
+   "question": "Wie viele Arbeitsstunden entsprechen einem ECTS-Punkt an der Fakultät WIAI?",
+   "reference": "Ca. 30 Arbeitsstunden.",
+   "answer": "Competences acquired outside the higher education sector may replace at most half of the competences to be demonstrated in the degree programme [C1].",
+   "original": "Ein ECTS-Punkt entspricht einem Arbeitsaufwand von ca. 30 Arbeitsstunden [C1]. Die APO WIAI gilt für die Bachelor- und Masterstudiengänge der WIAI-Fakultät [C3].",
+   "verdict": "wrong",
+   "reason": "The system answer is about crediting competences acquired outside higher education and does not mention the 30 working hours per ECTS point."
+  },
+  {
+   "qid": "f21-en",
+   "kind": "other_answer",
+   "question": "How many hours of work correspond to one ECTS credit at the WIAI faculty?",
+   "reference": "About 30 hours of work.",
+   "answer": "The master's thesis module grade is made up of the written thesis, weighted 67%, and the oral colloquium (presentation) of 20 to 60 minutes, weighted 33% [C1][C2]. The colloquium can take place before or after the thesis is graded, according to the student's preference [C2].",
+   "original": "One ECTS credit corresponds to a workload of approximately 30 working hours [C1].",
+   "verdict": "wrong",
+   "reason": "The system answer discusses master's thesis grading weights and does not state the 30 hours per ECTS credit, so it answers a different question."
+  },
+  {
+   "qid": "f25-de",
+   "kind": "other_answer",
+   "question": "Wie viele Kompetenzen dürfen höchstens durch außerhalb der Hochschule erworbene Kenntnisse ersetzt werden?",
+   "reference": "Höchstens die Hälfte der im Studiengang nachzuweisenden Kompetenzen.",
+   "answer": "Applicants need English proficiency sufficient to study in English, proven by certificates of at least IELTS 6.5 or TOEFL 90 iBT, or equivalent language proof [C1].",
+   "original": "Außerhalb des Hochschulbereichs erworbene Kompetenzen dürfen höchstens die Hälfte der im Studiengang nachzuweisenden Kompetenzen ersetzen [C1].",
+   "verdict": "wrong",
+   "reason": "The system answer discusses English proficiency requirements and does not mention the maximum of half of the competencies that may be replaced by knowledge acquired outside the university."
+  },
+  {
+   "qid": "f25-en",
+   "kind": "other_answer",
+   "question": "How much of the required competences can at most be replaced by competences acquired outside higher education?",
+   "reference": "At most half of the competences to be proven in the programme.",
+   "answer": "Ein ECTS-Punkt entspricht einem Arbeitsaufwand von ca. 30 Arbeitsstunden [C1]. Die APO WIAI gilt für die Bachelor- und Masterstudiengänge der WIAI-Fakultät [C3].",
+   "original": "Competences acquired outside the higher education sector may replace at most half of the competences to be demonstrated in the degree programme [C1].",
+   "verdict": "wrong",
+   "reason": "The system answer does not mention the maximum share (half) of competences replaceable by non-higher-education competences and talks about unrelated topics."
+  },
+  {
+   "qid": "f27-de",
+   "kind": "other_answer",
+   "question": "Wie lange dauert eine mündliche Prüfung nach der APO WIAI?",
+   "reference": "Mindestens 5 und höchstens 60 Minuten.",
+   "answer": "The person responsible for module DS-RL-M Reinforcement Learning is Prof. Dr. Stefan Ultes [C1].",
+   "original": "Eine mündliche Prüfung dauert mindestens 5 und höchstens 60 Minuten [C1].",
+   "verdict": "wrong",
+   "reason": "The system answer addresses a different question (module responsibility) and gives no information about the duration of oral exams."
+  },
+  {
+   "qid": "f27-en",
+   "kind": "other_answer",
+   "question": "How long does an oral exam last according to the APO WIAI?",
+   "reference": "At least 5 and at most 60 minutes.",
+   "answer": "Verantwortlich für das Modul Reinforcement Learning (DS-RL-M) ist Prof. Dr. Stefan Ultes [C1].",
+   "original": "According to the APO WIAI, an oral examination lasts at least 5 and at most 60 minutes [C1].",
+   "verdict": "wrong",
+   "reason": "The system answer talks about who is responsible for a Reinforcement Learning module and does not give the oral exam duration (5 to 60 minutes)."
+  },
+  {
+   "qid": "f33-en",
+   "kind": "other_answer",
+   "question": "How many times can a failed master's thesis be repeated?",
+   "reference": "Once, with a new topic; a second repetition is not allowed.",
+   "answer": "Die Note der Masterarbeit setzt sich zu 67 % aus der Bewertung der schriftlichen Arbeit und zu 33 % aus der Bewertung des Kolloquiums zusammen, in dem die Hauptergebnisse der Arbeit verteidigt werden [C1].",
+   "original": "A failed master's thesis may be repeated once [C2]. The repetition is a second thesis on a new topic, and a second repetition is excluded [C1].",
+   "verdict": "wrong",
+   "reason": "The system answer discusses how the master's thesis grade is composed (67% written work, 33% colloquium) and does not say how many times a failed thesis can be repeated."
+  },
+  {
+   "qid": "f36-de",
+   "kind": "other_answer",
+   "question": "Wie lange nach der Zeugnisausstellung kann der Prüfungsausschuss wegen Täuschung noch Noten berichtigen oder Prüfungen für nicht bestanden erklären?",
+   "reference": "Fünf Jahre ab dem Datum des Prüfungszeugnisses.",
+   "answer": "Ein ECTS-Punkt entspricht einem Arbeitsaufwand von ca. 30 Arbeitsstunden [C1]. Die APO WIAI gilt für die Bachelor- und Masterstudiengänge der WIAI-Fakultät [C3].",
+   "original": "Eine Entscheidung nach § 25 Abs. 1 (Berichtigung der Noten bzw. Erklärung des Nichtbestehens) ist nach einer Frist von fünf Jahren ab dem Datum des Prüfungszeugnisses ausgeschlossen [C1].",
+   "verdict": "wrong",
+   "reason": "The system answer discusses ECTS hours and the scope of the APO, never gives the five-year deadline, and so answers a different question."
+  },
+  {
+   "qid": "f36-en",
+   "kind": "other_answer",
+   "question": "For how long after the degree certificate was issued can the examination committee still correct grades or declare exams failed because of cheating?",
+   "reference": "Five years from the date of the certificate.",
+   "answer": "A failed master's thesis may be repeated once [C2]. The repetition is a second thesis on a new topic, and a second repetition is excluded [C1].",
+   "original": "Decisions to correct grades or declare exams failed because of deception are excluded five years after the date of the examination certificate [C1].",
+   "verdict": "wrong",
+   "reason": "The system answer discusses repeating a failed master's thesis and never mentions the five-year period for correcting grades or declaring exams failed after the certificate was issued."
+  },
+  {
+   "qid": "f37-de",
+   "kind": "other_answer",
+   "question": "Ab welcher Kohortengröße gibt das Diploma Supplement die prozentuale Notenverteilung an?",
+   "reference": "Wenn die Kohorte der vier vorhergehenden Abschlusssemester mindestens 15 Absolventen umfasst.",
+   "answer": "Ja, auf Antrag kann der Prüfungsausschuss auch ein Thema aus einem anderen Fach zulassen; die Kandidatin bzw. der Kandidat muss dann glaubhaft nachweisen, dass das Thema inhaltlich der Software Systems Science entnommen ist [C1]. Für andere Fächer aus dem Bereich des Masterstudiums gilt zudem, dass im Antrag ein inhaltlicher Bezug zum Masterstudiengang glaubhaft zu belegen ist [C2].",
+   "original": "Die prozentuale Notenverteilung wird angegeben, sofern die Kohorte der vier dem Abschlusssemester vorhergehenden Abschlusssemester insgesamt mindestens 15 Absolventinnen und Absolventen enthält [C1].",
+   "verdict": "wrong",
+   "reason": "The system answer discusses admitting a topic from another subject and never mentions the cohort size of 15 graduates for the grade distribution, so it answers a different question."
+  },
+  {
+   "qid": "f37-en",
+   "kind": "other_answer",
+   "question": "From what cohort size does the Diploma Supplement show the percentage distribution of grades?",
+   "reference": "If the cohort of the four preceding graduation semesters contains at least 15 graduates.",
+   "answer": "Die Klausur im Modul Introduction to Functional Programming dauert 90 Minuten [C3]. Dies bestätigt auch die Modulübersicht [C5].",
+   "original": "The percentage grade distribution is shown if the cohort of the four preceding graduation semesters contains at least 15 graduates [C1].",
+   "verdict": "wrong",
+   "reason": "The system answer talks about an exam duration in a different module and does not mention the cohort size of at least 15 graduates."
+  },
+  {
+   "qid": "f38-de",
+   "kind": "other_answer",
+   "question": "Was geschieht mit überschüssigen ECTS-Punkten, wenn die Grenze einer Modulgruppe überschritten wird?",
+   "reference": "Die überschießende Punktezahl wird bei dem am schlechtesten bewerteten Modul abgeschnitten.",
+   "answer": "Verantwortlich für das Modul Reinforcement Learning (DS-RL-M) ist Prof. Dr. Stefan Ultes [C1].",
+   "original": "Wird die ECTS-Grenze einer Modulgruppe überschritten, wird die überschießende Punktezahl beim am schlechtesten bewerteten Modul abgeschnitten [C1].",
+   "verdict": "wrong",
+   "reason": "The system answer names the person responsible for a module and does not address what happens to excess ECTS points."
+  },
+  {
+   "qid": "f38-en",
+   "kind": "other_answer",
+   "question": "What happens to excess ECTS credits when the credit limit of a module group is exceeded?",
+   "reference": "The excess credits are cut from the worst-graded module.",
+   "answer": "Eine Entscheidung nach § 25 Abs. 1 (Berichtigung der Noten bzw. Erklärung des Nichtbestehens) ist nach einer Frist von fünf Jahren ab dem Datum des Prüfungszeugnisses ausgeschlossen [C1].",
+   "original": "When the ECTS limit of a module group is exceeded, the excess points are cut from the worst-graded module in that group [C1].",
+   "verdict": "wrong",
+   "reason": "The system answer discusses a five-year limit on grade corrections under § 25 and does not address how excess ECTS credits are handled (cut from the worst-graded module)."
+  },
+  {
+   "qid": "f40-de",
+   "kind": "other_answer",
+   "question": "Wer ist für das Modul Reinforcement Learning (DS-RL-M) verantwortlich?",
+   "reference": "Prof. Dr. Stefan Ultes.",
+   "answer": "Wird die ECTS-Grenze einer Modulgruppe überschritten, wird die überschießende Punktezahl beim am schlechtesten bewerteten Modul abgeschnitten [C1].",
+   "original": "Verantwortlich für das Modul Reinforcement Learning (DS-RL-M) ist Prof. Dr. Stefan Ultes [C1].",
+   "verdict": "wrong",
+   "reason": "The system answer discusses ECTS limits of module groups and does not name Prof. Dr. Stefan Ultes as responsible for the module, so it answers a different question."
+  },
+  {
+   "qid": "f40-en",
+   "kind": "other_answer",
+   "question": "Who is responsible for the module Reinforcement Learning (DS-RL-M)?",
+   "reference": "Prof. Dr. Stefan Ultes.",
+   "answer": "Eine mündliche Prüfung dauert mindestens 5 und höchstens 60 Minuten [C1].",
+   "original": "The person responsible for module DS-RL-M Reinforcement Learning is Prof. Dr. Stefan Ultes [C1].",
+   "verdict": "wrong",
+   "reason": "The system answer talks about oral exam duration and does not name Prof. Dr. Stefan Ultes, so it answers a different question."
+  },
+  {
+   "qid": "f47-de",
+   "kind": "other_answer",
+   "question": "In welcher Sprache wird das Modul Ubiquitous Systems (HCI-US-B) standardmäßig unterrichtet?",
+   "reference": "Standardmäßig auf Deutsch; auf Wunsch kann auf Englisch gewechselt werden.",
+   "answer": "The application deadline for the winter semester ends on 15 July of the respective year, and for the summer semester it ends on 15 January of the respective year [C1].",
+   "original": "Die Standardsprache des Moduls HCI-US-B Ubiquitous Systems ist Deutsch; auf Wunsch kann sie auf Englisch umgestellt werden [C1].",
+   "verdict": "wrong",
+   "reason": "The system answer discusses application deadlines and does not address the teaching language of the module."
+  },
+  {
+   "qid": "f47-en",
+   "kind": "other_answer",
+   "question": "In which language is the module Ubiquitous Systems (HCI-US-B) taught by default?",
+   "reference": "German by default, but it can be changed to English on demand.",
+   "answer": "A failed master's thesis may be repeated once [C2]. The repetition is a second thesis on a new topic, and a second repetition is excluded [C1].",
+   "original": "The default language of instruction is German, but it can be changed to English on demand [C1].",
+   "verdict": "wrong",
+   "reason": "The system's answer is about repeating a failed master's thesis and never states the teaching language of the Ubiquitous Systems module."
+  },
+  {
+   "qid": "f48-de",
+   "kind": "other_answer",
+   "question": "Wie lange dauert die Klausur im Modul Introduction to Functional Programming?",
+   "reference": "90 Minuten.",
+   "answer": "Ein ECTS-Punkt entspricht einem Arbeitsaufwand von ca. 30 Arbeitsstunden [C1]. Die APO WIAI gilt für die Bachelor- und Masterstudiengänge der WIAI-Fakultät [C3].",
+   "original": "Die Klausur im Modul Introduction to Functional Programming dauert 90 Minuten [C3]. Dies bestätigt auch die Modulübersicht [C5].",
+   "verdict": "wrong",
+   "reason": "The system answer never states the exam duration (90 minutes) and only gives unrelated information about ECTS and the APO WIAI."
+  },
+  {
+   "qid": "f48-en",
+   "kind": "other_answer",
+   "question": "How long is the written exam in the module Introduction to Functional Programming?",
+   "reference": "90 minutes.",
+   "answer": "When the ECTS limit of a module group is exceeded, the excess points are cut from the worst-graded module in that group [C1].",
+   "original": "The written examination in Introduction to Functional Programming lasts 90 minutes [C1]. The module handbook summary lists the same 90-minute written examination [C4].",
+   "verdict": "wrong",
+   "reason": "The system's answer is about ECTS limits in module groups and does not give the exam duration of 90 minutes, so it answers a different question."
+  },
+  {
+   "qid": "f49-de",
+   "kind": "other_answer",
+   "question": "Welche Prüfungsform hat das Modul Designing Gamified Systems?",
+   "reference": "Ein Portfolio.",
+   "answer": "Die Note der Masterarbeit setzt sich zu 67 % aus der Bewertung der schriftlichen Arbeit und zu 33 % aus der Bewertung des Kolloquiums zusammen, in dem die Hauptergebnisse der Arbeit verteidigt werden [C1].",
+   "original": "Die Prüfungsform des Moduls Designing Gamified Systems ist ein Portfolio [C2].",
+   "verdict": "wrong",
+   "reason": "The system answer discusses how the master's thesis grade is composed and does not say that the module Designing Gamified Systems is assessed with a portfolio."
+  },
+  {
+   "qid": "f49-en",
+   "kind": "other_answer",
+   "question": "What is the form of examination in the module Designing Gamified Systems?",
+   "reference": "A portfolio.",
+   "answer": "When the ECTS limit of a module group is exceeded, the excess points are cut from the worst-graded module in that group [C1].",
+   "original": "The form of examination in the module Designing Gamified Systems is a portfolio [C3].",
+   "verdict": "wrong",
+   "reason": "The system's answer discusses ECTS limits for module groups and does not say the exam form is a portfolio, so it answers a different question."
+  }
+ ]
+}

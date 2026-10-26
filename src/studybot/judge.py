@@ -25,6 +25,7 @@ import argparse
 import csv
 import json
 import random
+import re
 import sys
 from collections import Counter, defaultdict
 from collections.abc import Callable, Sequence
@@ -191,6 +192,141 @@ def agreement_report(pairs: Sequence[tuple[str, str]]) -> dict:
     }
 
 
+# ---------------------------------------------------------------- stress test
+#
+# The human sample contains almost no wrong answers, so it cannot show whether the judge
+# wrongly accepts a bad one. The stress test builds bad answers on purpose: take an answer the
+# judge called correct, damage one key fact, and check that the judge no longer says "correct".
+
+_NUMBER = re.compile(r"(?<![\w.,])\d+(?:[.,]\d+)?(?![\w])")
+_REFERENCE_NUMBER_PREFIXES = ("§ ", "§§ ", "Abs. ", "Absatz ", "Satz ", "paragraph ", "Nr. ")
+_NUMBER_WORDS = {
+    "four": "six", "six": "four", "five": "three", "three": "five", "two": "one", "one": "two",
+    "vier": "sechs", "sechs": "vier", "fünf": "drei", "drei": "fünf", "einmal": "zweimal",
+    "half": "a third", "halb": "ein Drittel", "halbe": "ein Drittel",
+}  # fmt: skip
+_NAME = re.compile(r"Prof\. Dr\. [A-ZÄÖÜ][\w-]+ [A-ZÄÖÜ][\w-]+")
+FAKE_NAME = "Prof. Dr. Anna Berger"
+UNAVAILABLE = "The excerpts do not state this."
+
+
+def _changed(token: str) -> str:
+    """A different number with a similar shape: 6.5 -> 7.5, 15 -> 25, 5 -> 7."""
+    decimals = len(token.replace(",", ".").split(".")[1]) if re.search(r"[.,]", token) else 0
+    value = float(token.replace(",", "."))
+    new = value + 1 if decimals else (value + 2 if value < 10 else value + 10)
+    return f"{new:.{decimals}f}".replace(".", "," if "," in token else ".")
+
+
+def swap_number(answer: str, reference: str) -> str | None:
+    """Change the first key number (one the reference also has), everywhere it appears; else None.
+
+    Paragraph and sentence numbers ('§ 25 Abs. 1') are left alone."""
+    ref_numbers = {m.group() for m in _NUMBER.finditer(reference)}
+    target = None
+    for m in _NUMBER.finditer(answer):
+        if m.group() in ref_numbers and not answer[: m.start()].endswith(
+            _REFERENCE_NUMBER_PREFIXES
+        ):
+            target = m.group()
+            break
+    if target is None:
+        return None
+
+    def replace(m: re.Match) -> str:
+        if m.group() != target or answer[: m.start()].endswith(_REFERENCE_NUMBER_PREFIXES):
+            return m.group()
+        return _changed(target)
+
+    return _NUMBER.sub(replace, answer)
+
+
+def swap_number_word(answer: str, reference: str) -> str | None:
+    """Change a number word ('four' -> 'six') that the reference also contains, else None."""
+    for word, other in _NUMBER_WORDS.items():
+        pattern = re.compile(rf"\b{word}\b", re.IGNORECASE)
+        if pattern.search(reference):
+            hit = pattern.search(answer)
+            if hit:
+                new = other.capitalize() if hit.group()[0].isupper() else other
+                return answer[: hit.start()] + new + answer[hit.end() :]
+    return None
+
+
+def swap_name(answer: str, reference: str) -> str | None:
+    """Replace a professor's name that the reference also names, else None."""
+    ref_names = set(_NAME.findall(reference))
+    for m in _NAME.finditer(answer):
+        if m.group() in ref_names:
+            return answer[: m.start()] + FAKE_NAME + answer[m.end() :]
+    return None
+
+
+def make_stress_cases(judged: Sequence[dict], seed: int = SEED) -> list[dict]:
+    """Damaged copies of answers the judge graded 'correct'. Every case should now fail."""
+    good = [
+        r for r in judged
+        if r["gold_answerable"] and r["judged_by"] == "llm" and r["verdict"] == "correct"
+    ]  # fmt: skip
+    good.sort(key=lambda r: r["qid"])
+    cases = []
+
+    def add(row: dict, kind: str, answer: str | None) -> None:
+        if answer:
+            cases.append(
+                {"qid": row["qid"], "kind": kind, "question": row["question"],
+                 "reference": row["gold_answer"], "answer": answer, "original": row["text"]}
+            )  # fmt: skip
+
+    for row in good:
+        ref, text = row["gold_answer"], row["text"]
+        add(row, "changed_number", swap_number(text, ref))
+        add(row, "changed_number_word", swap_number_word(text, ref))
+        add(row, "changed_name", swap_name(text, ref))
+        add(row, "not_stated", UNAVAILABLE)
+    rng = random.Random(seed)  # an answer to a different question
+    for row in good:
+        others = [r for r in good if pair_id(r["qid"]) != pair_id(row["qid"])]
+        if others:
+            add(row, "other_answer", rng.choice(others)["text"])
+    return cases
+
+
+def run_stress(cases: Sequence[dict], complete: Complete) -> list[dict]:
+    results = []
+    for case in cases:
+        prompt = judge_prompt(case["question"], case["reference"], case["answer"])
+        verdict = None
+        for _attempt in range(2):
+            verdict, reason = parse_verdict(complete(JUDGE_PROMPT, prompt))
+            if verdict:
+                break
+        results.append({**case, "verdict": verdict or "unreadable", "reason": reason})
+    return results
+
+
+def summarise_stress(results: Sequence[dict]) -> dict:
+    """Per kind of damage: how many cases, and how many the judge refused to call correct."""
+    kinds: dict[str, dict] = {}
+    for kind in sorted({r["kind"] for r in results}):
+        rows = [r for r in results if r["kind"] == kind]
+        caught = sum(r["verdict"] != "correct" for r in rows)
+        kinds[kind] = {"n": len(rows), "caught": caught, "rate": caught / len(rows)}
+    total = len(results)
+    caught_all = sum(r["verdict"] != "correct" for r in results)
+    return {
+        "kinds": kinds,
+        "n": total,
+        "caught": caught_all,
+        "rate": caught_all / total if total else float("nan"),
+        "missed": [
+            {"qid": r["qid"], "kind": r["kind"], "answer": r["answer"]}
+            for r in results
+            if r["verdict"] == "correct"
+        ],
+    }
+
+
 # ---------------------------------------------------------------- human labelling sheet
 
 SHEET_FIELDS = ["qid", "question", "reference_answer", "system_answer", "human_label"]
@@ -235,6 +371,45 @@ def read_labels(path: str | Path) -> dict[str, str]:
                 raise ValueError(f"{row['qid']}: label must be c, p or w (got {raw!r})")
             labels[row["qid"]] = label
     return labels
+
+
+def label_interactively(
+    path: str | Path, ask: Callable[[str], str] = input, relabel: Sequence[str] = ()
+) -> int:
+    """Walk through the sheet in the terminal; saves after every answer, so you can stop anytime.
+    `relabel` lists qids to ask again even though they already have a label.
+    Answers: c = correct, p = partial, w = wrong, s = skip for now, q = quit."""
+    with open(path, newline="", encoding="utf-8") as f:
+        table = list(csv.DictReader(f))
+    todo = [
+        i
+        for i, row in enumerate(table)
+        if row["qid"] in relabel or not (row.get("human_label") or "").strip()
+    ]
+    for position, i in enumerate(todo, start=1):
+        row = table[i]
+        print(f"\n--- {position}/{len(todo)}  {row['qid']} ---")
+        print(f"QUESTION:  {row['question']}")
+        print(f"REFERENCE: {row['reference_answer']}")
+        print(f"SYSTEM:    {row['system_answer']}")
+        while True:
+            choice = (
+                ask("c = correct, p = partial, w = wrong, s = skip, q = quit > ").strip().lower()
+            )
+            if choice in LABEL_ALIASES or choice in ("s", "q"):
+                break
+        if choice == "q":
+            break
+        if choice == "s":
+            continue
+        row["human_label"] = LABEL_ALIASES[choice]
+        with open(path, "w", newline="", encoding="utf-8") as f:
+            writer = csv.DictWriter(f, fieldnames=SHEET_FIELDS)
+            writer.writeheader()
+            writer.writerows(table)
+    left = sum(1 for row in table if not (row.get("human_label") or "").strip())
+    print(f"\n{len(table) - left} labelled, {left} left")
+    return 0
 
 
 # ---------------------------------------------------------------- command line
@@ -290,6 +465,9 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--in-dir", default="results")
     parser.add_argument("--sample", type=int, help="write a sheet of N answers to label by hand")
     parser.add_argument("--sheet", default="data/eval/judge_labels.csv")
+    parser.add_argument("--stress", action="store_true", help="damage correct answers, re-judge")
+    parser.add_argument("--label", action="store_true", help="label the sheet in the terminal")
+    parser.add_argument("--relabel", default="", help="with --label: qids to label again (a,b)")
     parser.add_argument("--validate", metavar="CSV", help="compare the judge with your labels")
     args = parser.parse_args(argv)
 
@@ -298,6 +476,37 @@ def main(argv: list[str] | None = None) -> int:
         return 2
     answers_path = Path(args.in_dir) / f"answers_{args.split}.json"
     judged_path = Path(args.in_dir) / f"judged_{args.split}.json"
+
+    if args.stress:
+        if not judged_path.exists():
+            print(f"{judged_path} not found: run `python -m studybot.judge --split {args.split}`")
+            return 2
+        from studybot.answer import AnthropicLLM
+
+        llm = AnthropicLLM(args.judge, max_tokens=300)
+        judged = json.loads(judged_path.read_text("utf-8"))["answers"]
+        results = run_stress(make_stress_cases(judged), llm.complete)
+        summary = summarise_stress(results)
+        print("stress test: damaged answers the judge should not call correct")
+        for kind, k in summary["kinds"].items():
+            print(f"  {kind:<20} caught {k['caught']}/{k['n']}")
+        print(f"  {'all':<20} caught {summary['caught']}/{summary['n']}  ({summary['rate']:.2f})")
+        for m in summary["missed"]:
+            print(f"  MISSED {m['qid']} [{m['kind']}]: {m['answer'][:120]}")
+        out = Path(args.in_dir) / f"stress_{args.split}.json"
+        out.write_text(
+            json.dumps({"judge": args.judge, "summary": summary, "cases": results},
+                       ensure_ascii=False, indent=1),
+            encoding="utf-8",
+        )  # fmt: skip
+        print(f"\nwrote {out}")
+        return 0
+
+    if args.label:
+        if not Path(args.sheet).exists():
+            print(f"{args.sheet} not found: run with --sample 24 first")
+            return 2
+        return label_interactively(args.sheet, relabel=[q for q in args.relabel.split(",") if q])
 
     if args.validate:
         if not judged_path.exists():
