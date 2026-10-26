@@ -1,0 +1,29 @@
+# Phase 1 configuration: which PDFs to read and how to cut them into chunks.
+# Paths are relative to the repo root (run commands from there).
+
+chunking:
+  max_words: 350        # a chunk never gets longer than this (cut at "(1)", "(2)" first, then at sentences)
+  min_words: 40         # a smaller left-over tail is merged into the chunk before it
+
+documents:
+  # kind: regulation -> cut along "§ N" / "Anlage N" headings (see ingest.py)
+  - doc_id: stufpo-isss-2024
+    file: data/raw/StuFPO_MA_ISSS_2024-1.pdf
+    title: "Studien- und Fachprüfungsordnung für den Masterstudiengang International Software Systems Science (vom 24.09.2024, zuletzt geändert am 31.03.2025)"
+    short_title: "StuFPO ISSS 2024"
+    version: "2024-09-24, geändert 2025-03-31"
+    kind: regulation
+
+  - doc_id: apo-wiai-2026
+    file: data/raw/APO-BA-MA-WIAI-26.pdf
+    title: "Allgemeine Prüfungsordnung für Bachelor- und Masterstudiengänge der Fakultät Wirtschaftsinformatik und Angewandte Informatik (vom 31.03.2008, zuletzt geändert am 05.08.2026)"
+    short_title: "APO WIAI 2026"
+    version: "2008-03-31, geändert 2026-08-05"
+    kind: regulation
+
+  - doc_id: mhb-isss-2024
+    file: data/raw/MHB_MA_ISSS_2024.pdf
+    title: "Modulhandbuch Master International Software Systems Science, Studienbeginn ab WS 2024/2025"
+    short_title: "MHB ISSS 2024"
+    version: "Studienbeginn ab WS 2024/25"
+    kind: handbook
