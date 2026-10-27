@@ -299,6 +299,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--sample", type=int)
     parser.add_argument("--sheet", default="data/eval/faithfulness_labels.csv")
     parser.add_argument("--label", action="store_true")
+    parser.add_argument("--relabel", nargs="+", default=[], metavar="QID", help="label these again")
     parser.add_argument("--validate", action="store_true")
     parser.add_argument("--stress", action="store_true")
     args = parser.parse_args(argv)
@@ -306,11 +307,11 @@ def main(argv: list[str] | None = None) -> int:
     if args.split == "test" and not args.final:
         print("The test split is locked. Use --final once, for the reported numbers.")
         return 2
-    if args.label:
+    if args.label or args.relabel:
         if not Path(args.sheet).exists():
             print(f"{args.sheet} not found: run steps 1 and 2 first (grade, then --sample 20)")
             return 2
-        return label_interactively(args.sheet)
+        return label_interactively(args.sheet, relabel=args.relabel)
 
     graded_path = Path(args.in_dir) / f"faithfulness_{args.split}.json"
     answers_path = Path(args.in_dir) / f"answers_{args.split}.json"

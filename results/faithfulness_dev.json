@@ -1,0 +1,1689 @@
+{
+ "judge": "claude-sonnet-5-5",
+ "summary": {
+  "n_answers": 40,
+  "n_claims": 104,
+  "claim_support": 0.9423076923076923,
+  "fully_faithful": 0.85,
+  "fully_faithful_ci": [
+   0.7105263157894737,
+   0.9523809523809523
+  ],
+  "not_graded": [],
+  "unfaithful": [
+   "f27-en",
+   "f36-de",
+   "f38-en",
+   "f48-en",
+   "f49-de",
+   "f49-en"
+  ]
+ },
+ "answers": [
+  {
+   "qid": "f01-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Vier Fachsemester.",
+   "gold_chunk_ids": [
+    "stufpo-isss-2024:par30:0"
+   ],
+   "question": "Wie viele Fachsemester beträgt die Regelstudienzeit im Masterstudiengang International Software Systems Science?",
+   "answerable": true,
+   "text": "Die Regelstudienzeit beträgt vier Fachsemester [C3].",
+   "citations": [
+    "stufpo-isss-2024:par30:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "stufpo-isss-2024:par33:0",
+    "stufpo-isss-2024:par37:0",
+    "stufpo-isss-2024:par30:0",
+    "mhb-isss-2024:modulisosysc-sem-m:0",
+    "stufpo-isss-2024:par29:0"
+   ],
+   "error": null,
+   "raw": "{\"answer\": \"Die Regelstudienzeit beträgt vier Fachsemester [C3].\", \"answerable\": true, \"citations\": [\"C3\"]}",
+   "claims": [
+    {
+     "claim": "Die Regelstudienzeit beträgt vier Fachsemester.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 1,
+   "n_supported": 1,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f01-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "Four semesters.",
+   "gold_chunk_ids": [
+    "stufpo-isss-2024:par30:0"
+   ],
+   "question": "How many semesters is the standard period of study in the International Software Systems Science master's programme?",
+   "answerable": true,
+   "text": "Die Regelstudienzeit beträgt vier Fachsemester [C5]. The standard period of study is four semesters, with a minimum of 120 ECTS points [C5].",
+   "citations": [
+    "stufpo-isss-2024:par30:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "stufpo-isss-2024:par33:0",
+    "mhb-isss-2024:modulisosysc-sem-m:0",
+    "mhb-isss-2024:modulisosysc-proj-m:0",
+    "mhb-isss-2024:modulsss-thesis-m:0",
+    "stufpo-isss-2024:par30:0"
+   ],
+   "error": null,
+   "raw": "{\"answer\": \"Die Regelstudienzeit beträgt vier Fachsemester [C5]. The standard period of study is four semesters, with a minimum of 120 ECTS points [C5].\", \"answerable\": true, \"citations\": [\"C5\"]}",
+   "claims": [
+    {
+     "claim": "Die Regelstudienzeit beträgt vier Fachsemester.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The standard period of study is four semesters.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The program has a minimum study volume of 120 ECTS points.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 3,
+   "n_supported": 3,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f03-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Die Gesamtnote 2,7 oder besser.",
+   "gold_chunk_ids": [
+    "stufpo-isss-2024:par33:0"
+   ],
+   "question": "Welche Gesamtnote braucht man im Bachelorabschluss im gleichen Studienfach, um direkt zum Master ISSS zugelassen zu werden?",
+   "answerable": true,
+   "text": "Für einen Hochschulabschluss in einem Studiengang im gleichen Studienfach muss die Gesamtnote 2,7 oder besser betragen [C1]. Zusätzlich sind mindestens 180 ECTS-Punkte und eine Regelstudienzeit von mindestens sechs Fachsemestern erforderlich [C1].",
+   "citations": [
+    "stufpo-isss-2024:par33:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "stufpo-isss-2024:par33:0",
+    "stufpo-isss-2024:par29:0",
+    "stufpo-isss-2024:par33:1",
+    "stufpo-isss-2024:par40:0",
+    "stufpo-isss-2024:par35:0"
+   ],
+   "error": null,
+   "raw": "{\"answer\": \"Für einen Hochschulabschluss in einem Studiengang im gleichen Studienfach muss die Gesamtnote 2,7 oder besser betragen [C1]. Zusätzlich sind mindestens 180 ECTS-Punkte und eine Regelstudienzeit von mindestens sechs Fachsemestern erforderlich [C1].\", \"answerable\": true, \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "For a degree in a programme in the same subject, the overall grade must be 2.7 or better.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "At least 180 ECTS points are required.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "A standard period of study of at least six semesters is required.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 3,
+   "n_supported": 3,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f03-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "An overall grade of 2.7 or better.",
+   "gold_chunk_ids": [
+    "stufpo-isss-2024:par33:0"
+   ],
+   "question": "What overall grade does a bachelor's degree in the same subject need for direct admission to the ISSS master's programme?",
+   "answerable": true,
+   "text": "Für den direkten Zugang zum Masterstudiengang International Software Systems Science ist ein Hochschulabschluss in einem Studiengang im gleichen Studienfach mit der Gesamtnote 2,7 oder besser erforderlich, mit einer Regelstudienzeit von mindestens sechs Fachsemestern im Umfang von 180 ECTS-Punkten [C1].",
+   "citations": [
+    "stufpo-isss-2024:par33:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "stufpo-isss-2024:par33:0",
+    "stufpo-isss-2024:par29:0",
+    "mhb-isss-2024:modulsss-thesis-m:0",
+    "stufpo-isss-2024:par40:0",
+    "mhb-isss-2024:modulisosysc-sem-m:0"
+   ],
+   "error": null,
+   "raw": "{\"answer\": \"Für den direkten Zugang zum Masterstudiengang International Software Systems Science ist ein Hochschulabschluss in einem Studiengang im gleichen Studienfach mit der Gesamtnote 2,7 oder besser erforderlich, mit einer Regelstudienzeit von mindestens sechs Fachsemestern im Umfang von 180 ECTS-Punkten [C1].\", \"answerable\": true, \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "Direct access to the master's program requires a university degree (or equivalent) in a program in the same field of study.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The required overall grade is 2.7 or better.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The degree must have a standard period of study of at least six semesters, amounting to 180 ECTS credits.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 3,
+   "n_supported": 3,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f04-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Mindestens IELTS 6.5 oder TOEFL 90 iBT oder ein gleichwertiger Nachweis.",
+   "gold_chunk_ids": [
+    "stufpo-isss-2024:par33:0"
+   ],
+   "question": "Welche Englischnachweise werden für den Master ISSS verlangt?",
+   "answerable": true,
+   "text": "Für den Masterstudiengang International Software Systems Science wird ein Nachweis von Englischkenntnissen verlangt, die zu einem englischsprachigen Studium befähigen. Der Nachweis ist durch Zertifikate entsprechend zumindest IELTS 6.5 oder TOEFL 90 iBT oder gleichwertige Sprachnachweise zu erbringen [C1].",
+   "citations": [
+    "stufpo-isss-2024:par33:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "stufpo-isss-2024:par33:0",
+    "stufpo-isss-2024:par33:1",
+    "stufpo-isss-2024:par39:0",
+    "stufpo-isss-2024:par37:0",
+    "mhb-isss-2024:modulisosysc-sem-m:0"
+   ],
+   "error": null,
+   "raw": "{\"answer\": \"Für den Masterstudiengang International Software Systems Science wird ein Nachweis von Englischkenntnissen verlangt, die zu einem englischsprachigen Studium befähigen. Der Nachweis ist durch Zertifikate entsprechend zumindest IELTS 6.5 oder TOEFL 90 iBT oder gleichwertige Sprachnachweise zu erbringen [C1].\", \"answerable\": true, \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "The master's program International Software Systems Science requires proof of English skills that enable studying in English.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Proof must be provided by certificates at least equivalent to IELTS 6.5 or TOEFL 90 iBT, or equivalent language proofs.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 2,
+   "n_supported": 2,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f04-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "At least IELTS 6.5 or TOEFL 90 iBT, or an equivalent proof.",
+   "gold_chunk_ids": [
+    "stufpo-isss-2024:par33:0"
+   ],
+   "question": "Which English language certificates are required for the ISSS master's programme?",
+   "answerable": true,
+   "text": "Für den Masterstudiengang International Software Systems Science sind Englischkenntnisse erforderlich, die zu einem englischsprachigen Studium befähigen; der Nachweis erfolgt durch Zertifikate entsprechend zumindest IELTS 6.5 oder TOEFL 90 iBT oder gleichwertige Sprachnachweise [C1].",
+   "citations": [
+    "stufpo-isss-2024:par33:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "stufpo-isss-2024:par33:0",
+    "mhb-isss-2024:allgemeines:2",
+    "mhb-isss-2024:anhang:4",
+    "stufpo-isss-2024:par38:0",
+    "mhb-isss-2024:modulisosysc-sem-m:0"
+   ],
+   "error": null,
+   "raw": "{\"answer\": \"Für den Masterstudiengang International Software Systems Science sind Englischkenntnisse erforderlich, die zu einem englischsprachigen Studium befähigen; der Nachweis erfolgt durch Zertifikate entsprechend zumindest IELTS 6.5 oder TOEFL 90 iBT oder gleichwertige Sprachnachweise [C1].\", \"answerable\": true, \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "English proficiency enabling study in English is required for the Master's program International Software Systems Science.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Proof is provided by certificates corresponding to at least IELTS 6.5 or TOEFL 90 iBT, or equivalent language certificates.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 2,
+   "n_supported": 2,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f05-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Zum Wintersemester bis zum 15. Juli, zum Sommersemester bis zum 15. Januar.",
+   "gold_chunk_ids": [
+    "stufpo-isss-2024:par33:1"
+   ],
+   "question": "Bis wann muss man sich für den Master ISSS zum Wintersemester und zum Sommersemester bewerben?",
+   "answerable": true,
+   "text": "Für das Wintersemester endet die Bewerbungsfrist am 15. Juli des jeweiligen Jahres, für das Sommersemester am 15. Januar des jeweiligen Jahres [C1].",
+   "citations": [
+    "stufpo-isss-2024:par33:1"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "stufpo-isss-2024:par33:1",
+    "stufpo-isss-2024:par41:0",
+    "mhb-isss-2024:allgemeines:0",
+    "stufpo-isss-2024:par33:0",
+    "stufpo-isss-2024:par37:0"
+   ],
+   "error": null,
+   "raw": "{\"answer\": \"Für das Wintersemester endet die Bewerbungsfrist am 15. Juli des jeweiligen Jahres, für das Sommersemester am 15. Januar des jeweiligen Jahres [C1].\", \"answerable\": true, \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "Die Bewerbungsfrist für das Wintersemester endet am 15. Juli des jeweiligen Jahres.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Die Bewerbungsfrist für das Sommersemester endet am 15. Januar des jeweiligen Jahres.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 2,
+   "n_supported": 2,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f05-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "15 July for the winter semester and 15 January for the summer semester.",
+   "gold_chunk_ids": [
+    "stufpo-isss-2024:par33:1"
+   ],
+   "question": "What are the application deadlines for the ISSS master's programme for the winter and the summer semester?",
+   "answerable": true,
+   "text": "Die Bewerbungsfrist für die Aufnahme des Studiums im Wintersemester endet am 15. Juli des jeweiligen Jahres. Für die Aufnahme des Studiums im Sommersemester endet die Bewerbungsfrist am 15. Januar des jeweiligen Jahres. [C1]",
+   "citations": [
+    "stufpo-isss-2024:par33:1"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "stufpo-isss-2024:par33:1",
+    "stufpo-isss-2024:par41:0",
+    "mhb-isss-2024:allgemeines:0",
+    "mhb-isss-2024:anhang:0",
+    "mhb-isss-2024:modulisosysc-proj-m:1"
+   ],
+   "error": null,
+   "raw": "{\"answer\": \"Die Bewerbungsfrist für die Aufnahme des Studiums im Wintersemester endet am 15. Juli des jeweiligen Jahres. Für die Aufnahme des Studiums im Sommersemester endet die Bewerbungsfrist am 15. Januar des jeweiligen Jahres. [C1]\", \"answerable\": true, \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "Die Bewerbungsfrist für das Wintersemester endet am 15. Juli des jeweiligen Jahres.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Die Bewerbungsfrist für das Sommersemester endet am 15. Januar des jeweiligen Jahres.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 2,
+   "n_supported": 2,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f09-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "67 % schriftliche Arbeit und 33 % Kolloquium.",
+   "gold_chunk_ids": [
+    "stufpo-isss-2024:par35:0"
+   ],
+   "question": "Wie setzt sich die Note der Masterarbeit im Master ISSS zusammen?",
+   "answerable": true,
+   "text": "Die Note der Masterarbeit setzt sich zu 67 % aus der Bewertung der schriftlichen Arbeit und zu 33 % aus der Bewertung des Kolloquiums zusammen, in dem die Hauptergebnisse der Arbeit verteidigt werden [C1].",
+   "citations": [
+    "stufpo-isss-2024:par35:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "stufpo-isss-2024:par35:0",
+    "stufpo-isss-2024:par33:0",
+    "stufpo-isss-2024:anhang1:0",
+    "stufpo-isss-2024:anhang2:0",
+    "stufpo-isss-2024:par34:0"
+   ],
+   "error": null,
+   "raw": "{\"answer\": \"Die Note der Masterarbeit setzt sich zu 67 % aus der Bewertung der schriftlichen Arbeit und zu 33 % aus der Bewertung des Kolloquiums zusammen, in dem die Hauptergebnisse der Arbeit verteidigt werden [C1].\", \"answerable\": true, \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "67 % der Note der Masterarbeit stammen aus der Bewertung der schriftlichen Arbeit",
+     "verdict": "supported"
+    },
+    {
+     "claim": "33 % der Note der Masterarbeit stammen aus der Bewertung des Kolloquiums",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Im Kolloquium werden die Hauptergebnisse der Arbeit verteidigt",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 3,
+   "n_supported": 3,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f09-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "67% the written thesis and 33% the colloquium.",
+   "gold_chunk_ids": [
+    "stufpo-isss-2024:par35:0"
+   ],
+   "question": "How is the grade of the master's thesis in the ISSS programme composed?",
+   "answerable": true,
+   "text": "The master's thesis module (30 ECTS) is graded 67% for the written thesis and 33% for the colloquium (presentation of 20 to 60 minutes) [C1][C2].",
+   "citations": [
+    "mhb-isss-2024:modulsss-thesis-m:0",
+    "mhb-isss-2024:modulsss-thesis-m:1"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "mhb-isss-2024:modulsss-thesis-m:0",
+    "mhb-isss-2024:modulsss-thesis-m:1",
+    "stufpo-isss-2024:anhang1:0",
+    "stufpo-isss-2024:par40:0",
+    "mhb-isss-2024:allgemeines:2"
+   ],
+   "error": null,
+   "raw": "{\"answer\": \"The master's thesis module (30 ECTS) is graded 67% for the written thesis and 33% for the colloquium (presentation of 20 to 60 minutes) [C1][C2].\", \"answerable\": true, \"citations\": [\"C1\", \"C2\"]}",
+   "claims": [
+    {
+     "claim": "The master's thesis module is worth 30 ECTS.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The written thesis counts for 67% of the grade.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The colloquium counts for 33% of the grade.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The colloquium is a presentation lasting 20 to 60 minutes.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 4,
+   "n_supported": 4,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f10-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Mindestens 60 ECTS-Punkte.",
+   "gold_chunk_ids": [
+    "stufpo-isss-2024:par35:0"
+   ],
+   "question": "Wie viele ECTS-Punkte muss man schon haben, um zur Masterarbeit im Master ISSS zugelassen zu werden?",
+   "answerable": true,
+   "text": "Für die Zulassung zur Masterarbeit müssen Module im Umfang von mindestens 60 ECTS-Punkten erfolgreich absolviert worden sein [C2].",
+   "citations": [
+    "stufpo-isss-2024:par35:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "stufpo-isss-2024:par33:0",
+    "stufpo-isss-2024:par35:0",
+    "stufpo-isss-2024:anhang1:0",
+    "stufpo-isss-2024:par29:0",
+    "stufpo-isss-2024:anhang2:0"
+   ],
+   "error": null,
+   "raw": "{\"answer\": \"Für die Zulassung zur Masterarbeit müssen Module im Umfang von mindestens 60 ECTS-Punkten erfolgreich absolviert worden sein [C2].\", \"answerable\": true, \"citations\": [\"C2\"]}",
+   "claims": [
+    {
+     "claim": "Admission to the master's thesis requires successful completion of modules totaling at least 60 ECTS credits.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 1,
+   "n_supported": 1,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f10-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "At least 60 ECTS credits.",
+   "gold_chunk_ids": [
+    "stufpo-isss-2024:par35:0"
+   ],
+   "question": "How many ECTS credits do you need before you are admitted to the master's thesis in ISSS?",
+   "answerable": true,
+   "text": "At least 60 ECTS credit points must be successfully completed before admission to the master's thesis [C5]. The module handbook likewise states that registration is possible only after at least 60 ECTS credit points have been successfully completed towards the degree [C1].",
+   "citations": [
+    "stufpo-isss-2024:par35:0",
+    "mhb-isss-2024:modulsss-thesis-m:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "mhb-isss-2024:modulsss-thesis-m:0",
+    "stufpo-isss-2024:par33:0",
+    "stufpo-isss-2024:anhang1:0",
+    "mhb-isss-2024:allgemeines:2",
+    "stufpo-isss-2024:par35:0"
+   ],
+   "error": null,
+   "raw": "{\"answer\": \"At least 60 ECTS credit points must be successfully completed before admission to the master's thesis [C5]. The module handbook likewise states that registration is possible only after at least 60 ECTS credit points have been successfully completed towards the degree [C1].\", \"answerable\": true, \"citations\": [\"C5\", \"C1\"]}",
+   "claims": [
+    {
+     "claim": "At least 60 ECTS credit points must be successfully completed before admission to the master's thesis.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The module handbook states that registration for the master's thesis is possible only after at least 60 ECTS credit points have been successfully completed towards the degree.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 2,
+   "n_supported": 2,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f17-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "S1: Distributed and Mobile Systems, S2: Software Analysis and Verification, S3: Service-oriented Architectures, S4: Communication Systems and Protocols.",
+   "gold_chunk_ids": [
+    "stufpo-isss-2024:anhang3:0"
+   ],
+   "question": "Welche vier Studienschwerpunkte kann man im Master ISSS wählen?",
+   "answerable": true,
+   "text": "Im Masterstudiengang International Software Systems Science kann aus den folgenden vier Studienschwerpunkten gewählt werden: S1: Distributed and Mobile Systems, S2: Software Analysis and Verification, S3: Service-oriented Architectures, S4: Communication Systems and Protocols. [C1]",
+   "citations": [
+    "stufpo-isss-2024:anhang3:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "stufpo-isss-2024:anhang3:0",
+    "stufpo-isss-2024:par36:0",
+    "stufpo-isss-2024:par40:0",
+    "stufpo-isss-2024:anhang3:1",
+    "stufpo-isss-2024:par39:0"
+   ],
+   "error": null,
+   "raw": "{\"answer\": \"Im Masterstudiengang International Software Systems Science kann aus den folgenden vier Studienschwerpunkten gewählt werden: S1: Distributed and Mobile Systems, S2: Software Analysis and Verification, S3: Service-oriented Architectures, S4: Communication Systems and Protocols. [C1]\", \"answerable\": true, \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "The Master's program International Software Systems Science offers a choice among four study focus areas.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "S1 is Distributed and Mobile Systems.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "S2 is Software Analysis and Verification.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "S3 is Service-oriented Architectures.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "S4 is Communication Systems and Protocols.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 5,
+   "n_supported": 5,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f17-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "S1: Distributed and Mobile Systems, S2: Software Analysis and Verification, S3: Service-oriented Architectures, S4: Communication Systems and Protocols.",
+   "gold_chunk_ids": [
+    "stufpo-isss-2024:anhang3:0"
+   ],
+   "question": "Which four study focus areas can you choose in the ISSS master's programme?",
+   "answerable": true,
+   "text": "In the Masterstudiengang International Software Systems Science you can choose from four study focus areas: S1: Distributed and Mobile Systems, S2: Software Analysis and Verification, S3: Service-oriented Architectures, and S4: Communication Systems and Protocols [C1].",
+   "citations": [
+    "stufpo-isss-2024:anhang3:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "stufpo-isss-2024:anhang3:0",
+    "stufpo-isss-2024:par40:0",
+    "stufpo-isss-2024:anhang2:0",
+    "stufpo-isss-2024:par39:0",
+    "stufpo-isss-2024:par31:0"
+   ],
+   "error": null,
+   "raw": "{\"answer\": \"In the Masterstudiengang International Software Systems Science you can choose from four study focus areas: S1: Distributed and Mobile Systems, S2: Software Analysis and Verification, S3: Service-oriented Architectures, and S4: Communication Systems and Protocols [C1].\", \"answerable\": true, \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "The Master's program International Software Systems Science offers a choice among four study focus areas.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "S1 is Distributed and Mobile Systems.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "S2 is Software Analysis and Verification.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "S3 is Service-oriented Architectures.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "S4 is Communication Systems and Protocols.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 5,
+   "n_supported": 5,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f20-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Ja, auf Antrag kann der Prüfungsausschuss ein Thema aus einem anderen Fach zulassen, sofern glaubhaft nachgewiesen wird, dass es inhaltlich der Software Systems Science entnommen ist.",
+   "gold_chunk_ids": [
+    "stufpo-isss-2024:par35:0"
+   ],
+   "question": "Kann die Masterarbeit im Master ISSS auch in einem anderen als dem vorgegebenen Fach geschrieben werden?",
+   "answerable": true,
+   "text": "Ja. Auf Antrag der Prüfungskandidatin bzw. des Prüfungskandidaten kann vom Prüfungsausschuss auch ein Thema aus einem anderen Fach zugelassen werden; dabei ist glaubhaft nachzuweisen, dass das Thema inhaltlich der Software Systems Science entnommen ist [C1]. Für andere Fächer aus dem Bereich des Masterstudiums ISSS mit Bezug zur Software Systems Science genehmigt der Prüfungsausschuss das Thema auf Antrag [C2].",
+   "citations": [
+    "stufpo-isss-2024:par35:0",
+    "stufpo-isss-2024:anhang2:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "stufpo-isss-2024:par35:0",
+    "stufpo-isss-2024:anhang2:0",
+    "stufpo-isss-2024:par34:0",
+    "stufpo-isss-2024:par33:0",
+    "stufpo-isss-2024:par40:0"
+   ],
+   "error": null,
+   "raw": "{\"answer\": \"Ja. Auf Antrag der Prüfungskandidatin bzw. des Prüfungskandidaten kann vom Prüfungsausschuss auch ein Thema aus einem anderen Fach zugelassen werden; dabei ist glaubhaft nachzuweisen, dass das Thema inhaltlich der Software Systems Science entnommen ist [C1]. Für andere Fächer aus dem Bereich des Masterstudiums ISSS mit Bezug zur Software Systems Science genehmigt der Prüfungsausschuss das Thema auf Antrag [C2].\", \"answerable\": true, \"citations\": [\"C1\", \"C2\"]}",
+   "claims": [
+    {
+     "claim": "Upon the candidate's application, the examination board can admit a topic from another subject.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "In that case the candidate must credibly demonstrate that the topic is content-wise taken from Software Systems Science.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "For other subjects from the International Software Systems Science master's program with relation to Software Systems Science, the examination board approves the topic upon application.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 3,
+   "n_supported": 3,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f20-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "Yes, on request the examination committee can approve a topic from another subject if it is credibly shown that the topic belongs to Software Systems Science.",
+   "gold_chunk_ids": [
+    "stufpo-isss-2024:par35:0"
+   ],
+   "question": "Can the ISSS master's thesis be written on a topic from a different subject than the listed ones?",
+   "answerable": true,
+   "text": "Yes. A topic from another subject may be admitted on request, but the examination board must approve it individually, and the candidate must plausibly show that the topic is related to the subject matter of Software Systems Science (for the MHB: related to the curriculum of the ISSS master's programme) [C3][C1][C2].",
+   "citations": [
+    "stufpo-isss-2024:anhang2:0",
+    "mhb-isss-2024:modulsss-thesis-m:0",
+    "stufpo-isss-2024:par35:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "stufpo-isss-2024:anhang2:0",
+    "mhb-isss-2024:modulsss-thesis-m:0",
+    "stufpo-isss-2024:par35:0",
+    "stufpo-isss-2024:par40:0",
+    "stufpo-isss-2024:par31:0"
+   ],
+   "error": null,
+   "raw": "{\"answer\": \"Yes. A topic from another subject may be admitted on request, but the examination board must approve it individually, and the candidate must plausibly show that the topic is related to the subject matter of Software Systems Science (for the MHB: related to the curriculum of the ISSS master's programme) [C3][C1][C2].\", \"answerable\": true, \"citations\": [\"C1\", \"C2\", \"C3\"]}",
+   "claims": [
+    {
+     "claim": "A topic from another subject may be admitted on request.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The examination board must approve such a topic individually.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The candidate must plausibly show that the topic is related to the subject matter of Software Systems Science.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "In the module handbook, the requirement is that the topic be related to the curriculum of the International Software Systems Science master's programme.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 4,
+   "n_supported": 4,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f21-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Ca. 30 Arbeitsstunden.",
+   "gold_chunk_ids": [
+    "apo-wiai-2026:par2:0"
+   ],
+   "question": "Wie viele Arbeitsstunden entsprechen einem ECTS-Punkt an der Fakultät WIAI?",
+   "answerable": true,
+   "text": "Ein ECTS-Punkt entspricht einem Arbeitsaufwand von ca. 30 Arbeitsstunden [C1].",
+   "citations": [
+    "apo-wiai-2026:par2:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "apo-wiai-2026:par2:0",
+    "stufpo-isss-2024:anhang1:2",
+    "apo-wiai-2026:par1:0",
+    "apo-wiai-2026:par6:0",
+    "apo-wiai-2026:par10:0"
+   ],
+   "error": null,
+   "raw": "{\"answer\": \"Ein ECTS-Punkt entspricht einem Arbeitsaufwand von ca. 30 Arbeitsstunden [C1].\", \"answerable\": true, \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "Ein ECTS-Punkt entspricht einem Arbeitsaufwand von ca. 30 Arbeitsstunden.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 1,
+   "n_supported": 1,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f21-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "About 30 hours of work.",
+   "gold_chunk_ids": [
+    "apo-wiai-2026:par2:0"
+   ],
+   "question": "How many hours of work correspond to one ECTS credit at the WIAI faculty?",
+   "answerable": true,
+   "text": "One ECTS credit corresponds to a workload of approximately 30 working hours [C1].",
+   "citations": [
+    "apo-wiai-2026:par2:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "apo-wiai-2026:par2:0",
+    "stufpo-isss-2024:anhang1:2",
+    "apo-wiai-2026:par12:0",
+    "mhb-isss-2024:allgemeines:1",
+    "apo-wiai-2026:par21:0"
+   ],
+   "error": null,
+   "raw": "{\"answer\": \"One ECTS credit corresponds to a workload of approximately 30 working hours [C1].\", \"answerable\": true, \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "One ECTS credit corresponds to a workload of approximately 30 working hours.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 1,
+   "n_supported": 1,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f25-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Höchstens die Hälfte der im Studiengang nachzuweisenden Kompetenzen.",
+   "gold_chunk_ids": [
+    "apo-wiai-2026:par6:0"
+   ],
+   "question": "Wie viele Kompetenzen dürfen höchstens durch außerhalb der Hochschule erworbene Kenntnisse ersetzt werden?",
+   "answerable": true,
+   "text": "Außerhalb des Hochschulbereichs erworbene Kompetenzen dürfen höchstens die Hälfte der im Studiengang nachzuweisenden Kompetenzen ersetzen [C1].",
+   "citations": [
+    "apo-wiai-2026:par6:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "apo-wiai-2026:par6:0",
+    "stufpo-isss-2024:par37:0",
+    "apo-wiai-2026:par10:0",
+    "stufpo-isss-2024:anhang1:2",
+    "stufpo-isss-2024:par33:0"
+   ],
+   "error": null,
+   "raw": "{\"answer\": \"Außerhalb des Hochschulbereichs erworbene Kompetenzen dürfen höchstens die Hälfte der im Studiengang nachzuweisenden Kompetenzen ersetzen [C1].\", \"answerable\": true, \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "Competencies acquired outside the higher education sector may replace at most half of the competencies to be demonstrated in the study program.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 1,
+   "n_supported": 1,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f25-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "At most half of the competences to be proven in the programme.",
+   "gold_chunk_ids": [
+    "apo-wiai-2026:par6:0"
+   ],
+   "question": "How much of the required competences can at most be replaced by competences acquired outside higher education?",
+   "answerable": true,
+   "text": "Kompetenzen, die außerhalb des Hochschulbereichs erworben wurden, dürfen höchstens die Hälfte der im Studiengang nachzuweisenden Kompetenzen ersetzen. [C1]",
+   "citations": [
+    "apo-wiai-2026:par6:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "apo-wiai-2026:par6:0",
+    "stufpo-isss-2024:par37:0",
+    "apo-wiai-2026:par10:0",
+    "mhb-isss-2024:allgemeines:2",
+    "mhb-isss-2024:modulisosysc-proj-m:0"
+   ],
+   "error": null,
+   "raw": "{\"answer\": \"Kompetenzen, die außerhalb des Hochschulbereichs erworben wurden, dürfen höchstens die Hälfte der im Studiengang nachzuweisenden Kompetenzen ersetzen. [C1]\", \"answerable\": true, \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "Kompetenzen, die außerhalb des Hochschulbereichs erworben wurden, dürfen höchstens die Hälfte der im Studiengang nachzuweisenden Kompetenzen ersetzen.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 1,
+   "n_supported": 1,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f27-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Mindestens 5 und höchstens 60 Minuten.",
+   "gold_chunk_ids": [
+    "apo-wiai-2026:par9:2"
+   ],
+   "question": "Wie lange dauert eine mündliche Prüfung nach der APO WIAI?",
+   "answerable": true,
+   "text": "Eine mündliche Prüfung oder ein Testat dauert mindestens 5 und höchstens 60 Minuten. [C1]",
+   "citations": [
+    "apo-wiai-2026:par9:2"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "apo-wiai-2026:par9:2",
+    "apo-wiai-2026:par13:0",
+    "apo-wiai-2026:par9:1",
+    "apo-wiai-2026:par9:3",
+    "apo-wiai-2026:par2:0"
+   ],
+   "error": null,
+   "raw": "{\"answer\": \"Eine mündliche Prüfung oder ein Testat dauert mindestens 5 und höchstens 60 Minuten. [C1]\", \"answerable\": true, \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "Eine mündliche Prüfung dauert mindestens 5 und höchstens 60 Minuten.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Ein Testat dauert mindestens 5 und höchstens 60 Minuten.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 2,
+   "n_supported": 2,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f27-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "At least 5 and at most 60 minutes.",
+   "gold_chunk_ids": [
+    "apo-wiai-2026:par9:2"
+   ],
+   "question": "How long does an oral exam last according to the APO WIAI?",
+   "answerable": true,
+   "text": "According to the APO WIAI, the duration of an oral examination (mündliche Prüfung) or a Testat is at least 5 and at most 60 minutes. [C1]",
+   "citations": [
+    "apo-wiai-2026:par9:2"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "apo-wiai-2026:par9:2",
+    "mhb-isss-2024:modulds-convai-m:3",
+    "mhb-isss-2024:modulhci-us-b:1",
+    "mhb-isss-2024:modulhci-mci-m:1",
+    "apo-wiai-2026:par9:3"
+   ],
+   "error": null,
+   "raw": "{\"answer\": \"According to the APO WIAI, the duration of an oral examination (mündliche Prüfung) or a Testat is at least 5 and at most 60 minutes. [C1]\", \"answerable\": true, \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "The duration of an oral examination is at least 5 and at most 60 minutes.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The duration of a Testat is at least 5 and at most 60 minutes.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "This rule comes from the APO WIAI.",
+     "verdict": "unsupported"
+    }
+   ],
+   "n_claims": 3,
+   "n_supported": 2,
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f33-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Einmal, mit einem neuen Thema; eine zweite Wiederholung ist ausgeschlossen.",
+   "gold_chunk_ids": [
+    "apo-wiai-2026:par18:0"
+   ],
+   "question": "Wie oft darf eine nicht bestandene Masterarbeit wiederholt werden?",
+   "answerable": true,
+   "text": "Eine nicht bestandene Bachelor- bzw. Masterarbeit kann gemäß § 18 einmal wiederholt werden [C1]. Die zweite Arbeit muss über ein neues Thema angefertigt werden, und eine zweite Wiederholung ist ausgeschlossen [C2].",
+   "citations": [
+    "apo-wiai-2026:par11:0",
+    "apo-wiai-2026:par18:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "apo-wiai-2026:par11:0",
+    "apo-wiai-2026:par18:0",
+    "apo-wiai-2026:par20:0",
+    "apo-wiai-2026:par16:0",
+    "apo-wiai-2026:par17:0"
+   ],
+   "error": null,
+   "raw": "{\"answer\": \"Eine nicht bestandene Bachelor- bzw. Masterarbeit kann gemäß § 18 einmal wiederholt werden [C1]. Die zweite Arbeit muss über ein neues Thema angefertigt werden, und eine zweite Wiederholung ist ausgeschlossen [C2].\", \"answerable\": true, \"citations\": [\"C1\", \"C2\"]}",
+   "claims": [
+    {
+     "claim": "A failed Bachelor's or Master's thesis can be repeated once according to § 18.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The second thesis must be written on a new topic.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "A second repetition of the thesis is excluded.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 3,
+   "n_supported": 3,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f33-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "Once, with a new topic; a second repetition is not allowed.",
+   "gold_chunk_ids": [
+    "apo-wiai-2026:par18:0"
+   ],
+   "question": "How many times can a failed master's thesis be repeated?",
+   "answerable": true,
+   "text": "A failed Bachelor's or Master's thesis rated \"nicht ausreichend\" (5,0) can be repeated once, with a second thesis on a new topic; a second repetition is excluded [C1]. This is consistent with the rule that a failed thesis may be repeated once [C2].",
+   "citations": [
+    "apo-wiai-2026:par18:0",
+    "apo-wiai-2026:par11:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "apo-wiai-2026:par18:0",
+    "apo-wiai-2026:par11:0",
+    "mhb-isss-2024:modulsss-thesis-m:0",
+    "mhb-isss-2024:modulisosysc-sem-m:0",
+    "apo-wiai-2026:par20:0"
+   ],
+   "error": null,
+   "raw": "{\"answer\": \"A failed Bachelor's or Master's thesis rated \\\"nicht ausreichend\\\" (5,0) can be repeated once, with a second thesis on a new topic; a second repetition is excluded [C1]. This is consistent with the rule that a failed thesis may be repeated once [C2].\", \"answerable\": true, \"citations\": [\"C1\", \"C2\"]}",
+   "claims": [
+    {
+     "claim": "A Bachelor's or Master's thesis rated \"nicht ausreichend\" (5,0) can be repeated once.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The repetition is done with a second thesis on a new topic.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "A second repetition of the thesis is excluded.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "This is consistent with the rule that a failed thesis may be repeated once.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 4,
+   "n_supported": 4,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f36-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Fünf Jahre ab dem Datum des Prüfungszeugnisses.",
+   "gold_chunk_ids": [
+    "apo-wiai-2026:par25:0"
+   ],
+   "question": "Wie lange nach der Zeugnisausstellung kann der Prüfungsausschuss wegen Täuschung noch Noten berichtigen oder Prüfungen für nicht bestanden erklären?",
+   "answerable": true,
+   "text": "Eine Entscheidung nach § 25 Abs. 1 (Täuschung, Berichtigung der Noten bzw. Erklärung als nicht bestanden) ist nach einer Frist von fünf Jahren ab dem Datum des Prüfungszeugnisses ausgeschlossen [C1].",
+   "citations": [
+    "apo-wiai-2026:par25:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "apo-wiai-2026:par25:0",
+    "apo-wiai-2026:par7:0",
+    "apo-wiai-2026:par20:0",
+    "apo-wiai-2026:par4:1",
+    "apo-wiai-2026:par8:0"
+   ],
+   "error": null,
+   "raw": "{\"answer\": \"Eine Entscheidung nach § 25 Abs. 1 (Täuschung, Berichtigung der Noten bzw. Erklärung als nicht bestanden) ist nach einer Frist von fünf Jahren ab dem Datum des Prüfungszeugnisses ausgeschlossen [C1].\", \"answerable\": true, \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "Eine Entscheidung nach Abs. 1 (Täuschung: Notenberichtigung bzw. Erklärung der Prüfung als nicht bestanden) ist ausgeschlossen.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Der Ausschluss gilt nach einer Frist von fünf Jahren ab dem Datum des Prüfungszeugnisses.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Die Regelung steht in § 25.",
+     "verdict": "unsupported"
+    }
+   ],
+   "n_claims": 3,
+   "n_supported": 2,
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f36-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "Five years from the date of the certificate.",
+   "gold_chunk_ids": [
+    "apo-wiai-2026:par25:0"
+   ],
+   "question": "For how long after the degree certificate was issued can the examination committee still correct grades or declare exams failed because of cheating?",
+   "answerable": true,
+   "text": "Eine Entscheidung des Prüfungsausschusses über Berichtigung der Noten bzw. Nichtbestehen wegen Täuschung ist nach einer Frist von fünf Jahren ab dem Datum des Prüfungszeugnisses ausgeschlossen [C1].",
+   "citations": [
+    "apo-wiai-2026:par25:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "apo-wiai-2026:par25:0",
+    "apo-wiai-2026:par7:0",
+    "mhb-isss-2024:allgemeines:0",
+    "apo-wiai-2026:par8:0",
+    "apo-wiai-2026:par20:0"
+   ],
+   "error": null,
+   "raw": "{\"answer\": \"Eine Entscheidung des Prüfungsausschusses über Berichtigung der Noten bzw. Nichtbestehen wegen Täuschung ist nach einer Frist von fünf Jahren ab dem Datum des Prüfungszeugnisses ausgeschlossen [C1].\", \"answerable\": true, \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "Der Prüfungsausschuss kann bei Täuschung die Noten berichtigen bzw. die Prüfung für nicht bestanden erklären.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Eine solche Entscheidung nach Abs. 1 ist nach Ablauf von fünf Jahren ausgeschlossen.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Die Fünfjahresfrist beginnt mit dem Datum des Prüfungszeugnisses.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 3,
+   "n_supported": 3,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f37-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Wenn die Kohorte der vier vorhergehenden Abschlusssemester mindestens 15 Absolventen umfasst.",
+   "gold_chunk_ids": [
+    "apo-wiai-2026:par21:1"
+   ],
+   "question": "Ab welcher Kohortengröße gibt das Diploma Supplement die prozentuale Notenverteilung an?",
+   "answerable": true,
+   "text": "Das Diploma Supplement gibt die prozentuale Notenverteilung an, wenn die Kohorte der vier dem Abschlusssemester vorhergehenden Abschlusssemester insgesamt mindestens 15 Absolventinnen bzw. Absolventen enthält [C1].",
+   "citations": [
+    "apo-wiai-2026:par21:1"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "apo-wiai-2026:par21:1",
+    "apo-wiai-2026:par10:0",
+    "stufpo-isss-2024:par35:0",
+    "apo-wiai-2026:par9:4",
+    "apo-wiai-2026:par9:5"
+   ],
+   "error": null,
+   "raw": "{\"answer\": \"Das Diploma Supplement gibt die prozentuale Notenverteilung an, wenn die Kohorte der vier dem Abschlusssemester vorhergehenden Abschlusssemester insgesamt mindestens 15 Absolventinnen bzw. Absolventen enthält [C1].\", \"answerable\": true, \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "Das Diploma Supplement gibt die prozentuale Notenverteilung der Abschlussnoten an, sofern die erforderliche Kohorte gebildet werden kann.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Als Kohorte dienen die vier dem jeweiligen Abschlusssemester vorhergehenden Abschlusssemester.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Die Kohorte muss insgesamt mindestens 15 Absolventinnen bzw. Absolventen enthalten.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 3,
+   "n_supported": 3,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f37-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "If the cohort of the four preceding graduation semesters contains at least 15 graduates.",
+   "gold_chunk_ids": [
+    "apo-wiai-2026:par21:1"
+   ],
+   "question": "From what cohort size does the Diploma Supplement show the percentage distribution of grades?",
+   "answerable": true,
+   "text": "Die prozentuale Verteilung der Abschlussnoten wird im Diploma Supplement angegeben, sofern die erforderliche Kohorte gebildet werden kann; als Kohorte dienen die vier vorhergehenden Abschlusssemester, sofern diese insgesamt mindestens 15 Absolventinnen bzw. Absolventen enthalten [C1].",
+   "citations": [
+    "apo-wiai-2026:par21:1"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "apo-wiai-2026:par21:1",
+    "mhb-isss-2024:modulds-rl-m:2",
+    "apo-wiai-2026:par9:3",
+    "mhb-isss-2024:modulxai-adl-m:2",
+    "mhb-isss-2024:moduleesys-adaml-m:2"
+   ],
+   "error": null,
+   "raw": "{\"answer\": \"Die prozentuale Verteilung der Abschlussnoten wird im Diploma Supplement angegeben, sofern die erforderliche Kohorte gebildet werden kann; als Kohorte dienen die vier vorhergehenden Abschlusssemester, sofern diese insgesamt mindestens 15 Absolventinnen bzw. Absolventen enthalten [C1].\", \"answerable\": true, \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "Die prozentuale Verteilung der Abschlussnoten wird im Diploma Supplement angegeben, sofern die erforderliche Kohorte gebildet werden kann.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Als Kohorte dienen die vier dem jeweiligen Abschlusssemester vorhergehenden Abschlusssemester.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Die Kohorte muss insgesamt mindestens 15 Absolventen bzw. Absolventinnen enthalten.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 3,
+   "n_supported": 3,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f38-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Die überschießende Punktezahl wird bei dem am schlechtesten bewerteten Modul abgeschnitten.",
+   "gold_chunk_ids": [
+    "apo-wiai-2026:par19:0"
+   ],
+   "question": "Was geschieht mit überschüssigen ECTS-Punkten, wenn die Grenze einer Modulgruppe überschritten wird?",
+   "answerable": true,
+   "text": "Bei Überschreitung der ECTS-Grenze einer Modulgruppe wird die überschießende Punktezahl bei dem am schlechtesten bewerteten Modul abgeschnitten. [C1]",
+   "citations": [
+    "apo-wiai-2026:par19:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "apo-wiai-2026:par19:0",
+    "stufpo-isss-2024:anhang1:2",
+    "stufpo-isss-2024:anhang1:0",
+    "apo-wiai-2026:par11:0",
+    "stufpo-isss-2024:par36:0"
+   ],
+   "error": null,
+   "raw": "{\"answer\": \"Bei Überschreitung der ECTS-Grenze einer Modulgruppe wird die überschießende Punktezahl bei dem am schlechtesten bewerteten Modul abgeschnitten. [C1]\", \"answerable\": true, \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "Bei Überschreitung der ECTS-Grenze einer Modulgruppe wird die überschießende Punktezahl abgeschnitten.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Die überschießende Punktezahl wird bei dem am schlechtesten bewerteten Modul abgeschnitten.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 2,
+   "n_supported": 2,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f38-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "The excess credits are cut from the worst-graded module.",
+   "gold_chunk_ids": [
+    "apo-wiai-2026:par19:0"
+   ],
+   "question": "What happens to excess ECTS credits when the credit limit of a module group is exceeded?",
+   "answerable": true,
+   "text": "When the ECTS limit of a module group is exceeded, the excess credit points are cut off from the module rated worst (the lowest-graded module) in that group. [C1]",
+   "citations": [
+    "apo-wiai-2026:par19:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "apo-wiai-2026:par19:0",
+    "mhb-isss-2024:allgemeines:1",
+    "mhb-isss-2024:allgemeines:2",
+    "stufpo-isss-2024:anhang1:2",
+    "stufpo-isss-2024:anhang1:0"
+   ],
+   "error": null,
+   "raw": "{\"answer\": \"When the ECTS limit of a module group is exceeded, the excess credit points are cut off from the module rated worst (the lowest-graded module) in that group. [C1]\", \"answerable\": true, \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "When the ECTS limit of a module group is exceeded, the excess credit points are cut off.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The excess points are cut off from the module with the worst rating (lowest grade).",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The module that loses the points is a module within the module group whose limit was exceeded.",
+     "verdict": "unsupported"
+    }
+   ],
+   "n_claims": 3,
+   "n_supported": 2,
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f39-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Einmal oder mehrmals innerhalb der Höchststudiendauer von sechs Fachsemestern.",
+   "gold_chunk_ids": [
+    "apo-wiai-2026:par11:0",
+    "stufpo-isss-2024:par30:0"
+   ],
+   "question": "Wie oft darf man eine nicht bestandene Modulprüfung im Master ISSS wiederholen und wie lange hat man dafür höchstens Zeit?",
+   "answerable": true,
+   "text": "Eine nicht bestandene Modulprüfung bzw. Modulteilprüfung kann innerhalb der Höchststudiendauer gemäß § 30 Abs. 2 StuFPO einmal oder mehrmals wiederholt werden [C1]. Wie lange die Höchststudiendauer genau ist, geht aus den vorliegenden Auszügen nicht hervor; die Zeitspanne ist dort nur durch Verweis auf § 30 Abs. 2 StuFPO bestimmt [C1].",
+   "citations": [
+    "apo-wiai-2026:par11:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "apo-wiai-2026:par11:0",
+    "apo-wiai-2026:par20:0",
+    "stufpo-isss-2024:par40:0",
+    "stufpo-isss-2024:anhang1:2",
+    "stufpo-isss-2024:par37:0"
+   ],
+   "error": null,
+   "raw": "{\"answer\": \"Eine nicht bestandene Modulprüfung bzw. Modulteilprüfung kann innerhalb der Höchststudiendauer gemäß § 30 Abs. 2 StuFPO einmal oder mehrmals wiederholt werden [C1]. Wie lange die Höchststudiendauer genau ist, geht aus den vorliegenden Auszügen nicht hervor; die Zeitspanne ist dort nur durch Verweis auf § 30 Abs. 2 StuFPO bestimmt [C1].\", \"answerable\": true, \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "A failed module exam or partial module exam can be repeated once or several times within the maximum study duration under § 30 Abs. 2 StuFPO.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The excerpts do not state how long the maximum study duration is; the period is only determined by reference to § 30 Abs. 2 StuFPO.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 2,
+   "n_supported": 2,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f40-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Prof. Dr. Stefan Ultes.",
+   "gold_chunk_ids": [
+    "mhb-isss-2024:modulds-rl-m:0"
+   ],
+   "question": "Wer ist für das Modul Reinforcement Learning (DS-RL-M) verantwortlich?",
+   "answerable": true,
+   "text": "Verantwortlich für das Modul Reinforcement Learning (DS-RL-M) ist Prof. Dr. Stefan Ultes [C1].",
+   "citations": [
+    "mhb-isss-2024:modulds-rl-m:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "mhb-isss-2024:modulds-rl-m:0",
+    "mhb-isss-2024:modulds-rl-m:1",
+    "mhb-isss-2024:modulds-rl-m:2",
+    "mhb-isss-2024:moduldsg-rds-m:0",
+    "mhb-isss-2024:modulds-convai-m:1"
+   ],
+   "error": null,
+   "raw": "{\"answer\": \"Verantwortlich für das Modul Reinforcement Learning (DS-RL-M) ist Prof. Dr. Stefan Ultes [C1].\", \"answerable\": true, \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "The module is Reinforcement Learning (DS-RL-M).",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Prof. Dr. Stefan Ultes is responsible for the module.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 2,
+   "n_supported": 2,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f40-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "Prof. Dr. Stefan Ultes.",
+   "gold_chunk_ids": [
+    "mhb-isss-2024:modulds-rl-m:0"
+   ],
+   "question": "Who is responsible for the module Reinforcement Learning (DS-RL-M)?",
+   "answerable": true,
+   "text": "Prof. Dr. Stefan Ultes is the person responsible for the module Reinforcement Learning (DS-RL-M) [C1].",
+   "citations": [
+    "mhb-isss-2024:modulds-rl-m:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "mhb-isss-2024:modulds-rl-m:0",
+    "mhb-isss-2024:modulds-rl-m:1",
+    "mhb-isss-2024:modulds-rl-m:2",
+    "mhb-isss-2024:moduldsg-rds-m:0",
+    "mhb-isss-2024:modulds-convai-m:0"
+   ],
+   "error": null,
+   "raw": "{\"answer\": \"Prof. Dr. Stefan Ultes is the person responsible for the module Reinforcement Learning (DS-RL-M) [C1].\", \"answerable\": true, \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "Prof. Dr. Stefan Ultes is the person responsible for the module Reinforcement Learning.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The module code is DS-RL-M.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 2,
+   "n_supported": 2,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f47-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Standardmäßig auf Deutsch; auf Wunsch kann auf Englisch gewechselt werden.",
+   "gold_chunk_ids": [
+    "mhb-isss-2024:modulhci-us-b:0"
+   ],
+   "question": "In welcher Sprache wird das Modul Ubiquitous Systems (HCI-US-B) standardmäßig unterrichtet?",
+   "answerable": true,
+   "text": "Das Modul Ubiquitous Systems (HCI-US-B) wird standardmäßig auf Deutsch unterrichtet; Englisch ist auf Wunsch möglich. [C1]",
+   "citations": [
+    "mhb-isss-2024:modulhci-us-b:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "mhb-isss-2024:modulhci-us-b:0",
+    "mhb-isss-2024:modulhci-us-b:1",
+    "mhb-isss-2024:modulhci-mci-m:0",
+    "mhb-isss-2024:modulhci-mci-m:1",
+    "stufpo-isss-2024:par38:0"
+   ],
+   "error": null,
+   "raw": "{\"answer\": \"Das Modul Ubiquitous Systems (HCI-US-B) wird standardmäßig auf Deutsch unterrichtet; Englisch ist auf Wunsch möglich. [C1]\", \"answerable\": true, \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "The module Ubiquitous Systems (HCI-US-B) is taught in German by default.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "English instruction is possible on request.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 2,
+   "n_supported": 2,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f47-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "German by default, but it can be changed to English on demand.",
+   "gold_chunk_ids": [
+    "mhb-isss-2024:modulhci-us-b:0"
+   ],
+   "question": "In which language is the module Ubiquitous Systems (HCI-US-B) taught by default?",
+   "answerable": true,
+   "text": "The default language of instruction in the module Ubiquitous Systems (HCI-US-B) is German, but it can be changed to English on demand. [C1]",
+   "citations": [
+    "mhb-isss-2024:modulhci-us-b:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "mhb-isss-2024:modulhci-us-b:0",
+    "mhb-isss-2024:modulhci-mci-m:0",
+    "mhb-isss-2024:modulhci-us-b:1",
+    "mhb-isss-2024:modulgames-dgs-m:1",
+    "mhb-isss-2024:modulhci-mci-m:1"
+   ],
+   "error": null,
+   "raw": "{\"answer\": \"The default language of instruction in the module Ubiquitous Systems (HCI-US-B) is German, but it can be changed to English on demand. [C1]\", \"answerable\": true, \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "The module is Ubiquitous Systems (HCI-US-B).",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The default language of instruction is German.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The language of instruction can be changed to English on demand.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 3,
+   "n_supported": 3,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f48-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "90 Minuten.",
+   "gold_chunk_ids": [
+    "mhb-isss-2024:modulgdi-ifp-m:1"
+   ],
+   "question": "Wie lange dauert die Klausur im Modul Introduction to Functional Programming?",
+   "answerable": true,
+   "text": "Die Klausur im Modul Introduction to Functional Programming (GdI-IFP-M) dauert 90 Minuten [C3]. Dies bestätigt auch die Modulübersicht, in der die schriftliche Prüfung mit 90 Minuten angegeben ist [C5].",
+   "citations": [
+    "mhb-isss-2024:modulgdi-ifp-m:1",
+    "mhb-isss-2024:anhang:1"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "mhb-isss-2024:modulgdi-ifp-m:0",
+    "mhb-isss-2024:modulgdi-fprs-m:1",
+    "mhb-isss-2024:modulgdi-ifp-m:1",
+    "stufpo-isss-2024:anhang1:1",
+    "mhb-isss-2024:anhang:1"
+   ],
+   "error": null,
+   "raw": "{\"answer\": \"Die Klausur im Modul Introduction to Functional Programming (GdI-IFP-M) dauert 90 Minuten [C3]. Dies bestätigt auch die Modulübersicht, in der die schriftliche Prüfung mit 90 Minuten angegeben ist [C5].\", \"answerable\": true, \"citations\": [\"C3\", \"C5\"]}",
+   "claims": [
+    {
+     "claim": "The exam in the module Introduction to Functional Programming (GdI-IFP-M) lasts 90 minutes",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The module overview states the written examination as 90 minutes",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 2,
+   "n_supported": 2,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f48-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "90 minutes.",
+   "gold_chunk_ids": [
+    "mhb-isss-2024:modulgdi-ifp-m:1"
+   ],
+   "question": "How long is the written exam in the module Introduction to Functional Programming?",
+   "answerable": true,
+   "text": "The written examination in the module Introduction to Functional Programming (GdI-IFP-M) lasts 90 minutes [C1].",
+   "citations": [
+    "mhb-isss-2024:modulgdi-ifp-m:1"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "mhb-isss-2024:modulgdi-ifp-m:1",
+    "mhb-isss-2024:modulgdi-ifp-m:0",
+    "mhb-isss-2024:modulgdi-fprs-m:1",
+    "mhb-isss-2024:anhang:1",
+    "mhb-isss-2024:modulgdi-fprs-m:2"
+   ],
+   "error": null,
+   "raw": "{\"answer\": \"The written examination in the module Introduction to Functional Programming (GdI-IFP-M) lasts 90 minutes [C1].\", \"answerable\": true, \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "The written examination lasts 90 minutes.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The module is called Introduction to Functional Programming (GdI-IFP-M).",
+     "verdict": "unsupported"
+    }
+   ],
+   "n_claims": 2,
+   "n_supported": 1,
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f49-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Ein Portfolio.",
+   "gold_chunk_ids": [
+    "mhb-isss-2024:modulgames-dgs-m:2"
+   ],
+   "question": "Welche Prüfungsform hat das Modul Designing Gamified Systems?",
+   "answerable": true,
+   "text": "Die excerpts list \"Examination Portfolio\" under the module GAMES-DGS-M Designing Gamified Systems, so the form of examination is a portfolio [C2]. The portfolio form is defined in the general examination regulations as several cumulative sub-aspects of an exam topic, compiled in a documentation [C5].",
+   "citations": [
+    "mhb-isss-2024:modulgames-dgs-m:2",
+    "apo-wiai-2026:par9:1"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "mhb-isss-2024:modulgames-dgs-m:0",
+    "mhb-isss-2024:modulgames-dgs-m:2",
+    "mhb-isss-2024:modulgames-dgs-m:1",
+    "mhb-isss-2024:modulhci-us-b:2",
+    "apo-wiai-2026:par9:1"
+   ],
+   "error": null,
+   "raw": "{\"answer\": \"Die excerpts list \\\"Examination Portfolio\\\" under the module GAMES-DGS-M Designing Gamified Systems, so the form of examination is a portfolio [C2]. The portfolio form is defined in the general examination regulations as several cumulative sub-aspects of an exam topic, compiled in a documentation [C5].\", \"answerable\": true, \"citations\": [\"C2\", \"C5\"]}",
+   "claims": [
+    {
+     "claim": "The form of examination for the module is a portfolio.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The module is named GAMES-DGS-M Designing Gamified Systems.",
+     "verdict": "unsupported"
+    },
+    {
+     "claim": "The general examination regulations define a portfolio as cumulatively working on several sub-aspects of an exam topic.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "In a portfolio, the individual write-ups are compiled in a documentation.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 4,
+   "n_supported": 3,
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f49-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "A portfolio.",
+   "gold_chunk_ids": [
+    "mhb-isss-2024:modulgames-dgs-m:2"
+   ],
+   "question": "What is the form of examination in the module Designing Gamified Systems?",
+   "answerable": true,
+   "text": "The excerpts name the form of examination for Designing Gamified Systems only as \"Examination Portfolio\" [C3]; they do not describe what the portfolio consists of.",
+   "citations": [
+    "mhb-isss-2024:modulgames-dgs-m:2"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "mhb-isss-2024:modulgames-dgs-m:0",
+    "mhb-isss-2024:modulgames-dgs-m:1",
+    "mhb-isss-2024:modulgames-dgs-m:2",
+    "mhb-isss-2024:modulgdi-fprs-m:2",
+    "mhb-isss-2024:modulds-convai-m:3"
+   ],
+   "error": null,
+   "raw": "{\"answer\": \"The excerpts name the form of examination for Designing Gamified Systems only as \\\"Examination Portfolio\\\" [C3]; they do not describe what the portfolio consists of.\", \"answerable\": true, \"citations\": [\"C3\"]}",
+   "claims": [
+    {
+     "claim": "The excerpts name the form of examination as \"Examination Portfolio\".",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The excerpts do not describe what the portfolio consists of.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The course in question is Designing Gamified Systems.",
+     "verdict": "unsupported"
+    }
+   ],
+   "n_claims": 3,
+   "n_supported": 2,
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "u11-de",
+   "lang": "de",
+   "gold_answerable": false,
+   "gold_answer": null,
+   "gold_chunk_ids": [],
+   "question": "Brauche ich Deutschkenntnisse (DSH oder TestDaF) für den Master ISSS?",
+   "answerable": true,
+   "text": "Nein, die Excerpts nennen keine Deutschkenntnisse (DSH oder TestDaF) als Zugangsvoraussetzung. Für den Zugang sind Englischkenntnisse nachzuweisen, z. B. mit IELTS 6.5 oder TOEFL 90 iBT [C1]. Die Lehrveranstaltungen und Modulprüfungen werden in englischer Sprache abgehalten und abgelegt [C5].",
+   "citations": [
+    "stufpo-isss-2024:par33:0",
+    "stufpo-isss-2024:par38:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "stufpo-isss-2024:par33:0",
+    "stufpo-isss-2024:par34:0",
+    "stufpo-isss-2024:par40:0",
+    "stufpo-isss-2024:par39:0",
+    "stufpo-isss-2024:par38:0"
+   ],
+   "error": null,
+   "raw": "{\"answer\": \"Nein, die Excerpts nennen keine Deutschkenntnisse (DSH oder TestDaF) als Zugangsvoraussetzung. Für den Zugang sind Englischkenntnisse nachzuweisen, z. B. mit IELTS 6.5 oder TOEFL 90 iBT [C1]. Die Lehrveranstaltungen und Modulprüfungen werden in englischer Sprache abgehalten und abgelegt [C5].\", \"answerable\": true, \"citations\": [\"C1\", \"C5\"]}",
+   "claims": [
+    {
+     "claim": "The excerpts name no German language proficiency (DSH or TestDaF) as an admission requirement.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "English proficiency must be demonstrated for admission.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Accepted proof includes IELTS 6.5 or TOEFL 90 iBT.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Courses and module examinations are held and taken in English.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 4,
+   "n_supported": 4,
+   "faithful": true,
+   "status": "graded"
+  }
+ ]
+}

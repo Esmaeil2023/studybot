@@ -1,0 +1,390 @@
+{
+ "summary": {
+  "kinds": {
+   "changed_number": {
+    "n": 19,
+    "caught": 19
+   },
+   "invented_sentence": {
+    "n": 34,
+    "caught": 34
+   }
+  },
+  "n": 53,
+  "caught": 53,
+  "missed": []
+ },
+ "cases": [
+  {
+   "qid": "f01-de",
+   "kind": "invented_sentence",
+   "text": "Die Regelstudienzeit beträgt vier Fachsemester [C3]. Außerdem beträgt die Studiengebühr 500 Euro pro Semester.",
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f01-en",
+   "kind": "invented_sentence",
+   "text": "Die Regelstudienzeit beträgt vier Fachsemester [C5]. The standard period of study is four semesters, with a minimum of 120 ECTS points [C5]. Außerdem beträgt die Studiengebühr 500 Euro pro Semester.",
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f01-en",
+   "kind": "changed_number",
+   "text": "Die Regelstudienzeit beträgt vier Fachsemester. The standard period of study is four semesters, with a minimum of 130 ECTS points.",
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f03-de",
+   "kind": "invented_sentence",
+   "text": "Für einen Hochschulabschluss in einem Studiengang im gleichen Studienfach muss die Gesamtnote 2,7 oder besser betragen [C1]. Zusätzlich sind mindestens 180 ECTS-Punkte und eine Regelstudienzeit von mindestens sechs Fachsemestern erforderlich [C1]. Außerdem beträgt die Studiengebühr 500 Euro pro Semester.",
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f03-de",
+   "kind": "changed_number",
+   "text": "Für einen Hochschulabschluss in einem Studiengang im gleichen Studienfach muss die Gesamtnote 3,7 oder besser betragen. Zusätzlich sind mindestens 180 ECTS-Punkte und eine Regelstudienzeit von mindestens sechs Fachsemestern erforderlich.",
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f03-en",
+   "kind": "invented_sentence",
+   "text": "Für den direkten Zugang zum Masterstudiengang International Software Systems Science ist ein Hochschulabschluss in einem Studiengang im gleichen Studienfach mit der Gesamtnote 2,7 oder besser erforderlich, mit einer Regelstudienzeit von mindestens sechs Fachsemestern im Umfang von 180 ECTS-Punkten [C1]. Außerdem beträgt die Studiengebühr 500 Euro pro Semester.",
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f03-en",
+   "kind": "changed_number",
+   "text": "Für den direkten Zugang zum Masterstudiengang International Software Systems Science ist ein Hochschulabschluss in einem Studiengang im gleichen Studienfach mit der Gesamtnote 3,7 oder besser erforderlich, mit einer Regelstudienzeit von mindestens sechs Fachsemestern im Umfang von 180 ECTS-Punkten.",
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f04-de",
+   "kind": "invented_sentence",
+   "text": "Für den Masterstudiengang International Software Systems Science wird ein Nachweis von Englischkenntnissen verlangt, die zu einem englischsprachigen Studium befähigen. Der Nachweis ist durch Zertifikate entsprechend zumindest IELTS 6.5 oder TOEFL 90 iBT oder gleichwertige Sprachnachweise zu erbringen [C1]. Außerdem beträgt die Studiengebühr 500 Euro pro Semester.",
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f04-de",
+   "kind": "changed_number",
+   "text": "Für den Masterstudiengang International Software Systems Science wird ein Nachweis von Englischkenntnissen verlangt, die zu einem englischsprachigen Studium befähigen. Der Nachweis ist durch Zertifikate entsprechend zumindest IELTS 7.5 oder TOEFL 90 iBT oder gleichwertige Sprachnachweise zu erbringen.",
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f04-en",
+   "kind": "invented_sentence",
+   "text": "Für den Masterstudiengang International Software Systems Science sind Englischkenntnisse erforderlich, die zu einem englischsprachigen Studium befähigen; der Nachweis erfolgt durch Zertifikate entsprechend zumindest IELTS 6.5 oder TOEFL 90 iBT oder gleichwertige Sprachnachweise [C1]. Außerdem beträgt die Studiengebühr 500 Euro pro Semester.",
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f04-en",
+   "kind": "changed_number",
+   "text": "Für den Masterstudiengang International Software Systems Science sind Englischkenntnisse erforderlich, die zu einem englischsprachigen Studium befähigen; der Nachweis erfolgt durch Zertifikate entsprechend zumindest IELTS 7.5 oder TOEFL 90 iBT oder gleichwertige Sprachnachweise.",
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f05-de",
+   "kind": "invented_sentence",
+   "text": "Für das Wintersemester endet die Bewerbungsfrist am 15. Juli des jeweiligen Jahres, für das Sommersemester am 15. Januar des jeweiligen Jahres [C1]. Außerdem beträgt die Studiengebühr 500 Euro pro Semester.",
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f05-de",
+   "kind": "changed_number",
+   "text": "Für das Wintersemester endet die Bewerbungsfrist am 25. Juli des jeweiligen Jahres, für das Sommersemester am 25. Januar des jeweiligen Jahres.",
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f05-en",
+   "kind": "invented_sentence",
+   "text": "Die Bewerbungsfrist für die Aufnahme des Studiums im Wintersemester endet am 15. Juli des jeweiligen Jahres. Für die Aufnahme des Studiums im Sommersemester endet die Bewerbungsfrist am 15. Januar des jeweiligen Jahres. [C1] Außerdem beträgt die Studiengebühr 500 Euro pro Semester.",
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f05-en",
+   "kind": "changed_number",
+   "text": "Die Bewerbungsfrist für die Aufnahme des Studiums im Wintersemester endet am 25. Juli des jeweiligen Jahres. Für die Aufnahme des Studiums im Sommersemester endet die Bewerbungsfrist am 25. Januar des jeweiligen Jahres.",
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f09-de",
+   "kind": "invented_sentence",
+   "text": "Die Note der Masterarbeit setzt sich zu 67 % aus der Bewertung der schriftlichen Arbeit und zu 33 % aus der Bewertung des Kolloquiums zusammen, in dem die Hauptergebnisse der Arbeit verteidigt werden [C1]. Außerdem beträgt die Studiengebühr 500 Euro pro Semester.",
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f09-de",
+   "kind": "changed_number",
+   "text": "Die Note der Masterarbeit setzt sich zu 77 % aus der Bewertung der schriftlichen Arbeit und zu 33 % aus der Bewertung des Kolloquiums zusammen, in dem die Hauptergebnisse der Arbeit verteidigt werden.",
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f09-en",
+   "kind": "invented_sentence",
+   "text": "The master's thesis module (30 ECTS) is graded 67% for the written thesis and 33% for the colloquium (presentation of 20 to 60 minutes) [C1][C2]. Außerdem beträgt die Studiengebühr 500 Euro pro Semester.",
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f09-en",
+   "kind": "changed_number",
+   "text": "The master's thesis module (40 ECTS) is graded 67% for the written thesis and 33% for the colloquium (presentation of 20 to 60 minutes).",
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f10-de",
+   "kind": "invented_sentence",
+   "text": "Für die Zulassung zur Masterarbeit müssen Module im Umfang von mindestens 60 ECTS-Punkten erfolgreich absolviert worden sein [C2]. Außerdem beträgt die Studiengebühr 500 Euro pro Semester.",
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f10-de",
+   "kind": "changed_number",
+   "text": "Für die Zulassung zur Masterarbeit müssen Module im Umfang von mindestens 70 ECTS-Punkten erfolgreich absolviert worden sein.",
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f10-en",
+   "kind": "invented_sentence",
+   "text": "At least 60 ECTS credit points must be successfully completed before admission to the master's thesis [C5]. The module handbook likewise states that registration is possible only after at least 60 ECTS credit points have been successfully completed towards the degree [C1]. Außerdem beträgt die Studiengebühr 500 Euro pro Semester.",
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f10-en",
+   "kind": "changed_number",
+   "text": "At least 70 ECTS credit points must be successfully completed before admission to the master's thesis. The module handbook likewise states that registration is possible only after at least 70 ECTS credit points have been successfully completed towards the degree.",
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f17-de",
+   "kind": "invented_sentence",
+   "text": "Im Masterstudiengang International Software Systems Science kann aus den folgenden vier Studienschwerpunkten gewählt werden: S1: Distributed and Mobile Systems, S2: Software Analysis and Verification, S3: Service-oriented Architectures, S4: Communication Systems and Protocols. [C1] Außerdem beträgt die Studiengebühr 500 Euro pro Semester.",
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f17-en",
+   "kind": "invented_sentence",
+   "text": "In the Masterstudiengang International Software Systems Science you can choose from four study focus areas: S1: Distributed and Mobile Systems, S2: Software Analysis and Verification, S3: Service-oriented Architectures, and S4: Communication Systems and Protocols [C1]. Außerdem beträgt die Studiengebühr 500 Euro pro Semester.",
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f20-de",
+   "kind": "invented_sentence",
+   "text": "Ja. Auf Antrag der Prüfungskandidatin bzw. des Prüfungskandidaten kann vom Prüfungsausschuss auch ein Thema aus einem anderen Fach zugelassen werden; dabei ist glaubhaft nachzuweisen, dass das Thema inhaltlich der Software Systems Science entnommen ist [C1]. Für andere Fächer aus dem Bereich des Masterstudiums ISSS mit Bezug zur Software Systems Science genehmigt der Prüfungsausschuss das Thema auf Antrag [C2]. Außerdem beträgt die Studiengebühr 500 Euro pro Semester.",
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f20-en",
+   "kind": "invented_sentence",
+   "text": "Yes. A topic from another subject may be admitted on request, but the examination board must approve it individually, and the candidate must plausibly show that the topic is related to the subject matter of Software Systems Science (for the MHB: related to the curriculum of the ISSS master's programme) [C3][C1][C2]. Außerdem beträgt die Studiengebühr 500 Euro pro Semester.",
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f21-de",
+   "kind": "invented_sentence",
+   "text": "Ein ECTS-Punkt entspricht einem Arbeitsaufwand von ca. 30 Arbeitsstunden [C1]. Außerdem beträgt die Studiengebühr 500 Euro pro Semester.",
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f21-de",
+   "kind": "changed_number",
+   "text": "Ein ECTS-Punkt entspricht einem Arbeitsaufwand von ca. 40 Arbeitsstunden.",
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f21-en",
+   "kind": "invented_sentence",
+   "text": "One ECTS credit corresponds to a workload of approximately 30 working hours [C1]. Außerdem beträgt die Studiengebühr 500 Euro pro Semester.",
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f21-en",
+   "kind": "changed_number",
+   "text": "One ECTS credit corresponds to a workload of approximately 40 working hours.",
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f25-de",
+   "kind": "invented_sentence",
+   "text": "Außerhalb des Hochschulbereichs erworbene Kompetenzen dürfen höchstens die Hälfte der im Studiengang nachzuweisenden Kompetenzen ersetzen [C1]. Außerdem beträgt die Studiengebühr 500 Euro pro Semester.",
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f25-en",
+   "kind": "invented_sentence",
+   "text": "Kompetenzen, die außerhalb des Hochschulbereichs erworben wurden, dürfen höchstens die Hälfte der im Studiengang nachzuweisenden Kompetenzen ersetzen. [C1] Außerdem beträgt die Studiengebühr 500 Euro pro Semester.",
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f27-de",
+   "kind": "invented_sentence",
+   "text": "Eine mündliche Prüfung oder ein Testat dauert mindestens 5 und höchstens 60 Minuten. [C1] Außerdem beträgt die Studiengebühr 500 Euro pro Semester.",
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f27-de",
+   "kind": "changed_number",
+   "text": "Eine mündliche Prüfung oder ein Testat dauert mindestens 7 und höchstens 60 Minuten.",
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f33-de",
+   "kind": "invented_sentence",
+   "text": "Eine nicht bestandene Bachelor- bzw. Masterarbeit kann gemäß § 18 einmal wiederholt werden [C1]. Die zweite Arbeit muss über ein neues Thema angefertigt werden, und eine zweite Wiederholung ist ausgeschlossen [C2]. Außerdem beträgt die Studiengebühr 500 Euro pro Semester.",
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f33-en",
+   "kind": "invented_sentence",
+   "text": "A failed Bachelor's or Master's thesis rated \"nicht ausreichend\" (5,0) can be repeated once, with a second thesis on a new topic; a second repetition is excluded [C1]. This is consistent with the rule that a failed thesis may be repeated once [C2]. Außerdem beträgt die Studiengebühr 500 Euro pro Semester.",
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f33-en",
+   "kind": "changed_number",
+   "text": "A failed Bachelor's or Master's thesis rated \"nicht ausreichend\" (6,0) can be repeated once, with a second thesis on a new topic; a second repetition is excluded. This is consistent with the rule that a failed thesis may be repeated once.",
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f36-en",
+   "kind": "invented_sentence",
+   "text": "Eine Entscheidung des Prüfungsausschusses über Berichtigung der Noten bzw. Nichtbestehen wegen Täuschung ist nach einer Frist von fünf Jahren ab dem Datum des Prüfungszeugnisses ausgeschlossen [C1]. Außerdem beträgt die Studiengebühr 500 Euro pro Semester.",
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f37-de",
+   "kind": "invented_sentence",
+   "text": "Das Diploma Supplement gibt die prozentuale Notenverteilung an, wenn die Kohorte der vier dem Abschlusssemester vorhergehenden Abschlusssemester insgesamt mindestens 15 Absolventinnen bzw. Absolventen enthält [C1]. Außerdem beträgt die Studiengebühr 500 Euro pro Semester.",
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f37-de",
+   "kind": "changed_number",
+   "text": "Das Diploma Supplement gibt die prozentuale Notenverteilung an, wenn die Kohorte der vier dem Abschlusssemester vorhergehenden Abschlusssemester insgesamt mindestens 25 Absolventinnen bzw. Absolventen enthält.",
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f37-en",
+   "kind": "invented_sentence",
+   "text": "Die prozentuale Verteilung der Abschlussnoten wird im Diploma Supplement angegeben, sofern die erforderliche Kohorte gebildet werden kann; als Kohorte dienen die vier vorhergehenden Abschlusssemester, sofern diese insgesamt mindestens 15 Absolventinnen bzw. Absolventen enthalten [C1]. Außerdem beträgt die Studiengebühr 500 Euro pro Semester.",
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f37-en",
+   "kind": "changed_number",
+   "text": "Die prozentuale Verteilung der Abschlussnoten wird im Diploma Supplement angegeben, sofern die erforderliche Kohorte gebildet werden kann; als Kohorte dienen die vier vorhergehenden Abschlusssemester, sofern diese insgesamt mindestens 25 Absolventinnen bzw. Absolventen enthalten.",
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f38-de",
+   "kind": "invented_sentence",
+   "text": "Bei Überschreitung der ECTS-Grenze einer Modulgruppe wird die überschießende Punktezahl bei dem am schlechtesten bewerteten Modul abgeschnitten. [C1] Außerdem beträgt die Studiengebühr 500 Euro pro Semester.",
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f39-de",
+   "kind": "invented_sentence",
+   "text": "Eine nicht bestandene Modulprüfung bzw. Modulteilprüfung kann innerhalb der Höchststudiendauer gemäß § 30 Abs. 2 StuFPO einmal oder mehrmals wiederholt werden [C1]. Wie lange die Höchststudiendauer genau ist, geht aus den vorliegenden Auszügen nicht hervor; die Zeitspanne ist dort nur durch Verweis auf § 30 Abs. 2 StuFPO bestimmt [C1]. Außerdem beträgt die Studiengebühr 500 Euro pro Semester.",
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f40-de",
+   "kind": "invented_sentence",
+   "text": "Verantwortlich für das Modul Reinforcement Learning (DS-RL-M) ist Prof. Dr. Stefan Ultes [C1]. Außerdem beträgt die Studiengebühr 500 Euro pro Semester.",
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f40-en",
+   "kind": "invented_sentence",
+   "text": "Prof. Dr. Stefan Ultes is the person responsible for the module Reinforcement Learning (DS-RL-M) [C1]. Außerdem beträgt die Studiengebühr 500 Euro pro Semester.",
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f47-de",
+   "kind": "invented_sentence",
+   "text": "Das Modul Ubiquitous Systems (HCI-US-B) wird standardmäßig auf Deutsch unterrichtet; Englisch ist auf Wunsch möglich. [C1] Außerdem beträgt die Studiengebühr 500 Euro pro Semester.",
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f47-en",
+   "kind": "invented_sentence",
+   "text": "The default language of instruction in the module Ubiquitous Systems (HCI-US-B) is German, but it can be changed to English on demand. [C1] Außerdem beträgt die Studiengebühr 500 Euro pro Semester.",
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f48-de",
+   "kind": "invented_sentence",
+   "text": "Die Klausur im Modul Introduction to Functional Programming (GdI-IFP-M) dauert 90 Minuten [C3]. Dies bestätigt auch die Modulübersicht, in der die schriftliche Prüfung mit 90 Minuten angegeben ist [C5]. Außerdem beträgt die Studiengebühr 500 Euro pro Semester.",
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f48-de",
+   "kind": "changed_number",
+   "text": "Die Klausur im Modul Introduction to Functional Programming (GdI-IFP-M) dauert 100 Minuten. Dies bestätigt auch die Modulübersicht, in der die schriftliche Prüfung mit 100 Minuten angegeben ist.",
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "u11-de",
+   "kind": "invented_sentence",
+   "text": "Nein, die Excerpts nennen keine Deutschkenntnisse (DSH oder TestDaF) als Zugangsvoraussetzung. Für den Zugang sind Englischkenntnisse nachzuweisen, z. B. mit IELTS 6.5 oder TOEFL 90 iBT [C1]. Die Lehrveranstaltungen und Modulprüfungen werden in englischer Sprache abgehalten und abgelegt [C5]. Außerdem beträgt die Studiengebühr 500 Euro pro Semester.",
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "u11-de",
+   "kind": "changed_number",
+   "text": "Nein, die Excerpts nennen keine Deutschkenntnisse (DSH oder TestDaF) als Zugangsvoraussetzung. Für den Zugang sind Englischkenntnisse nachzuweisen, z. B. mit IELTS 7.5 oder TOEFL 90 iBT. Die Lehrveranstaltungen und Modulprüfungen werden in englischer Sprache abgehalten und abgelegt.",
+   "faithful": false,
+   "status": "graded"
+  }
+ ]
+}
