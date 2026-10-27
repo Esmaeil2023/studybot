@@ -284,8 +284,9 @@ answer. Settings are environment variables (see the top of `api.py`).
 
 ### Docker
 
-*The Dockerfile has not been built or run yet (the author's machine has no Docker); the service
-itself was tested locally with `uvicorn`.*
+The Dockerfile has been built and run for real: Google Cloud Build builds the image from it
+(see Live demo below) and Cloud Run serves that container. The one thing not tried is
+`docker run` on the author's own machine, which has no Docker installed.
 
 ```
 make chunks                                   # the image bakes in data/processed/chunks.jsonl
