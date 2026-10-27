@@ -250,8 +250,9 @@ function el(tag,cls,text){const e=document.createElement(tag);if(cls)e.className
 if(text!==undefined)e.textContent=text;return e}
 async function ask(){b.disabled=true;out.replaceChildren(el("p","sub","Searching…"));
 try{const r=await fetch("/ask",{method:"POST",headers:{"Content-Type":"application/json"},
-body:JSON.stringify({question:q.value})});const d=await r.json();
-if(!r.ok)throw new Error(d.detail||r.status);
+body:JSON.stringify({question:q.value})});const raw=await r.text();let d={};try{d=JSON.parse(raw)}catch(_){}
+if(!r.ok)throw new Error(d.detail||(r.status===429||/rate/i.test(raw)
+?"The demo is busy or you asked too fast. Wait a few seconds and try again.":"HTTP "+r.status));
 const c=el("div","card"+(d.answerable?"":" refuse"));
 c.append(el("div","",(d.answerable?"":"Not in the documents. ")+d.answer));
 for(const s of d.citations){const p=el("div","src");

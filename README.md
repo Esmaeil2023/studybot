@@ -278,26 +278,48 @@ The key is passed at run time and is never part of the image. The image needs ab
 On an Apple-silicon Mac, add `--platform linux/amd64` when building for a cloud server.
 The image contains the text of the three public documents; do not push it to a public registry.
 
-### Deploying to Google Cloud Run (not done as part of this repo)
+### Live demo (Google Cloud Run)
 
-Replace `PROJECT` with your project id. Cloud Run bills per use and scales to zero; the first
-request after idle waits for the models to load (about a minute).
+**https://studybot-624130036232.europe-west3.run.app**
+
+![StudyBot answering a question with a cited source](docs/demo.png)
+
+Deployed with `scripts/deploy_cloud_run.sh` and checked in a browser: a German answer with its
+citation, and a refusal for an out-of-scope question. Notes:
+
+- It runs on a Google Cloud free trial, so the link stops working when the trial ends (about
+  26 Jan 2027). The code and results in this repository do not depend on it.
+- The first visit after idle takes about a minute while the two models load.
+- One instance serves one request at a time; a second simultaneous request is turned away by
+  Cloud Run ("busy, try again"). Each answer uses a small amount of the author's prepaid model
+  budget, hence the per-visitor rate limit.
+
+The image was built and pushed by Google Cloud Build, so it builds; `docker run` on a local
+machine is still untested.
+
+One-time setup (Google account with the free trial, which needs a payment method for
+verification but is not charged unless you upgrade):
+
+1. Install the CLI: `brew install --cask google-cloud-sdk`, then `gcloud auth login`.
+2. In the Google Cloud console create a project and enable billing for it.
+3. Create a budget alert: Billing → Budgets & alerts → Create budget, a small amount (for
+   example 5 EUR), alerts at 50%, 90% and 100%. (A budget only warns; it does not stop spending.)
+4. In the Anthropic console set a monthly spend limit for the API key.
+
+Then, from the project folder:
 
 ```
-gcloud services enable run.googleapis.com artifactregistry.googleapis.com secretmanager.googleapis.com
-gcloud artifacts repositories create studybot --repository-format=docker --location=europe-west3
-gcloud auth configure-docker europe-west3-docker.pkg.dev
-docker build --platform linux/amd64 -t europe-west3-docker.pkg.dev/PROJECT/studybot/studybot:1 .
-docker push europe-west3-docker.pkg.dev/PROJECT/studybot/studybot:1
-gcloud secrets create studybot-llm-key --data-file=- < <(printf %s "$LLM_API_KEY")
-gcloud run deploy studybot --image europe-west3-docker.pkg.dev/PROJECT/studybot/studybot:1 \
-  --region europe-west3 --memory 4Gi --cpu 2 --cpu-boost --concurrency 1 --max-instances 1 \
-  --timeout 120 --set-secrets LLM_API_KEY=studybot-llm-key:latest --allow-unauthenticated
+bash scripts/deploy_cloud_run.sh YOUR_PROJECT_ID
 ```
 
-A public demo means strangers can spend your model budget. Keep `--max-instances 1`, leave the
-rate limit on, and set a monthly spend limit for the API key in the Anthropic console before
-sharing the link. (If you set `STUDYBOT_API_KEY`, the demo page can no longer call the API.)
+It enables the services, builds the image, stores the key from `.env` in Secret Manager (not in
+the image), deploys one instance (`--max-instances 1`, one request at a time, 10 requests per
+visitor per minute) and prints the URL. The first visit after idle takes about a minute while the
+models load. Take it offline with `gcloud run services delete studybot --region europe-west3`.
+
+A public demo lets strangers spend your model budget: that is what the spend limit, the single
+instance and the rate limit are for. If you set `STUDYBOT_API_KEY`, the demo page can no longer
+call the API.
 
 ### Continuous integration
 
@@ -353,6 +375,8 @@ src/studybot/answer.py     cited answers with abstention
 src/studybot/judge.py      LLM judge, human-label check, stress test
 src/studybot/api.py        FastAPI service and demo page
 Dockerfile, .dockerignore  container image
+scripts/deploy_cloud_run.sh  build in Google's cloud and deploy to Cloud Run
+.gcloudignore              what `gcloud builds submit` uploads
 .github/workflows/ci.yml   lint, format, tests
 tests/                     pytest, with a synthetic regulation PDF
 ```
