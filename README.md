@@ -224,6 +224,9 @@ once, after all settings were fixed on dev.
 | retrieval MRR | 0.81 | 0.81 |
 | answers with a cited gold chunk | 0.97 | 0.96 |
 | invented citations | 0 | 0 |
+| answers graded for faithfulness (refusals are not graded) | 40 | 56 |
+| ... every claim supported by the cited excerpts | 0.85 [0.71, 0.95] | 0.93 [0.86, 0.98] |
+| ... claims supported (claim by claim) | 0.94 (104 claims) | 0.97 (176 claims) |
 
 Brackets are 95% bootstrap intervals. What the 4 wrong test answers were:
 
@@ -232,6 +235,22 @@ Brackets are 95% bootstrap intervals. What the 4 wrong test answers were:
 - **f08 (DE and EN)**: format failures, not knowledge failures. The German reply was empty twice;
   the English reply was an answer that did not parse as JSON. They count as wrong (an unreadable
   reply is treated as a refusal).
+
+**Faithfulness** (`faithfulness.py`) is a different question from correctness: is every statement
+in the answer backed by the excerpts it cites, even if the answer happens to be right? A judge model
+(Claude Sonnet) splits each answer into claims and checks each against the cited excerpts only.
+Test answers with an unsupported claim: f13-en, f18-de, f26-de, f29-de. How far to trust the judge:
+
+- Stress test on dev: 53 damaged answers (a changed number, or a false sentence added to a correct
+  answer) were all flagged (19/19 and 34/34). The damage was blatant, so this shows the judge is
+  not blind, not that it catches subtle errors.
+- Hand check on dev: 20 answers labelled by the author, agreement 0.90 (18/20), kappa 0.46. Only one
+  answer was labelled unfaithful, so this is a weak check. One label was corrected after the judge
+  pointed out a section number that the excerpt does not contain. In the two remaining
+  disagreements the judge was stricter than the author (a claim that is implied by the excerpt, and
+  a course title that comes from the question), so the faithfulness numbers are probably slightly
+  pessimistic.
+- The judge is Claude grading Claude, and the test numbers belong to the v1.0 answers.
 
 On dev, two unanswerable questions about German-language requirements (u11) were answered with
 "no German certificate is required, only English", which is arguably correct; the label

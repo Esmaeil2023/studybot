@@ -1,0 +1,2500 @@
+{
+ "judge": "claude-sonnet-5-5",
+ "summary": {
+  "n_answers": 56,
+  "n_claims": 176,
+  "claim_support": 0.9715909090909091,
+  "fully_faithful": 0.9285714285714286,
+  "fully_faithful_ci": [
+   0.8571428571428571,
+   0.9821428571428571
+  ],
+  "not_graded": [],
+  "unfaithful": [
+   "f13-en",
+   "f18-de",
+   "f26-de",
+   "f29-de"
+  ]
+ },
+ "answers": [
+  {
+   "qid": "f02-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Sechs Fachsemester.",
+   "gold_chunk_ids": [
+    "stufpo-isss-2024:par30:0"
+   ],
+   "question": "Wie lange darf man im Master ISSS maximal studieren (Höchststudienzeit)?",
+   "answerable": true,
+   "text": "Die Höchststudienzeit beträgt sechs Fachsemester [C1].",
+   "citations": [
+    "stufpo-isss-2024:par30:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "stufpo-isss-2024:par30:0",
+    "stufpo-isss-2024:par33:0",
+    "stufpo-isss-2024:par37:0",
+    "stufpo-isss-2024:par40:0",
+    "stufpo-isss-2024:anhang1:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Die Höchststudienzeit beträgt sechs Fachsemester [C1].\", \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "Die Höchststudienzeit beträgt sechs Fachsemester.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 1,
+   "n_supported": 1,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f02-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "Six semesters.",
+   "gold_chunk_ids": [
+    "stufpo-isss-2024:par30:0"
+   ],
+   "question": "What is the maximum duration of study in the ISSS master's programme?",
+   "answerable": true,
+   "text": "The maximum duration of study (Höchststudienzeit) is six Fachsemester. [C1]",
+   "citations": [
+    "stufpo-isss-2024:par30:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "stufpo-isss-2024:par30:0",
+    "stufpo-isss-2024:par33:0",
+    "stufpo-isss-2024:par37:0",
+    "mhb-isss-2024:modulsss-thesis-m:0",
+    "mhb-isss-2024:modulisosysc-sem-m:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"The maximum duration of study (Höchststudienzeit) is six Fachsemester. [C1]\", \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "The maximum duration of study (Höchststudienzeit) is six Fachsemester.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 1,
+   "n_supported": 1,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f07-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Bewerber, die nicht in einem Lissabon-Unterzeichnerstaat studiert haben und eine Gesamtnote schlechter als 1,5 haben; GRE: mindestens 153 Verbal Reasoning, 164 Quantitative Reasoning und Niveau 4,0 in Analytical Writing.",
+   "gold_chunk_ids": [
+    "stufpo-isss-2024:par33:1"
+   ],
+   "question": "Wer muss für den Master ISSS einen GRE- oder GATE-Nachweis vorlegen und welche Mindestpunkte gelten im GRE?",
+   "answerable": true,
+   "text": "Nachweis von GRE General Test oder GATE müssen Bewerberinnen und Bewerber vorlegen, deren qualifizierendes Studium nicht in einem Unterzeichnerstaat der Lissabon-Konvention abgeschlossen wurde und deren Gesamtnote schlechter als 1,5 ist [C1]. Im GRE sind mindestens 153 Punkte in Verbal Reasoning, 164 Punkte in Quantitative Reasoning und Niveau 4,0 in Analytical Writing erforderlich [C1]. Beim GATE sind mindestens 500 Punkte (GATE General Score) nötig [C1].",
+   "citations": [
+    "stufpo-isss-2024:par33:1"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "stufpo-isss-2024:par33:1",
+    "stufpo-isss-2024:par33:0",
+    "stufpo-isss-2024:par35:0",
+    "stufpo-isss-2024:anhang1:0",
+    "stufpo-isss-2024:par29:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Nachweis von GRE General Test oder GATE müssen Bewerberinnen und Bewerber vorlegen, deren qualifizierendes Studium nicht in einem Unterzeichnerstaat der Lissabon-Konvention abgeschlossen wurde und deren Gesamtnote schlechter als 1,5 ist [C1]. Im GRE sind mindestens 153 Punkte in Verbal Reasoning, 164 Punkte in Quantitative Reasoning und Niveau 4,0 in Analytical Writing erforderlich [C1]. Beim GATE sind mindestens 500 Punkte (GATE General Score) nötig [C1].\", \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "Applicants whose qualifying degree was not completed in a signatory state of the Lisbon Convention and whose overall grade is worse than 1.5 must provide a GRE General Test or GATE proof.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The GRE requires at least 153 points in Verbal Reasoning.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The GRE requires at least 164 points in Quantitative Reasoning.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The GRE requires level 4.0 in Analytical Writing.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The GATE requires at least 500 points (GATE General Score).",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 5,
+   "n_supported": 5,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f07-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "Applicants whose degree is not from a Lisbon Convention signatory state and whose overall grade is worse than 1.5; GRE: at least 153 Verbal Reasoning, 164 Quantitative Reasoning and 4.0 in Analytical Writing.",
+   "gold_chunk_ids": [
+    "stufpo-isss-2024:par33:1"
+   ],
+   "question": "Who has to submit a GRE or GATE score for the ISSS master's programme, and what are the minimum GRE scores?",
+   "answerable": true,
+   "text": "Applicants whose qualifying degree was not completed in a signatory state of the Lisbon Convention and whose overall grade under Abs. 1 or 2 is worse than 1.5 must submit a GRE General Test or GATE result [C1]. The minimum GRE scores are 153 points in Verbal Reasoning, 164 points in Quantitative Reasoning, and level 4.0 in Analytical Writing; for GATE, the minimum is 500 points (GATE General Score) [C1].",
+   "citations": [
+    "stufpo-isss-2024:par33:1"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "stufpo-isss-2024:par33:1",
+    "stufpo-isss-2024:par33:0",
+    "stufpo-isss-2024:par40:0",
+    "stufpo-isss-2024:par35:0",
+    "mhb-isss-2024:modulsss-thesis-m:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Applicants whose qualifying degree was not completed in a signatory state of the Lisbon Convention and whose overall grade under Abs. 1 or 2 is worse than 1.5 must submit a GRE General Test or GATE result [C1]. The minimum GRE scores are 153 points in Verbal Reasoning, 164 points in Quantitative Reasoning, and level 4.0 in Analytical Writing; for GATE, the minimum is 500 points (GATE General Score) [C1].\", \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "Applicants whose qualifying degree was not completed in a Lisbon Convention signatory state must provide GRE General Test or GATE proof if their overall grade is worse than 1.5.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The overall grade condition refers to the grade under Abs. 1 or Abs. 2.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "GRE minimum scores are 153 in Verbal Reasoning.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "GRE minimum is 164 in Quantitative Reasoning.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "GRE minimum is level 4.0 in Analytical Writing.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "GATE minimum is 500 points (GATE General Score).",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 6,
+   "n_supported": 6,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f11-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Sechs Monate Bearbeitungszeit; das Kolloquium dauert 20 bis 60 Minuten.",
+   "gold_chunk_ids": [
+    "stufpo-isss-2024:anhang1:2"
+   ],
+   "question": "Wie lange ist die Bearbeitungszeit der Masterarbeit im Master ISSS und wie lang dauert das Kolloquium?",
+   "answerable": true,
+   "text": "Die Bearbeitungszeit der schriftlichen Hausarbeit zur Masterarbeit beträgt sechs Monate [C2][C3]. Das Kolloquium hat eine Prüfungsdauer von 20 bis 60 Minuten [C2][C1].",
+   "citations": [
+    "mhb-isss-2024:modulsss-thesis-m:1",
+    "stufpo-isss-2024:anhang1:2",
+    "mhb-isss-2024:modulsss-thesis-m:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "mhb-isss-2024:modulsss-thesis-m:1",
+    "stufpo-isss-2024:anhang1:2",
+    "mhb-isss-2024:modulsss-thesis-m:0",
+    "mhb-isss-2024:moduldsg-distrsys-m:0",
+    "mhb-isss-2024:modulisosysc-proj-m:1"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Die Bearbeitungszeit der schriftlichen Hausarbeit zur Masterarbeit beträgt sechs Monate [C2][C3]. Das Kolloquium hat eine Prüfungsdauer von 20 bis 60 Minuten [C2][C1].\", \"citations\": [\"C1\", \"C2\", \"C3\"]}",
+   "claims": [
+    {
+     "claim": "The processing time of the written thesis (Hausarbeit) for the master's thesis is six months.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The colloquium has an examination duration of 20 to 60 minutes.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 2,
+   "n_supported": 2,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f11-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "Six months for the thesis; the colloquium lasts 20 to 60 minutes.",
+   "gold_chunk_ids": [
+    "stufpo-isss-2024:anhang1:2"
+   ],
+   "question": "How long is the processing time of the master's thesis in ISSS and how long is the colloquium?",
+   "answerable": true,
+   "text": "The processing time for the master's thesis is six months [C2][C3]. The colloquium lasts between 20 and 60 minutes [C1][C3].",
+   "citations": [
+    "mhb-isss-2024:modulsss-thesis-m:1",
+    "mhb-isss-2024:modulsss-thesis-m:0",
+    "stufpo-isss-2024:anhang1:2"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "mhb-isss-2024:modulsss-thesis-m:1",
+    "mhb-isss-2024:modulsss-thesis-m:0",
+    "stufpo-isss-2024:anhang1:2",
+    "mhb-isss-2024:modulisosysc-proj-m:1",
+    "mhb-isss-2024:modulktr-gik-m:3"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"The processing time for the master's thesis is six months [C2][C3]. The colloquium lasts between 20 and 60 minutes [C1][C3].\", \"citations\": [\"C1\", \"C2\", \"C3\"]}",
+   "claims": [
+    {
+     "claim": "The processing time for the master's thesis is six months.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The colloquium lasts between 20 and 60 minutes.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 2,
+   "n_supported": 2,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f12-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "30 ECTS-Punkte.",
+   "gold_chunk_ids": [
+    "stufpo-isss-2024:anhang1:2"
+   ],
+   "question": "Wie viele ECTS-Punkte hat die Masterarbeit im Master ISSS?",
+   "answerable": true,
+   "text": "Die Masterarbeit hat 30 ECTS-Punkte [C1][C2].",
+   "citations": [
+    "stufpo-isss-2024:anhang1:0",
+    "stufpo-isss-2024:anhang2:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "stufpo-isss-2024:anhang1:0",
+    "stufpo-isss-2024:anhang2:0",
+    "stufpo-isss-2024:par29:0",
+    "stufpo-isss-2024:par33:0",
+    "stufpo-isss-2024:par35:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Die Masterarbeit hat 30 ECTS-Punkte [C1][C2].\", \"citations\": [\"C1\", \"C2\"]}",
+   "claims": [
+    {
+     "claim": "Die Masterarbeit hat einen Umfang von 30 ECTS-Punkten.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 1,
+   "n_supported": 1,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f12-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "30 ECTS credits.",
+   "gold_chunk_ids": [
+    "stufpo-isss-2024:anhang1:2"
+   ],
+   "question": "How many ECTS credits is the master's thesis worth in the ISSS programme?",
+   "answerable": true,
+   "text": "The master's thesis is worth 30 ECTS credit points [C1]. This matches the module group A4 Master's Thesis, which carries 30 ECTS [C2].",
+   "citations": [
+    "mhb-isss-2024:modulsss-thesis-m:0",
+    "stufpo-isss-2024:anhang1:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "mhb-isss-2024:modulsss-thesis-m:0",
+    "stufpo-isss-2024:anhang1:0",
+    "mhb-isss-2024:allgemeines:2",
+    "stufpo-isss-2024:par40:0",
+    "stufpo-isss-2024:par29:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"The master's thesis is worth 30 ECTS credit points [C1]. This matches the module group A4 Master's Thesis, which carries 30 ECTS [C2].\", \"citations\": [\"C1\", \"C2\"]}",
+   "claims": [
+    {
+     "claim": "The master's thesis is worth 30 ECTS credit points.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Module group A4 Master's Thesis carries 30 ECTS.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The thesis ECTS value matches the module group A4 value.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 3,
+   "n_supported": 3,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f13-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Auf Englisch.",
+   "gold_chunk_ids": [
+    "stufpo-isss-2024:par38:0"
+   ],
+   "question": "In welcher Sprache werden Lehrveranstaltungen und Prüfungen im Master ISSS abgehalten?",
+   "answerable": true,
+   "text": "Lehrveranstaltungen und Modulprüfungen nach der Studien- und Prüfungsordnung werden in englischer Sprache abgehalten und abgelegt [C1]. In einzelnen Modulen sind Antworten auf Deutsch zulässig, etwa im Modul Reliable Distributed Systems, wo die Studierenden die Prüfungssprache wählen können [C5].",
+   "citations": [
+    "stufpo-isss-2024:par38:0",
+    "mhb-isss-2024:moduldsg-rds-m:1"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "stufpo-isss-2024:par38:0",
+    "stufpo-isss-2024:par39:0",
+    "stufpo-isss-2024:par33:0",
+    "mhb-isss-2024:moduldt-dbcpu-m:1",
+    "mhb-isss-2024:moduldsg-rds-m:1"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Lehrveranstaltungen und Modulprüfungen nach der Studien- und Prüfungsordnung werden in englischer Sprache abgehalten und abgelegt [C1]. In einzelnen Modulen sind Antworten auf Deutsch zulässig, etwa im Modul Reliable Distributed Systems, wo die Studierenden die Prüfungssprache wählen können [C5].\", \"citations\": [\"C1\", \"C5\"]}",
+   "claims": [
+    {
+     "claim": "Lehrveranstaltungen und Modulprüfungen nach der Studien- und Prüfungsordnung werden in englischer Sprache abgehalten und abgelegt.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "In einzelnen Modulen sind Antworten auf Deutsch zulässig.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Im Modul Reliable Distributed Systems können die Studierenden die Prüfungssprache (Englisch oder Deutsch) wählen.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 3,
+   "n_supported": 3,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f13-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "In English.",
+   "gold_chunk_ids": [
+    "stufpo-isss-2024:par38:0"
+   ],
+   "question": "In which language are courses and exams held in the ISSS master's programme?",
+   "answerable": true,
+   "text": "Courses and module examinations under the ISSS master's regulations are held and taken in English [C1]. For example, the Master's Seminar is listed as taught in English [C5], although for the module DT-DBCPU-M the questions are in English and answers may be given in English or German [C4].",
+   "citations": [
+    "stufpo-isss-2024:par38:0",
+    "mhb-isss-2024:modulisosysc-sem-m:0",
+    "mhb-isss-2024:moduldt-dbcpu-m:1"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "stufpo-isss-2024:par38:0",
+    "stufpo-isss-2024:par39:0",
+    "stufpo-isss-2024:par33:0",
+    "mhb-isss-2024:moduldt-dbcpu-m:1",
+    "mhb-isss-2024:modulisosysc-sem-m:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Courses and module examinations under the ISSS master's regulations are held and taken in English [C1]. For example, the Master's Seminar is listed as taught in English [C5], although for the module DT-DBCPU-M the questions are in English and answers may be given in English or German [C4].\", \"citations\": [\"C1\", \"C5\", \"C4\"]}",
+   "claims": [
+    {
+     "claim": "Courses and module examinations under the regulations are held and taken in English.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The Master's Seminar is listed as taught in English.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "For one exam, the questions are in English and answers may be given in English or German.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "This exam description belongs to the module DT-DBCPU-M.",
+     "verdict": "unsupported"
+    }
+   ],
+   "n_claims": 4,
+   "n_supported": 3,
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f14-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "120 ECTS-Punkte einschließlich der Masterarbeit.",
+   "gold_chunk_ids": [
+    "stufpo-isss-2024:anhang1:0"
+   ],
+   "question": "Wie viele ECTS-Punkte muss man im Master ISSS insgesamt erreichen?",
+   "answerable": true,
+   "text": "Im Masterstudiengang International Software Systems Science beträgt die zu erreichende Summe der ECTS-Punkte einschließlich der Masterarbeit 120 ECTS-Punkte [C1].",
+   "citations": [
+    "stufpo-isss-2024:anhang1:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "stufpo-isss-2024:anhang1:0",
+    "stufpo-isss-2024:par33:0",
+    "stufpo-isss-2024:par29:0",
+    "stufpo-isss-2024:par40:0",
+    "stufpo-isss-2024:anhang2:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Im Masterstudiengang International Software Systems Science beträgt die zu erreichende Summe der ECTS-Punkte einschließlich der Masterarbeit 120 ECTS-Punkte [C1].\", \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "Im Masterstudiengang International Software Systems Science sind insgesamt 120 ECTS-Punkte zu erreichen.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Die 120 ECTS-Punkte schließen die Masterarbeit ein.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 2,
+   "n_supported": 2,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f14-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "120 ECTS credits including the master's thesis.",
+   "gold_chunk_ids": [
+    "stufpo-isss-2024:anhang1:0"
+   ],
+   "question": "How many ECTS credits in total do you need to complete the ISSS master's programme?",
+   "answerable": true,
+   "text": "The sum of ECTS credits to be achieved in the International Software Systems Science master's programme, including the master's thesis, is 120 ECTS credits [C2].",
+   "citations": [
+    "stufpo-isss-2024:anhang1:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "mhb-isss-2024:modulsss-thesis-m:0",
+    "stufpo-isss-2024:anhang1:0",
+    "stufpo-isss-2024:par29:0",
+    "stufpo-isss-2024:par33:0",
+    "mhb-isss-2024:allgemeines:2"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"The sum of ECTS credits to be achieved in the International Software Systems Science master's programme, including the master's thesis, is 120 ECTS credits [C2].\", \"citations\": [\"C2\"]}",
+   "claims": [
+    {
+     "claim": "The International Software Systems Science master's programme requires a total of 120 ECTS credits.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The 120 ECTS credits include the master's thesis.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 2,
+   "n_supported": 2,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f15-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Ein Seminarmodul mit 3 ECTS-Punkten und ein Projektmodul mit 6 ECTS-Punkten.",
+   "gold_chunk_ids": [
+    "stufpo-isss-2024:anhang1:2"
+   ],
+   "question": "Aus welchen Modulen besteht die Modulgruppe A3 (Seminar and Project) und wie viele ECTS-Punkte haben sie?",
+   "answerable": true,
+   "text": "Die Modulgruppe A3 besteht aus einem Seminarmodul im Umfang von 3 ECTS-Punkten [C1] und einem Projektmodul im Fachgebiet der Software Systems Science im Umfang von 6 ECTS-Punkten [C1]. Zusammen ergibt das 9 ECTS-Punkte [C5].",
+   "citations": [
+    "stufpo-isss-2024:anhang1:2",
+    "stufpo-isss-2024:anhang1:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "stufpo-isss-2024:anhang1:2",
+    "stufpo-isss-2024:par40:0",
+    "mhb-isss-2024:allgemeines:2",
+    "stufpo-isss-2024:par36:0",
+    "stufpo-isss-2024:anhang1:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Die Modulgruppe A3 besteht aus einem Seminarmodul im Umfang von 3 ECTS-Punkten [C1] und einem Projektmodul im Fachgebiet der Software Systems Science im Umfang von 6 ECTS-Punkten [C1]. Zusammen ergibt das 9 ECTS-Punkte [C5].\", \"citations\": [\"C1\", \"C5\"]}",
+   "claims": [
+    {
+     "claim": "Modulgruppe A3 enthält ein Seminarmodul im Umfang von 3 ECTS-Punkten.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Modulgruppe A3 enthält ein Projektmodul im Fachgebiet der Software Systems Science im Umfang von 6 ECTS-Punkten.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Die Modulgruppe A3 umfasst zusammen 9 ECTS-Punkte.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 3,
+   "n_supported": 3,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f15-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "A seminar module worth 3 ECTS credits and a project module worth 6 ECTS credits.",
+   "gold_chunk_ids": [
+    "stufpo-isss-2024:anhang1:2"
+   ],
+   "question": "What does module group A3 (Seminar and Project) consist of, and how many ECTS credits do the parts have?",
+   "answerable": true,
+   "text": "Module group A3 consists of a seminar module worth 3 ECTS credits and a project module in the field of Software Systems Science worth 6 ECTS credits, for 9 ECTS in total [C1][C4][C5]. The group deepens and applies the contents of groups A1 and A2 [C3].",
+   "citations": [
+    "stufpo-isss-2024:anhang1:2",
+    "stufpo-isss-2024:par40:0",
+    "mhb-isss-2024:anhang:3",
+    "stufpo-isss-2024:anhang1:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "stufpo-isss-2024:anhang1:2",
+    "mhb-isss-2024:allgemeines:2",
+    "stufpo-isss-2024:par40:0",
+    "mhb-isss-2024:anhang:3",
+    "stufpo-isss-2024:anhang1:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Module group A3 consists of a seminar module worth 3 ECTS credits and a project module in the field of Software Systems Science worth 6 ECTS credits, for 9 ECTS in total [C1][C4][C5]. The group deepens and applies the contents of groups A1 and A2 [C3].\", \"citations\": [\"C1\", \"C3\", \"C4\", \"C5\"]}",
+   "claims": [
+    {
+     "claim": "Module group A3 includes a seminar module worth 3 ECTS credits.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Module group A3 includes a project module in Software Systems Science worth 6 ECTS credits.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Module group A3 totals 9 ECTS.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Module group A3 deepens and applies the contents of module groups A1 and A2.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 4,
+   "n_supported": 4,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f16-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Mindestens 360 Stunden; es zählt mit 12 ECTS-Punkten (unbenotet).",
+   "gold_chunk_ids": [
+    "stufpo-isss-2024:par37:0",
+    "stufpo-isss-2024:anhang1:2"
+   ],
+   "question": "Wie lange muss das Praktikum im internationalen Kontext mindestens dauern und wie viele ECTS-Punkte bringt es?",
+   "answerable": true,
+   "text": "Das Praktikum im internationalen Kontext muss im Umfang von mindestens 360 Stunden abgeleistet werden [C3]. Es umfasst 12 ECTS-Punkte [C1][C2].",
+   "citations": [
+    "mhb-isss-2024:modulsss-praktintkon-m:0",
+    "stufpo-isss-2024:anhang1:2",
+    "stufpo-isss-2024:par37:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "mhb-isss-2024:modulsss-praktintkon-m:0",
+    "stufpo-isss-2024:anhang1:2",
+    "stufpo-isss-2024:par37:0",
+    "mhb-isss-2024:anhang:4",
+    "mhb-isss-2024:allgemeines:2"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Das Praktikum im internationalen Kontext muss im Umfang von mindestens 360 Stunden abgeleistet werden [C3]. Es umfasst 12 ECTS-Punkte [C1][C2].\", \"citations\": [\"C1\", \"C2\", \"C3\"]}",
+   "claims": [
+    {
+     "claim": "The internship in an international context must be completed with a scope of at least 360 hours.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The internship comprises 12 ECTS credits.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 2,
+   "n_supported": 2,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f16-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "At least 360 hours; it is worth 12 ECTS credits (ungraded).",
+   "gold_chunk_ids": [
+    "stufpo-isss-2024:par37:0",
+    "stufpo-isss-2024:anhang1:2"
+   ],
+   "question": "What is the minimum duration of the internship in an international context, and how many ECTS credits does it give?",
+   "answerable": true,
+   "text": "The internship in an international context must cover at least 360 hours [C5]. It is worth 12 ECTS credits [C1].",
+   "citations": [
+    "stufpo-isss-2024:par37:0",
+    "mhb-isss-2024:modulsss-praktintkon-m:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "mhb-isss-2024:modulsss-praktintkon-m:0",
+    "mhb-isss-2024:anhang:4",
+    "mhb-isss-2024:allgemeines:2",
+    "stufpo-isss-2024:anhang1:2",
+    "stufpo-isss-2024:par37:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"The internship in an international context must cover at least 360 hours [C5]. It is worth 12 ECTS credits [C1].\", \"citations\": [\"C5\", \"C1\"]}",
+   "claims": [
+    {
+     "claim": "The internship in an international context must cover at least 360 hours.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The internship is worth 12 ECTS credits.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 2,
+   "n_supported": 2,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f18-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Auf Antrag, wenn die Masterarbeit in A4, ein Seminar oder Projekt in A3 und mindestens 18 ECTS-Punkte aus A1 und A2 im Schwerpunkt erbracht wurden.",
+   "gold_chunk_ids": [
+    "stufpo-isss-2024:par36:0"
+   ],
+   "question": "Unter welchen Bedingungen wird ein Studienschwerpunkt im Zeugnis ausgewiesen?",
+   "answerable": true,
+   "text": "Ein Studienschwerpunkt wird auf Antrag an den Prüfungsausschuss im Zeugnis ausgewiesen, wenn die Masterarbeit in Modulgruppe A4, ein Seminar oder Projekt in Modulgruppe A3 und zusätzlich mindestens 18 ECTS-Punkte aus den Modulgruppen A1 und A2 im entsprechenden Studienschwerpunkt erbracht wurden [C1]. Das Zeugnis enthält den gegebenenfalls gewählten Studienschwerpunkt [C2]. Die Bedingungen stammen aus der StuFPO ISSS 2024 [C1].",
+   "citations": [
+    "stufpo-isss-2024:par36:0",
+    "apo-wiai-2026:par21:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "stufpo-isss-2024:par36:0",
+    "apo-wiai-2026:par21:0",
+    "apo-wiai-2026:par21:1",
+    "apo-wiai-2026:par6:0",
+    "apo-wiai-2026:par25:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Ein Studienschwerpunkt wird auf Antrag an den Prüfungsausschuss im Zeugnis ausgewiesen, wenn die Masterarbeit in Modulgruppe A4, ein Seminar oder Projekt in Modulgruppe A3 und zusätzlich mindestens 18 ECTS-Punkte aus den Modulgruppen A1 und A2 im entsprechenden Studienschwerpunkt erbracht wurden [C1]. Das Zeugnis enthält den gegebenenfalls gewählten Studienschwerpunkt [C2]. Die Bedingungen stammen aus der StuFPO ISSS 2024 [C1].\", \"citations\": [\"C1\", \"C2\"]}",
+   "claims": [
+    {
+     "claim": "A Studienschwerpunkt is shown on the Zeugnis upon application to the Prüfungsausschuss.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Condition: the Masterarbeit was completed in Modulgruppe A4.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Condition: a seminar or project in Modulgruppe A3 was completed.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Condition: at least 18 ECTS points from Modulgruppen A1 and A2 in the corresponding Studienschwerpunkt.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The Zeugnis contains the Studienschwerpunkt, if one was chosen.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The conditions come from the StuFPO ISSS 2024.",
+     "verdict": "unsupported"
+    }
+   ],
+   "n_claims": 6,
+   "n_supported": 5,
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f18-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "On request, if the thesis is in A4, a seminar or project is in A3, and at least 18 ECTS credits from A1 and A2 were earned in that focus area.",
+   "gold_chunk_ids": [
+    "stufpo-isss-2024:par36:0"
+   ],
+   "question": "Under which conditions is a study focus area shown on the degree certificate?",
+   "answerable": true,
+   "text": "A study focus area can be shown on the certificate if the student applies to the examination board and (a) the master's thesis is in module group A4, (b) a seminar or a project is completed in module group A3, and (c) at least 18 ECTS credits from module groups A1 and A2 are completed in that focus area [C2]. The certificate states the chosen study focus area where applicable [C5].",
+   "citations": [
+    "stufpo-isss-2024:par36:0",
+    "apo-wiai-2026:par21:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "mhb-isss-2024:allgemeines:1",
+    "stufpo-isss-2024:par36:0",
+    "mhb-isss-2024:allgemeines:2",
+    "mhb-isss-2024:anhang:4",
+    "apo-wiai-2026:par21:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"A study focus area can be shown on the certificate if the student applies to the examination board and (a) the master's thesis is in module group A4, (b) a seminar or a project is completed in module group A3, and (c) at least 18 ECTS credits from module groups A1 and A2 are completed in that focus area [C2]. The certificate states the chosen study focus area where applicable [C5].\", \"citations\": [\"C2\", \"C5\"]}",
+   "claims": [
+    {
+     "claim": "A study focus area can be shown on the certificate upon application to the examination board",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Condition: the master's thesis is in module group A4",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Condition: a seminar or a project is completed in module group A3",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Condition: at least 18 ECTS credits from module groups A1 and A2 in that focus area",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The certificate states the chosen study focus area where applicable",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 5,
+   "n_supported": 5,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f19-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Bis zum 30. September 2026, durch schriftliche Erklärung an den Prüfungsausschuss.",
+   "gold_chunk_ids": [
+    "stufpo-isss-2024:par41:0"
+   ],
+   "question": "Bis wann konnten Studierende, die vor dem Wintersemester 2024/25 begonnen haben, in die neue StuFPO des Masters ISSS übertreten?",
+   "answerable": true,
+   "text": "Studierende, die das Masterstudium International Software Systems Science vor dem Wintersemester 2024/25 aufgenommen haben, konnten bis zum 30. September 2026 in die neue Ordnung übertreten. Der Übertritt erfolgte durch schriftliche Erklärung, die dem Prüfungsausschuss innerhalb dieser Frist zugegangen sein musste [C1].",
+   "citations": [
+    "stufpo-isss-2024:par41:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "stufpo-isss-2024:par41:0",
+    "stufpo-isss-2024:par33:1",
+    "stufpo-isss-2024:par40:0",
+    "stufpo-isss-2024:par33:0",
+    "stufpo-isss-2024:par39:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Studierende, die das Masterstudium International Software Systems Science vor dem Wintersemester 2024/25 aufgenommen haben, konnten bis zum 30. September 2026 in die neue Ordnung übertreten. Der Übertritt erfolgte durch schriftliche Erklärung, die dem Prüfungsausschuss innerhalb dieser Frist zugegangen sein musste [C1].\", \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "Students who began the Master's program International Software Systems Science before WS 2024/25 could switch to the new regulations until 30 September 2026.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The switch was made by written declaration.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The declaration had to reach the examination committee within the deadline.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 3,
+   "n_supported": 3,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f19-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "Until 30 September 2026, by written declaration to the examination committee.",
+   "gold_chunk_ids": [
+    "stufpo-isss-2024:par41:0"
+   ],
+   "question": "Until when could students who started the ISSS master's programme before winter semester 2024/25 switch to the new study and examination regulations?",
+   "answerable": true,
+   "text": "Students who began the Master's programme International Software Systems Science before winter semester 2024/25 could switch to the new regulations until 30 September 2026 [C1]. The switch required a written declaration that had to reach the examination board within that deadline [C1].",
+   "citations": [
+    "stufpo-isss-2024:par41:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "stufpo-isss-2024:par41:0",
+    "mhb-isss-2024:allgemeines:0",
+    "mhb-isss-2024:modulsss-thesis-m:0",
+    "stufpo-isss-2024:par33:1",
+    "stufpo-isss-2024:par29:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Students who began the Master's programme International Software Systems Science before winter semester 2024/25 could switch to the new regulations until 30 September 2026 [C1]. The switch required a written declaration that had to reach the examination board within that deadline [C1].\", \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "Students who began the Master's programme International Software Systems Science before winter semester 2024/25 can switch to the new regulations until 30 September 2026.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The switch requires a written declaration by the student.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The declaration must reach the examination board within the deadline (by 30 September 2026).",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 3,
+   "n_supported": 3,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f22-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Mindestens drei Mitglieder.",
+   "gold_chunk_ids": [
+    "apo-wiai-2026:par4:0"
+   ],
+   "question": "Aus wie vielen Mitgliedern besteht der Prüfungsausschuss mindestens?",
+   "answerable": true,
+   "text": "Der Prüfungsausschuss besteht aus mindestens drei Mitgliedern [C1].",
+   "citations": [
+    "apo-wiai-2026:par4:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "apo-wiai-2026:par4:0",
+    "apo-wiai-2026:par4:1",
+    "apo-wiai-2026:par7:0",
+    "apo-wiai-2026:par9:4",
+    "stufpo-isss-2024:par37:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Der Prüfungsausschuss besteht aus mindestens drei Mitgliedern [C1].\", \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "Der Prüfungsausschuss besteht aus mindestens drei Mitgliedern.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 1,
+   "n_supported": 1,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f22-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "At least three members.",
+   "gold_chunk_ids": [
+    "apo-wiai-2026:par4:0"
+   ],
+   "question": "What is the minimum number of members of the examination committee?",
+   "answerable": true,
+   "text": "The examination committee consists of at least three members. [C1]",
+   "citations": [
+    "apo-wiai-2026:par4:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "apo-wiai-2026:par4:0",
+    "apo-wiai-2026:par4:1",
+    "mhb-isss-2024:modulsysnap-ose-m:2",
+    "mhb-isss-2024:modulds-convai-m:3",
+    "mhb-isss-2024:modulgdi-fprs-m:2"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"The examination committee consists of at least three members. [C1]\", \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "The examination committee consists of at least three members.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 1,
+   "n_supported": 1,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f23-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Die Prüfungsleistung wird mit „nicht ausreichend“ (5,0) bewertet.",
+   "gold_chunk_ids": [
+    "apo-wiai-2026:par7:0"
+   ],
+   "question": "Was passiert, wenn ich eine Prüfung ohne triftigen Grund versäume?",
+   "answerable": true,
+   "text": "Wird ein Prüfungstermin ohne triftige Gründe versäumt, wird die Prüfungsleistung mit „nicht ausreichend“ (5,0) bewertet [C1]. Die Gründe sollten unverzüglich schriftlich angezeigt und glaubhaft nachgewiesen werden, und über ihre Anerkennung entscheidet der Prüfungsausschuss [C1].",
+   "citations": [
+    "apo-wiai-2026:par7:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "apo-wiai-2026:par7:0",
+    "apo-wiai-2026:par7:1",
+    "apo-wiai-2026:par13:0",
+    "apo-wiai-2026:par9:3",
+    "apo-wiai-2026:par20:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Wird ein Prüfungstermin ohne triftige Gründe versäumt, wird die Prüfungsleistung mit „nicht ausreichend“ (5,0) bewertet [C1]. Die Gründe sollten unverzüglich schriftlich angezeigt und glaubhaft nachgewiesen werden, und über ihre Anerkennung entscheidet der Prüfungsausschuss [C1].\", \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "Wird ein Prüfungstermin ohne triftige Gründe versäumt, wird die Prüfungsleistung mit „nicht ausreichend“ (5,0) bewertet.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Die Gründe sollten unverzüglich schriftlich angezeigt und glaubhaft nachgewiesen werden.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Über die Anerkennung der Gründe entscheidet der Prüfungsausschuss.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 3,
+   "n_supported": 3,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f23-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "The exam is graded 'nicht ausreichend' (5.0).",
+   "gold_chunk_ids": [
+    "apo-wiai-2026:par7:0"
+   ],
+   "question": "What happens if I miss an exam without a valid reason?",
+   "answerable": true,
+   "text": "If you miss an exam date without valid reasons, the exam performance is graded \"nicht ausreichend\" (5.0) [C1]. The reasons should be reported in writing to the chair of the examination board without delay and credibly proven [C1].",
+   "citations": [
+    "apo-wiai-2026:par7:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "apo-wiai-2026:par7:0",
+    "mhb-isss-2024:allgemeines:0",
+    "apo-wiai-2026:par7:1",
+    "apo-wiai-2026:par13:0",
+    "apo-wiai-2026:par25:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"If you miss an exam date without valid reasons, the exam performance is graded \\\"nicht ausreichend\\\" (5.0) [C1]. The reasons should be reported in writing to the chair of the examination board without delay and credibly proven [C1].\", \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "Missing an exam date without valid (triftige) reasons results in the exam performance being graded 'nicht ausreichend' (5.0).",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The reasons for missing the exam should be reported in writing to the chair of the examination board without delay.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The reasons for missing the exam should be credibly proven (glaubhaft nachgewiesen).",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 3,
+   "n_supported": 3,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f24-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Die Prüfung gilt als „nicht ausreichend“ (5,0); in schwerwiegenden Fällen oder bei Wiederholung kann der Prüfungsanspruch im Studiengang entfallen.",
+   "gold_chunk_ids": [
+    "apo-wiai-2026:par7:0"
+   ],
+   "question": "Welche Folgen kann ein Plagiat in einer Prüfung haben?",
+   "answerable": true,
+   "text": "Ein Plagiat führt dazu, dass die betreffende Modulprüfung bzw. Modulteilprüfung mit „nicht ausreichend“ (5,0) bewertet wird [C1]. In schwerwiegenden Fällen oder bei wiederholtem Verstoß kann der Prüfungsausschuss festlegen, dass in dem jeweiligen Bachelor- oder Masterstudiengang kein Prüfungsanspruch mehr besteht [C1]. Wird eine Täuschung erst nach Aushändigung des Zeugnisses bekannt, können die Noten berichtigt und die Prüfung ganz oder teilweise für nicht bestanden erklärt werden; dies ist nach fünf Jahren ab dem Datum des Prüfungszeugnisses ausgeschlossen [C2].",
+   "citations": [
+    "apo-wiai-2026:par7:0",
+    "apo-wiai-2026:par25:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "apo-wiai-2026:par7:0",
+    "apo-wiai-2026:par25:0",
+    "apo-wiai-2026:par7:1",
+    "apo-wiai-2026:par9:3",
+    "apo-wiai-2026:par9:1"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Ein Plagiat führt dazu, dass die betreffende Modulprüfung bzw. Modulteilprüfung mit „nicht ausreichend“ (5,0) bewertet wird [C1]. In schwerwiegenden Fällen oder bei wiederholtem Verstoß kann der Prüfungsausschuss festlegen, dass in dem jeweiligen Bachelor- oder Masterstudiengang kein Prüfungsanspruch mehr besteht [C1]. Wird eine Täuschung erst nach Aushändigung des Zeugnisses bekannt, können die Noten berichtigt und die Prüfung ganz oder teilweise für nicht bestanden erklärt werden; dies ist nach fünf Jahren ab dem Datum des Prüfungszeugnisses ausgeschlossen [C2].\", \"citations\": [\"C1\", \"C2\"]}",
+   "claims": [
+    {
+     "claim": "A plagiarism results in the module examination or partial module examination being graded 'nicht ausreichend' (5,0).",
+     "verdict": "supported"
+    },
+    {
+     "claim": "In serious cases or on repeated violation, the examination board can determine that no entitlement to examination remains in the respective Bachelor's or Master's programme.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "If deception becomes known only after the certificate was handed over, the grades can be corrected.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "In that case the examination can be declared wholly or partly failed.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "This is excluded after five years from the date of the examination certificate.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 5,
+   "n_supported": 5,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f24-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "The exam counts as 'nicht ausreichend' (5.0); in serious or repeated cases the right to take exams in the programme can be withdrawn.",
+   "gold_chunk_ids": [
+    "apo-wiai-2026:par7:0"
+   ],
+   "question": "What consequences can plagiarism in an exam have?",
+   "answerable": true,
+   "text": "A plagiarism finding means the affected module exam or partial module exam is graded “nicht ausreichend” (5,0), as determined by the examiner or, in case of doubt, the examination board [C1]. In serious cases or for repeated violations, the examination board can determine that the candidate no longer has an examination entitlement in the respective Bachelor's or Master's programme [C1]. If the deception only becomes known after the certificate has been issued, the grades are corrected and the examination board can declare the exam wholly or partly not passed [C3].",
+   "citations": [
+    "apo-wiai-2026:par7:0",
+    "apo-wiai-2026:par25:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "apo-wiai-2026:par7:0",
+    "apo-wiai-2026:par7:1",
+    "apo-wiai-2026:par25:0",
+    "mhb-isss-2024:moduldt-dbcpu-m:1",
+    "mhb-isss-2024:modulpsi-advasp-m:2"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"A plagiarism finding means the affected module exam or partial module exam is graded \\u201cnicht ausreichend\\u201d (5,0), as determined by the examiner or, in case of doubt, the examination board [C1]. In serious cases or for repeated violations, the examination board can determine that the candidate no longer has an examination entitlement in the respective Bachelor's or Master's programme [C1]. If the deception only becomes known after the certificate has been issued, the grades are corrected and the examination board can declare the exam wholly or partly not passed [C3].\", \"citations\": [\"C1\", \"C3\"]}",
+   "claims": [
+    {
+     "claim": "A plagiarism finding results in the affected module exam or partial module exam being graded 'nicht ausreichend' (5,0).",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Plagiarism is determined by the examiner or, in case of doubt, by the examination board.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "In serious cases or repeated violations, the examination board can determine that no examination entitlement remains in the respective Bachelor's or Master's programme.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "If deception becomes known only after the certificate was issued, the grades are corrected by the examination board.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "In that case the examination board can declare the exam wholly or partly not passed.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 5,
+   "n_supported": 5,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f26-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Mindestens 30 und höchstens 240 Minuten.",
+   "gold_chunk_ids": [
+    "apo-wiai-2026:par9:2"
+   ],
+   "question": "Wie lange darf eine Klausur dauern?",
+   "answerable": true,
+   "text": "Die Bearbeitungszeit einer schriftlichen Prüfung beträgt mindestens 30 und höchstens 240 Minuten [C1]. In den Modulen HCI-US-B und HCI-MCI-M dauert die Klausur 90 Minuten [C2][C3].",
+   "citations": [
+    "apo-wiai-2026:par9:2",
+    "mhb-isss-2024:modulhci-us-b:2",
+    "mhb-isss-2024:modulhci-mci-m:2"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "apo-wiai-2026:par9:2",
+    "mhb-isss-2024:modulhci-us-b:2",
+    "mhb-isss-2024:modulhci-mci-m:2",
+    "apo-wiai-2026:par24:0",
+    "apo-wiai-2026:par13:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Die Bearbeitungszeit einer schriftlichen Prüfung beträgt mindestens 30 und höchstens 240 Minuten [C1]. In den Modulen HCI-US-B und HCI-MCI-M dauert die Klausur 90 Minuten [C2][C3].\", \"citations\": [\"C1\", \"C2\", \"C3\"]}",
+   "claims": [
+    {
+     "claim": "Die Bearbeitungszeit einer schriftlichen Prüfung beträgt mindestens 30 Minuten.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Die Bearbeitungszeit einer schriftlichen Prüfung beträgt höchstens 240 Minuten.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Im Modul HCI-US-B dauert die Klausur 90 Minuten.",
+     "verdict": "unsupported"
+    },
+    {
+     "claim": "Im Modul HCI-MCI-M dauert die Klausur 90 Minuten.",
+     "verdict": "unsupported"
+    }
+   ],
+   "n_claims": 4,
+   "n_supported": 2,
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f26-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "At least 30 and at most 240 minutes.",
+   "gold_chunk_ids": [
+    "apo-wiai-2026:par9:2"
+   ],
+   "question": "How long can a written exam last?",
+   "answerable": true,
+   "text": "The processing time of a written examination must be at least 30 and at most 240 minutes [C5].",
+   "citations": [
+    "apo-wiai-2026:par9:2"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "mhb-isss-2024:modulgdi-ifp-m:1",
+    "mhb-isss-2024:modulvis-ivva-m:1",
+    "mhb-isss-2024:modulds-convai-m:3",
+    "mhb-isss-2024:modulhci-us-b:1",
+    "apo-wiai-2026:par9:2"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"The processing time of a written examination must be at least 30 and at most 240 minutes [C5].\", \"citations\": [\"C5\"]}",
+   "claims": [
+    {
+     "claim": "The processing time of a written examination must be at least 30 minutes.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The processing time of a written examination must be at most 240 minutes.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 2,
+   "n_supported": 2,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f28-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Bei mehr als zwei versäumten Unterrichtsterminen bzw. mehr als 20 % der Unterrichtszeit bei Blockveranstaltungen.",
+   "gold_chunk_ids": [
+    "apo-wiai-2026:par9:3"
+   ],
+   "question": "Wann gilt die regelmäßige Teilnahme an einer Lehrveranstaltung als nicht erfüllt, wenn ich selbst für die Abwesenheit verantwortlich bin?",
+   "answerable": true,
+   "text": "Wenn Sie die Abwesenheit selbst zu vertreten haben, gilt die regelmäßige Teilnahme als nicht erfüllt, sobald Sie mehr als zwei Unterrichtstermine oder bei Blockveranstaltungen mehr als 20 % der Unterrichtszeit fehlen [C1]. Dies gilt, wenn die Studien- und Prüfungsordnung regelmäßige Teilnahme für die Zulassung zur Modulprüfung oder für das Bestehen eines Moduls voraussetzt [C1].",
+   "citations": [
+    "apo-wiai-2026:par9:3"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "apo-wiai-2026:par9:3",
+    "apo-wiai-2026:par15:0",
+    "apo-wiai-2026:par7:0",
+    "apo-wiai-2026:par9:2",
+    "apo-wiai-2026:par6:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Wenn Sie die Abwesenheit selbst zu vertreten haben, gilt die regelmäßige Teilnahme als nicht erfüllt, sobald Sie mehr als zwei Unterrichtstermine oder bei Blockveranstaltungen mehr als 20 % der Unterrichtszeit fehlen [C1]. Dies gilt, wenn die Studien- und Prüfungsordnung regelmäßige Teilnahme für die Zulassung zur Modulprüfung oder für das Bestehen eines Moduls voraussetzt [C1].\", \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "Bei selbst zu vertretender Abwesenheit gilt die regelmäßige Teilnahme als nicht erfüllt, wenn mehr als zwei Unterrichtstermine fehlen.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Bei Blockveranstaltungen gilt die regelmäßige Teilnahme als nicht erfüllt, wenn mehr als 20 % der Unterrichtszeit fehlen (bei selbst zu vertretender Abwesenheit).",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Die Regelung gilt, wenn die Studien- und Prüfungsordnung regelmäßige Teilnahme für die Zulassung zur Modulprüfung oder für das Bestehen eines Moduls voraussetzt.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 3,
+   "n_supported": 3,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f28-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "If more than two sessions are missed, or more than 20% of the teaching time in block courses.",
+   "gold_chunk_ids": [
+    "apo-wiai-2026:par9:3"
+   ],
+   "question": "When is regular attendance considered not fulfilled if I am responsible for the absence?",
+   "answerable": true,
+   "text": "If you are responsible for the absence, regular attendance counts as not fulfilled once you miss more than two teaching dates, or more than 20% of the teaching time for block courses. [C1]",
+   "citations": [
+    "apo-wiai-2026:par9:3"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "apo-wiai-2026:par9:3",
+    "mhb-isss-2024:allgemeines:0",
+    "mhb-isss-2024:modulisosysc-sem-m:1",
+    "apo-wiai-2026:par13:0",
+    "apo-wiai-2026:par7:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"If you are responsible for the absence, regular attendance counts as not fulfilled once you miss more than two teaching dates, or more than 20% of the teaching time for block courses. [C1]\", \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "When the student is responsible for the absence, regular attendance counts as not fulfilled if more than two teaching dates are missed.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "For block courses, when the student is responsible for the absence, attendance counts as not fulfilled if more than 20% of teaching time is missed.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 2,
+   "n_supported": 2,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f29-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Maximal 20 % der in der Prüfungsleistung erreichbaren Punkte.",
+   "gold_chunk_ids": [
+    "apo-wiai-2026:par9:5"
+   ],
+   "question": "Wie viele Punkte kann man maximal durch optionale semesterbegleitende Studienleistungen zur Notenverbesserung sammeln?",
+   "answerable": true,
+   "text": "Die Ordnung begrenzt die optionalen Studienleistungen auf maximal 20 % der in der Prüfungsleistung erreichbaren Punkte [C1]. Konkret sind in den Modulen HCI-US-B, HCI-MCI-M und EESYS-ES-M insgesamt 12 Punkte vorgesehen [C2][C3][C4]; für andere Module gilt jeweils das Modulhandbuch.",
+   "citations": [
+    "apo-wiai-2026:par9:5",
+    "mhb-isss-2024:modulhci-us-b:2",
+    "mhb-isss-2024:modulhci-mci-m:2",
+    "mhb-isss-2024:moduleesys-es-m:3"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "apo-wiai-2026:par9:5",
+    "mhb-isss-2024:modulhci-us-b:2",
+    "mhb-isss-2024:modulhci-mci-m:2",
+    "mhb-isss-2024:moduleesys-es-m:3",
+    "mhb-isss-2024:modulpsi-advasp-m:2"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Die Ordnung begrenzt die optionalen Studienleistungen auf maximal 20 % der in der Prüfungsleistung erreichbaren Punkte [C1]. Konkret sind in den Modulen HCI-US-B, HCI-MCI-M und EESYS-ES-M insgesamt 12 Punkte vorgesehen [C2][C3][C4]; für andere Module gilt jeweils das Modulhandbuch.\", \"citations\": [\"C1\", \"C2\", \"C3\", \"C4\"]}",
+   "claims": [
+    {
+     "claim": "Die Ordnung begrenzt die optionalen Studienleistungen auf maximal 20 % der in der Prüfungsleistung erreichbaren Punkte.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "In den Modulen HCI-US-B, HCI-MCI-M und EESYS-ES-M sind insgesamt 12 Punkte für optionale Studienleistungen vorgesehen.",
+     "verdict": "unsupported"
+    },
+    {
+     "claim": "Für andere Module gilt jeweils das Modulhandbuch.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 3,
+   "n_supported": 2,
+   "faithful": false,
+   "status": "graded"
+  },
+  {
+   "qid": "f29-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "At most 20% of the points achievable in the exam.",
+   "gold_chunk_ids": [
+    "apo-wiai-2026:par9:5"
+   ],
+   "question": "How many points can optional coursework for grade improvement contribute at most?",
+   "answerable": true,
+   "text": "In the listed modules, optional coursework totals 12 points [C1][C2][C4][C5]. The general examination regulation caps such points at 20% of the points attainable in the examination [C3].",
+   "citations": [
+    "mhb-isss-2024:modulhci-us-b:2",
+    "mhb-isss-2024:modulhci-mci-m:2",
+    "apo-wiai-2026:par9:5",
+    "mhb-isss-2024:moduleesys-adaml-m:3",
+    "mhb-isss-2024:moduleesys-es-m:3"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "mhb-isss-2024:modulhci-us-b:2",
+    "mhb-isss-2024:modulhci-mci-m:2",
+    "apo-wiai-2026:par9:5",
+    "mhb-isss-2024:moduleesys-adaml-m:3",
+    "mhb-isss-2024:moduleesys-es-m:3"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"In the listed modules, optional coursework totals 12 points [C1][C2][C4][C5]. The general examination regulation caps such points at 20% of the points attainable in the examination [C3].\", \"citations\": [\"C1\", \"C2\", \"C3\", \"C4\", \"C5\"]}",
+   "claims": [
+    {
+     "claim": "In the listed modules, optional coursework totals 12 points.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The general examination regulation caps optional coursework points at 20% of the points attainable in the examination.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 2,
+   "n_supported": 2,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f30-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Bei einer Gesamtnote von 1,0 bis einschließlich 1,2.",
+   "gold_chunk_ids": [
+    "apo-wiai-2026:par10:0"
+   ],
+   "question": "Bei welcher Gesamtnote wird das Prädikat „mit Auszeichnung“ vergeben?",
+   "answerable": true,
+   "text": "Das Prädikat „mit Auszeichnung“ wird vergeben, wenn die Gesamtnote im Bereich von 1,0 bis einschließlich 1,2 liegt [C1].",
+   "citations": [
+    "apo-wiai-2026:par10:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "apo-wiai-2026:par10:0",
+    "apo-wiai-2026:par21:0",
+    "stufpo-isss-2024:par33:1",
+    "apo-wiai-2026:par6:0",
+    "apo-wiai-2026:par11:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Das Prädikat „mit Auszeichnung“ wird vergeben, wenn die Gesamtnote im Bereich von 1,0 bis einschließlich 1,2 liegt [C1].\", \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "Das Prädikat „mit Auszeichnung“ wird vergeben, wenn die Gesamtnote zwischen 1,0 und einschließlich 1,2 liegt.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 1,
+   "n_supported": 1,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f30-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "For an overall grade from 1.0 up to and including 1.2.",
+   "gold_chunk_ids": [
+    "apo-wiai-2026:par10:0"
+   ],
+   "question": "For which overall grade is the distinction 'mit Auszeichnung' awarded?",
+   "answerable": true,
+   "text": "The distinction \"mit Auszeichnung\" is awarded when the overall grade lies between 1.0 and 1.2 inclusive [C5].",
+   "citations": [
+    "apo-wiai-2026:par10:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "mhb-isss-2024:modulktr-gik-m:3",
+    "mhb-isss-2024:moduldsg-distrsys-m:0",
+    "mhb-isss-2024:modulxai-adl-m:0",
+    "mhb-isss-2024:modulktr-gik-m:0",
+    "apo-wiai-2026:par10:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"The distinction \\\"mit Auszeichnung\\\" is awarded when the overall grade lies between 1.0 and 1.2 inclusive [C5].\", \"citations\": [\"C5\"]}",
+   "claims": [
+    {
+     "claim": "The additional distinction \"mit Auszeichnung\" is awarded when the overall grade (Gesamtnote) lies between 1.0 and 1.2 inclusive.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 1,
+   "n_supported": 1,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f31-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Die Noten 0,7, 4,3, 4,7 und 5,3.",
+   "gold_chunk_ids": [
+    "apo-wiai-2026:par10:0"
+   ],
+   "question": "Welche Noten sind nach der APO WIAI ausgeschlossen?",
+   "answerable": true,
+   "text": "Die Noten 0,7, 4,3, 4,7 und 5,3 sind ausgeschlossen [C1].",
+   "citations": [
+    "apo-wiai-2026:par10:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "apo-wiai-2026:par10:0",
+    "apo-wiai-2026:par6:0",
+    "apo-wiai-2026:par25:0",
+    "apo-wiai-2026:par22:0",
+    "apo-wiai-2026:par7:1"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Die Noten 0,7, 4,3, 4,7 und 5,3 sind ausgeschlossen [C1].\", \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "Die Noten 0,7, 4,3, 4,7 und 5,3 sind ausgeschlossen.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 1,
+   "n_supported": 1,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f31-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "The grades 0.7, 4.3, 4.7 and 5.3.",
+   "gold_chunk_ids": [
+    "apo-wiai-2026:par10:0"
+   ],
+   "question": "Which grades are excluded under the APO WIAI?",
+   "answerable": true,
+   "text": "The grades 0.7, 4.3, 4.7 and 5.3 are excluded [C5].",
+   "citations": [
+    "apo-wiai-2026:par10:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "apo-wiai-2026:par3:0",
+    "apo-wiai-2026:par1:0",
+    "stufpo-isss-2024:par31:0",
+    "apo-wiai-2026:par18:0",
+    "apo-wiai-2026:par10:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"The grades 0.7, 4.3, 4.7 and 5.3 are excluded [C5].\", \"citations\": [\"C5\"]}",
+   "claims": [
+    {
+     "claim": "The grades 0.7, 4.3, 4.7 and 5.3 are excluded.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 1,
+   "n_supported": 1,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f32-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Als nach ECTS-Punkten gewichtetes arithmetisches Mittel der Modulnoten, auf eine Dezimalstelle abgeschnitten.",
+   "gold_chunk_ids": [
+    "apo-wiai-2026:par10:0"
+   ],
+   "question": "Wie wird die Gesamtnote eines Studiengangs berechnet?",
+   "answerable": true,
+   "text": "Die Gesamtnote eines Studiengangs ist das auf eine Dezimalstelle abgeschnittene, nach ECTS-Punkten gewichtete arithmetische Mittel der Noten der einzelnen Module gemäß StuFPO [C1]. Die Ordnungen der Bachelorstudiengänge können vorsehen, dass Grundlagenmodule, Module des Kontextstudiums sowie überfachliche Qualifikationen und Kompetenzen nicht in die Berechnung einfließen [C1].",
+   "citations": [
+    "apo-wiai-2026:par10:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "apo-wiai-2026:par10:0",
+    "apo-wiai-2026:par6:0",
+    "apo-wiai-2026:par21:0",
+    "apo-wiai-2026:par22:0",
+    "stufpo-isss-2024:par33:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Die Gesamtnote eines Studiengangs ist das auf eine Dezimalstelle abgeschnittene, nach ECTS-Punkten gewichtete arithmetische Mittel der Noten der einzelnen Module gemäß StuFPO [C1]. Die Ordnungen der Bachelorstudiengänge können vorsehen, dass Grundlagenmodule, Module des Kontextstudiums sowie überfachliche Qualifikationen und Kompetenzen nicht in die Berechnung einfließen [C1].\", \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "Die Gesamtnote eines Studiengangs ist das auf eine Dezimalstelle abgeschnittene arithmetische Mittel der Modulnoten.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Das Mittel wird nach ECTS-Punkten gewichtet.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Die Noten der einzelnen Module werden gemäß StuFPO herangezogen.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Die Ordnungen der Bachelorstudiengänge können vorsehen, dass Grundlagenmodule und Module des Kontextstudiums nicht in die Gesamtnote einfließen.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Die Ordnungen der Bachelorstudiengänge können vorsehen, dass überfachliche Qualifikationen und Kompetenzen nicht in die Gesamtnote einfließen.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 5,
+   "n_supported": 5,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f32-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "As the arithmetic mean of the module grades weighted by ECTS credits, truncated to one decimal place.",
+   "gold_chunk_ids": [
+    "apo-wiai-2026:par10:0"
+   ],
+   "question": "How is the overall grade of a programme calculated?",
+   "answerable": true,
+   "text": "The overall grade of the programme is the arithmetic mean of the individual module grades, weighted by ECTS points and truncated to one decimal place, as set out in the StuFPO [C2]. Bachelor programme regulations may exclude foundation modules, contextual-studies modules, and interdisciplinary qualifications from this calculation [C2]. Recognised grades from other institutions are included in the overall grade only if they can be converted to the grading system, and grades from non-comparable systems are not included [C3].",
+   "citations": [
+    "apo-wiai-2026:par10:0",
+    "apo-wiai-2026:par6:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "mhb-isss-2024:modulktr-gik-m:3",
+    "apo-wiai-2026:par10:0",
+    "apo-wiai-2026:par6:0",
+    "mhb-isss-2024:modulxai-adl-m:2",
+    "apo-wiai-2026:par21:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"The overall grade of the programme is the arithmetic mean of the individual module grades, weighted by ECTS points and truncated to one decimal place, as set out in the StuFPO [C2]. Bachelor programme regulations may exclude foundation modules, contextual-studies modules, and interdisciplinary qualifications from this calculation [C2]. Recognised grades from other institutions are included in the overall grade only if they can be converted to the grading system, and grades from non-comparable systems are not included [C3].\", \"citations\": [\"C2\", \"C3\"]}",
+   "claims": [
+    {
+     "claim": "The overall grade is the arithmetic mean of the individual module grades",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The mean is weighted by ECTS points",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The mean is truncated to one decimal place",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The calculation is set out in/according to the StuFPO",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Bachelor programme regulations may exclude foundation modules from the overall grade calculation",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Bachelor regulations may exclude contextual-studies modules from the calculation",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Bachelor regulations may exclude interdisciplinary qualifications from the calculation",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Recognised grades from other institutions are included in the overall grade if they can be converted to the grading system",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Grades from non-comparable grading systems are not included in the overall grade",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 9,
+   "n_supported": 9,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f34-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Um höchstens einen Monat, auf schriftlichen Antrag beim Prüfungsausschuss.",
+   "gold_chunk_ids": [
+    "apo-wiai-2026:par16:0"
+   ],
+   "question": "Um wie viel kann die Bearbeitungszeit der Masterarbeit bei triftigen Gründen höchstens verlängert werden?",
+   "answerable": true,
+   "text": "Der Bearbeitungszeitraum kann bei Vorliegen triftiger Gründe auf schriftlichen Antrag vom Prüfungsausschuss um höchstens einen Monat verlängert werden [C1].",
+   "citations": [
+    "apo-wiai-2026:par16:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "apo-wiai-2026:par16:0",
+    "apo-wiai-2026:par9:2",
+    "apo-wiai-2026:par17:0",
+    "apo-wiai-2026:par9:3",
+    "apo-wiai-2026:par18:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Der Bearbeitungszeitraum kann bei Vorliegen triftiger Gründe auf schriftlichen Antrag vom Prüfungsausschuss um höchstens einen Monat verlängert werden [C1].\", \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "Der Bearbeitungszeitraum der Bachelor- oder Masterarbeit kann bei Vorliegen triftiger Gründe verlängert werden.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Die Verlängerung erfolgt auf schriftlichen Antrag.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Der Prüfungsausschuss entscheidet über die Verlängerung.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Die Verlängerung beträgt höchstens einen Monat.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 4,
+   "n_supported": 4,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f34-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "By at most one month, on written request to the examination committee.",
+   "gold_chunk_ids": [
+    "apo-wiai-2026:par16:0"
+   ],
+   "question": "By how much can the processing time of the master's thesis be extended at most for valid reasons?",
+   "answerable": true,
+   "text": "The processing period can be extended by at most one month, on written application to the examination board, if valid reasons exist [C1].",
+   "citations": [
+    "apo-wiai-2026:par16:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "apo-wiai-2026:par16:0",
+    "apo-wiai-2026:par9:2",
+    "mhb-isss-2024:modulsss-thesis-m:0",
+    "mhb-isss-2024:modulsss-thesis-m:1",
+    "apo-wiai-2026:par18:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"The processing period can be extended by at most one month, on written application to the examination board, if valid reasons exist [C1].\", \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "The processing period for the thesis can be extended by at most one month.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The extension requires a written application.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The extension is granted by the examination board.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "An extension requires valid (triftige) reasons.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 4,
+   "n_supported": 4,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f35-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Ab der 30. Schwangerschaftswoche besteht nach je zwei Stunden Arbeitszeit Anspruch auf 30 Minuten Erholungspause, die an die Prüfungszeit angehängt wird.",
+   "gold_chunk_ids": [
+    "apo-wiai-2026:par24:0"
+   ],
+   "question": "Welche Pausenregelung gilt für Schwangere bei Klausuren?",
+   "answerable": true,
+   "text": "Schwangere haben ab der 30. Schwangerschaftswoche bei Prüfungsklausuren nach je zwei Stunden Arbeitszeit Anspruch auf eine Erholungspause von 30 Minuten, in Begleitung einer Aufsichtsperson, die auf Wunsch im Freien stattfinden kann [C1]. Die Pausenzeit wird an die Prüfungszeit angehängt [C1]. Der Nachteilsausgleich wird gewährt, wenn spätestens vier Wochen vor dem Klausurtermin beim Prüfungsamt ein Antrag mit ärztlicher Bescheinigung über die Schwangerschaftswoche zum Klausurtermin gestellt wird [C1].",
+   "citations": [
+    "apo-wiai-2026:par24:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "apo-wiai-2026:par24:0",
+    "apo-wiai-2026:par9:2",
+    "apo-wiai-2026:par13:0",
+    "apo-wiai-2026:par9:1",
+    "apo-wiai-2026:par9:3"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Schwangere haben ab der 30. Schwangerschaftswoche bei Prüfungsklausuren nach je zwei Stunden Arbeitszeit Anspruch auf eine Erholungspause von 30 Minuten, in Begleitung einer Aufsichtsperson, die auf Wunsch im Freien stattfinden kann [C1]. Die Pausenzeit wird an die Prüfungszeit angehängt [C1]. Der Nachteilsausgleich wird gewährt, wenn spätestens vier Wochen vor dem Klausurtermin beim Prüfungsamt ein Antrag mit ärztlicher Bescheinigung über die Schwangerschaftswoche zum Klausurtermin gestellt wird [C1].\", \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "Pregnant students are entitled from the 30th week of pregnancy to a recovery break during exam papers.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The break applies after every two hours of working time.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The break lasts 30 minutes.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The break is accompanied by a supervisor.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "On request the break can take place outdoors (a walk).",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The break time is added to the exam time.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The compensation is granted if an application is made to the examination office at the latest four weeks before the exam date.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "A medical certificate stating the week of pregnancy at the exam date must accompany the application.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 8,
+   "n_supported": 8,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f35-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "From the 30th week of pregnancy, a 30-minute break after every two hours of working time, which is added to the exam time.",
+   "gold_chunk_ids": [
+    "apo-wiai-2026:par24:0"
+   ],
+   "question": "What break rule applies to pregnant students in written exams?",
+   "answerable": true,
+   "text": "From the 30th week of pregnancy, pregnant students are entitled to a 30-minute recovery break after every two hours of working time in written exams (Prüfungsklausuren), during which they may leave the room accompanied by a supervisor [C1]. The break time is added to the exam time [C1]. The compensation must be requested from the Prüfungsamt at least four weeks before the exam, with a medical certificate stating the pregnancy week expected at the exam date [C1].",
+   "citations": [
+    "apo-wiai-2026:par24:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "apo-wiai-2026:par24:0",
+    "apo-wiai-2026:par9:3",
+    "apo-wiai-2026:par7:1",
+    "mhb-isss-2024:modulmobi-adm-m:1",
+    "mhb-isss-2024:modulds-rl-m:2"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"From the 30th week of pregnancy, pregnant students are entitled to a 30-minute recovery break after every two hours of working time in written exams (Prüfungsklausuren), during which they may leave the room accompanied by a supervisor [C1]. The break time is added to the exam time [C1]. The compensation must be requested from the Prüfungsamt at least four weeks before the exam, with a medical certificate stating the pregnancy week expected at the exam date [C1].\", \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "From the 30th week of pregnancy, pregnant students are entitled to a recovery break in written exams",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The break is 30 minutes long after every two hours of working time",
+     "verdict": "supported"
+    },
+    {
+     "claim": "During the break they may leave the exam room accompanied by a supervisor",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The break time is added to the exam time",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The compensation must be requested from the Prüfungsamt at least four weeks before the exam",
+     "verdict": "supported"
+    },
+    {
+     "claim": "A medical certificate must state the pregnancy week expected at the exam date",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 6,
+   "n_supported": 6,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f41-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "75 Stunden.",
+   "gold_chunk_ids": [
+    "mhb-isss-2024:modulds-rl-m:0"
+   ],
+   "question": "Wie viele Stunden Arbeit sind im Modul Reinforcement Learning für die Bearbeitung der Assignments eingeplant?",
+   "answerable": true,
+   "text": "Für die Bearbeitung der Assignments sind im Modul Reinforcement Learning 75 Stunden eingeplant [C1].",
+   "citations": [
+    "mhb-isss-2024:modulds-rl-m:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "mhb-isss-2024:modulds-rl-m:0",
+    "mhb-isss-2024:modulds-rl-m:1",
+    "mhb-isss-2024:modulds-rl-m:2",
+    "mhb-isss-2024:modulxai-adl-m:1",
+    "mhb-isss-2024:modulhci-mci-m:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Für die Bearbeitung der Assignments sind im Modul Reinforcement Learning 75 Stunden eingeplant [C1].\", \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "Im Modul Reinforcement Learning sind 75 Stunden für die Bearbeitung der Assignments eingeplant.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 1,
+   "n_supported": 1,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f41-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "75 hours.",
+   "gold_chunk_ids": [
+    "mhb-isss-2024:modulds-rl-m:0"
+   ],
+   "question": "How many hours of work are planned for the assignments in the Reinforcement Learning module?",
+   "answerable": true,
+   "text": "The Reinforcement Learning module plans 75 hours of work on the actual assignments [C1].",
+   "citations": [
+    "mhb-isss-2024:modulds-rl-m:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "mhb-isss-2024:modulds-rl-m:0",
+    "mhb-isss-2024:modulds-rl-m:1",
+    "mhb-isss-2024:modulds-rl-m:2",
+    "mhb-isss-2024:modulxai-adl-m:1",
+    "mhb-isss-2024:modulxai-dl-m:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"The Reinforcement Learning module plans 75 hours of work on the actual assignments [C1].\", \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "The Reinforcement Learning module (DS-RL-M) plans 75 hours of work on the actual assignments.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 1,
+   "n_supported": 1,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f42-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Dr. Sean Papay; jedes Sommersemester.",
+   "gold_chunk_ids": [
+    "mhb-isss-2024:modulnlproc-dl4nlp-m:0"
+   ],
+   "question": "Wer unterrichtet das Modul Deep Learning for Natural Language Processing und wann wird es angeboten?",
+   "answerable": true,
+   "text": "Das Modul wird von Dr. Sean Papay unterrichtet; verantwortlich für das Modul ist Prof. Dr. Roman Klinger [C1]. Es wird jedes Sommersemester angeboten [C1].",
+   "citations": [
+    "mhb-isss-2024:modulnlproc-dl4nlp-m:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "mhb-isss-2024:modulnlproc-dl4nlp-m:0",
+    "mhb-isss-2024:modulnlproc-dl4nlp-m:1",
+    "mhb-isss-2024:modulnlproc-ea-m:0",
+    "mhb-isss-2024:modulnlproc-pgm4nlp-m:0",
+    "mhb-isss-2024:modulxai-dl-m:1"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Das Modul wird von Dr. Sean Papay unterrichtet; verantwortlich für das Modul ist Prof. Dr. Roman Klinger [C1]. Es wird jedes Sommersemester angeboten [C1].\", \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "Das Modul wird von Dr. Sean Papay unterrichtet.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Prof. Dr. Roman Klinger ist für das Modul verantwortlich.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Das Modul wird jedes Sommersemester angeboten.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 3,
+   "n_supported": 3,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f42-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "Dr. Sean Papay; every summer semester.",
+   "gold_chunk_ids": [
+    "mhb-isss-2024:modulnlproc-dl4nlp-m:0"
+   ],
+   "question": "Who teaches the module Deep Learning for Natural Language Processing and when is it offered?",
+   "answerable": true,
+   "text": "Dr. Sean Papay is listed as the lecturer, and Prof. Dr. Roman Klinger is the person responsible for the module [C1]. It is offered every summer semester [C1][C5].",
+   "citations": [
+    "mhb-isss-2024:modulnlproc-dl4nlp-m:0",
+    "mhb-isss-2024:anhang:3"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "mhb-isss-2024:modulnlproc-dl4nlp-m:0",
+    "mhb-isss-2024:modulnlproc-dl4nlp-m:1",
+    "mhb-isss-2024:modulnlproc-ea-m:0",
+    "mhb-isss-2024:modulnlproc-ilt-m:0",
+    "mhb-isss-2024:anhang:3"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Dr. Sean Papay is listed as the lecturer, and Prof. Dr. Roman Klinger is the person responsible for the module [C1]. It is offered every summer semester [C1][C5].\", \"citations\": [\"C1\", \"C5\"]}",
+   "claims": [
+    {
+     "claim": "Dr. Sean Papay is listed as the lecturer of the module.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Prof. Dr. Roman Klinger is the person responsible for the module.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The module is offered every summer semester.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 3,
+   "n_supported": 3,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f43-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Vorkenntnisse und Erfahrung im Machine Learning sowie gute Programmierfähigkeiten, vorzugsweise in Python.",
+   "gold_chunk_ids": [
+    "mhb-isss-2024:modulnlproc-dl4nlp-m:0"
+   ],
+   "question": "Welche Vorkenntnisse werden für das Modul Deep Learning for Natural Language Processing empfohlen?",
+   "answerable": true,
+   "text": "Empfohlen werden Vorkenntnisse und Erfahrung im Bereich Machine Learning sowie starke Programmierfähigkeiten, vorzugsweise in Python [C1].",
+   "citations": [
+    "mhb-isss-2024:modulnlproc-dl4nlp-m:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "mhb-isss-2024:modulnlproc-dl4nlp-m:0",
+    "mhb-isss-2024:modulnlproc-ilt-m:0",
+    "mhb-isss-2024:modulnlproc-ea-m:0",
+    "mhb-isss-2024:modulnlproc-dl4nlp-m:1",
+    "mhb-isss-2024:modulnlproc-pgm4nlp-m:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Empfohlen werden Vorkenntnisse und Erfahrung im Bereich Machine Learning sowie starke Programmierfähigkeiten, vorzugsweise in Python [C1].\", \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "Prior knowledge of and experience with Machine Learning is recommended.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Strong programming ability is recommended.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Python is the preferred programming language.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 3,
+   "n_supported": 3,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f43-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "Prior knowledge of and experience with machine learning, plus strong programming ability, preferably in Python.",
+   "gold_chunk_ids": [
+    "mhb-isss-2024:modulnlproc-dl4nlp-m:0"
+   ],
+   "question": "Which prior knowledge is recommended for the module Deep Learning for Natural Language Processing?",
+   "answerable": true,
+   "text": "The recommended prior knowledge is prior knowledge of and experience with machine learning, plus strong programming ability, preferably in Python [C1].",
+   "citations": [
+    "mhb-isss-2024:modulnlproc-dl4nlp-m:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "mhb-isss-2024:modulnlproc-dl4nlp-m:0",
+    "mhb-isss-2024:modulnlproc-ilt-m:0",
+    "mhb-isss-2024:modulnlproc-ea-m:0",
+    "mhb-isss-2024:modulnlproc-pgm4nlp-m:0",
+    "mhb-isss-2024:modulxai-dl-m:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"The recommended prior knowledge is prior knowledge of and experience with machine learning, plus strong programming ability, preferably in Python [C1].\", \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "Recommended prior knowledge includes prior knowledge of and experience with machine learning.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Recommended prior knowledge includes strong programming ability.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Programming ability in Python is preferred.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 3,
+   "n_supported": 3,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f44-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Prof. Dr. Roman Klinger.",
+   "gold_chunk_ids": [
+    "mhb-isss-2024:modulnlproc-pgm4nlp-m:0"
+   ],
+   "question": "Wer ist für das Modul Probabilistic Graphical Models for Natural Language Processing verantwortlich?",
+   "answerable": true,
+   "text": "Verantwortlich für das Modul Probabilistic Graphical Models for Natural Language Processing ist Prof. Dr. Roman Klinger [C1].",
+   "citations": [
+    "mhb-isss-2024:modulnlproc-pgm4nlp-m:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "mhb-isss-2024:modulnlproc-pgm4nlp-m:0",
+    "mhb-isss-2024:modulnlproc-ilt-m:0",
+    "mhb-isss-2024:modulnlproc-dl4nlp-m:0",
+    "mhb-isss-2024:modulnlproc-pgm4nlp-m:1",
+    "mhb-isss-2024:allgemeines:1"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Verantwortlich für das Modul Probabilistic Graphical Models for Natural Language Processing ist Prof. Dr. Roman Klinger [C1].\", \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "The module is called Probabilistic Graphical Models for Natural Language Processing.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Prof. Dr. Roman Klinger is responsible for the module.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 2,
+   "n_supported": 2,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f44-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "Prof. Dr. Roman Klinger.",
+   "gold_chunk_ids": [
+    "mhb-isss-2024:modulnlproc-pgm4nlp-m:0"
+   ],
+   "question": "Who is responsible for the module Probabilistic Graphical Models for Natural Language Processing?",
+   "answerable": true,
+   "text": "The person responsible for the module Probabilistic Graphical Models for Natural Language Processing is Prof. Dr. Roman Klinger [C1].",
+   "citations": [
+    "mhb-isss-2024:modulnlproc-pgm4nlp-m:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "mhb-isss-2024:modulnlproc-pgm4nlp-m:0",
+    "mhb-isss-2024:modulnlproc-ilt-m:0",
+    "mhb-isss-2024:modulnlproc-dl4nlp-m:0",
+    "mhb-isss-2024:modulnlproc-pgm4nlp-m:1",
+    "mhb-isss-2024:modulnlproc-ea-m:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"The person responsible for the module Probabilistic Graphical Models for Natural Language Processing is Prof. Dr. Roman Klinger [C1].\", \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "The module is called Probabilistic Graphical Models for Natural Language Processing.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Prof. Dr. Roman Klinger is the person responsible for the module.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 2,
+   "n_supported": 2,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f45-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Gerichtete graphische Modelle / Bayessche Netze, ungerichtete graphische Modelle / Markov Random Fields, Conditional Random Fields (sowie u. a. kausale Modelle und neuronale graphische Modelle).",
+   "gold_chunk_ids": [
+    "mhb-isss-2024:modulnlproc-pgm4nlp-m:0",
+    "mhb-isss-2024:modulnlproc-pgm4nlp-m:1"
+   ],
+   "question": "Welche Arten von grafischen Modellen werden im Modul Probabilistic Graphical Models for NLP behandelt?",
+   "answerable": true,
+   "text": "Im Modul werden gerichtete grafische Modelle bzw. Bayes'sche Netze, ungerichtete grafische Modelle bzw. Markov-Zufallsfelder, Conditional Random Fields und neuronale grafische Modelle behandelt; außerdem stehen Kausalmodellierung sowie Inferenz und Sampling auf dem Inhalt [C2][C1].",
+   "citations": [
+    "mhb-isss-2024:modulnlproc-pgm4nlp-m:0",
+    "mhb-isss-2024:modulnlproc-pgm4nlp-m:1"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "mhb-isss-2024:modulnlproc-pgm4nlp-m:1",
+    "mhb-isss-2024:modulnlproc-pgm4nlp-m:0",
+    "mhb-isss-2024:modulnlproc-ilt-m:0",
+    "mhb-isss-2024:allgemeines:1",
+    "mhb-isss-2024:anhang:3"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Im Modul werden gerichtete grafische Modelle bzw. Bayes'sche Netze, ungerichtete grafische Modelle bzw. Markov-Zufallsfelder, Conditional Random Fields und neuronale grafische Modelle behandelt; außerdem stehen Kausalmodellierung sowie Inferenz und Sampling auf dem Inhalt [C2][C1].\", \"citations\": [\"C2\", \"C1\"]}",
+   "claims": [
+    {
+     "claim": "The module covers directed graphical models / Bayesian networks.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The module covers undirected graphical models / Markov random fields.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The module covers conditional random fields.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The module covers neural graphical models.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The module covers causal modeling.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The module covers inference and sampling.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 6,
+   "n_supported": 6,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f45-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "Directed graphical models / Bayesian networks, undirected graphical models / Markov random fields, conditional random fields (plus, among others, causal and neural graphical models).",
+   "gold_chunk_ids": [
+    "mhb-isss-2024:modulnlproc-pgm4nlp-m:0",
+    "mhb-isss-2024:modulnlproc-pgm4nlp-m:1"
+   ],
+   "question": "Which kinds of graphical models are covered in the module Probabilistic Graphical Models for NLP?",
+   "answerable": true,
+   "text": "The module covers directed graphical models (Bayesian networks), undirected graphical models (Markov random fields), conditional random fields, and neural graphical models [C1]. It also covers causal modeling as a topic [C1].",
+   "citations": [
+    "mhb-isss-2024:modulnlproc-pgm4nlp-m:1"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "mhb-isss-2024:modulnlproc-pgm4nlp-m:1",
+    "mhb-isss-2024:modulnlproc-pgm4nlp-m:0",
+    "mhb-isss-2024:modulnlproc-ilt-m:0",
+    "mhb-isss-2024:allgemeines:1",
+    "mhb-isss-2024:anhang:3"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"The module covers directed graphical models (Bayesian networks), undirected graphical models (Markov random fields), conditional random fields, and neural graphical models [C1]. It also covers causal modeling as a topic [C1].\", \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "The module covers directed graphical models (Bayesian networks).",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The module covers undirected graphical models (Markov random fields).",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The module covers conditional random fields.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The module covers neural graphical models.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The module covers causal modeling as a topic.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 5,
+   "n_supported": 5,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f46-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "45 Stunden Präsenzzeit und 135 Stunden Selbststudium.",
+   "gold_chunk_ids": [
+    "mhb-isss-2024:modulmobi-dsc-m:0"
+   ],
+   "question": "Wie verteilt sich der Arbeitsaufwand im Modul Data Streams and Complex Event Processing auf Präsenzzeit und Selbststudium?",
+   "answerable": true,
+   "text": "Das Modul umfasst 6 ECTS entsprechend 180 h: 45 h Präsenzzeit und 135 h Selbststudium [C1].",
+   "citations": [
+    "mhb-isss-2024:modulmobi-dsc-m:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "mhb-isss-2024:modulmobi-dsc-m:0",
+    "mhb-isss-2024:modulmobi-dsc-m:1",
+    "mhb-isss-2024:moduldsg-distrsys-m:0",
+    "stufpo-isss-2024:anhang1:1",
+    "mhb-isss-2024:anhang:0"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Das Modul umfasst 6 ECTS entsprechend 180 h: 45 h Präsenzzeit und 135 h Selbststudium [C1].\", \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "The module comprises 6 ECTS credits",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The module corresponds to 180 hours total workload",
+     "verdict": "supported"
+    },
+    {
+     "claim": "45 hours are contact/in-class time (Präsenzzeit)",
+     "verdict": "supported"
+    },
+    {
+     "claim": "135 hours are self-study (Selbststudium)",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 4,
+   "n_supported": 4,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f46-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "45 hours of contact time and 135 hours of self-study.",
+   "gold_chunk_ids": [
+    "mhb-isss-2024:modulmobi-dsc-m:0"
+   ],
+   "question": "How is the workload in the module Data Streams and Complex Event Processing split between contact time and self-study?",
+   "answerable": true,
+   "text": "The module carries 6 ECTS / 180 h in total, of which 45 h are contact time (Präsenzzeit) and 135 h are self-study (Selbststudium) [C1].",
+   "citations": [
+    "mhb-isss-2024:modulmobi-dsc-m:0"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "mhb-isss-2024:modulmobi-dsc-m:0",
+    "mhb-isss-2024:modulmobi-dsc-m:1",
+    "mhb-isss-2024:anhang:0",
+    "mhb-isss-2024:moduldsg-distrsys-m:0",
+    "stufpo-isss-2024:anhang1:1"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"The module carries 6 ECTS / 180 h in total, of which 45 h are contact time (Präsenzzeit) and 135 h are self-study (Selbststudium) [C1].\", \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "The module carries 6 ECTS in total.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The module has a workload of 180 h in total.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "45 h of the workload are contact time (Präsenzzeit).",
+     "verdict": "supported"
+    },
+    {
+     "claim": "135 h of the workload are self-study (Selbststudium).",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 4,
+   "n_supported": 4,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f50-de",
+   "lang": "de",
+   "gold_answerable": true,
+   "gold_answer": "Ja, Studierende können Englisch oder Deutsch für die schriftliche Hausarbeit und die mündliche Prüfung wählen.",
+   "gold_chunk_ids": [
+    "mhb-isss-2024:modulaise-ul:1"
+   ],
+   "question": "Kann ich die Prüfung im Modul Universal Logic & Universal Reasoning auf Deutsch ablegen?",
+   "answerable": true,
+   "text": "Ja, laut Modulhandbuch können Sie als Sprache für die schriftliche Ausarbeitung und die mündliche Prüfung Englisch oder Deutsch wählen [C1]. Die allgemeine Regel der Studienordnung lautet zwar, dass Prüfungen in englischer Sprache abgelegt werden [C3], Modulprüfungen können aber nach Maßgabe des Modulhandbuchs auch ganz oder teilweise auf Englisch abgehalten werden [C5].",
+   "citations": [
+    "mhb-isss-2024:modulaise-ul:1",
+    "stufpo-isss-2024:par38:0",
+    "apo-wiai-2026:par9:5"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "mhb-isss-2024:modulaise-ul:1",
+    "mhb-isss-2024:modulaise-ul:0",
+    "stufpo-isss-2024:par38:0",
+    "stufpo-isss-2024:anhang1:1",
+    "apo-wiai-2026:par9:5"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Ja, laut Modulhandbuch können Sie als Sprache für die schriftliche Ausarbeitung und die mündliche Prüfung Englisch oder Deutsch wählen [C1]. Die allgemeine Regel der Studienordnung lautet zwar, dass Prüfungen in englischer Sprache abgelegt werden [C3], Modulprüfungen können aber nach Maßgabe des Modulhandbuchs auch ganz oder teilweise auf Englisch abgehalten werden [C5].\", \"citations\": [\"C1\", \"C3\", \"C5\"]}",
+   "claims": [
+    {
+     "claim": "According to the module handbook, students may choose English or German for the written assignment and oral examination.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "The general rule of the study regulations is that courses and examinations are held/taken in English.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Module examinations can, according to the module handbook, be held wholly or partly in English.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 3,
+   "n_supported": 3,
+   "faithful": true,
+   "status": "graded"
+  },
+  {
+   "qid": "f50-en",
+   "lang": "en",
+   "gold_answerable": true,
+   "gold_answer": "Yes, students may choose English or German for the written assignment and the oral examination.",
+   "gold_chunk_ids": [
+    "mhb-isss-2024:modulaise-ul:1"
+   ],
+   "question": "Can I take the exam in the module Universal Logic & Universal Reasoning in German?",
+   "answerable": true,
+   "text": "Yes, students may choose English or German as the language for the written assignment and oral examination [C1].",
+   "citations": [
+    "mhb-isss-2024:modulaise-ul:1"
+   ],
+   "invalid_citations": [],
+   "context_ids": [
+    "mhb-isss-2024:modulaise-ul:1",
+    "mhb-isss-2024:modulaise-ul:0",
+    "mhb-isss-2024:modulaise-ul:2",
+    "mhb-isss-2024:moduldt-dbcpu-m:1",
+    "mhb-isss-2024:modulmobi-adm-m:1"
+   ],
+   "error": null,
+   "raw": "{\"answerable\": true, \"answer\": \"Yes, students may choose English or German as the language for the written assignment and oral examination [C1].\", \"citations\": [\"C1\"]}",
+   "claims": [
+    {
+     "claim": "Students may choose English or German as the language for the written assignment.",
+     "verdict": "supported"
+    },
+    {
+     "claim": "Students may choose English or German as the language for the oral examination.",
+     "verdict": "supported"
+    }
+   ],
+   "n_claims": 2,
+   "n_supported": 2,
+   "faithful": true,
+   "status": "graded"
+  }
+ ]
+}
