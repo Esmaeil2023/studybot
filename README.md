@@ -4,8 +4,9 @@ Bilingual (German/English) question answering over a university's study and exam
 Answers cite the exact paragraph and page. Retrieval and answer quality are measured on a
 hand-written test set.
 
-**Status:** Phases 1-4 (parsing and chunking; evaluation set; retrieval; reranking). Later
-phases add answer generation, evaluation, the API and the deployment.
+**Status:** complete. Parsing and chunking, evaluation set, retrieval and reranking, cited
+answers with abstention, correctness and faithfulness evaluation, FastAPI service, Docker image,
+CI, and a live demo on Google Cloud Run (see [Live demo](#live-demo-google-cloud-run)).
 
 ## Quickstart
 
@@ -284,9 +285,9 @@ answer. Settings are environment variables (see the top of `api.py`).
 
 ### Docker
 
-The Dockerfile has been built and run for real: Google Cloud Build builds the image from it
-(see Live demo below) and Cloud Run serves that container. The one thing not tried is
-`docker run` on the author's own machine, which has no Docker installed.
+The Dockerfile has been built and run in two places: locally with Docker Desktop (the image
+builds in about 7 minutes; the container starts, loads both models and answers `/ask`), and by
+Google Cloud Build, whose image Cloud Run serves (see Live demo below).
 
 ```
 make chunks                                   # the image bakes in data/processed/chunks.jsonl
